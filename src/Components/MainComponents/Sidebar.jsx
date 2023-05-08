@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { faPerson } from "@fortawesome/free-solid-svg-icons";
 
 const Sidebar = () => {
   return (
@@ -11,10 +14,11 @@ const Sidebar = () => {
       <div className="sidebar_content">
         <ul>
           <li>
-            <a href="index.html">
-              <i data-feather="home"></i>
+            {/* <a href="index.html"> */}
+              <i class="fa-solid fa-user"></i>
+              <FontAwesomeIcon icon={faHouse} />
               <p className="sidebar-texts">მთავარი</p>
-            </a>
+            {/* </a> */}
           </li>
           {/*<li>
             <a href="">
@@ -23,10 +27,11 @@ const Sidebar = () => {
             </a>
           </li>*/}
           <li>
-            <a href="about_us.html">
-              <i data-feather="users"></i>
+            {/* <a href="about_us.html"> */}
+              <FontAwesomeIcon icon={faPerson} />
+
               <p className="sidebar-texts">ჩვენს შესახებ</p>
-            </a>
+            {/* </a> */}
           </li>
           {/*<li>
             <a href="contact.html">
