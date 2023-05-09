@@ -2,25 +2,33 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faPerson } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar_title">
-        <a href="index.html">
+        <Link to="/" className="sidebar_logo">
           <h1>ციტატელი</h1>
-        </a>
+        </Link>
       </div>
       <div className="sidebar_content">
         <ul>
           <li>
-            <i className="fa-solid fa-user"></i>
-            <FontAwesomeIcon icon={faHouse} />
-            <p className="sidebar-texts">მთავარი</p>
+            <Link to="/" className="sidebar-links">
+              <span>
+                <FontAwesomeIcon icon={faHouse} />
+              </span>
+              <p className="sidebar-texts">მთავარი</p>
+            </Link>
           </li>
           <li>
-            <FontAwesomeIcon icon={faPerson} />
-            <p className="sidebar-texts">ჩვენს შესახებ</p>
+            <Link to="/about-us" className="sidebar-links">
+              <span>
+                <FontAwesomeIcon icon={faPerson} />
+              </span>
+              <p className="sidebar-texts">ჩვენს შესახებ</p>
+            </Link>
           </li>
         </ul>
       </div>
