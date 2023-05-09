@@ -8,14 +8,14 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar_title">
-        <Link to="/tsitatelli/" className="sidebar_logo">
+        <Link to="/" className="sidebar_logo">
           <h1>ციტატელი</h1>
         </Link>
       </div>
       <div className="sidebar_content">
         <ul>
           <li>
-            <Link to="/tsitatelli/" className="sidebar-links">
+            <Link to="/" className="sidebar-links">
               <span>
                 <FontAwesomeIcon icon={faHouse} />
               </span>
@@ -23,7 +23,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/tsitatelli/about-us" className="sidebar-links">
+            <Link to="/about-us" className="sidebar-links">
               <span>
                 <FontAwesomeIcon icon={faPerson} />
               </span>
