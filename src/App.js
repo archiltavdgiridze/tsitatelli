@@ -12,8 +12,8 @@ function App() {
       <Sidebar />
       <Routes>
         {/* <Route path="/" element={<Sidebar />} /> */}
-        <Route path="/" element={<MainPage />} />
-        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/tsitatelli/" element={<MainPage />} />
+        <Route path="/tsitatelli/about-us" element={<AboutUs />} />
         {/* <Route path="/filter" element={<Filter />} /> */}
       </Routes>
     </div>
