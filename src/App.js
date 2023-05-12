@@ -11,10 +11,8 @@ function App() {
     <div className="App">
       <Sidebar />
       <Routes>
-        {/* <Route path="/" element={<Sidebar />} /> */}
-        <Route path="/tsitatelli/" element={<MainPage />} />
-        <Route path="/tsitatelli/about-us" element={<AboutUs />} />
-        {/* <Route path="/filter" element={<Filter />} /> */}
+        <Route path="/" element={<MainPage />} />
+        <Route path="/about_us" element={<AboutUs />} />
       </Routes>
     </div>
   );
