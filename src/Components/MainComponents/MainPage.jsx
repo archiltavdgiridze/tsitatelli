@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import quoteBase from "../../quoteBase.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
@@ -12,6 +12,9 @@ const MainPage = () => {
     const randomIndex = Math.floor(Math.random() * quoteBase.length);
     setQuote(quoteBase[randomIndex].quote);
     setAuthor(quoteBase[randomIndex].nameSurname);
+    const quoteElement = document.querySelector(".quote h3");
+    quoteElement.classList.remove("templateText");
+    console.log(quoteBase[randomIndex]);
   }
 
   return (
@@ -22,7 +25,12 @@ const MainPage = () => {
         </div>
         <div className="quote">
           <FontAwesomeIcon icon={faQuoteLeft} />
-          <h3 className="generatedQuote">{quote}</h3>
+          {/* <h3 className="templateText">daaadsa</h3> */}
+          {/* <h3 className="generatedQuote">{quote}</h3> */}
+          <h3 className={quote ? "generatedQuote" : "templateText"}>
+            {quote || "დააჭირე ღილაკს, რათა დააგენერირო ციტატა"}
+          </h3>
+
         </div>
         <div className="author">
           <FontAwesomeIcon icon={faPenNib} />

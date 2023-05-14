@@ -1,9 +1,11 @@
 @font-face {
   font-family: 'Batonishvili';
   src: url(./assets/fonts/DM-Batonishvili.ttf);
+}
 
-  /* font-family: 'Moistsrapishvili';
-  src: url(./assets/fonts/DM-Revaz-Moistsrapishvili.ttf); */
+@font-face {
+  font-family: 'ar-archy';
+  src: url(./assets/fonts/ar-archy-regular.ttf);
 }
 
 :root {
@@ -42,22 +44,6 @@ p {
 
 ul {
   padding: 0;
-}
-
-/* ul li {} */
-
-/* ul li:hover {} */
-
-/* ul li a {} */
-
-/* ul li a:hover {} */
-
-a {
-  /* text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: #000; */
 }
 
 .App {
@@ -102,7 +88,6 @@ a {
   height: 85vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   margin: 50px 0;
 }
@@ -126,24 +111,18 @@ a {
   justify-content: flex-start;
   text-decoration: none;
   color: var(--sidebarTextColor);
-  /* gap: 10px; */
   padding: 10px;
 }
 
 .sidebar-links span {
   width: 30%;
-  /* background-color: red; */
 }
 
 .sidebar-links p {
   width: 70%;
-  /* background-color: green; */
 }
 
-
-
 .sidebar-links:hover {
-  /* height: 80%; */
   transition: 0.4s;
   color: #ebb400;
   background-color: aliceblue;
@@ -225,30 +204,41 @@ a {
 
 /* ~ quote */
 .quote {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-end;
-  width: 100%;
+  /* width: 100%; */
+  width: -webkit-fill-available;
   min-width: 50vw;
   height: auto;
-  background-color: var(--quoteBG);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: var(--lightGray);
   border-radius: 20px;
 }
 
 .fa-quote-left {
+  min-width: 10%;
+  display: flex;
+  align-items: flex-start;
   font-size: 4rem;
-  margin: 1rem 2rem 0;
-  left: 0;
   color: rgb(255, 128, 9);
 }
 
+.templateText {
+  letter-spacing: 1px;
+}
+
 .quote h3 {
+  width: 90%;
+  max-width: 90%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  margin: 1rem 1rem 1rem 0;
+  line-height: 4.2rem;
   text-align: right;
   font-size: 1.7rem;
-  margin: 0 2rem 1rem;
 }
 
 .generatedQuote {
@@ -275,18 +265,18 @@ a {
 /* ~ author */
 .author {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 60%;
-  border-radius: 20px;
+  flex-direction: row;
+  align-items: center;
+  width: 37%;
   height: auto;
   min-height: 10%;
-  background-color: var(--authorBG);
+  padding: 1rem 2rem 1rem 1rem;
+  border-radius: 20px;
+  background-color: #f0f0f070;
 }
 
 .fa-pen-nib {
-  font-size: 56px;
-  margin: 1rem 2rem;
+  font-size: 40px;
   left: 0;
   color: rgb(255, 128, 9);
 }
@@ -294,8 +284,9 @@ a {
 .author h3 {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   text-align: right;
-  margin: 0 2rem 1rem;
+  width: 90%;
   padding: 0;
   font-size: 1.4rem;
 }
@@ -309,7 +300,28 @@ a {
 
 /* author */
 
+/* ~ about us */
+.about_us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  letter-spacing: 1px;
+  padding: 60px;
+}
 
+
+
+
+/* about us */
+
+/* ! BOTTOM CSS */
+/* ~ --------------------- */
+/* ~ --------------------- */
+/* ~ --------------------- */
+/* ~ --------------------- */
+/* ~ --------------------- */
 /* ~ Dark mode */
 .darkmode-toggle {
   z-index: 1;
@@ -357,10 +369,6 @@ a {
     font-size: 1.6rem;
   }
 
-  .sidebar_logo {
-    /* height: 100%; */
-  }
-
   .sidebar_content {
     width: 50%;
     height: 100%;
@@ -401,7 +409,6 @@ a {
 
   .sidebar-links span {
     width: auto;
-    /* height: 100%; */
   }
 
   .sidebar-texts {
@@ -423,29 +430,32 @@ a {
   }
 
   .fa-quote-left {
-    font-size: 2rem;
-    margin: 1rem 2rem 0;
-    left: 0;
+    font-size: 2.5rem;
     color: rgb(255, 128, 9);
   }
 
   .quote h3 {
-    font-size: 1.3rem;
+    font-size: 1rem;
+    margin: 1rem 0;
+    line-height: 2.5rem;
+  }
+
+
+  .author {
+    width: 70%;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
   }
 
   .fa-pen-nib {
+    width: 20%;
     font-size: 32px;
-    margin: 1rem 2rem;
+    margin: 1rem 0.5rem;
     left: 0;
     color: rgb(255, 128, 9);
   }
 
-  .author {
-    width: 70%;
-  }
-
   .author h3 {
-    font-size: 1.3rem;
-    margin: 0 1rem 1rem;
+    width: 80%;
+    font-size: 1rem;
   }
 }
