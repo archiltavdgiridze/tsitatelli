@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/tsitatelli/static/css/main.fb198976.css",
-    "main.js": "/tsitatelli/static/js/main.911afb95.js",
+    "main.css": "/tsitatelli/static/css/main.73e1a120.css",
+    "main.js": "/tsitatelli/static/js/main.79af4540.js",
     "static/media/DM-Batonishvili.ttf": "/tsitatelli/static/media/DM-Batonishvili.b75360934ca4e959668b.ttf",
+    "static/media/ar-archy-regular.ttf": "/tsitatelli/static/media/ar-archy-regular.a8dd85608b3ccf80a316.ttf",
     "index.html": "/tsitatelli/index.html",
-    "main.fb198976.css.map": "/tsitatelli/static/css/main.fb198976.css.map",
-    "main.911afb95.js.map": "/tsitatelli/static/js/main.911afb95.js.map"
+    "main.73e1a120.css.map": "/tsitatelli/static/css/main.73e1a120.css.map",
+    "main.79af4540.js.map": "/tsitatelli/static/js/main.79af4540.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb198976.css",
-    "static/js/main.911afb95.js"
+    "static/css/main.73e1a120.css",
+    "static/js/main.79af4540.js"
   ]
 }
