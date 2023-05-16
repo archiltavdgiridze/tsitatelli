@@ -97,7 +97,7 @@
     },
     {
         "id": "13",
-        "nameSurname": "\"\"\"ლონდრე\"\"\"",
+        "nameSurname": "ლონდრე",
         "quote": "მგელი უნდა იყო, მგელი და მგელზე უფრო მგელი. ცხოვრება ომია, ომში კი ძლიერები იმარჯვებენ.",
         "source": "ლონდრე",
         "topic": "",
@@ -1782,61 +1782,5 @@
         "source": "\"\"\"ყოველმან ჩემმან მპოვნელმან“\"",
         "topic": "",
         "wordCount": "10"
-    },
-    {
-        "id": "224",
-        "nameSurname": "",
-        "quote": "უბედურებაში ჩავარდნილ კაცს ყველაზე მეტად თანაგრძნობა სჭირდება, თუნდაც მოჩვენებითი, ყალბი, მოვალეობის მოსახდელი.",
-        "source": "",
-        "topic": "",
-        "wordCount": "12"
-    },
-    {
-        "id": "225",
-        "nameSurname": "",
-        "quote": "",
-        "source": "",
-        "topic": "",
-        "wordCount": ""
-    },
-    {
-        "id": "226",
-        "nameSurname": "",
-        "quote": "",
-        "source": "",
-        "topic": "",
-        "wordCount": ""
-    },
-    {
-        "id": "227",
-        "nameSurname": "",
-        "quote": "",
-        "source": "",
-        "topic": "",
-        "wordCount": ""
-    },
-    {
-        "id": "228",
-        "nameSurname": "",
-        "quote": "",
-        "source": "",
-        "topic": "",
-        "wordCount": ""
-    },
-    {
-        "id": "229",
-        "nameSurname": "",
-        "quote": "",
-        "source": "",
-        "topic": "",
-        "wordCount": ""
-    },
-    {
-        "id": "230",
-        "nameSurname": "",
-        "quote": "",
-        "source": "",
-        "topic": "",
-        "wordCount": ""
     }
 ]

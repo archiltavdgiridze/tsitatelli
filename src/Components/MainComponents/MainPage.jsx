@@ -14,8 +14,10 @@ const MainPage = () => {
     setAuthor(quoteBase[randomIndex].nameSurname);
     const quoteElement = document.querySelector(".quote h3");
     quoteElement.classList.remove("templateText");
-    console.log(quoteBase[randomIndex]);
+    // console.log(quoteBase[randomIndex]);
   }
+
+  
 
   return (
     <div className="result rightDiv">

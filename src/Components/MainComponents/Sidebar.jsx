@@ -23,6 +23,14 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
+            <Link to="/filter_by_authors" className="sidebar-links">
+              <span>
+                <FontAwesomeIcon icon={faPerson} />
+              </span>
+              <p className="sidebar-texts">ავტორები</p>
+            </Link>
+          </li>
+          <li>
             <Link to="/about_us" className="sidebar-links">
               <span>
                 <FontAwesomeIcon icon={faPerson} />
