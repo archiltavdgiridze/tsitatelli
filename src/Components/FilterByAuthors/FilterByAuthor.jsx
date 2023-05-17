@@ -39,13 +39,13 @@ const FilterByAuthors = () => {
     );
     setFilteredQuotes(filteredQuotes);
     setSelectedAuthor(authorName);
-    console.log(filteredQuotes);
+    // console.log(filteredQuotes);
   }
 
   return (
-    <div className="result">
+    <div className="result FBA_result">
+      <h1>ავტორები:</h1>
       <div className="FBA">
-        <h1>ავტორები:</h1>
         {sortedFirstLetters.map((letter) => (
           <div key={letter} className="FBA_section">
             <h2>{letter}</h2>
@@ -66,18 +66,29 @@ const FilterByAuthors = () => {
             </div>
           </div>
         ))}
-        <div className="FBA_quotes">
-          <h1>
-            {selectedAuthor} – ციტატები <span>({filteredQuotes.length}) :</span>
-          </h1>
-          {filteredQuotes.map((quote) => (
-            <div key={quote.id}>
-              <h2>{quote.quote}</h2>
-              {/* <p>{quote.source}</p> */}
-              {/* <p>{quote.topic}</p> */}
-            </div>
-          ))}
-        </div>
+      </div>
+      <div className="FBA_quotes">
+        <h1>
+          {selectedAuthor ? (
+            <>
+              {selectedAuthor} – ციტატები
+              <span>({filteredQuotes.length})</span>
+            </>
+          ) : (
+            <>
+              ციტატები
+              <span>({quoteBase.length})</span>
+            </>
+          )}
+        </h1>
+
+        {filteredQuotes.map((quote) => (
+          <div key={quote.id}>
+            <h2>{quote.quote}</h2>
+            {/* <p>{quote.source}</p> */}
+            {/* <p>{quote.topic}</p> */}
+          </div>
+        ))}
       </div>
     </div>
   );

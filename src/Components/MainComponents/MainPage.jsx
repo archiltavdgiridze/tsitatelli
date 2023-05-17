@@ -17,8 +17,6 @@ const MainPage = () => {
     // console.log(quoteBase[randomIndex]);
   }
 
-  
-
   return (
     <div className="result rightDiv">
       <div className="result_wrapper rightDivWrapper" id="data-container">
@@ -39,9 +37,9 @@ const MainPage = () => {
           <h3 className="generatedAuthor">{author}</h3>
         </div>
       </div>
-      <div className="dev-info">
+      {/* <div className="dev-info">
         <p>*საიტი არის დეველოპმენტის პროცესში*</p>
-      </div>
+      </div> */}
     </div>
   );
 };

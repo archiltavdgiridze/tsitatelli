@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faPerson } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import Darkmode from "darkmode-js";
 
 const Sidebar = () => {
-  return (
-    <div className="sidebar">
+  useEffect(() => {
+    const darkmode = new Darkmode();
+    darkmode.showWidget(); // Optional: Displays a toggle switch on the page
+    }, []);
+    
+    return (
+      <div className="sidebar">
       <div className="sidebar_title">
         <Link to="/" className="sidebar_logo">
           <h1>ციტატელი</h1>

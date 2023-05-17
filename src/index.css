@@ -29,6 +29,10 @@ body {
 
 h1,
 h2,
+h3,
+h4,
+h5,
+h6,
 p {
   margin-block-start: 0em;
   margin-block-end: 0em
@@ -61,7 +65,7 @@ ul {
   top: 0;
   left: 0;
   color: var(--sidebarTextColor);
-  background-color: var(--sidebarColor);
+  /* background-color: var(--sidebarColor); */
 }
 
 .sidebar_title {
@@ -133,6 +137,7 @@ ul {
 .sidebar-texts {
   display: flex;
   letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .material-symbols-outlined {
@@ -300,29 +305,43 @@ ul {
 /* author */
 
 /* ~ filter by authors */
+.FBA_result {
+  gap: 10px;
+}
+
 .FBA {
   width: 80%;
+  height: 60vh;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  padding: 10px 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: -1px 1px 31px 10px rgba(58, 136, 145, 0.22);
+  -webkit-box-shadow: -1px 1px 31px 10px rgba(58, 136, 145, 0.22);
+  -moz-box-shadow: -1px 1px 31px 10px rgba(58, 136, 145, 0.22);
 }
 
 .FBA_section {
   width: -webkit-fill-available;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   text-align: left;
-  margin: 1rem auto;
   padding: 1rem;
   border: 1px solid black;
   border-radius: 1rem;
 }
 
 .FBA_section h2 {
+  width: 5%;
   padding: 0 0 0 20px;
 }
 
 .FBA_buttons {
+  width: 95%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -330,7 +349,7 @@ ul {
 }
 
 .FBA_buttons button {
-  padding: 5px 15px;
+  padding: 6px 16px;
   font-size: 1.5rem;
   font-family: var(--sidebarFontBold);
   border: 3px solid #ffffff00;
@@ -344,6 +363,19 @@ ul {
   border: 3px solid var(--sidebarTextColor);
 }
 
+.FBA_quotes {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px auto 60px;
+  gap: 20px;
+}
+
+.FBA_quotes h1 {
+  line-height: 4rem;
+}
+
 .FBA_quotes span {
   font-size: 4rem;
   font-weight: 100;
@@ -354,13 +386,35 @@ ul {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  margin: 20px 0;
   padding: 1.5rem;
   text-align: left;
   letter-spacing: 1px;
   background-color: var(--lightGray);
   border-radius: 1rem;
 }
+
+/* ~ scrollbar */
+body::-webkit-scrollbar-track,
+.FBA::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar,
+.FBA::-webkit-scrollbar {
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb,
+.FBA::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #666666;
+}
+
+/*  */
 
 /* filter by authors */
 
@@ -384,8 +438,32 @@ ul {
 /* ~ --------------------- */
 /* ~ --------------------- */
 /* ~ Dark mode */
+
 .darkmode-toggle {
-  z-index: 1;
+  z-index: 1000;
+  background: #1a13ee;
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  border-radius: 50%;
+  border: none;
+  right: 95% !important;
+  bottom: 32px;
+  /* left: unset; */
+  cursor: pointer;
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.darkmode-layer--button {
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 50%;
+  right: 95% !important;
+  bottom: 32px;
+  left: unset;
 }
 
 /* darkmode */
@@ -520,21 +598,51 @@ ul {
   }
 
   /* ~ FBA */
+  .FBA_result {
+    gap: 10px;
+  }
+
+  .FBA_result h1,
+  .FBA_quotes h1 {
+    font-size: 1.5rem;
+  }
+
+  .FBA {
+    height: 40vh;
+    gap: 10px;
+  }
+
   .FBA_section {
-    margin: 0.5rem 0;
     padding: 0.5rem 1rem;
   }
 
-  .FBA_section button {
+  .FBA_buttons button {
     font-size: 1rem;
     font-weight: 600;
     text-align: left;
+    padding: 0 10px;
   }
 
   .FBA_quotes h2 {
     padding: 1rem 1.5rem;
     font-size: 1.1rem;
     line-height: 3rem;
+  }
+
+  .FBA_section h2 {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .FBA_buttons {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 10px;
   }
 
   /* FBA */
