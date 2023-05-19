@@ -4,13 +4,13 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faPerson } from "@fortawesome/free-solid-svg-icons";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import Darkmode from "darkmode-js";
+// import Darkmode from "darkmode-js";
 
 const Sidebar = () => {
-  useEffect(() => {
-    const darkmode = new Darkmode();
-    darkmode.showWidget(); // Optional: Displays a toggle switch on the page
-    }, []);
+  // useEffect(() => {
+  //   const darkmode = new Darkmode();
+  //   darkmode.showWidget(); // Optional: Displays a toggle switch on the page
+  //   }, []);
     
     return (
       <div className="sidebar">
