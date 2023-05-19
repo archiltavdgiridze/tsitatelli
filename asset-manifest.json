@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/tsitatelli/static/css/main.e6df09e5.css",
-    "main.js": "/tsitatelli/static/js/main.cec9a3ee.js",
+    "main.css": "/tsitatelli/static/css/main.99c3fd4f.css",
+    "main.js": "/tsitatelli/static/js/main.ab587156.js",
     "static/media/DM-Batonishvili.ttf": "/tsitatelli/static/media/DM-Batonishvili.b75360934ca4e959668b.ttf",
+    "static/media/bpg-ucnobi-webfont.ttf": "/tsitatelli/static/media/bpg-ucnobi-webfont.947ab2e925323774a3ec.ttf",
     "static/media/ar-archy-regular.ttf": "/tsitatelli/static/media/ar-archy-regular.a8dd85608b3ccf80a316.ttf",
     "index.html": "/tsitatelli/index.html",
-    "main.e6df09e5.css.map": "/tsitatelli/static/css/main.e6df09e5.css.map",
-    "main.cec9a3ee.js.map": "/tsitatelli/static/js/main.cec9a3ee.js.map"
+    "main.99c3fd4f.css.map": "/tsitatelli/static/css/main.99c3fd4f.css.map",
+    "main.ab587156.js.map": "/tsitatelli/static/js/main.ab587156.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6df09e5.css",
-    "static/js/main.cec9a3ee.js"
+    "static/css/main.99c3fd4f.css",
+    "static/js/main.ab587156.js"
   ]
 }
