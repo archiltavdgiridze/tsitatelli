@@ -30,6 +30,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--mainFont);
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -204,7 +205,7 @@ ul {
 }
 
 .generatorBtn button {
-  padding: 30px 40px;
+  padding: 20px 30px;
   font-size: 2.5rem;
   font-family: var(--sidebarFontBold);
   color: var(--white);
@@ -400,8 +401,7 @@ ul {
   font-weight: 100;
 }
 
-.FBA_quotes h2,
-.FBA_filtered_quotes h2 {
+/* .FBA_quotes h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -412,19 +412,17 @@ ul {
   letter-spacing: 1px;
   background-color: var(--lightGray);
   border-radius: 1rem;
-}
+} */
 
 .FBA_filtered {
-  position: relative;
   gap: 20px;
 }
 
+
 .FBA_filtered button {
-  position: absolute;
-  left: 30px;
-  top: 30px;
-  width: 40px;
+  width: 30%;
   height: 40px;
+  margin: 1rem auto 0;
   font-size: 1.2rem;
   border-radius: 50px;
   border: none;
@@ -448,7 +446,28 @@ ul {
 
 .filtered_authorName {
   line-height: 3.5rem;
+  letter-spacing: 1px;
   padding: 2rem 1.5rem;
+}
+
+.filtered_quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 1rem 1.5rem;
+  text-align: left;
+  line-height: 4.2rem;
+  letter-spacing: 1px;
+  background-color: var(--lightGray);
+  border-radius: 10px;
+  box-shadow: 6px 5px 0px -1px var(--accentColor);
+  -webkit-box-shadow: 6px 5px 0px -1px var(--accentColor);
+  -moz-box-shadow: 6px 5px 0px -1px var(--accentColor);
+}
+
+.filtered_quote h2 {
+  font-size: 1.7rem;
 }
 
 
@@ -547,7 +566,7 @@ body::-webkit-scrollbar-thumb,
 
   .sidebar {
     width: 100%;
-    height: 12vh;
+    height: 15vh;
     min-height: auto;
     flex-direction: row;
     justify-content: space-around;
@@ -622,7 +641,7 @@ body::-webkit-scrollbar-thumb,
     justify-content: flex-start;
     align-items: center;
     margin-left: 0;
-    margin-top: 12vh;
+    margin-top: 15vh;
     box-sizing: border-box;
     gap: 60px;
     background-color: var(--resultColor);
@@ -634,7 +653,7 @@ body::-webkit-scrollbar-thumb,
   }
 
   .quote h3 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin: 1rem 0;
     line-height: 4.4rem;
   }
@@ -665,23 +684,23 @@ body::-webkit-scrollbar-thumb,
   .FBA_result h1,
   .FBA_quotes h1 {
     font-size: 2rem;
+    padding: 10px 0 0 0;
   }
 
   .FBA {
-    height: 40vh;
     gap: 10px;
   }
 
   .FBA_section {
     padding: 0.5rem 1rem;
+
   }
 
   .FBA_buttons button {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 600;
     text-align: left;
-    padding: 0 10px;
-    font-family: ;
+    padding: 6px 10px;
   }
 
   .FBA_quotes h2 {
@@ -706,5 +725,27 @@ body::-webkit-scrollbar-thumb,
     margin-left: 10px;
   }
 
-  /* FBA */
-}
+  .FBA_filtered {
+    gap: 10px;
+  }
+
+  .FBA_filtered button {
+    left: 30px;
+    top: 20px;
+    width: 80%;
+  }
+
+  .filtered_authorName {
+    font-size: 1.8rem;
+  }
+
+  .filtered_quote h2 {
+    font-size: 1.5rem;
+  }
+
+  .filtered_quote {
+    padding: 1rem;
+  }
+
+    /* FBA */
+  }

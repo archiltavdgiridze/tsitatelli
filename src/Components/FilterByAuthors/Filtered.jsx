@@ -30,7 +30,7 @@ const Filtered = () => {
       <div className="FBA_filtered_quotes">
         {state?.filteredQuotes &&
           state.filteredQuotes.map((quote) => (
-            <div key={quote.id}>
+            <div key={quote.id} className="filtered_quote">
               <h2>{quote.quote}</h2>
               {/* <p>{quote.source}</p>
               <p>{quote.topic}</p> */}
