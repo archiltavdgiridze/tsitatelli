@@ -73,7 +73,7 @@ const FilterByAuthors = () => {
           </div>
         ))}
       </div>
-      <div className="FBA_quotes">
+      {/* <div className="FBA_quotes">
         <h1>
           {selectedAuthor ? (
             <>
@@ -87,7 +87,7 @@ const FilterByAuthors = () => {
             </>
           )}
         </h1>
-      </div>
+      </div> */}
     </div>
   );
 };
