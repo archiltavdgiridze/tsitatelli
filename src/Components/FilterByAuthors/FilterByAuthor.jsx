@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import quoteBase from "../../quoteBase.json";
+import { useNavigate } from "react-router-dom";
 
 const FilterByAuthors = () => {
   // ~ georgianCollator is used to sort author names in georgian alphabet
@@ -21,6 +22,8 @@ const FilterByAuthors = () => {
   }
   const sortedFirstLetters = [...firstLetters].sort();
 
+  const navigate = useNavigate();
+
   // ~ this code pushes unique authors to authorsList array
   const [selectedAuthor, setSelectedAuthor] = useState("");
   const [filteredQuotes, setFilteredQuotes] = useState([]);
@@ -39,6 +42,9 @@ const FilterByAuthors = () => {
     );
     setFilteredQuotes(filteredQuotes);
     setSelectedAuthor(authorName);
+    navigate("/filtered", {
+      state: { filteredQuotes },
+    });
     // console.log(filteredQuotes);
   }
 
@@ -81,14 +87,6 @@ const FilterByAuthors = () => {
             </>
           )}
         </h1>
-
-        {filteredQuotes.map((quote) => (
-          <div key={quote.id}>
-            <h2>{quote.quote}</h2>
-            {/* <p>{quote.source}</p> */}
-            {/* <p>{quote.topic}</p> */}
-          </div>
-        ))}
       </div>
     </div>
   );
