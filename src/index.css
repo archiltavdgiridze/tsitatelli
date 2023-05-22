@@ -207,12 +207,18 @@ ul {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: 0.4s;
+  outline: 3px solid var(--accentColor);
+  transition: outline-offset .25s;
 }
 
+/* ! .generatorBtn button:hover {} */
+
 .generatorBtn button:hover {
+  transition: 0.4s;
   background-color: var(--goldColor);
   color: var(--black);
+  outline-offset: 3px;
+  outline: 3px solid var(--goldColor);
 }
 
 /* ~ quote */
@@ -237,9 +243,9 @@ ul {
   color: var(--accentColor);
 }
 
-.templateText {
+/* .templateText {
   letter-spacing: 1px;
-}
+} */
 
 .quote h3 {
   width: 90%;
@@ -357,17 +363,23 @@ ul {
   font-weight: bolder;
   padding: 10px 16px;
   border-radius: 10px;
-  border: 3px solid var(--accentColor);
+  outline: 3px solid var(--accentColor);
+  border: none;
+  /* border: 3px solid var(--accentColor); */
   cursor: pointer;
   transition: 0.4s;
   letter-spacing: 1px;
-  transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease-in-out;
   transition: background-color 0.5s ease-out;
+  transition: outline-offset .25s;
+
 }
 
 .FBA_buttons button:hover {
   background-color: #feedb4;
-  border: 3px solid var(--goldColor);
+  outline-offset: 2px;
+  outline: 3px solid var(--goldColor);
+  /* border: 3px solid var(--goldColor); */
   box-shadow: 8px 6px 0px -1px #feedb4;
   -webkit-box-shadow: 8px 6px 8px 0px #feedb4;
   -moz-box-shadow: 8px 6px 0px -1px #feedb4;
