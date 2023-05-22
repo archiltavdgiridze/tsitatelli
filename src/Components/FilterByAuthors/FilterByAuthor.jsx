@@ -53,7 +53,7 @@ const FilterByAuthors = () => {
       <h1>ავტორები:</h1>
       <div className="FBA">
         {sortedFirstLetters.map((letter) => (
-          <div key={letter} className="FBA_section">
+          <div key={letter} className=" FBA_section">
             <h2>{letter}</h2>
             <div className="FBA_buttons">
               {authorsList.map((author) => {

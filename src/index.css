@@ -13,6 +13,11 @@
   src: url(./assets/fonts/bpg-ucnobi-webfont.ttf);
 }
 
+@font-face {
+  font-family: "FiraGO_Reg";
+  src: url(./assets/fonts/FiraGO-Regular.ttf);
+}
+
 :root {
   --white: #fff;
   --black: #252525;
@@ -141,8 +146,7 @@ ul {
 
 .sidebar-links:hover {
   transition: 0.4s;
-  color: #ebb400;
-  /* background-color: aliceblue; */
+  color: var(--goldColor);
   border-radius: 10px;
   box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25), 0 0.25rem 0.25rem rgba(58, 136, 145, 0.2);
 }
@@ -209,7 +213,7 @@ ul {
   font-size: 2.5rem;
   font-family: var(--sidebarFontBold);
   color: var(--white);
-  background-color: #16b8f3;
+  background-color: var(--accentColor);
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -262,20 +266,6 @@ ul {
 .generatedQuote {
   height: 70%;
   letter-spacing: 1px;
-}
-
-.generatedQuote {
-  animation: fadeIn 1s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
 
 /* quote */
@@ -344,8 +334,13 @@ ul {
   padding: 1rem;
   background-color: var(--lightGray);
   border-radius: 1rem;
+  transition: box-shadow 0.5s ease;
+}
+
+.FBA_section:hover {
+  transition: 0.3s ease-in-out;
   box-shadow: 8px 6px 0px -1px var(--accentColor);
-  -webkit-box-shadow: 8px 6px 0px -1px var(--accentColor);
+  -webkit-box-shadow: 8px 6px 8px 0px var(--accentColor);
   -moz-box-shadow: 8px 6px 0px -1px var(--accentColor);
 }
 
@@ -366,6 +361,7 @@ ul {
 }
 
 .FBA_buttons button {
+  transition: background-color 1.5s ease;
   font-family: var(--secondaryFont);
   font-size: 2rem;
   font-weight: bolder;
@@ -375,12 +371,16 @@ ul {
   cursor: pointer;
   transition: 0.4s;
   letter-spacing: 1px;
+  transition: box-shadow 0.5s ease;
+  transition: background-color 0.5s ease-out;
 }
 
 .FBA_buttons button:hover {
   background-color: #feedb4;
-  /* gold color */
   border: 3px solid var(--goldColor);
+  box-shadow: 8px 6px 0px -1px #feedb4;
+  -webkit-box-shadow: 8px 6px 8px 0px #feedb4;
+  -moz-box-shadow: 8px 6px 0px -1px #feedb4;
 }
 
 .FBA_quotes {
@@ -401,23 +401,9 @@ ul {
   font-weight: 100;
 }
 
-/* .FBA_quotes h2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  padding: 1rem 2rem;
-  line-height: 4rem;
-  text-align: left;
-  letter-spacing: 1px;
-  background-color: var(--lightGray);
-  border-radius: 1rem;
-} */
-
 .FBA_filtered {
   gap: 20px;
 }
-
 
 .FBA_filtered button {
   width: 30%;
@@ -426,11 +412,18 @@ ul {
   font-size: 1.2rem;
   border-radius: 50px;
   border: none;
+  transition: box-shadow 0.5s ease;
+  transition: background-color 0.5s ease;
+
 }
 
 .FBA_filtered button:hover {
+  color: var(--white);
   background-color: var(--goldColor);
-  color: var(--black);
+  transition: 0.3s ease-in-out;
+  box-shadow: 8px 6px 0px -1px #feedb4;
+  -webkit-box-shadow: 8px 6px 8px 0px #feedb4;
+  -moz-box-shadow: 8px 6px 0px -1px #feedb4;
   transition: 0.3s ease-in-out;
 }
 
@@ -461,13 +454,19 @@ ul {
   letter-spacing: 1px;
   background-color: var(--lightGray);
   border-radius: 10px;
-  box-shadow: 6px 5px 0px -1px var(--accentColor);
-  -webkit-box-shadow: 6px 5px 0px -1px var(--accentColor);
-  -moz-box-shadow: 6px 5px 0px -1px var(--accentColor);
+  transition: box-shadow 0.5s ease;
+}
+
+.filtered_quote:hover {
+  transition: 0.3s ease-in-out;
+  box-shadow: 8px 6px 0px -1px var(--accentColor);
+  -webkit-box-shadow: 8px 6px 8px 0px var(--accentColor);
+  -moz-box-shadow: 8px 6px 0px -1px var(--accentColor);
 }
 
 .filtered_quote h2 {
   font-size: 1.7rem;
+  box-shadow: none;
 }
 
 
@@ -518,7 +517,7 @@ body::-webkit-scrollbar-thumb,
 /* ~ --------------------- */
 /* ~ Dark mode */
 
-.darkmode-toggle {
+/* .darkmode-toggle {
   z-index: 1000;
   background: #1a13ee;
   width: 3rem;
@@ -528,7 +527,6 @@ body::-webkit-scrollbar-thumb,
   border: none;
   right: 95% !important;
   bottom: 32px;
-  /* left: unset; */
   cursor: pointer;
   transition: all 0.5s ease;
   display: flex;
@@ -543,7 +541,7 @@ body::-webkit-scrollbar-thumb,
   right: 95% !important;
   bottom: 32px;
   left: unset;
-}
+} */
 
 /* darkmode */
 
@@ -747,5 +745,5 @@ body::-webkit-scrollbar-thumb,
     padding: 1rem;
   }
 
-    /* FBA */
-  }
+  /* FBA */
+}
