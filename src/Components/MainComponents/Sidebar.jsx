@@ -22,7 +22,7 @@ const Sidebar = () => {
         <div className="sidebar_content">
           <ul>
             <li>
-              <Link to="/" className="sidebar-links">
+              <Link to="/" className="sidebar-links" alt="home-button">
                 <span>
                   <FontAwesomeIcon icon={faHouse} />
                 </span>
@@ -30,7 +30,7 @@ const Sidebar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/filter_by_authors" className="sidebar-links">
+              <Link to="/filter_by_authors" className="sidebar-links" alt="filter-by-authors-button">
                 <span>
                   <FontAwesomeIcon icon={faPerson} />
                 </span>
@@ -38,7 +38,7 @@ const Sidebar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/about_us" className="sidebar-links">
+              <Link to="/about_us" className="sidebar-links" alt="about-us-button">
                 <span>
                   <FontAwesomeIcon icon={faCircleInfo} />
                 </span>

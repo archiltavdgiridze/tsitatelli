@@ -4,18 +4,8 @@
 }
 
 @font-face {
-  font-family: 'ar-archy';
-  src: url(./assets/fonts/ar-archy-regular.ttf);
-}
-
-@font-face {
   font-family: 'BPG_ucnobi';
   src: url(./assets/fonts/bpg-ucnobi-webfont.ttf);
-}
-
-@font-face {
-  font-family: "FiraGO_Reg";
-  src: url(./assets/fonts/FiraGO-Regular.ttf);
 }
 
 :root {
