@@ -756,6 +756,35 @@ body::-webkit-scrollbar-thumb,
     font-size: 1.5rem;
   }
 
+  /* ~ copy btn */
+  .copy-btn {
+    width: 25%;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .copy-text {
+    display: none;
+  }
+
+  .copy-message {
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    padding: 0 20px;
+    font-size: 1.8rem;
+  }
+
+  .copy-message p {
+    line-height: 3rem;
+  }
+
+  /* copy btn */
+
   /* ~ FBA */
   .FBA_result {
     gap: 10px;
@@ -768,6 +797,7 @@ body::-webkit-scrollbar-thumb,
   }
 
   .FBA {
+    width: 90%;
     gap: 10px;
   }
 
@@ -809,10 +839,14 @@ body::-webkit-scrollbar-thumb,
     gap: 10px;
   }
 
-  .FBA_filtered button {
+  .backButton {
     left: 30px;
     top: 20px;
     width: 80%;
+  }
+
+  .FBA_filtered_quotes {
+    width: 90%;
   }
 
   .filtered_authorName {
@@ -820,6 +854,7 @@ body::-webkit-scrollbar-thumb,
   }
 
   .filtered_quote h2 {
+    line-height: 3.6rem;
     font-size: 1.5rem;
   }
 
