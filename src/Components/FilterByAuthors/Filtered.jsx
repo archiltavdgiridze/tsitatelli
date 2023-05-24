@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import CopyButton from "../ReComp/CopyButton";
 
 const Filtered = () => {
   const navigate = useNavigate();
@@ -29,9 +30,15 @@ const Filtered = () => {
 
       <div className="FBA_filtered_quotes">
         {state?.filteredQuotes &&
-          state.filteredQuotes.map((quote) => (
-            <div key={quote.id} className="filtered_quote">
-              <h2>{quote.quote}</h2>
+          state.filteredQuotes.map((data) => (
+            <div key={data.id} className="filtered_quote">
+              <h2>{data.quote}</h2>
+              <CopyButton
+                text={`"${data.quote}" - ${authorName}"`}
+                className="copy-btn"
+                style={{}}
+              />
+
               {/* <p>{quote.source}</p>
               <p>{quote.topic}</p> */}
             </div>

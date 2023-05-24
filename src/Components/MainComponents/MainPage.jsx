@@ -3,27 +3,31 @@ import quoteBase from "../../quoteBase.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 import { faPenNib } from "@fortawesome/free-solid-svg-icons";
+import CopyButton from "../ReComp/CopyButton";
 
 const MainPage = () => {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
 
+  // ~ this code generates a random quote when the component mounts
   useEffect(() => {
     generateRandomQuote(); // Generate a random quote when the component mounts
   }, []);
 
+  // ~ this function generates a random quote
   function generateRandomQuote() {
     const randomIndex = Math.floor(Math.random() * quoteBase.length);
     setQuote(quoteBase[randomIndex].quote);
     setAuthor(quoteBase[randomIndex].nameSurname);
   }
 
+  // ~ this function generates a new quote
   function genQuote() {
     const randomIndex = Math.floor(Math.random() * quoteBase.length);
-      setQuote(quoteBase[randomIndex].quote);
-      setAuthor(quoteBase[randomIndex].nameSurname);
-      const quoteElement = document.querySelector(".quote h3");
-      quoteElement.classList.remove("templateText");
+    setQuote(quoteBase[randomIndex].quote);
+    setAuthor(quoteBase[randomIndex].nameSurname);
+    const quoteElement = document.querySelector(".quote h3");
+    quoteElement.classList.remove("templateText");
     // console.log(quoteBase[randomIndex]);
   }
 
@@ -35,10 +39,14 @@ const MainPage = () => {
         </div>
         <div className="quote">
           <FontAwesomeIcon icon={faQuoteLeft} />
-          <h3 className="generatedQuote">{quote}</h3>
-          {/* <h3 className={quote ? "generatedQuote" : "templateText"}> */}
-            {/* {quote || "დააჭირე ღილაკს, რათა დააგენერირო ციტატა"} */}
-          {/* </h3> */}
+          <div className="MP_textNcopy">
+            <h3 className="generatedQuote">{quote}</h3>
+            <CopyButton
+              text={`"${quote}" - ${author}`}
+              className="copy-btn"
+              style={{}}
+            />
+          </div>
         </div>
         <div className="author">
           <FontAwesomeIcon icon={faPenNib} />
