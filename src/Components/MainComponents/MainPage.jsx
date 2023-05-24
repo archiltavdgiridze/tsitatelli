@@ -11,7 +11,7 @@ const MainPage = () => {
 
   // ~ this code generates a random quote when the component mounts
   useEffect(() => {
-    generateRandomQuote(); // Generate a random quote when the component mounts
+    generateRandomQuote();
   }, []);
 
   // ~ this function generates a random quote

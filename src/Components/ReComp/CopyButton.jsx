@@ -12,7 +12,7 @@ const CopyButton = ({ text, className, style }) => {
         setShowMessage(true);
         setTimeout(() => {
           setShowMessage(false);
-        }, 4000); // Adjust the duration (in milliseconds) as needed
+        }, 4000); 
       })
       .catch((error) => {
         console.error("Error copying text to clipboard:", error);
@@ -23,7 +23,6 @@ const CopyButton = ({ text, className, style }) => {
     <>
       <button
         onClick={handleCopy}
-        // className="copy-btn"
         className={`${className}`}
         style={style}
       >

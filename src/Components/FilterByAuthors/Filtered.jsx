@@ -38,9 +38,8 @@ const Filtered = () => {
                 className="copy-btn"
                 style={{}}
               />
-
-              {/* <p>{quote.source}</p>
-              <p>{quote.topic}</p> */}
+              {/* <p>{data.source}</p>
+              <p>{data.topic}</p> */}
             </div>
           ))}
       </div>

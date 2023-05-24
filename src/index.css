@@ -524,7 +524,6 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: flex-end; */
   gap: 20px;
   padding: 1rem 1.5rem;
   text-align: left;
@@ -551,7 +550,6 @@ ul {
   box-shadow: none;
 }
 
-
 /* ~ scrollbar */
 body::-webkit-scrollbar-track,
 .FBA::-webkit-scrollbar-track {
@@ -572,8 +570,6 @@ body::-webkit-scrollbar-thumb,
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
   background-color: var(--accentColor);
 }
-
-/*  */
 
 /* filter by authors */
 
@@ -729,7 +725,6 @@ body::-webkit-scrollbar-thumb,
 
   .fa-quote-left {
     font-size: 2.5rem;
-    /* color: rgb(255, 128, 9); */
   }
 
   .quote h3 {
@@ -748,7 +743,6 @@ body::-webkit-scrollbar-thumb,
     font-size: 32px;
     margin: 1rem 0.5rem;
     left: 0;
-    /* color: rgb(255, 128, 9); */
   }
 
   .author h3 {
