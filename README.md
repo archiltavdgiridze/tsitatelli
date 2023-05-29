@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# ციტატელი | Tsitatelli
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tsitatelli is a Georgian quotes website that has a database of quotes from famous Georgian people. You can browse, generate and copy quotes from various authors and topics.
 
-## Available Scripts
+[![Website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://tsitatelli.vercel.app/)
 
-In the project directory, you can run:
+## Table of contents
 
-### `npm start`
+- [Features](#Features "click to see info")
+- [How to use](#How-to-use "click to see info")
+- [Technologies used](#Technologies-used "click to see info")
+- [Fonts used](#fonts-used "click to see font info")
+- [Demo](#Demo "click to see info")
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Discover Random Quotes**: Immerse yourself in the world of wisdom by generating random quotes at the click of a button. Let serendipity guide you to your next source of inspiration.
+- **Author Filtering**: Delve deeper into the wisdom of your favorite Georgian authors. With a simple click on an author's name, immerse yourself in a curated selection of quotes specifically attributed to them.
+- **Copy to Clipboard**: Capture the essence of a quote effortlessly. By clicking the copy button below each quote, instantly save it, along with the author's name, to your clipboard. Share these gems across various platforms with ease.
+- **Search by Topics** (Coming Soon!): Unleash the power of specific topics. Soon, you'll be able to explore quotes related to suggested topics, enabling you to navigate the vast collection with greater precision.
 
-### `npm test`
+## How to use
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To use Tsitatelli, simply visit the website and explore the different sections. You can click on the “Generate” button to see a random quote, or click on the “Authors” button to see a list of authors. You can also click on an author’s name to see all the quotes from that author. To copy a quote, just click on the “Copy” button below the quote and it will be copied to your clipboard with the author’s name.
 
-### `npm run build`
+## Technologies used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Tsitatelli is built with ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![JSON](https://img.shields.io/badge/json-323330?style=for-the-badge&logo=json&logoColor=pink)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Fonts used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The website uses the font [“DM-Batonishvili”](https://calligraphy.ge/fonts/dm-batonishvili) as the main quote font, which is made by Davit Maisuradze. As a secondary font, the website uses [“BPG Ucnobi”](https://web-fonts.ge/bpg-ucnobi/) which is made by Besarion Gugushvili.
 
-### `npm run eject`
+## Demo
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Curious to see Tsitatelli in action? Experience the magic firsthand by visiting our live demo: [tsitatelli](https://tsitatelli.vercel.app)
