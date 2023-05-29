@@ -6,11 +6,13 @@ Tsitatelli is a Georgian quotes website that has a database of quotes from famou
 
 ## Table of contents
 
-- [Features](#Features "click to see info")
-- [How to use](#How-to-use "click to see info")
-- [Technologies used](#Technologies-used "click to see info")
-- [Fonts used](#fonts-used "click to see font info")
-- [Demo](#Demo "click to see info")
+- [ციტატელი | Tsitatelli](#ციტატელი--tsitatelli)
+  - [Table of contents](#table-of-contents)
+  - [Features](#features)
+  - [How to use](#how-to-use)
+  - [Technologies used](#technologies-used)
+  - [Fonts used](#fonts-used)
+  - [Demo](#demo)
 
 ## Features
 
