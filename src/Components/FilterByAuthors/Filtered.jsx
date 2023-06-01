@@ -34,7 +34,7 @@ const Filtered = () => {
             <div key={data.id} className="filtered_quote">
               <h2>{data.quote}</h2>
               <CopyButton
-                text={`"${data.quote}" - ${authorName}"`}
+                text={`"${data.quote}" - ${authorName}`}
                 className="copy-btn"
                 style={{}}
               />
