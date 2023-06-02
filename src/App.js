@@ -5,10 +5,15 @@ import MainPage from "./Components/MainComponents/MainPage";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import FilterByAuthors from "./Components/FilterByAuthors/FilterByAuthor";
 import Filtered from "./Components/FilterByAuthors/Filtered";
+import { useEffect, useState } from "react";
 
 // import Filter from "./Components/Filter/Filter";
 
+
+
 function App() {
+
+
   return (
     <div className="App">
       <Sidebar />
