@@ -588,6 +588,104 @@ body::-webkit-scrollbar-thumb,
 
 /* about us */
 
+/* ~ sources */
+.sources {
+  width: 80%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 0 50px;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.sources_section {
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: left;
+  padding: 1rem;
+  background-color: var(--lightGray);
+  border-radius: 1rem;
+  transition: box-shadow 0.5s ease;
+}
+
+.sources_section h2 {
+  width: 5%;
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  padding: 0 0 0 20px;
+}
+
+.sources_section:hover {
+  transition: 0.3s ease-in-out;
+  box-shadow: 8px 6px 0px -1px var(--accentColor);
+  -webkit-box-shadow: 8px 6px 8px 0px var(--accentColor);
+  -moz-box-shadow: 8px 6px 0px -1px var(--accentColor);
+}
+
+.sources_section h2 {
+  width: 5%;
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  padding: 0 0 0 20px;
+}
+
+.sources_buttons {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sources_buttons p {
+  display: flex;
+  align-items: center;
+  transition: background-color 1.5s ease;
+  font-family: var(--secondaryFont);
+  font-size: 2rem;
+  font-weight: bolder;
+  padding: 10px 16px;
+  border-radius: 10px;
+  outline: 3px solid var(--accentColor);
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+  letter-spacing: 1px;
+  transition: box-shadow 0.5s ease-in-out;
+  transition: background-color 0.5s ease-out;
+  transition: outline-offset .25s;
+}
+
+.sources_buttons p:hover {
+  background-color: #feedb4;
+  outline-offset: 2px;
+  outline: 3px solid var(--goldColor);
+  box-shadow: 8px 6px 0px -1px #feedb4;
+  -webkit-box-shadow: 8px 6px 8px 0px #feedb4;
+  -moz-box-shadow: 8px 6px 0px -1px #feedb4;
+}
+
+/* sources */
+
+/*
+
+
+
+
+
+
+
+
+
+*/
+
+
 /* ! BOTTOM CSS */
 /* ~ --------------------- */
 /* ~ --------------------- */

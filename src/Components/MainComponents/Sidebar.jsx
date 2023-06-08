@@ -30,15 +30,35 @@ const Sidebar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/filter_by_authors" className="sidebar-links" alt="filter-by-authors-button">
+              <Link
+                to="/filter_by_authors"
+                className="sidebar-links"
+                alt="filter-by-authors-button"
+              >
                 <span>
                   <FontAwesomeIcon icon={faPerson} />
                 </span>
                 <p className="sidebar-texts">ავტორები</p>
               </Link>
             </li>
+            {/* <li>
+              <Link
+                to="/sources"
+                className="sidebar-links"
+                alt="sources-button"
+              >
+                <span>
+                  <FontAwesomeIcon icon={faPerson} />
+                </span>
+                <p className="sidebar-texts">წყაროები</p>
+              </Link>
+            </li> */}
             <li>
-              <Link to="/about_us" className="sidebar-links" alt="about-us-button">
+              <Link
+                to="/about_us"
+                className="sidebar-links"
+                alt="about-us-button"
+              >
                 <span>
                   <FontAwesomeIcon icon={faCircleInfo} />
                 </span>
