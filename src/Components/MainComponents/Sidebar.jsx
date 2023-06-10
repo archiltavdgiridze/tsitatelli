@@ -29,7 +29,7 @@ const Sidebar = () => {
                 <p className="sidebar-texts">მთავარი</p>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 to="/filter_by_authors"
                 className="sidebar-links"
@@ -40,19 +40,19 @@ const Sidebar = () => {
                 </span>
                 <p className="sidebar-texts">ავტორები</p>
               </Link>
-            </li>
-            {/* <li>
+            </li> */}
+            <li>
               <Link
-                to="/sources"
+                to="/filter"
                 className="sidebar-links"
                 alt="sources-button"
               >
                 <span>
                   <FontAwesomeIcon icon={faPerson} />
                 </span>
-                <p className="sidebar-texts">წყაროები</p>
+                <p className="sidebar-texts">ფილტრი</p>
               </Link>
-            </li> */}
+            </li>
             <li>
               <Link
                 to="/about_us"

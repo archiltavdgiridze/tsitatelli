@@ -14,18 +14,17 @@ const MainPage = () => {
   const [previousIndex, setPreviousIndex] = useState(null);
   // needed in case there is only one quote in the database at the moment, so it won't run in infinite loop
   const [singleQuote, setSingleQuote] = useState(false);
-
   
   const url =
   "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
   
-  async function logJSONData() {
-    const response = await fetch(url);
-    const jsonData = await response.json();
-    console.log(jsonData.data[5].attributes.topic);
-  }
+  // async function logJSONData() {
+  //   const response = await fetch(url);
+  //   const jsonData = await response.json();
+  //   console.log(jsonData.data[5].attributes.topic);
+  // }
 
-  logJSONData();
+  // logJSONData();
 
   useEffect(() => {
     fetchRandomQuote();

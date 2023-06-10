@@ -1,10 +1,40 @@
-import React from 'react'
+import React, { useState } from "react";
+import AuthorFilt from "./MiniFilter/AuthorFilt";
+import TopicFilt from "./MiniFilter/TopicFilt";
+import SourceFilt from "./MiniFilter/SourceFilt";
 
 const Filter = () => {
-  return (
-    <div>TESSSSSST 
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, aut voluptatum alias recusandae est neque sapiente illum eveniet velit optio aperiam iure suscipit eos facere quisquam pariatur repellendus nobis tempore ipsa? Porro assumenda asperiores inventore eaque fugit accusamus? Vitae minus ex temporibus architecto nobis reiciendis consectetur fuga corrupti repellat itaque?</div>
-  )
-}
+  const [activeFilter, setActiveFilter] = useState(null);
 
-export default Filter
+  const handleFilterClick = (filterName) => {
+    setActiveFilter(filterName);
+  };
+
+  const renderMiniFilter = () => {
+    switch (activeFilter) {
+      case "Authors":
+        return <AuthorFilt />;
+      case "Topics":
+        return <TopicFilt />;
+      case "Sources":
+        return <SourceFilt />;
+      default:
+        return <h1 className="filter_placeholder">დააჭირე ღილაკს გასაფილტრად.</h1>;
+    }
+  };
+
+  return (
+    <div className="result">
+      <div className="result_wrapper">
+        <div className="filter_buttons">
+          <button onClick={() => handleFilterClick("Authors")}>ავტორები</button>
+          <button onClick={() => handleFilterClick("Topics")}>თემატიკა</button>
+          <button onClick={() => handleFilterClick("Sources")}>წყაროები</button>
+        </div>
+        <div className="filter_result">{renderMiniFilter()}</div>
+      </div>
+    </div>
+  );
+};
+
+export default Filter;

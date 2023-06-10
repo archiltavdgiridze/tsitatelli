@@ -13,7 +13,7 @@ const Filtered = () => {
 
   useEffect(() => {
     if (!state?.filteredQuotes) {
-      navigate("/filter_by_authors");
+      navigate("/filter");
     } else {
       const quotes = state.filteredQuotes;
       setAuthorName(quotes[0]?.attributes.author || "");
@@ -22,7 +22,7 @@ const Filtered = () => {
   }, [state]);
 
   const handleGoBack = () => {
-    navigate("/filter_by_authors");
+    navigate("/filter");
   };
 
   return (
