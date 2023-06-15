@@ -14,7 +14,6 @@ const AuthorResult = () => {
     if (!state?.filteredQuotes) {
       navigate("/author-results/:author");
     } else {
-      // this code is executed when a user clicks on an author button 
       const quotes = state.filteredQuotes;
       setAuthorName(quotes[0]?.attributes.author || "");
       setFilteredQuotes(quotes);
@@ -32,17 +31,28 @@ const AuthorResult = () => {
       </button>
       {authorName && <h1 className="filtered_authorName">{authorName}</h1>}
 
-      <div className="filt_elem_result_quotes">
+      <div className="card">
         {filteredQuotes.map((data) => (
-          <div key={data.id} className="filtered_quote">
-            <h2>{data.attributes.quote}</h2>
-            <CopyButton
-              text={`"${data.attributes.quote}" - ${authorName}`}
-              className="copy-btn"
-            />
-            {/* <p>{data.attributes.field_source}</p>
-            <p>{data.attributes.field_topic}</p> */}
-          </div>
+          <figure key={data.id} className="quote_card">
+            <div className="q_card_top">
+              <h2>{data.attributes.quote}</h2>
+            </div>
+
+            <figcaption className="q_card_body">
+              <div className="q_card_bottom">
+                <div className="q_card_buttons">
+                  <button className="linker_source">წყარო</button>
+                  <button className="linker_topic">თემატიკა</button>
+                </div>
+                <div className="card_copy">
+                  <CopyButton
+                    text={`"${data.attributes.quote}" - ${authorName}`}
+                    className="copy-btn btn_filled"
+                  />
+                </div>
+              </div>
+            </figcaption>
+          </figure>
         ))}
       </div>
     </div>

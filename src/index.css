@@ -8,6 +8,12 @@
   src: url(./assets/fonts/bpg-ucnobi-webfont.ttf);
 }
 
+@font-face {
+  font-family: 'Paragraph';
+  src: url(./assets/fonts/bpg-paragraph-chveulebrivi-webfont.ttf);
+}
+
+
 :root {
   --white: #fff;
   --black: #252525;
@@ -19,7 +25,7 @@
   --goldColor: #ebb400;
   --lightGoldColor: #f7d600;
   --mainFont: "Batonishvili", sans-serif;
-  --secondaryFont: "BPG_ucnobi", sans-serif;
+  --secondaryFont: "Paragraph", sans-serif;
   --test: #000;
 }
 
@@ -97,7 +103,7 @@ ul {
   flex-direction: column;
   align-items: center;
   margin: 50px 0;
-  font-family: 'BPG_ucnobi', sans-serif;
+  font-family: var(--secondaryFont), sans-serif;
   font-weight: 100;
 }
 
@@ -128,13 +134,16 @@ ul {
 }
 
 .sidebar-links span {
-  width: 25%;
+  width: 15%;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 
 .sidebar-links p {
-  width: 70%;
+  width: 85%;
+  padding-left: 1rem;
 }
 
 .sidebar-links:hover {
@@ -147,7 +156,8 @@ ul {
 .sidebar-texts {
   display: flex;
   letter-spacing: 1px;
-  font-weight: 600;
+  font-weight: 900;
+  font-size: 1.8rem;
 }
 
 .material-symbols-outlined {
@@ -194,7 +204,7 @@ ul {
 /* ~ button */
 .generatorBtn {
   border: 0px;
-  font-family: 'BPG_ucnobi', sans-serif;
+  font-family: var(--secondaryFont), sans-serif;
 }
 
 .generatorBtn:active {
@@ -421,7 +431,7 @@ body::-webkit-scrollbar-thumb,
   gap: 40px;
   letter-spacing: 1px;
   padding: 60px;
-  font-family: 'BPG_ucnobi', sans-serif;
+  font-family: var(--secondaryFont), sans-serif;
 }
 
 /* about us */
@@ -488,6 +498,7 @@ body::-webkit-scrollbar-thumb,
 .topic_placeholder {
   font-family: var(--secondaryFont);
 }
+
 /* topic-filter */
 
 
@@ -525,8 +536,10 @@ body::-webkit-scrollbar-thumb,
   width: 5%;
   display: flex;
   align-items: center;
-  font-size: 1.7rem;
-  padding: 0 0 0 20px;
+  font-size: 2rem;
+  padding: 0 0 0 10px;
+  line-height: 50px;
+  font-family: var(--secondaryFont);
 }
 
 .filt_cont_btn {
@@ -538,11 +551,12 @@ body::-webkit-scrollbar-thumb,
 }
 
 .filt_cont_btn button {
+  height: auto;
   transition: background-color 0.5s ease, outline-offset 0.25s, box-shadow 0.5s ease-in-out;
   font-family: var(--secondaryFont);
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: bolder;
-  padding: 10px 16px;
+  padding: 6px 16px;
   border-radius: 10px;
   outline: 3px solid var(--accentColor);
   border: none;
@@ -576,7 +590,7 @@ body::-webkit-scrollbar-thumb,
   transition: background-color 0.5s ease;
 }
 
-.filt_elem_result button:hover {
+.backButton:hover {
   color: var(--white);
   background-color: var(--goldColor);
   transition: 0.3s ease-in-out;
@@ -631,6 +645,104 @@ body::-webkit-scrollbar-thumb,
   box-shadow: none;
 }
 
+
+/* ~ quote CARD  */
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.quote_card {
+  position: relative;
+  isolation: isolate;
+  width: 80%;
+  background-color: #595959;
+  border-radius: 8px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+.q_card_top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  transition: transform 250ms;
+  background-color: var(--lightGray);
+}
+
+.quote_card:hover .q_card_top {
+  background-color: var(--lightGray);
+  outline: var(--goldColor) solid 4px;
+  transition: 0.4s;
+  transform: translateY(-70px) scale(0.85);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.q_card_top h2 {
+  padding: 10px 24px;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+}
+
+.q_card_body {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 16px 70px;
+  color: #f4c644;
+}
+
+.q_card_bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: flex-end;
+}
+
+.btn_filled {
+  color: var(--white);
+  background-color: var(--accentColor);
+  margin: 0;
+  border-radius: 6px;
+  font-size: 1.3rem;
+}
+
+.btn_filled:hover {
+  color: var(--white);
+  transition: 0.4s;
+  background-color: var(--goldColor);
+  outline-color: var(--lightGoldColor);
+  box-shadow: none;
+}
+
+.q_card_buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.q_card_buttons button {
+  font-family: var(--secondaryFont);
+  font-size: 1.3rem;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.card__category {
+  color: #fff;
+}
 
 /* filter */
 
