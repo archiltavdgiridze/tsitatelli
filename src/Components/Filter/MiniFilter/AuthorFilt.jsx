@@ -14,20 +14,14 @@ const AuthorFilt = () => {
     fetch(url)
       .then((response) => response.json())
       .then((db) => {
-        // console.log(db.data);
-
         const authorNames = db.data.map((author) => author.attributes.author);
-        // console.log(authorNames);
 
-        // ~ sort author names in georgian alphabet
         const georgianCollator = new Intl.Collator("ka-GE", {
           sensitivity: "base",
           ignorePunctuation: true,
         });
 
         authorNames.sort((a, b) => georgianCollator.compare(a, b));
-
-        // ~ push unique authors to authorsList array
 
         const uniqueAuthorNames = Array.from(new Set(authorNames));
         setAuthors(uniqueAuthorNames);
@@ -44,7 +38,7 @@ const AuthorFilt = () => {
         const filteredQuotes = db.data.filter(
           (author) => author.attributes.author === authorName
         );
-        // console.log(filteredQuotes);
+        console.log(filteredQuotes);
         setFilteredQuotes(filteredQuotes);
         setSelectedAuthor(authorName);
         navigate("/author-results/:author", {
@@ -56,13 +50,12 @@ const AuthorFilt = () => {
       });
   }
 
-  // ~ group authors by first letter
   const sortedFirstLetters = [
     ...new Set(authors.map((author) => author.charAt(0))),
   ].sort();
 
   return (
-    <div className="author_filter ">
+    <div className="author_filter">
       <div className="filter_container">
         {sortedFirstLetters.map((letter) => {
           const authorsWithLetter = authors.filter(

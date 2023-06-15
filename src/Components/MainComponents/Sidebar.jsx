@@ -29,18 +29,6 @@ const Sidebar = () => {
                 <p className="sidebar-texts">მთავარი</p>
               </Link>
             </li>
-            {/* <li>
-              <Link
-                to="/filter_by_authors"
-                className="sidebar-links"
-                alt="filter-by-authors-button"
-              >
-                <span>
-                  <FontAwesomeIcon icon={faPerson} />
-                </span>
-                <p className="sidebar-texts">ავტორები</p>
-              </Link>
-            </li> */}
             <li>
               <Link
                 to="/filter"

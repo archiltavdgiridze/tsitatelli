@@ -5,9 +5,12 @@ import MainPage from "./Components/MainComponents/MainPage";
 import AboutUs from "./Components/AboutUs/AboutUs";
 //
 import Filter from "./Components/Filter/Filter";
-import AuthorFilt from "./Components/Filter/MiniFilter/AuthorFilt";
-// 
+
+// filter results
 import AuthorResult from "./Components/Filter/MiniFilter/FilterResult/AuthorResult";
+import TopicResult from "./Components/Filter/MiniFilter/FilterResult/TopicResult";
+import SourceResult from "./Components/Filter/MiniFilter/FilterResult/SourceResult";
+
 // 
 
 
@@ -19,11 +22,9 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/filter" element={<Filter />} />
           <Route path="/author-results/:author" element={<AuthorResult />} />
-          {/* TODO add route to topics and sources like author */}
-          {/* <Route path="/topic-results/:topic" element={<Filtered />} /> */}
-          {/* <Route path="/source-results/:source" element={<Filtered />} /> */}
+          <Route path="/topic-results/:topic" element={<TopicResult />} />
+          <Route path="/source-results/:source" element={<SourceResult />} />
         <Route path="/about_us" element={<AboutUs />} />
-        {/* <Route path="/filter_by_authors" element={<FilterByAuthors />} /> */}
       </Routes>
     </div>
   );
