@@ -6,8 +6,6 @@ const AuthorFilt = () => {
     "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
 
   const [authors, setAuthors] = useState([]);
-  const [selectedAuthor, setSelectedAuthor] = useState("");
-  const [filteredQuotes, setFilteredQuotes] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,24 +29,13 @@ const AuthorFilt = () => {
       });
   }, []);
 
-  function handleAuthorClick(authorName) {
-    fetch(url)
-      .then((response) => response.json())
-      .then((db) => {
-        const filteredQuotes = db.data.filter(
-          (author) => author.attributes.author === authorName
-        );
-        console.log(filteredQuotes);
-        setFilteredQuotes(filteredQuotes);
-        setSelectedAuthor(authorName);
-        navigate("/author-results/:author", {
-          state: { filteredQuotes },
-        });
-      })
-      .catch((error) => {
-        console.error("Error fetching filtered quotes:", error);
-      });
-  }
+  const handleAuthorClick = (authorName) => {
+    navigate(
+      `/author-results/${encodeURIComponent(
+        authorName.replace(/\s+|-|–/g, "-")
+      )}`
+    );
+  };
 
   const sortedFirstLetters = [
     ...new Set(authors.map((author) => author.charAt(0))),

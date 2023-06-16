@@ -10,9 +10,16 @@ const SourceResult = () => {
   const [sourceName, setSourceName] = useState("");
   const [filteredQuotes, setFilteredQuotes] = useState([]);
 
+  const url =
+    "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
+
   useEffect(() => {
     if (!state?.filteredQuotes) {
-      navigate("/source-results/:source");
+      const sourceFromURL = decodeURIComponent(
+        window.location.pathname.split("/")[2]
+      );
+      const decodedSourceName = sourceFromURL.replace(/-/g, " ");
+      fetchQuotesBySource(decodedSourceName);
     } else {
       // this code is executed when a user clicks on an source button
       const quotes = state.filteredQuotes;
@@ -20,6 +27,27 @@ const SourceResult = () => {
       setFilteredQuotes(quotes);
     }
   }, [state]);
+
+  const fetchQuotesBySource = (sourceName) => {
+    const decodedSourceName = sourceName.replace(/[-–]/g, " ");
+
+    const apiUrl = `${url}?filter[source]=${encodeURIComponent(
+      decodedSourceName
+    )}`;
+
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        const filteredQuotes = data.data;
+        const formattedSourceName = decodedSourceName.replace(/–/g, " ");
+        setSourceName(formattedSourceName);
+        setFilteredQuotes(filteredQuotes);
+      })
+
+      .catch((error) => {
+        console.error("Error fetching filtered quotes:", error);
+      });
+  };
 
   const handleGoBack = () => {
     navigate("/filter");
@@ -32,7 +60,7 @@ const SourceResult = () => {
       </button>
       {sourceName && <h1 className="filtered_sourceName">{sourceName}</h1>}
 
-     <div className="card">
+      <div className="card">
         {filteredQuotes.map((data) => (
           <figure key={data.id} className="quote_card">
             <div className="q_card_top">

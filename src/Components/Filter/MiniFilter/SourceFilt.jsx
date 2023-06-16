@@ -6,27 +6,14 @@ const SourceFilt = () => {
     "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
 
   const [sources, setSources] = useState([]);
-  const [selectedSource, setSelectedSource] = useState("");
-  const [filteredQuotes, setFilteredQuotes] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
       .then((db) => {
-        // console.log(db.data);
-
-        async function logJSONData() {
-          const response = await fetch(url);
-          const jsonData = await response.json();
-          // console.log(jsonData.data);
-        }
-        logJSONData();
-
         const sourceNames = db.data.map((source) => source.attributes.source);
-        // console.log(sourceNames);
 
-        // ~ sort source names in Georgian alphabet
         const georgianCollator = new Intl.Collator("ka-GE", {
           sensitivity: "base",
           ignorePunctuation: true,
@@ -34,36 +21,22 @@ const SourceFilt = () => {
 
         sourceNames.sort((a, b) => georgianCollator.compare(a, b));
 
-        // ~ push unique sources to sourcesList array
-
         const uniqueSourceNames = Array.from(new Set(sourceNames));
         setSources(uniqueSourceNames);
       })
       .catch((error) => {
         console.error("Error fetching source data:", error);
       });
-  }, []); // Add an empty dependency array to execute the effect only once
+  }, []);
 
-  function handleSourceClick(sourceName) {
-    fetch(url)
-      .then((response) => response.json())
-      .then((db) => {
-        const filteredQuotes = db.data.filter(
-          (source) => source.attributes.source === sourceName
-        );
-        console.log(filteredQuotes);
-        setFilteredQuotes(filteredQuotes);
-        setSelectedSource(sourceName);
-        navigate("/source-results/:source", {
-          state: { filteredQuotes },
-        });
-      })
-      .catch((error) => {
-        console.error("Error fetching source data:", error);
-      });
-  }
+  const handleSourceClick = (sourceName) => {
+    navigate(
+      `/source-results/${encodeURIComponent(
+        sourceName.replace(/\s+|-|–/g, "-")
+      )}`
+    );
+  };
 
-  // ~ group authors by first letter
   const sortedFirstLetters = [
     ...new Set(sources.map((source) => source.charAt(0))),
   ].sort();
