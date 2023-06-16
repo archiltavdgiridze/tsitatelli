@@ -72,9 +72,8 @@ const MainPage = () => {
           <div className="MP_textNcopy">
             <h3 className="generatedQuote">{quote}</h3>
             <CopyButton
-              text={`"${quote}" - ${author}`}
+              text={`„${quote}“ - ${author}`}
               className="copy-btn"
-              style={{}}
             />
           </div>
         </div>

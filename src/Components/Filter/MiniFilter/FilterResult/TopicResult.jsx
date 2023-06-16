@@ -38,7 +38,7 @@ const TopicResult = () => {
           <div key={data.id} className="filtered_quote">
             <h2>{data.attributes?.quote}</h2>
             <CopyButton
-              text={`"${data.attributes?.quote}" - ${topicName}`}
+              text={`„${data.attributes?.quote}“ - ${topicName}`}
               className="copy-btn"
             />
           </div>

@@ -73,7 +73,7 @@ const AuthorResult = () => {
                 </div>
                 <div className="card_copy">
                   <CopyButton
-                    text={`"${data.attributes.quote}" - ${authorName}`}
+                    text={`„${data.attributes.quote}“ - ${authorName}`}
                     className="copy-btn btn_filled"
                   />
                 </div>
