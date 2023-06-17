@@ -585,7 +585,7 @@ body::-webkit-scrollbar-thumb,
   height: auto;
   transition: background-color 0.5s ease, outline-offset 0.25s, box-shadow 0.5s ease-in-out;
   font-family: var(--secondaryFont);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   padding: 6px 16px;
   border-radius: 10px;
@@ -641,9 +641,7 @@ body::-webkit-scrollbar-thumb,
 }
 
 .filtered_authorName {
-  line-height: 3.5rem;
   letter-spacing: 1px;
-  padding: 2rem 1.5rem;
 }
 
 .filtered_quote {
@@ -687,7 +685,7 @@ body::-webkit-scrollbar-thumb,
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 .quote_card {
@@ -765,6 +763,7 @@ body::-webkit-scrollbar-thumb,
   display: flex;
   justify-content: flex-end;
   gap: 10px;
+  position: relative;
 }
 
 .q_card_buttons button {
@@ -774,8 +773,31 @@ body::-webkit-scrollbar-thumb,
   border-radius: 6px;
 }
 
-.card__category {
-  color: #fff;
+.linker_source {
+  position: relative;
+  z-index: 1;
+}
+
+.info_div {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  background-color: var(--lightGray);
+  padding: 8px 10px;
+  color: var(--black);
+  font-family: var(--secondaryFont);
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  line-height: 1.4;
+  transition: 0.4s;
+  width: max-content;
+}
+
+.linker_source:hover+.info_div {
+  display: block;
 }
 
 /* filter */

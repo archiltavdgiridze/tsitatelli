@@ -9,6 +9,7 @@ const SourceResult = () => {
   const { state } = useLocation();
   const [sourceName, setSourceName] = useState("");
   const [filteredQuotes, setFilteredQuotes] = useState([]);
+  const [hoveredAuthor, setHoveredAuthor] = useState(null);
 
   const url =
     "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
@@ -53,6 +54,19 @@ const SourceResult = () => {
     navigate("/filter");
   };
 
+  const handleAuthorClick = (authorName) => {
+    const decodedAuthorName = authorName.replace(/[-–\s]/g, "-");
+    navigate(`/author-results/${encodeURIComponent(decodedAuthorName)}`);
+  };
+
+  const handleAuthorHover = (authorName) => {
+    setHoveredAuthor(authorName);
+  };
+
+  const handleAuthorHoverLeave = () => {
+    setHoveredAuthor(null);
+  };
+
   return (
     <div className="result filt_elem_result">
       <button className="backButton" onClick={handleGoBack}>
@@ -70,8 +84,28 @@ const SourceResult = () => {
             <figcaption className="q_card_body">
               <div className="q_card_bottom">
                 <div className="q_card_buttons">
-                  <button className="linker_source">წყარო</button>
-                  <button className="linker_topic">თემატიკა</button>
+                  <div
+                    className="info_div"
+                    style={{
+                      display:
+                        hoveredAuthor === data.attributes.author
+                          ? "block"
+                          : "none",
+                    }}
+                  >
+                    <p>ავტორი: {data.attributes.author}</p>
+                  </div>
+                  <button
+                    className="linker_source"
+                    onClick={() => handleAuthorClick(data.attributes.author)}
+                    onMouseEnter={() =>
+                      handleAuthorHover(data.attributes.author)
+                    }
+                    onMouseLeave={handleAuthorHoverLeave}
+                  >
+                    ავტორის სხვა ციტატები
+                  </button>
+                  {/* <button className="linker_topic">თემატიკა</button> */}
                 </div>
                 <div className="card_copy">
                   <CopyButton

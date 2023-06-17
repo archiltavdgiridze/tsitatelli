@@ -10,6 +10,7 @@ const AuthorResult = () => {
   const { state } = useLocation();
   const [authorName, setAuthorName] = useState("");
   const [filteredQuotes, setFilteredQuotes] = useState([]);
+  const [hoveredSource, setHoveredSource] = useState(null);
 
   const url =
     "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
@@ -53,7 +54,16 @@ const AuthorResult = () => {
   };
 
   const handleSourceClick = (sourceName) => {
-    navigate(`/source-results/${encodeURIComponent(sourceName)}`); // Assuming you have a route defined for the SourceResult component
+    const decodedSourceName = sourceName.replace(/[-–\s]/g, "-");
+    navigate(`/source-results/${encodeURIComponent(decodedSourceName)}`);
+  };
+
+  const handleSourceHover = (sourceName) => {
+    setHoveredSource(sourceName);
+  };
+
+  const handleSourceHoverLeave = () => {
+    setHoveredSource(null);
   };
 
   return (
@@ -73,10 +83,24 @@ const AuthorResult = () => {
             <figcaption className="q_card_body">
               <div className="q_card_bottom">
                 <div className="q_card_buttons">
-                  {/* Pass the source name to the handleSourceClick function */}
+                  <div
+                    className="info_div"
+                    style={{
+                      display:
+                        hoveredSource === data.attributes.source
+                          ? "block"
+                          : "none",
+                    }}
+                  >
+                    <p>წყარო: {data.attributes.source}</p>
+                  </div>
                   <button
                     className="linker_source"
                     onClick={() => handleSourceClick(data.attributes.source)}
+                    onMouseEnter={() =>
+                      handleSourceHover(data.attributes.source)
+                    }
+                    onMouseLeave={handleSourceHoverLeave}
                   >
                     სხვა ციტატები წყაროდან
                   </button>
