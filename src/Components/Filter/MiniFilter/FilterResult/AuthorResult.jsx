@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import CopyButton from "../../../ReComp/CopyButton";
+import { Link } from "react-router-dom"; // Add the Link import
 
 const AuthorResult = () => {
   const navigate = useNavigate();
@@ -51,6 +52,10 @@ const AuthorResult = () => {
     navigate("/filter");
   };
 
+  const handleSourceClick = (sourceName) => {
+    navigate(`/source-results/${encodeURIComponent(sourceName)}`); // Assuming you have a route defined for the SourceResult component
+  };
+
   return (
     <div className="result filt_elem_result">
       <button className="backButton" onClick={handleGoBack}>
@@ -68,8 +73,14 @@ const AuthorResult = () => {
             <figcaption className="q_card_body">
               <div className="q_card_bottom">
                 <div className="q_card_buttons">
-                  <button className="linker_source">წყარო</button>
-                  <button className="linker_topic">თემატიკა</button>
+                  {/* Pass the source name to the handleSourceClick function */}
+                  <button
+                    className="linker_source"
+                    onClick={() => handleSourceClick(data.attributes.source)}
+                  >
+                    სხვა ციტატები წყაროდან
+                  </button>
+                  {/* <button className="linker_topic">სხვა ციტატები თემატიკიდან</button> */}
                 </div>
                 <div className="card_copy">
                   <CopyButton

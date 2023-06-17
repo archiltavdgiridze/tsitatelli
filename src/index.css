@@ -13,6 +13,31 @@
   src: url(./assets/fonts/bpg-paragraph-chveulebrivi-webfont.ttf);
 }
 
+@font-face {
+  font-family: 'NSG_thin';
+  src: url(./assets/fonts/Noto-Serif-Georgian/NotoSerifGeorgian-Thin.ttf);
+}
+
+@font-face {
+  font-family: 'NSG_light';
+  src: url(./assets/fonts/Noto-Serif-Georgian/NotoSerifGeorgian-Light.ttf);
+}
+
+@font-face {
+  font-family: 'NSG_regular';
+  src: url(./assets/fonts/Noto-Serif-Georgian/NotoSerifGeorgian-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'NSG_bold';
+  src: url(./assets/fonts/Noto-Serif-Georgian/NotoSerifGeorgian-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'NSG_black';
+  src: url(./assets/fonts/Noto-Serif-Georgian/NotoSerifGeorgian-Black.ttf);
+}
+
 
 :root {
   --white: #fff;
@@ -25,7 +50,7 @@
   --goldColor: #ebb400;
   --lightGoldColor: #f7d600;
   --mainFont: "Batonishvili", sans-serif;
-  --secondaryFont: "Paragraph", sans-serif;
+  --secondaryFont: "NSG_light", sans-serif;
   --test: #000;
 }
 
@@ -157,7 +182,7 @@ ul {
   display: flex;
   letter-spacing: 1px;
   font-weight: 900;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .material-symbols-outlined {
@@ -213,7 +238,7 @@ ul {
 
 .generatorBtn button {
   padding: 20px 30px;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-family: var(--sidebarFontBold);
   color: var(--white);
   background-color: var(--accentColor);
@@ -331,7 +356,7 @@ ul {
   gap: 10px;
   padding: 8px 10px;
   margin: 3rem 1rem 0 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   font-family: var(--secondaryFont);
   color: var(--accentColor);
@@ -367,7 +392,7 @@ ul {
   background-color: var(--accentColor);
   color: var(--white);
   outline: 3px solid var(--accentColor);
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   font-family: var(--secondaryFont);
   border-radius: 5px;
@@ -507,7 +532,7 @@ body::-webkit-scrollbar-thumb,
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
   margin: 0 0 50px;
   border-radius: 20px;
   padding: 10px 20px;
@@ -519,7 +544,7 @@ body::-webkit-scrollbar-thumb,
   flex-direction: row;
   justify-content: center;
   text-align: left;
-  padding: 1rem;
+  padding: 10px 1rem;
   background-color: var(--lightGray);
   border-radius: 1rem;
   transition: box-shadow 0.5s ease, background-color 0.5s ease, outline-offset 0.25s;
@@ -541,6 +566,12 @@ body::-webkit-scrollbar-thumb,
   line-height: 50px;
   font-family: var(--secondaryFont);
 }
+
+.filt_cont_div:hover.filt_cont_div h2 {
+  color: var(--goldColor);
+  transition: 0.3s ease-in-out;
+}
+
 
 .filt_cont_btn {
   width: 95%;
@@ -645,6 +676,9 @@ body::-webkit-scrollbar-thumb,
   box-shadow: none;
 }
 
+.filtered_sourceName {
+  letter-spacing: 1px;
+}
 
 /* ~ quote CARD  */
 .card {
@@ -735,7 +769,7 @@ body::-webkit-scrollbar-thumb,
 
 .q_card_buttons button {
   font-family: var(--secondaryFont);
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   padding: 8px 10px;
   border-radius: 6px;
 }
