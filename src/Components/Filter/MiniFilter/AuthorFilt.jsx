@@ -8,6 +8,17 @@ const AuthorFilt = () => {
   const [authors, setAuthors] = useState([]);
   const navigate = useNavigate();
 
+  async function logJSONData() {
+    let url =
+      "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
+    const response = await fetch(url);
+    const jsonData = await response.json();
+    // console log all of the topics array together
+    console.log(jsonData.data.map((topic) => topic.attributes.topic));
+  }
+
+  logJSONData();
+
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())

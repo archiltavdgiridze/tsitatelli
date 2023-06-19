@@ -221,7 +221,7 @@ ul {
   flex-direction: column;
   align-items: flex-end;
   gap: 20px;
-  margin: 20px 0 50px;
+  margin: 20px 0 0;
 }
 
 /* result */
@@ -533,7 +533,7 @@ body::-webkit-scrollbar-thumb,
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin: 0 0 50px;
+  margin: 0 0 10vh;
   border-radius: 20px;
   padding: 10px 20px;
 }
@@ -685,13 +685,14 @@ body::-webkit-scrollbar-thumb,
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 26px;
+  margin-bottom: 10vh;
 }
 
 .quote_card {
   position: relative;
   isolation: isolate;
-  width: 80%;
+  width: 90%;
   background-color: #595959;
   border-radius: 8px;
   margin-block-start: 0;
@@ -722,6 +723,7 @@ body::-webkit-scrollbar-thumb,
   padding: 10px 24px;
   font-size: 1.7rem;
   letter-spacing: 1px;
+  line-height: 4.3rem;
 }
 
 .q_card_body {
@@ -792,8 +794,13 @@ body::-webkit-scrollbar-thumb,
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   font-size: 14px;
   line-height: 1.4;
-  transition: 0.4s;
   width: max-content;
+  outline: var(--accentColor) solid 3px;
+  z-index: 10;
+}
+
+.info_div.active {
+  display: block;
 }
 
 .linker_source:hover+.info_div {

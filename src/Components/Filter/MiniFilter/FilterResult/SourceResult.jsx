@@ -9,7 +9,8 @@ const SourceResult = () => {
   const { state } = useLocation();
   const [sourceName, setSourceName] = useState("");
   const [filteredQuotes, setFilteredQuotes] = useState([]);
-  const [hoveredAuthor, setHoveredAuthor] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  // const [hoveredAuthor, setHoveredAuthor] = useState(null);
 
   const url =
     "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
@@ -59,12 +60,12 @@ const SourceResult = () => {
     navigate(`/author-results/${encodeURIComponent(decodedAuthorName)}`);
   };
 
-  const handleAuthorHover = (authorName) => {
-    setHoveredAuthor(authorName);
+  const handleAuthorHover = (index) => {
+    setHoveredIndex(index);
   };
 
   const handleAuthorHoverLeave = () => {
-    setHoveredAuthor(null);
+    setHoveredIndex(null);
   };
 
   return (
@@ -75,7 +76,7 @@ const SourceResult = () => {
       {sourceName && <h1 className="filtered_sourceName">{sourceName}</h1>}
 
       <div className="card">
-        {filteredQuotes.map((data) => (
+        {filteredQuotes.map((data, index) => (
           <figure key={data.id} className="quote_card">
             <div className="q_card_top">
               <h2>{data.attributes.quote}</h2>
@@ -85,25 +86,21 @@ const SourceResult = () => {
               <div className="q_card_bottom">
                 <div className="q_card_buttons">
                   <div
-                    className="info_div"
-                    style={{
-                      display:
-                        hoveredAuthor === data.attributes.author
-                          ? "block"
-                          : "none",
-                    }}
+                    className={`info_div ${
+                      hoveredIndex === index ? "active" : ""
+                    }`}
                   >
-                    <p>ავტორი: {data.attributes.author}</p>
+                    ავტორის სხვა ციტატები
                   </div>
                   <button
                     className="linker_source"
                     onClick={() => handleAuthorClick(data.attributes.author)}
                     onMouseEnter={() =>
-                      handleAuthorHover(data.attributes.author)
+                      handleAuthorHover(index)
                     }
                     onMouseLeave={handleAuthorHoverLeave}
                   >
-                    ავტორის სხვა ციტატები
+                    <p>ავტორი: {data.attributes.author}</p>
                   </button>
                   {/* <button className="linker_topic">თემატიკა</button> */}
                 </div>
