@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
-import { faPerson } from "@fortawesome/free-solid-svg-icons";
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFilter,
+  faHouse,
+  faCircleInfo,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 // import Darkmode from "darkmode-js";
 
@@ -36,7 +38,7 @@ const Sidebar = () => {
                 alt="sources-button"
               >
                 <span>
-                  <FontAwesomeIcon icon={faPerson} />
+                  <FontAwesomeIcon icon={faFilter} />
                 </span>
                 <p className="sidebar-texts">ფილტრი</p>
               </Link>
