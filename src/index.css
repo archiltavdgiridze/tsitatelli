@@ -610,6 +610,10 @@ body::-webkit-scrollbar-thumb,
   gap: 20px;
 }
 
+.result_title {
+  font-family: var(--secondaryFont);
+}
+
 .backButton {
   width: 30%;
   height: 40px;
@@ -686,7 +690,7 @@ body::-webkit-scrollbar-thumb,
   justify-content: center;
   align-items: center;
   gap: 26px;
-  margin-bottom: 10vh;
+  margin: 60px 0 10vh;
 }
 
 .quote_card {
@@ -709,6 +713,10 @@ body::-webkit-scrollbar-thumb,
   border-radius: inherit;
   transition: transform 250ms;
   background-color: var(--lightGray);
+  text-align: center;
+}
+
+.q_card_top h2 {
 }
 
 .quote_card:hover .q_card_top {
@@ -773,6 +781,27 @@ body::-webkit-scrollbar-thumb,
   font-size: 0.9rem;
   padding: 8px 10px;
   border-radius: 6px;
+}
+
+.linkers {
+  color: var(--white);
+  background-color: var(--accentColor);
+  border: none;
+}
+
+.linkers:hover {
+  /* color: var(--black); */
+  background-color: var(--goldColor);
+  outline: 3px solid var(--goldColor);
+  outline-offset: 3px;
+  transition: 0.4s;
+}
+
+.linkers p {
+  font-size: 1rem;
+  /* padding: 8px 10px; */
+
+  font-weight: bold;
 }
 
 .linker_source {

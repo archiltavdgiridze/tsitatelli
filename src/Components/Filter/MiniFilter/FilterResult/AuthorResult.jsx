@@ -70,7 +70,7 @@ const AuthorResult = () => {
       <button className="backButton" onClick={handleGoBack}>
         <FontAwesomeIcon icon={faArrowLeft} />
       </button>
-      {authorName && <h1 className="filtered_authorName">{authorName}</h1>}
+      {authorName && <h1 className="filtered_authorName result_title">{authorName}</h1>}
 
       <div className="card">
         {filteredQuotes.map((data, index) => (
@@ -90,7 +90,7 @@ const AuthorResult = () => {
                     სხვა ციტატები წყაროდან
                   </div>
                   <button
-                    className="linker_source"
+                    className="linker_source linkers"
                     onClick={() => handleSourceClick(data.attributes.source)}
                     onMouseEnter={() => handleSourceHover(index)}
                     onMouseLeave={handleSourceHoverLeave}
