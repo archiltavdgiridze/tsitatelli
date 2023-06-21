@@ -47,8 +47,8 @@ const Filter = () => {
     // Render dropdown selector for mobile
     return (
       <div className="result">
-        <div className="result_wrapper">
-          <select value={activeFilter} onChange={handleFilterChange}>
+        <div className="result_wrapper mobile_result">
+          <select className="filter_select" value={activeFilter} onChange={handleFilterChange}>
             <option value="Authors">ავტორები</option>
             <option value="Topics">თემატიკა</option>
             <option value="Sources">წყაროები</option>
