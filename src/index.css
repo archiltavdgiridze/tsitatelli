@@ -268,7 +268,7 @@ ul {
   align-items: flex-start;
   padding: 1rem;
   background-color: var(--lightGray);
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .MP_textNcopy {
@@ -282,7 +282,9 @@ ul {
 }
 
 .fa-quote-left {
-  min-width: 5%;
+  -webkit-width: 5%;
+  -moz-width: 5%;
+  width: 5%;
   display: flex;
   align-items: flex-start;
   font-size: 3rem;
@@ -716,8 +718,7 @@ body::-webkit-scrollbar-thumb,
   text-align: center;
 }
 
-.q_card_top h2 {
-}
+.q_card_top h2 {}
 
 .quote_card:hover .q_card_top {
   background-color: var(--lightGray);
@@ -899,13 +900,14 @@ body::-webkit-scrollbar-thumb,
 
   .sidebar {
     width: 100%;
-    height: 15vh;
+    height: 10vh;
     min-height: auto;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     position: fixed;
     top: 0;
+    z-index: 3;
   }
 
   .sidebar_title {
@@ -918,6 +920,7 @@ body::-webkit-scrollbar-thumb,
 
   .sidebar_title h1 {
     font-size: 1.6rem;
+    padding-bottom: 1rem;
   }
 
   .sidebar_content {
@@ -974,42 +977,75 @@ body::-webkit-scrollbar-thumb,
     justify-content: flex-start;
     align-items: center;
     margin-left: 0;
-    margin-top: 15vh;
+    margin-top: 10vh;
     box-sizing: border-box;
     gap: 60px;
     background-color: var(--resultColor);
   }
 
+  .result_wrapper {
+    gap: 1rem;
+    margin: 1rem 0 80px;
+  }
+
+  .quote {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    padding: 0;
+  }
+  
+  .MP_textNcopy {
+    padding: 1rem;
+  }
+
   .fa-quote-left {
+    position: absolute;
+    left: 1rem;
+    bottom: 0.5rem;
     font-size: 2.5rem;
+    -webkit-width: 2rem;
+    -moz-width: 2rem;
+    width: 2rem;
   }
 
   .quote h3 {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    line-height: 4.4rem;
+    width: 100%;
+    min-width: 100%;
+    font-size: 1.4rem;
+    margin: 0 0 1rem;
+    line-height: 4rem;
+    text-align: left;
   }
 
   .author {
-    width: 70%;
+    width: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 0.5rem 1rem 0.5rem 0.5rem;
+    align-items: flex-end;
   }
 
   .fa-pen-nib {
+    position: absolute;
     width: 20%;
     font-size: 32px;
-    margin: 1rem 0.5rem;
+    margin: 1rem 0;
     left: 0;
   }
 
   .author h3 {
-    width: 80%;
-    font-size: 1.5rem;
+    width: 100%;
+    font-size: 1.3rem;
   }
 
   /* ~ copy btn */
   .copy-btn {
-    width: 25%;
+    width: 5rem;
     height: 6vh;
     display: flex;
     justify-content: center;
