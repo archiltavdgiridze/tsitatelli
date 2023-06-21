@@ -70,11 +70,10 @@ const MainPage = () => {
         <div className="quote">
           <FontAwesomeIcon icon={faQuoteLeft} />
           <div className="MP_textNcopy">
-            <h3 className="generatedQuote">{quote}</h3>
-            <CopyButton
-              text={`„${quote}“ - ${author}`}
-              className="copy-btn"
-            />
+            <h3 className="generatedQuote">
+              {quote}
+            </h3>
+            <CopyButton text={`„${quote}“ - ${author}`} className="copy-btn" />
           </div>
         </div>
         <div className="author">

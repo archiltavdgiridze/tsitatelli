@@ -282,12 +282,12 @@ ul {
 }
 
 .fa-quote-left {
-  -webkit-width: 5%;
-  -moz-width: 5%;
-  width: 5%;
+  -webkit-width: 2rem;
+  -moz-width: 2rem;
+  width: 2rem;
   display: flex;
   align-items: flex-start;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--accentColor);
 }
 
@@ -317,7 +317,7 @@ ul {
   align-items: center;
   width: 37%;
   height: auto;
-  min-height: 10%;
+  min-height: 65px;
   padding: 1rem 2rem 1rem 1rem;
   border-radius: 20px;
   background-color: #f0f0f070;
@@ -996,9 +996,10 @@ body::-webkit-scrollbar-thumb,
     position: relative;
     padding: 0;
   }
-  
+
   .MP_textNcopy {
     padding: 1rem;
+    width: -moz-available;
   }
 
   .fa-quote-left {
@@ -1017,7 +1018,7 @@ body::-webkit-scrollbar-thumb,
     font-size: 1.4rem;
     margin: 0 0 1rem;
     line-height: 4rem;
-    text-align: left;
+    text-align: right;
   }
 
   .author {
