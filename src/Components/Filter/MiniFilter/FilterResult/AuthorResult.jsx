@@ -70,7 +70,9 @@ const AuthorResult = () => {
       <button className="backButton" onClick={handleGoBack}>
         <FontAwesomeIcon icon={faArrowLeft} />
       </button>
-      {authorName && <h1 className="filtered_authorName result_title">{authorName}</h1>}
+      {authorName && (
+        <h1 className="filtered_authorName result_title">{authorName}</h1>
+      )}
 
       <div className="card">
         {filteredQuotes.map((data, index) => (
@@ -100,7 +102,8 @@ const AuthorResult = () => {
                 </div>
                 <div className="card_copy">
                   <CopyButton
-                    text={`„${data.attributes.quote}“ - ${authorName}`}
+                    text={`„${data.attributes.quote}“ 
+- ${authorName}`}
                     className="copy-btn btn_filled"
                   />
                 </div>
