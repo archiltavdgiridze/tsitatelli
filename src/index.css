@@ -556,7 +556,7 @@ body::-webkit-scrollbar-thumb,
   gap: 12px;
   margin: 0 0 15vh;
   border-radius: 20px;
-  padding: 12px;
+  padding: 0 12px 12px;
 }
 
 .filt_cont_div {
@@ -704,6 +704,36 @@ body::-webkit-scrollbar-thumb,
 .filtered_sourceName {
   letter-spacing: 1px;
 }
+
+/* ~ search bar */
+.search_div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  margin: 3px 0 0;
+
+}
+
+.search_bar {
+  height: 3rem;
+  /* gap: 1rem; */
+  padding: 0 3%;
+  border: none;
+  border-radius: 1rem;
+  font-family: var(--secondaryFont);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.search_bar::placeholder {
+  font-family: var(--secondaryFont);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+/* search bar */
 
 /* ~ quote CARD  */
 .card {

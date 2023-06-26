@@ -106,7 +106,7 @@ const SourceResult = () => {
                 </div>
                 <div className="card_copy">
                   <CopyButton
-                    text={`„${data.attributes.quote}“ - ${sourceName}`}
+                    text={`„${data.attributes.quote}“ - ${data.attributes.author}`}
                     className="copy-btn btn_filled"
                   />
                 </div>

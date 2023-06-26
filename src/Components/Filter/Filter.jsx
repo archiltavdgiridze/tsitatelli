@@ -26,6 +26,42 @@ const Filter = () => {
     }
   };
 
+  const url =
+    "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
+
+  async function logJSONData() {
+    const response = await fetch(url);
+    const jsonData = await response.json();
+
+    // Collect all unique topics from the endpoint URL
+    const alltopics = [];
+
+    jsonData.data.forEach((topic) => {
+      const currentTopic = topic.attributes.topic;
+
+      if (typeof currentTopic === "string") {
+        // Handle casual string type
+        alltopics.push(currentTopic);
+      } else if (Array.isArray(currentTopic)) {
+        // Handle string array type
+        currentTopic.forEach((element) => alltopics.push(element));
+      }
+    });
+
+    const georgianCollator = new Intl.Collator("ka-GE", {
+      sensitivity: "base",
+      ignorePunctuation: true,
+    });
+
+    alltopics.sort((a, b) => georgianCollator.compare(a, b));
+
+    const uniqueTopics = Array.from(new Set(alltopics));
+
+    console.log(uniqueTopics);
+  }
+
+  logJSONData();
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 500); // Adjust the breakpoint as needed
@@ -48,7 +84,11 @@ const Filter = () => {
     return (
       <div className="result">
         <div className="result_wrapper mobile_result">
-          <select className="filter_select" value={activeFilter} onChange={handleFilterChange}>
+          <select
+            className="filter_select"
+            value={activeFilter}
+            onChange={handleFilterChange}
+          >
             <option value="Authors">ავტორები</option>
             <option value="Topics">თემატიკა</option>
             <option value="Sources">წყაროები</option>
@@ -90,60 +130,3 @@ const Filter = () => {
 };
 
 export default Filter;
-
-// import React, { useState, useEffect } from "react";
-// import AuthorFilt from "./MiniFilter/AuthorFilt";
-// import TopicFilt from "./MiniFilter/TopicFilt";
-// import SourceFilt from "./MiniFilter/SourceFilt";
-
-// const Filter = () => {
-//   const [activeFilter, setActiveFilter] = useState(
-//     sessionStorage.getItem("activeFilter") || "Authors"
-//   ); // Get the active filter from sessionStorage, default to "Authors" if not set
-
-//   const handleFilterClick = (filterName) => {
-//     setActiveFilter(filterName);
-//     sessionStorage.setItem("activeFilter", filterName); // Store the active filter in sessionStorage
-//   };
-
-//   const renderMiniFilter = () => {
-//     switch (activeFilter) {
-//       case "Topics":
-//         return <TopicFilt />;
-//       case "Sources":
-//         return <SourceFilt />;
-//       default:
-//         return <AuthorFilt />;
-//     }
-//   };
-
-//   return (
-//     <div className="result">
-//       <div className="result_wrapper">
-//         <div className="filter_buttons">
-//           <button
-//             className={activeFilter === "Authors" ? "active" : ""}
-//             onClick={() => handleFilterClick("Authors")}
-//           >
-//             ავტორები
-//           </button>
-//           <button
-//             className={activeFilter === "Topics" ? "active" : ""}
-//             onClick={() => handleFilterClick("Topics")}
-//           >
-//             თემატიკა
-//           </button>
-//           <button
-//             className={activeFilter === "Sources" ? "active" : ""}
-//             onClick={() => handleFilterClick("Sources")}
-//           >
-//             წყაროები
-//           </button>
-//         </div>
-//         <div className="filter_result">{renderMiniFilter()}</div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Filter;
