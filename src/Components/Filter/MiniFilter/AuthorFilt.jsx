@@ -9,6 +9,7 @@ const AuthorFilt = () => {
   const [authors, setAuthors] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredAuthors, setFilteredAuthors] = useState([]);
+  const [showNotFoundMessage, setShowNotFoundMessage] = useState(false);
 
   const navigate = useNavigate();
 
@@ -50,6 +51,7 @@ const AuthorFilt = () => {
       author.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredAuthors(filtered);
+    setShowNotFoundMessage(filtered.length === 0 && query !== "");
   };
 
   const sortedFirstLetters = [
@@ -64,6 +66,11 @@ const AuthorFilt = () => {
           onChange={handleSearchChange}
           placeholder="ძიება ავტორის მიხედვით..."
         />
+        <div>
+          {showNotFoundMessage && (
+            <p className="not_found_msg">ავტორი ვერ მოიძებნა, სცადეთ სხვა სახელი.</p>
+          )}
+        </div>
 
         {sortedFirstLetters.map((letter) => {
           const authorsWithLetter = filteredAuthors.filter(

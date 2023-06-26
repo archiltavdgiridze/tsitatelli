@@ -29,42 +29,16 @@ const Filter = () => {
   const url =
     "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
 
-  async function logJSONData() {
-    const response = await fetch(url);
-    const jsonData = await response.json();
+  // async function logJSONData() {
+  //   const response = await fetch(url);
+  //   const jsonData = await response.json();
+  // }
 
-    // Collect all unique topics from the endpoint URL
-    const alltopics = [];
-
-    jsonData.data.forEach((topic) => {
-      const currentTopic = topic.attributes.topic;
-
-      if (typeof currentTopic === "string") {
-        // Handle casual string type
-        alltopics.push(currentTopic);
-      } else if (Array.isArray(currentTopic)) {
-        // Handle string array type
-        currentTopic.forEach((element) => alltopics.push(element));
-      }
-    });
-
-    const georgianCollator = new Intl.Collator("ka-GE", {
-      sensitivity: "base",
-      ignorePunctuation: true,
-    });
-
-    alltopics.sort((a, b) => georgianCollator.compare(a, b));
-
-    const uniqueTopics = Array.from(new Set(alltopics));
-
-    console.log(uniqueTopics);
-  }
-
-  logJSONData();
+  // logJSONData();
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 500); // Adjust the breakpoint as needed
+      setIsMobile(window.innerWidth <= 500); 
     };
 
     // Add event listener for window resize

@@ -9,6 +9,7 @@ const SourceFilt = () => {
   const [sources, setSources] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredSources, setFilteredSources] = useState([]);
+  const [showNotFoundMessage, setShowNotFoundMessage] = useState(false);
 
   const navigate = useNavigate();
 
@@ -50,6 +51,7 @@ const SourceFilt = () => {
       source.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredSources(filtered);
+    setShowNotFoundMessage(filtered.length === 0 && query !== "");
   };
 
   const sortedFirstLetters = [
@@ -64,7 +66,11 @@ const SourceFilt = () => {
           onChange={handleSearchChange}
           placeholder="ძიება წყაროს მიხედვით..."
         />
-
+        {showNotFoundMessage && (
+          <p className="not_found_msg">
+            წყარო ვერ მოიძებნა, სცადეთ სხვა სათაური.
+          </p>
+        )}
         {sortedFirstLetters.map((letter) => {
           const sourcesWithLetter = filteredSources.filter(
             (source) => source.charAt(0) === letter
