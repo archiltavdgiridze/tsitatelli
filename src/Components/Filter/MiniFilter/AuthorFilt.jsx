@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Search from "../../ReComp/Search";
+// import "./minifilter.css"
 
 const AuthorFilt = () => {
   const url =

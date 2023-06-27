@@ -6,6 +6,7 @@ import {
   faCircleInfo,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import "../MainComponents/MainCSS/sidebar.css";
 
 const Sidebar = () => {
   const [activeLink, setActiveLink] = useState(""); // State variable to store the active link

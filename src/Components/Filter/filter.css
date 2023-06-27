@@ -1,0 +1,90 @@
+.filter_buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.filter_select {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--accentColor);
+  outline: 3px solid var(--accentColor);
+}
+
+.filter_select:hover {
+  outline-offset: 3px;
+  outline: 3px solid var(--accentColor);
+}
+
+.filter_buttons button {
+  width: 200px;
+  padding: 20px 30px;
+  font-size: 1.7rem;
+  font-family: var(--secondaryFont);
+  font-weight: bold;
+  color: var(--black);
+  background-color: var(--darkGray);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: 3px solid var(--accentColor);
+  transition: outline-offset 0.25s;
+}
+
+.filter_buttons button.active {
+  background-color: var(--goldColor);
+  color: var(--black);
+  outline-offset: 3px;
+  outline: 3px solid var(--goldColor);
+}
+
+.filter_buttons button:hover {
+  transition: 0.2s ease-in-out;
+}
+
+.filter_buttons button:hover:not(.active) {
+  transition: 0.4s ease-out;
+  background-color: var(--accentColor);
+  color: var(--white);
+  outline-offset: 3px;
+  outline: 3px solid var(--accentColor);
+}
+
+.filter_result {
+  width: 100%;
+}
+
+.topic_placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-family: var(--secondaryFont);
+}
+
+@media screen and (max-width: 1024px) {
+  .filter_buttons {
+    width: 93%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 16px;
+  }
+
+  .filter_buttons button {
+    padding: 20px 0;
+    font-size: 1.5rem;
+  }
+
+}

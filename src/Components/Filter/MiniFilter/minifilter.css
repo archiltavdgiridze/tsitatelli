@@ -1,0 +1,98 @@
+.filter_container {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 0 15vh;
+  border-radius: 20px;
+  padding: 0 12px 12px;
+}
+
+.not_found_msg {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: var(--secondaryFont);
+  text-align: center;
+}
+
+.filt_cont_div {
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  text-align: left;
+  padding: 10px 1rem;
+  background-color: var(--lightGray);
+  border-radius: 1rem;
+  transition: box-shadow 0.5s ease, background-color 0.5s ease, outline-offset 0.25s;
+}
+
+.filt_cont_div:hover {
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  box-shadow: 8px 6px 0px -1px var(--accentColor);
+  -webkit-box-shadow: 8px 6px 8px 0px var(--accentColor);
+  -moz-box-shadow: 8px 6px 0px -1px var(--accentColor);
+}
+
+.filt_cont_div h2 {
+  width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  line-height: 50px;
+  font-family: var(--secondaryFont);
+}
+
+.filt_cont_div:hover.filt_cont_div h2 {
+  color: var(--goldColor);
+  transition: 0.3s ease-in-out;
+}
+
+.filt_cont_btn {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filt_cont_btn button {
+  min-height: 50px;
+  width: auto;
+  transition: background-color 0.5s ease, outline-offset 0.25s, box-shadow 0.5s ease-in-out;
+  font-family: var(--secondaryFont);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding: 6px 16px;
+  text-align: left;
+  border-radius: 10px;
+  outline: 3px solid var(--accentColor);
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.filt_cont_btn button:hover {
+  outline-offset: 3px;
+  outline-color: var(--goldColor);
+  background-color: var(--lightGoldColor);
+}
+
+.filter_placeholder {
+  font-family: var(--secondaryFont);
+}
+
+@media screen and (max-width: 1024px) {
+  .filt_cont_btn button {
+    font-size: 1.3rem;
+  }
+}

@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import AuthorFilt from "./MiniFilter/AuthorFilt";
 import TopicFilt from "./MiniFilter/TopicFilt";
 import SourceFilt from "./MiniFilter/SourceFilt";
+import "./filter.css";
+import "../Filter/MiniFilter/minifilter.css";
+import "./MiniFilter/FilterResult/result.css"
+
 
 const Filter = () => {
   const [activeFilter, setActiveFilter] = useState(
@@ -38,7 +42,7 @@ const Filter = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 500); 
+      setIsMobile(window.innerWidth <= 600); 
     };
 
     // Add event listener for window resize

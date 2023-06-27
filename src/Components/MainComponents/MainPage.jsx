@@ -6,6 +6,7 @@ import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 import { faPenNib } from "@fortawesome/free-solid-svg-icons";
 import CopyButton from "../ReComp/CopyButton";
 import axios from "axios";
+import "../MainComponents/MainCSS/mainpage.css";
 
 const MainPage = () => {
   const [quote, setQuote] = useState("");

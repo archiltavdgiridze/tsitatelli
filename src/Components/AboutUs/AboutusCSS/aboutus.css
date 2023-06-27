@@ -1,0 +1,10 @@
+.about_us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  letter-spacing: 1px;
+  padding: 60px;
+  font-family: var(--secondaryFont), sans-serif;
+}

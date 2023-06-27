@@ -1,5 +1,6 @@
 import React from "react";
 import MailTo from "./MailTo";
+import "./AboutusCSS/aboutus.css";
 
 const AboutUs = () => {
   const url = "https://linktr.ee/archiltavdgiridze";

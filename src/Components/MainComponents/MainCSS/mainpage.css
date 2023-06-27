@@ -1,0 +1,183 @@
+.generatorBtn {
+  border: 0px;
+  font-family: var(--secondaryFont), sans-serif;
+}
+
+.generatorBtn:active {
+  border: none;
+}
+
+.generatorBtn button {
+  padding: 20px 30px;
+  font-size: 1.8rem;
+  font-family: var(--sidebarFontBold);
+  color: var(--white);
+  background-color: var(--accentColor);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: 3px solid var(--accentColor);
+  transition: outline-offset .25s;
+}
+
+.generatorBtn button:hover {
+  transition: 0.4s;
+  background-color: var(--goldColor);
+  color: var(--black);
+  outline-offset: 3px;
+  outline: 3px solid var(--goldColor);
+}
+
+.quote {
+  width: -webkit-fill-available;
+  min-width: 50vw;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: var(--lightGray);
+  border-radius: 10px;
+}
+
+.MP_textNcopy {
+  width: -webkit-fill-available;
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.fa-quote-left {
+  -webkit-width: 2rem;
+  -moz-width: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: flex-start;
+  font-size: 2.5rem;
+  color: var(--accentColor);
+}
+
+.quote h3 {
+  width: 90%;
+  max-width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin: 1rem 1rem 1rem 0;
+  line-height: 4.2rem;
+  text-align: right;
+  font-size: 1.7rem;
+}
+
+.generatedQuote {
+  height: 70%;
+  letter-spacing: 1px;
+}
+
+.author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 37%;
+  height: auto;
+  min-height: 65px;
+  padding: 1rem 2rem 1rem 1rem;
+  border-radius: 20px;
+  background-color: #f0f0f070;
+}
+
+.fa-pen-nib {
+  font-size: 40px;
+  left: 0;
+  color: var(--accentColor);
+}
+
+.author h3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  text-align: right;
+  width: 90%;
+  padding: 0;
+  font-size: 1.4rem;
+}
+
+.generatedAuthor {
+  font-size: 1.7rem;
+  height: 70%;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1024px) {
+  .quote {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    padding: 0;
+  }
+
+  .MP_textNcopy {
+    padding: 1rem;
+    width: -moz-available;
+  }
+
+  .fa-quote-left {
+    position: absolute;
+    left: 1rem;
+    bottom: 0.5rem;
+    font-size: 2.5rem;
+    -webkit-width: 2rem;
+    -moz-width: 2rem;
+    width: 2rem;
+  }
+
+  .quote h3 {
+    width: 100%;
+    min-width: 100%;
+    font-size: 1.4rem;
+    margin: 0 0 1rem;
+    line-height: 4rem;
+    text-align: right;
+  }
+
+  .author {
+    width: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    align-items: flex-end;
+  }
+
+  .fa-pen-nib {
+    position: absolute;
+    width: 20%;
+    font-size: 32px;
+    margin: 1rem 0;
+    left: 0;
+  }
+
+  .author h3 {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+
+  .generatorBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .generatorBtn button {
+    width: 100%;
+  }
+}

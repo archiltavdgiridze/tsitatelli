@@ -1,0 +1,213 @@
+.filt_elem_result {
+  gap: 20px;
+}
+
+.backButton {
+  width: 30%;
+  height: 40px;
+  margin: 1rem auto 0;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  border: none;
+  transition: box-shadow 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+.backButton:hover {
+  color: var(--white);
+  background-color: var(--goldColor);
+  transition: 0.3s ease-in-out;
+  box-shadow: 8px 6px 0px -1px #feedb4;
+  -webkit-box-shadow: 8px 6px 8px 0px #feedb4;
+  -moz-box-shadow: 8px 6px 0px -1px #feedb4;
+  transition: 0.3s ease-in-out;
+}
+
+.filtered_authorName {
+  letter-spacing: 1px;
+}
+
+.result_title {
+  font-family: var(--secondaryFont);
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 60px 0 10vh;
+}
+
+.quote_card {
+  position: relative;
+  isolation: isolate;
+  width: 90%;
+  background-color: #595959;
+  border-radius: 8px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+.q_card_top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  transition: transform 250ms;
+  background-color: var(--lightGray);
+  text-align: center;
+}
+
+.quote_card:hover .q_card_top {
+  background-color: var(--lightGray);
+  outline: var(--goldColor) solid 4px;
+  transition: 0.4s;
+  transform: translateY(-70px) scale(0.85);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.q_card_top h2 {
+  padding: 10px 24px;
+  font-size: 1.7rem;
+  text-align: left;
+  letter-spacing: 1px;
+  line-height: 4.3rem;
+}
+
+.q_card_body {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem 0;
+  color: #f4c644;
+}
+
+.q_card_bottom {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.btn_filled {
+  color: var(--white);
+  background-color: var(--accentColor);
+  margin: 0;
+  border-radius: 6px;
+  font-size: 1.3rem;
+}
+
+.btn_filled:hover {
+  color: var(--white);
+  transition: 0.4s;
+  background-color: var(--goldColor);
+  outline-color: var(--lightGoldColor);
+  box-shadow: none;
+}
+
+.q_card_buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  position: relative;
+}
+
+.q_card_buttons button {
+  font-family: var(--secondaryFont);
+  font-size: 0.9rem;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.info_div {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  background-color: var(--lightGray);
+  padding: 8px 10px;
+  color: var(--black);
+  font-family: var(--secondaryFont);
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  line-height: 1.4;
+  width: max-content;
+  outline: var(--accentColor) solid 3px;
+  z-index: 10;
+}
+
+.info_div.active {
+  display: block;
+}
+
+.linker_source:hover+.info_div {
+  display: block;
+}
+
+.linkers {
+  color: var(--white);
+  background-color: var(--accentColor);
+  border: none;
+}
+
+.linkers:hover {
+  background-color: var(--goldColor);
+  outline: 3px solid var(--goldColor);
+  outline-offset: 3px;
+  transition: 0.4s;
+}
+
+.linkers p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.linker_source {
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .backButton {
+    left: 30px;
+    top: 20px;
+    width: 80%;
+  }
+
+  .filtered_authorName {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .result_title {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .card {
+    margin: 36px 0 10vh;
+    gap: 16px;
+  }
+
+  .q_card_top h2 {
+    text-align: left;
+    font-size: 1.5rem;
+    padding: 0.8rem 24px;
+    line-height: 3.6rem;
+  }
+
+  .q_card_bottom {
+    gap: 1rem;
+  }
+}
