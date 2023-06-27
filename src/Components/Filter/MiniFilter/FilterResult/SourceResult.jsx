@@ -5,15 +5,14 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import CopyButton from "../../../ReComp/CopyButton";
 
 const SourceResult = () => {
+  const url =
+    "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
   const navigate = useNavigate();
   const { state } = useLocation();
   const [sourceName, setSourceName] = useState("");
   const [filteredQuotes, setFilteredQuotes] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   // const [hoveredAuthor, setHoveredAuthor] = useState(null);
-
-  const url =
-    "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
 
   useEffect(() => {
     if (!state?.filteredQuotes) {
@@ -56,8 +55,10 @@ const SourceResult = () => {
   };
 
   const handleAuthorClick = (authorName) => {
-    const decodedAuthorName = authorName.replace(/[-–\s]/g, "-");
-    navigate(`/author-results/${encodeURIComponent(decodedAuthorName)}`);
+    const encodedAuthorName = encodeURIComponent(
+      authorName.replace(/\s+|-/g, "_")
+    );
+    navigate(`/author-results/${encodedAuthorName}`);
   };
 
   const handleAuthorHover = (index) => {
@@ -68,13 +69,17 @@ const SourceResult = () => {
     setHoveredIndex(null);
   };
 
+  const quoteCount = filteredQuotes.length;
+
   return (
     <div className="result filt_elem_result">
       <button className="backButton" onClick={handleGoBack}>
         <FontAwesomeIcon icon={faArrowLeft} />
       </button>
       {sourceName && (
-        <h1 className="filtered_sourceName result_title ">{sourceName}</h1>
+        <h1 className="filtered_sourceName result_title ">
+          {sourceName} | {quoteCount}
+        </h1>
       )}
 
       <div className="card">

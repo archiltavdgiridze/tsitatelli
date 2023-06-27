@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Search from "../../ReComp/Search";
+import { API_ENDPOINT } from "../../../quoteURL";
 // import "./minifilter.css"
 
-const AuthorFilt = () => {
-  const url =
-    "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
 
+const AuthorFilt = () => {
+  const url = API_ENDPOINT;
   const [authors, setAuthors] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredAuthors, setFilteredAuthors] = useState([]);
@@ -37,11 +37,10 @@ const AuthorFilt = () => {
   }, []);
 
   const handleAuthorClick = (authorName) => {
-    navigate(
-      `/author-results/${encodeURIComponent(
-        authorName.replace(/\s+|-|–/g, "-")
-      )}`
+    const encodedAuthorName = encodeURIComponent(
+      authorName.replace(/\s+|-/g, "_")
     );
+    navigate(`/author-results/${encodedAuthorName}`);
   };
 
   const handleSearchChange = (event) => {
@@ -69,7 +68,9 @@ const AuthorFilt = () => {
         />
         <div>
           {showNotFoundMessage && (
-            <p className="not_found_msg">ავტორი ვერ მოიძებნა, სცადეთ სხვა სახელი.</p>
+            <p className="not_found_msg">
+              ავტორი ვერ მოიძებნა, სცადეთ სხვა სახელი.
+            </p>
           )}
         </div>
 

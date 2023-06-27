@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Search from "../../ReComp/Search";
+import { API_ENDPOINT } from "../../../quoteURL";
 // import "./minifilter.css";
 
 const SourceFilt = () => {
-  const url =
-    "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
-
+  const url = API_ENDPOINT;
   const [sources, setSources] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredSources, setFilteredSources] = useState([]);

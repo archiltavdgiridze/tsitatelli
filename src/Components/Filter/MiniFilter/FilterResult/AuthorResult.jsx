@@ -19,28 +19,24 @@ const AuthorResult = () => {
       const authorFromURL = decodeURIComponent(
         window.location.pathname.split("/")[2]
       );
-      const decodedAuthorName = authorFromURL.replace(/-/g, " ");
+      const decodedAuthorName = authorFromURL.replace(/_/g, " ");
+      setAuthorName(decodedAuthorName);
       fetchQuotesByAuthor(decodedAuthorName);
     } else {
       const quotes = state.filteredQuotes;
-      setAuthorName(quotes[0]?.attributes.author || "");
       setFilteredQuotes(quotes);
     }
   }, [state]);
 
   const fetchQuotesByAuthor = (authorName) => {
-    const decodedAuthorName = authorName.replace(/[-–]/g, " ");
-
-    const apiUrl = `${url}?filter[author]=${encodeURIComponent(
-      decodedAuthorName
-    )}`;
+    // const encodedAuthorName = encodeURIComponent(authorName);
+    const apiUrl = `${url}?filter[author]=${authorName}`;
+    console.log(apiUrl);
 
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
         const filteredQuotes = data.data;
-        const formattedAuthorName = decodedAuthorName.replace(/–/g, " ");
-        setAuthorName(formattedAuthorName);
         setFilteredQuotes(filteredQuotes);
       })
       .catch((error) => {
@@ -65,13 +61,17 @@ const AuthorResult = () => {
     setHoveredIndex(null);
   };
 
+  const quoteCount = filteredQuotes.length;
+
   return (
     <div className="result filt_elem_result">
       <button className="backButton" onClick={handleGoBack}>
         <FontAwesomeIcon icon={faArrowLeft} />
       </button>
       {authorName && (
-        <h1 className="filtered_authorName result_title">{authorName}</h1>
+        <h1 className="filtered_authorName result_title">
+          {authorName} | {quoteCount}
+        </h1>
       )}
 
       <div className="card">

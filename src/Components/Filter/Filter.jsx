@@ -30,8 +30,8 @@ const Filter = () => {
     }
   };
 
-  const url =
-    "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
+  // const url =
+  //   "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
 
   // async function logJSONData() {
   //   const response = await fetch(url);
