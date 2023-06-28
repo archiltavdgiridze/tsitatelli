@@ -80,10 +80,10 @@ const SourceResult = () => {
         </h1>
       )}
       {sourceName === "უცნობი" && (
-        <div className="special-design">
+        // <div className="special-design">
           <p className="unknown_source_msg">
-            მოცემული ციტატების წყარო არის უცნობი. თუ რომელიმე ციტატის წყაროზე გაქვთ ინფორმაცია,
-            <MailTo
+            *მოცემული ციტატების წყარო არის უცნობი. თუ რომელიმე ციტატის წყაროზე
+            გაქვთ ინფორმაცია,<MailTo
               email="achitavdgiridze@gmail.com"
               subject="უცნობი წყაროს შესახებ"
               body="გამარჯობა, მსურს გაცნობოთ, რომ ციტატელის უცნობი წყაროს სექციაში არსებულ ერთ–ერთ ციტატაზე ვფლობ ინფორმაციას წყაროს შესახებ, იგი არის..."
@@ -91,7 +91,7 @@ const SourceResult = () => {
               დაგვიკავშირდით ელ-ფოსტაზე!
             </MailTo>
           </p>
-        </div>
+        // </div>
       )}
 
       <div className="card">

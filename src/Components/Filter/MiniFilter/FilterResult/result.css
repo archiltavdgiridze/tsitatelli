@@ -32,13 +32,16 @@
 }
 
 .unknown_source_msg {
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
-  font-size: 1.3rem;
+  text-align: center;
+  font-size: 1rem;
   font-family: var(--secondaryFont);
+  color: red;
 }
 
 .card {
