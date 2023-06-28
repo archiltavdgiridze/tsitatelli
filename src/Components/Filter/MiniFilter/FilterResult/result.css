@@ -31,6 +31,16 @@
   font-family: var(--secondaryFont);
 }
 
+.unknown_source_msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 1.3rem;
+  font-family: var(--secondaryFont);
+}
+
 .card {
   width: 100%;
   display: flex;

@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import CopyButton from "../../../ReComp/CopyButton";
+import MailTo from "../../../AboutUs/MailTo";
 
 const SourceResult = () => {
   const url =
@@ -12,7 +13,6 @@ const SourceResult = () => {
   const [sourceName, setSourceName] = useState("");
   const [filteredQuotes, setFilteredQuotes] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  // const [hoveredAuthor, setHoveredAuthor] = useState(null);
 
   useEffect(() => {
     if (!state?.filteredQuotes) {
@@ -22,7 +22,6 @@ const SourceResult = () => {
       const decodedSourceName = sourceFromURL.replace(/-/g, " ");
       fetchQuotesBySource(decodedSourceName);
     } else {
-      // this code is executed when a user clicks on an source button
       const quotes = state.filteredQuotes;
       setSourceName(quotes[0]?.attributes.source || "");
       setFilteredQuotes(quotes);
@@ -44,7 +43,6 @@ const SourceResult = () => {
         setSourceName(formattedSourceName);
         setFilteredQuotes(filteredQuotes);
       })
-
       .catch((error) => {
         console.error("Error fetching filtered quotes:", error);
       });
@@ -81,6 +79,20 @@ const SourceResult = () => {
           {sourceName} | {quoteCount}
         </h1>
       )}
+      {sourceName === "უცნობი" && (
+        <div className="special-design">
+          <p className="unknown_source_msg">
+            მოცემული ციტატების წყარო არის უცნობი. თუ რომელიმე ციტატის წყაროზე გაქვთ ინფორმაცია,
+            <MailTo
+              email="achitavdgiridze@gmail.com"
+              subject="უცნობი წყაროს შესახებ"
+              body="გამარჯობა, მსურს გაცნობოთ, რომ ციტატელის უცნობი წყაროს სექციაში არსებულ ერთ–ერთ ციტატაზე ვფლობ ინფორმაციას წყაროს შესახებ, იგი არის..."
+            >
+              დაგვიკავშირდით ელ-ფოსტაზე!
+            </MailTo>
+          </p>
+        </div>
+      )}
 
       <div className="card">
         {filteredQuotes.map((data, index) => (
@@ -107,11 +119,11 @@ const SourceResult = () => {
                   >
                     <p>ავტორი: {data.attributes.author}</p>
                   </button>
-                  {/* <button className="linker_topic">თემატიკა</button> */}
                 </div>
                 <div className="card_copy">
                   <CopyButton
-                    text={`„${data.attributes.quote}“ - ${data.attributes.author}`}
+                    text={`„${data.attributes.quote}“ 
+- ${data.attributes.author}`}
                     className="copy-btn btn_filled"
                   />
                 </div>
