@@ -1,68 +1,80 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_ENDPOINT } from "../../../quoteURL";
+import Search from "./../../ReComp/Search";
 
 const TopicFilt = () => {
-  const url =
-    "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
-
+  const url = API_ENDPOINT;
   const [topics, setTopics] = useState([]);
-  const [selectedTopic, setSelectedTopic] = useState("");
-  const [filteredQuotes, setFilteredQuotes] = useState([]);
-  const [allTopics, setAllTopics] = useState([]);
-  const [isRendered, setIsRendered] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredTopics, setFilteredTopics] = useState([]);
+  const [showNotFoundMessage, setShowNotFoundMessage] = useState(false);
   const navigate = useNavigate();
+  const [isRendered, setIsRendered] = useState(true);
 
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
       .then((db) => {
-        const topics = db.data.flatMap((quote) => quote.attributes.topic);
+        // ~
+        const topicNames = db.data.flatMap((topic) => topic.attributes.topic);
+        console.log(topics);
 
         const georgianCollator = new Intl.Collator("ka-GE", {
           sensitivity: "base",
           ignorePunctuation: true,
         });
 
-        const sortedTopics = topics.sort((a, b) =>
-          georgianCollator.compare(a, b)
-        );
+        topicNames.sort((a, b) => georgianCollator.compare(a, b));
 
-        const uniqueTopics = Array.from(new Set(sortedTopics));
-        setAllTopics(uniqueTopics);
+        const uniqueTopics = Array.from(new Set(topicNames));
+        setTopics(uniqueTopics);
+        setFilteredTopics(uniqueTopics);
       })
       .catch((error) => {
         console.error("Error fetching topic data:", error);
       });
   }, []);
 
-  function handleTopicClick(topicName) {
-    const filteredQuotes = allTopics.filter((topic) => topic === topicName);
-    console.log(filteredQuotes);
+  const handleTopicClick = (topicName) => {
+    const encodedTopicName = encodeURIComponent(
+      topicName.replace(/\s+|-/g, "_")
+    );
+    navigate(`/topic-results/${encodedTopicName}`);
+  };
 
-    setFilteredQuotes(filteredQuotes);
-    setSelectedTopic(topicName);
-    navigate("/topic-results/:topic", {
-      state: { filteredQuotes },
-    });
-  }
+  const handleSearchChange = (event) => {
+    const query = event.target.value;
+    setSearchQuery(query);
+
+    const filtered = topics.filter((source) =>
+      source.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredTopics(filtered);
+    setShowNotFoundMessage(filtered.length === 0 && query !== "");
+  };
 
   const sortedFirstLetters = [
-    ...new Set(allTopics.map((topic) => topic.toString().charAt(0))),
+    ...new Set(topics.map((topic) => topic.charAt(0))),
   ].sort();
-
-  // useEffect(() => {
-  //   if (allTopics.length > 0) {
-  //     setIsRendered(true);
-  //   }
-  // }, [allTopics]);
 
   return (
     <div className="topic_filter ">
       {isRendered ? (
         <div className="filter_container">
+          <Search
+            value={searchQuery}
+            onChange={handleSearchChange}
+            placeholder="ძიება წყაროს მიხედვით..."
+          />
+          {showNotFoundMessage && (
+            <p className="not_found_msg">
+              თემატიკა ვერ მოიძებნა, სცადეთ სხვა.
+            </p>
+          )}
           {sortedFirstLetters.map((letter) => {
-            const topicsByLetter = allTopics.filter(
-              (topic) => topic.toString().charAt(0) === letter
+            const topicsByLetter = filteredTopics.filter(
+              (topic) => topic.charAt(0) === letter
             );
             if (topicsByLetter.length > 0) {
               return (

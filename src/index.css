@@ -160,7 +160,6 @@ ul {
   animation-name: fadeOut;
 }
 
-
 .copy-message p {
   margin: 0;
   padding: 0;
@@ -181,6 +180,18 @@ ul {
     visibility: hidden;
   }
 }
+
+/* close btn */
+.close_icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+
+
 
 /* ~ scrollbar */
 /* ! needs fix */

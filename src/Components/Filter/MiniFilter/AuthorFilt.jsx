@@ -4,14 +4,12 @@ import Search from "../../ReComp/Search";
 import { API_ENDPOINT } from "../../../quoteURL";
 // import "./minifilter.css"
 
-
 const AuthorFilt = () => {
   const url = API_ENDPOINT;
   const [authors, setAuthors] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredAuthors, setFilteredAuthors] = useState([]);
   const [showNotFoundMessage, setShowNotFoundMessage] = useState(false);
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -66,13 +64,11 @@ const AuthorFilt = () => {
           onChange={handleSearchChange}
           placeholder="ძიება ავტორის მიხედვით..."
         />
-        <div>
-          {showNotFoundMessage && (
-            <p className="not_found_msg">
-              ავტორი ვერ მოიძებნა, სცადეთ სხვა სახელი.
-            </p>
-          )}
-        </div>
+        {showNotFoundMessage && (
+          <p className="not_found_msg">
+            ავტორი ვერ მოიძებნა, სცადეთ სხვა სახელი.
+          </p>
+        )}
 
         {sortedFirstLetters.map((letter) => {
           const authorsWithLetter = filteredAuthors.filter(
