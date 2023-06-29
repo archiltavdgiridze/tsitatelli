@@ -4,6 +4,7 @@ import "./AboutusCSS/aboutus.css";
 
 const AboutUs = () => {
   const url = "https://linktr.ee/archiltavdgiridze";
+  const urlGiorgi = "https://github.com/George1Meshveliani";
   const calligraphy = "https://calligraphy.ge/";
 
   return (
@@ -26,6 +27,7 @@ const AboutUs = () => {
           </span>
         </h2>
 
+        <br />
         <h2>
           ვებ–გვერდის ავტორი:{" "}
           <a href={url} target="_blank" rel="noopener noreferrer">
@@ -34,7 +36,13 @@ const AboutUs = () => {
         </h2>
         <br />
         <br />
-        <br />
+        <h3>
+          ციტატელის Back-end დეველოპმენტზე იზრუნა{" "}
+          <a href={urlGiorgi} target="_blank" rel="noopener noreferrer">
+            გიორგი მეშველიანმა
+          </a>
+          .
+        </h3>
         <br />
         <br />
 
