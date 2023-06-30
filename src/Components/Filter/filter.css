@@ -17,6 +17,7 @@
   color: var(--white);
   background-color: var(--accentColor);
   outline: 3px solid var(--accentColor);
+  
 }
 
 .filter_select:hover {
