@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import "./result.css";
 import CopyButton from "../../../ReComp/CopyButton";
 import MailTo from "../../../AboutUs/MailTo";
 
 const SourceResult = () => {
-  const url =
-    "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
   const navigate = useNavigate();
   const { state } = useLocation();
   const [sourceName, setSourceName] = useState("");
   const [filteredQuotes, setFilteredQuotes] = useState([]);
+  const [activeCardIndex, setActiveCardIndex] = useState(null);
   const [hoveredAuthor, setHoveredAuthor] = useState(null);
   const [hoveredTopic, setHoveredTopic] = useState(null);
 
@@ -33,7 +33,7 @@ const SourceResult = () => {
   const fetchQuotesBySource = (sourceName) => {
     // const decodedSourceName = sourceName.replace(/[-–]/g, " ");
 
-    const apiUrl = `${url}?filter[source]=${sourceName}`;
+    const apiUrl = `https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes?filter[source]=${sourceName}`;
 
     fetch(apiUrl)
       .then((response) => response.json())
@@ -94,6 +94,19 @@ const SourceResult = () => {
     setHoveredTopic(null);
   };
 
+  const handleCardClick = (index) => {
+    if (activeCardIndex === index) {
+      setActiveCardIndex(null); 
+    } else {
+      setActiveCardIndex(index);
+    }
+  };
+
+  const handleCardCloseClick = (event) => {
+    event.stopPropagation(); 
+    setActiveCardIndex(null);
+  };
+
   const quoteCount = filteredQuotes.length;
 
   return (
@@ -116,47 +129,68 @@ const SourceResult = () => {
             subject="უცნობი წყაროს შესახებ"
             body="გამარჯობა, მსურს გაცნობოთ, რომ ციტატელის უცნობი წყაროს სექციაში არსებულ ერთ–ერთ ციტატაზე ვფლობ ინფორმაციას წყაროს შესახებ, იგი არის..."
           >
-            დაგვიკავშირდით ელ-ფოსტაზე!
+            დაგვიკავშირდით ელ-ფოსტაზე
           </MailTo>
+          ❤
         </p>
-        // </div>
       )}
 
-      <div className="card">
+      <div className="cards">
         {filteredQuotes.map((data, index) => (
           <figure key={data.id} className="quote_card">
-            <div className="q_card_top">
-              <h2>{data.attributes.quote}</h2>
+            <div
+              className={`info_btn ${
+                activeCardIndex === index ? "active" : ""
+              }`}
+              onClick={() => handleCardClick(index)}
+            >
+              <FontAwesomeIcon className="quote_info" icon={faCircleInfo} />
             </div>
-
-            <figcaption className="q_card_body">
-              <div className="q_card_bottom">
-                <div className="q_card_buttons">
+            <figcaption className="q_card_top">
+              <h2>„{data.attributes.quote}“</h2>
+            </figcaption>
+            <figcaption
+              className={`q_card_bottom ${
+                activeCardIndex === index ? "active" : ""
+              }`}
+              style={{ display: activeCardIndex === index ? "flex" : "none" }}
+            >
+              <div className="q_card_buttons">
+                <div className="top_group_buttons">
+                  <p className="group_title">ავტორი:</p>
                   <button
                     className="linker_source linkers"
                     onClick={() => handleAuthorClick(data.attributes.author)}
                     onMouseEnter={() => handleAuthorHover(index)}
                     onMouseLeave={handleAuthorHoverLeave}
                   >
-                    <p>ავტორი: {data.attributes.author}</p>
-                    {/* <div
+                    <p>{data.attributes.author}</p>
+                  </button>
+                  {/* <div
                       className={`info_div ${
                         hoveredAuthor === index ? "active" : ""
                       }`}
                     >
                       ავტორის სხვა ციტატები
                     </div> */}
-                  </button>
+                </div>
+                <div className="bottom_group_buttons">
+                  <p className="group_title">თემატიკა:</p>
                   {splitTopics(data.attributes.topic).map(
                     (topic, topicIndex) => (
-                      <button
-                        key={`${data.id}_${topicIndex}`}
-                        className="linker_topic linkers"
-                        onClick={() => handleTopicClick(topic)}
-                        onMouseEnter={() => handleTopicHover(index, topicIndex)}
-                        onMouseLeave={handleTopicHoverLeave}
-                      >
-                        <p>{topic}</p>
+                      <>
+                        <button
+                          key={`${data.id}_${topicIndex}`}
+                          className="linker_topic linkers"
+                          onClick={() => handleTopicClick(topic)}
+                          onMouseEnter={() =>
+                            handleTopicHover(index, topicIndex)
+                          }
+                          onMouseLeave={handleTopicHoverLeave}
+                        >
+                          <p>{topic}</p>
+                        </button>
+
                         {/* <div
                           className={`info_div ${
                             hoveredTopic?.quoteIndex === index &&
@@ -165,19 +199,19 @@ const SourceResult = () => {
                               : ""
                           }`}
                         >
-                          სხვა ციტატები თემიდან
-                        </div> */}
-                      </button>
+                        სხვა ციტატები თემიდან
+                      </div> */}
+                      </>
                     )
                   )}
                 </div>
-                <div className="card_copy">
-                  <CopyButton
-                    text={`„${data.attributes.quote}“ 
+              </div>
+              <div className="card_copy">
+                <CopyButton
+                  text={`„${data.attributes.quote}“ 
 - ${data.attributes.author}`}
-                    className="copy-btn btn_filled"
-                  />
-                </div>
+                  className="copy-btn btn_filled"
+                />
               </div>
             </figcaption>
           </figure>

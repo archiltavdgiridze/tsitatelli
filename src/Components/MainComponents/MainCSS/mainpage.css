@@ -28,6 +28,10 @@
   outline: 3px solid var(--goldColor);
 }
 
+.generatorBtn button:active {
+  background-color: aliceblue;
+}
+
 .quote {
   width: -webkit-fill-available;
   min-width: 50vw;

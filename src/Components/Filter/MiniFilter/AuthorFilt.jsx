@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Search from "../../ReComp/Search";
 import { API_ENDPOINT } from "../../../quoteURL";
+
 // import "./minifilter.css"
 
 const AuthorFilt = () => {
@@ -63,7 +64,8 @@ const AuthorFilt = () => {
           value={searchQuery}
           onChange={handleSearchChange}
           placeholder="ძიება ავტორის მიხედვით..."
-        />
+        >
+        </Search>
         {showNotFoundMessage && (
           <p className="not_found_msg">
             ავტორი ვერ მოიძებნა, სცადეთ სხვა სახელი.

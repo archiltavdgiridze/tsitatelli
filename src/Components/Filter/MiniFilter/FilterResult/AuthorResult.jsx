@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowLeft,
-  faCircleInfo,
-  faX,
-} from "@fortawesome/free-solid-svg-icons";
-
+import { faArrowLeft, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import "./result.css";
 import CopyButton from "../../../ReComp/CopyButton";
 
 const AuthorResult = () => {
@@ -15,12 +11,8 @@ const AuthorResult = () => {
   const [authorName, setAuthorName] = useState("");
   const [filteredQuotes, setFilteredQuotes] = useState([]);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
-  const [closeButtonActive, setCloseButtonActive] = useState(false);
   const [hoveredTopic, setHoveredTopic] = useState(null);
   const [hoveredSource, setHoveredSource] = useState(null);
-
-  const url =
-    "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
 
   useEffect(() => {
     if (!state?.filteredQuotes) {
@@ -37,7 +29,7 @@ const AuthorResult = () => {
   }, [state]);
 
   const fetchQuotesByAuthor = (authorName) => {
-    const apiUrl = `${url}?filter[author]=${authorName}`;
+    const apiUrl = `https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes?filter[author]=${authorName}`;
     console.log(apiUrl);
 
     fetch(apiUrl)
@@ -51,10 +43,6 @@ const AuthorResult = () => {
       });
   };
 
-  const handleGoBack = () => {
-    navigate("/filter");
-  };
-
   const splitTopics = (topics) => {
     if (typeof topics === "string") {
       return topics.split(",");
@@ -63,6 +51,10 @@ const AuthorResult = () => {
     } else {
       return [];
     }
+  };
+
+  const handleGoBack = () => {
+    navigate("/filter");
   };
 
   const handleTopicClick = (topicName) => {
@@ -95,18 +87,18 @@ const AuthorResult = () => {
     setHoveredSource(null);
   };
 
-  // const handleCardClick = (index) => {
-  //   setActiveCardIndex(index);
-  // };
+  const handleCardClick = (index) => {
+    if (activeCardIndex === index) {
+      setActiveCardIndex(null); // Close the expanded div
+    } else {
+      setActiveCardIndex(index);
+    }
+  };
 
-  // const handleCardBodyClick = () => {
-  //   setActiveCardIndex(null);
-  // };
-
-  // const handleCardCloseClick = (event) => {
-  //   event.stopPropagation(); // Prevent event bubbling to the card div
-  //   setActiveCardIndex(null);
-  // };
+  const handleCardCloseClick = (event) => {
+    event.stopPropagation(); // Prevent event bubbling to the card div
+    setActiveCardIndex(null);
+  };
 
   const quoteCount = filteredQuotes.length;
 
@@ -121,52 +113,61 @@ const AuthorResult = () => {
         </h1>
       )}
 
-      <div className="card">
+      <div className="cards">
         {filteredQuotes.map((data, index) => (
-          <figure
-            key={data.id}
-            className={`quote_card ${
-              activeCardIndex === index ? "active" : ""
-            }`}
-          >
-            <div className="q_card_top">
-              {/* <FontAwesomeIcon className="quote_info" icon={faCircleInfo} /> */}
-              <h2>{data.attributes.quote}</h2>
+          <figure key={data.id} className="quote_card">
+            <div
+              className={`info_btn ${
+                activeCardIndex === index ? "active" : ""
+              }`}
+              onClick={() => handleCardClick(index)}
+            >
+              <FontAwesomeIcon className="quote_info" icon={faCircleInfo} />
             </div>
-            <figcaption className="q_card_body">
-              <div className="q_card_bottom">
-                {/* <FontAwesomeIcon
-                  className="close_icon"
-                  icon={faX}
-                  onClick={handleCardCloseClick}
-                /> */}
-
-                <div className="q_card_buttons">
+            <figcaption className="q_card_top">
+              <h2>„{data.attributes.quote}“</h2>
+            </figcaption>
+            <figcaption
+              className={`q_card_bottom ${
+                activeCardIndex === index ? "active" : ""
+              }`}
+              style={{ display: activeCardIndex === index ? "flex" : "none" }}
+            >
+              <div className="q_card_buttons">
+                <div className="top_group_buttons">
+                  <p className="group_title">წყარო:</p>
                   <button
                     className="linker_source linkers"
                     onClick={() => handleSourceClick(data.attributes.source)}
                     onMouseEnter={() => handleSourceHover(index)}
                     onMouseLeave={handleSourceHoverLeave}
                   >
-                    <p>წყარო: {data.attributes.source}</p>
-                    {/* <div
-                      className={`info_div ${
-                        hoveredSource === index ? "active" : ""
-                      }`}
-                    >
-                      სხვა ციტატები წყაროდან
-                    </div> */}
+                    <p>{data.attributes.source}</p>
                   </button>
+                </div>
+                {/* <div
+                    className={`info_div ${
+                      hoveredSource === index ? "active" : ""
+                    }`}
+                  >
+                    სხვა ციტატები წყაროდან
+                  </div> */}
+                <div className="bottom_group_buttons">
+                  <p className="group_title">თემატიკა:</p>
                   {splitTopics(data.attributes.topic).map(
                     (topic, topicIndex) => (
-                      <button
-                        key={`${data.id}_${topicIndex}`}
-                        className="linker_topic linkers"
-                        onClick={() => handleTopicClick(topic)}
-                        onMouseEnter={() => handleTopicHover(index, topicIndex)}
-                        onMouseLeave={handleTopicHoverLeave}
-                      >
-                        <p>{topic}</p>
+                      <>
+                        <button
+                          key={`${data.id}_${topicIndex}`}
+                          className="linker_topic linkers"
+                          onClick={() => handleTopicClick(topic)}
+                          onMouseEnter={() =>
+                            handleTopicHover(index, topicIndex)
+                          }
+                          onMouseLeave={handleTopicHoverLeave}
+                        >
+                          <p>{topic}</p>
+                        </button>
                         {/* <div
                           className={`info_div ${
                             hoveredTopic?.quoteIndex === index &&
@@ -177,18 +178,19 @@ const AuthorResult = () => {
                         >
                           სხვა ციტატები თემიდან
                         </div> */}
-                      </button>
+                      </>
                     )
                   )}
                 </div>
-                <div className="card_copy">
-                  <CopyButton
-                    text={`„${data.attributes.quote}“ 
-- ${authorName}`}
-                    className="copy-btn btn_filled"
-                  />
-                </div>
               </div>
+              <div className="card_copy">
+                <CopyButton
+                  text={`„${data.attributes.quote}“ 
+- ${authorName}`}
+                  className="copy-btn btn_filled"
+                />
+              </div>
+              {/* </div> */}
             </figcaption>
           </figure>
         ))}

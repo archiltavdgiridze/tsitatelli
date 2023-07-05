@@ -1,4 +1,5 @@
 .search_div {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -6,9 +7,24 @@
   margin: 3px 0 0;
 }
 
+.search_icon {
+  position: absolute;
+  top: 0.8rem;
+  left: 1rem;
+  color: lightgray;
+  font-size: 1.5rem;
+  z-index: 1;
+}
+
+.search_icon.focused {
+  transition: 0.4s;
+  color: var(--goldColor);
+}
+
+
 .search_bar {
   height: 3rem;
-  padding: 0 3%;
+  padding: 0 1rem 0 3.5rem;
   border: none;
   border-radius: 1rem;
   font-family: var(--secondaryFont);
@@ -16,7 +32,12 @@
   letter-spacing: 1px;
 }
 
-.search_bar:hover,
+.search_bar:hover {
+  transition: 0.2s;
+  outline: 3px solid var(--goldColor);
+
+}
+
 .search_bar:focus {
   transition: 0.4s;
   outline: 2px solid var(--goldColor);
@@ -25,8 +46,18 @@
   -moz-box-shadow: 8px 6px 0px -1px var(--goldColor);
 }
 
+/* when .search_bar is focused, search_icon should change color to gold color */
+
+
+
 .search_bar::placeholder {
   font-family: var(--secondaryFont);
   font-size: 1.3rem;
   letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1024px) {
+  .search_bar {
+    padding: 0 0 0 3.5rem;
+  }
 }
