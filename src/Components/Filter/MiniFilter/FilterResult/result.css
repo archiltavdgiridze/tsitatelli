@@ -51,7 +51,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin: 0 0 10vh;
+  margin: 0 0 1rem;
   overflow: hidden;
 }
 
@@ -222,7 +222,6 @@
   border: none;
 }
 
-
 .linkers:hover {
   background-color: var(--goldColor);
   outline: 3px solid var(--goldColor);
@@ -262,7 +261,7 @@
   }
 
   .cards {
-    margin: 0 0 10vh;
+    margin: 0 0 1rem;
     gap: 16px;
   }
 

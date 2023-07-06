@@ -9,16 +9,20 @@ import { Link } from "react-router-dom";
 import "../MainComponents/MainCSS/sidebar.css";
 
 const Sidebar = () => {
-  const [activeLink, setActiveLink] = useState(""); // State variable to store the active link
+  const [activeLink, setActiveLink] = useState("home"); // State variable to store the active link
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
   };
 
+  const handleLogoClick = () => {
+    setActiveLink("home"); // Set the active link to "home" when the logo is clicked
+  };
+
   return (
     <div className="sidebar">
       <div className="sidebar_title">
-        <Link to="/" className="sidebar_logo">
+        <Link to="/" className="sidebar_logo" onClick={handleLogoClick}>
           <h1>ციტატელი</h1>
         </Link>
       </div>

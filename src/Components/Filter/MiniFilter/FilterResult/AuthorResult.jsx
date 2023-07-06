@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import "./result.css";
 import CopyButton from "../../../ReComp/CopyButton";
+import Pagination from "@mui/lab/Pagination";
+import PaginationComponent from "../../../ReComp/Pagination";
 
 const AuthorResult = () => {
   const navigate = useNavigate();
@@ -11,8 +13,8 @@ const AuthorResult = () => {
   const [authorName, setAuthorName] = useState("");
   const [filteredQuotes, setFilteredQuotes] = useState([]);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
-  const [hoveredTopic, setHoveredTopic] = useState(null);
-  const [hoveredSource, setHoveredSource] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [quotesPerPage] = useState(8); 
 
   useEffect(() => {
     if (!state?.filteredQuotes) {
@@ -64,27 +66,11 @@ const AuthorResult = () => {
     navigate(`/topic-results/${decodedTopicName}`);
   };
 
-  const handleTopicHover = (index, topicIndex) => {
-    setHoveredTopic({ quoteIndex: index, topicIndex });
-  };
-
-  const handleTopicHoverLeave = () => {
-    setHoveredTopic(null);
-  };
-
   const handleSourceClick = (sourceName) => {
     const decodedSourceName = encodeURIComponent(
       sourceName.replace(/[-\s]/g, "_")
     );
     navigate(`/source-results/${decodedSourceName}`);
-  };
-
-  const handleSourceHover = (index) => {
-    setHoveredSource(index);
-  };
-
-  const handleSourceHoverLeave = () => {
-    setHoveredSource(null);
   };
 
   const handleCardClick = (index) => {
@@ -95,12 +81,19 @@ const AuthorResult = () => {
     }
   };
 
-  const handleCardCloseClick = (event) => {
-    event.stopPropagation(); // Prevent event bubbling to the card div
-    setActiveCardIndex(null);
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
   };
 
   const quoteCount = filteredQuotes.length;
+
+  const indexOfLastQuote = currentPage * quotesPerPage;
+  const indexOfFirstQuote = indexOfLastQuote - quotesPerPage;
+  const currentQuotes = filteredQuotes.slice(
+    indexOfFirstQuote,
+    indexOfLastQuote
+  );
+  const totalPages = Math.ceil(filteredQuotes.length / quotesPerPage);
 
   return (
     <div className="result filt_elem_result">
@@ -114,7 +107,7 @@ const AuthorResult = () => {
       )}
 
       <div className="cards">
-        {filteredQuotes.map((data, index) => (
+        {currentQuotes.map((data, index) => (
           <figure key={data.id} className="quote_card">
             <div
               className={`info_btn ${
@@ -139,46 +132,21 @@ const AuthorResult = () => {
                   <button
                     className="linker_source linkers"
                     onClick={() => handleSourceClick(data.attributes.source)}
-                    onMouseEnter={() => handleSourceHover(index)}
-                    onMouseLeave={handleSourceHoverLeave}
                   >
                     <p>{data.attributes.source}</p>
                   </button>
                 </div>
-                {/* <div
-                    className={`info_div ${
-                      hoveredSource === index ? "active" : ""
-                    }`}
-                  >
-                    სხვა ციტატები წყაროდან
-                  </div> */}
                 <div className="bottom_group_buttons">
                   <p className="group_title">თემატიკა:</p>
                   {splitTopics(data.attributes.topic).map(
                     (topic, topicIndex) => (
-                      <>
-                        <button
-                          key={`${data.id}_${topicIndex}`}
-                          className="linker_topic linkers"
-                          onClick={() => handleTopicClick(topic)}
-                          onMouseEnter={() =>
-                            handleTopicHover(index, topicIndex)
-                          }
-                          onMouseLeave={handleTopicHoverLeave}
-                        >
-                          <p>{topic}</p>
-                        </button>
-                        {/* <div
-                          className={`info_div ${
-                            hoveredTopic?.quoteIndex === index &&
-                            hoveredTopic?.topicIndex === topicIndex
-                              ? "active"
-                              : ""
-                          }`}
-                        >
-                          სხვა ციტატები თემიდან
-                        </div> */}
-                      </>
+                      <button
+                        key={`${data.id}_${topicIndex}`}
+                        className="linker_topic linkers"
+                        onClick={() => handleTopicClick(topic)}
+                      >
+                        <p>{topic}</p>
+                      </button>
                     )
                   )}
                 </div>
@@ -190,11 +158,18 @@ const AuthorResult = () => {
                   className="copy-btn btn_filled"
                 />
               </div>
-              {/* </div> */}
             </figcaption>
           </figure>
         ))}
       </div>
+      {/* pagination */}
+      {filteredQuotes.length > quotesPerPage && (
+        <PaginationComponent
+          totalPages={totalPages}
+          currentPage={currentPage}
+          handlePageChange={handlePageChange}
+        />
+      )}
     </div>
   );
 };

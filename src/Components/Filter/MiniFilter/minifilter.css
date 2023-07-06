@@ -72,7 +72,7 @@
   font-family: var(--secondaryFont);
   font-size: 1.5rem;
   font-weight: bolder;
-  padding: 6px 16px;
+  padding: 10px;
   text-align: left;
   border-radius: 10px;
   outline: 3px solid var(--accentColor);
