@@ -9,11 +9,55 @@
   font-size: 1.2rem;
   border-radius: 50px;
   border: none;
+  background-color: var(--lightGray);
   transition: box-shadow 0.5s ease;
   transition: background-color 0.5s ease;
 }
 
 .backButton:hover {
+  color: var(--white);
+  background-color: var(--goldColor);
+  transition: 0.3s ease-in-out;
+  box-shadow: 8px 6px 0px -1px #feedb4;
+  -webkit-box-shadow: 8px 6px 8px 0px #feedb4;
+  -moz-box-shadow: 8px 6px 0px -1px #feedb4;
+  transition: 0.3s ease-in-out;
+}
+
+.topBar {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--darkGray);
+  transition: background-color 0.1s;
+}
+
+.topBar.scrolled {
+  background-color: var(--lightGray);
+  position: fixed;
+  z-index: 999;
+  width: inherit;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0px;
+  border-bottom: 3px solid var(--accentColor);
+  transition: 0.4s ease-in-out;
+}
+
+.topBar.scrolled .backButton {
+  width: 10%;
+  margin: 0;
+  background-color: var(--darkGray);
+  transition: box-shadow 0.5s ease;
+}
+
+.topBar.scrolled .backButton:hover {
   color: var(--white);
   background-color: var(--goldColor);
   transition: 0.3s ease-in-out;
@@ -250,8 +294,20 @@
     width: 80%;
   }
 
+  .topBar.scrolled .backButton {
+    left: 30px;
+    top: 20px;
+    width: 20%;
+  }
+
+  .topBar.scrolled {
+    padding: 1rem;
+    gap: 0;
+    border-top: 3px solid var(--accentColor);
+  }
+
   .filtered_authorName {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     text-align: center;
   }
 

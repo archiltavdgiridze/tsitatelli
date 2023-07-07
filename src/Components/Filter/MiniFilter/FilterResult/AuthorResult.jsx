@@ -13,7 +13,8 @@ const AuthorResult = () => {
   const [filteredQuotes, setFilteredQuotes] = useState([]);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [quotesPerPage] = useState(8); 
+  const [quotesPerPage] = useState(15);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     if (!state?.filteredQuotes) {
@@ -80,9 +81,8 @@ const AuthorResult = () => {
     }
   };
 
- 
   const quoteCount = filteredQuotes.length;
- 
+
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
@@ -95,16 +95,31 @@ const AuthorResult = () => {
   );
   const totalPages = Math.ceil(filteredQuotes.length / quotesPerPage);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.pageYOffset > getYOffsetThreshold());
+    };
+
+    const getYOffsetThreshold = () => {
+      return window.innerWidth >= 1024 ? 135 : 125; // Change the values as per your requirement
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="result filt_elem_result">
-      <button className="backButton" onClick={handleGoBack}>
-        <FontAwesomeIcon icon={faArrowLeft} />
-      </button>
-      {authorName && (
-        <h1 className="filtered_authorName result_title">
-          {authorName} | {quoteCount}
-        </h1>
-      )}
+    <div className={`result filt_elem_result ${isScrolled ? "scrolled" : ""}`}>
+      <div className={`topBar ${isScrolled ? "scrolled" : ""}`}>
+        <button className="backButton" onClick={handleGoBack}>
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </button>
+        {authorName && (
+          <h1 className="filtered_authorName result_title">
+            {authorName} | {quoteCount}
+          </h1>
+        )}
+      </div>
 
       <div className="cards">
         {currentQuotes.map((data, index) => (

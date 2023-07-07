@@ -79,6 +79,7 @@
 .generatedQuote {
   height: 70%;
   letter-spacing: 1px;
+  font-family: var(--mainFont);
 }
 
 .author {
@@ -114,6 +115,7 @@
   height: 70%;
   margin: 0;
   letter-spacing: 1px;
+  font-family: var(--mainFont);
 }
 
 @media screen and (max-width: 1024px) {
