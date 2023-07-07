@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Search from "../../ReComp/Search";
 import { API_ENDPOINT } from "../../../quoteURL";
+import FilteredList from "../../ReComp/FilteredList";
 
 const SourceFilt = () => {
   const url = API_ENDPOINT;
@@ -37,9 +38,7 @@ const SourceFilt = () => {
     const encodedAuthorName = encodeURIComponent(
       sourceName.replace(/\s+|-/g, "_")
     );
-    navigate(
-      `/source-results/${encodedAuthorName}`
-    );
+    navigate(`/source-results/${encodedAuthorName}`);
   };
 
   const handleSearchChange = (event) => {
@@ -53,9 +52,9 @@ const SourceFilt = () => {
     setShowNotFoundMessage(filtered.length === 0 && query !== "");
   };
 
-  const sortedFirstLetters = [
-    ...new Set(sources.map((source) => source.charAt(0))),
-  ].sort();
+  // const sortedFirstLetters = [
+  //   ...new Set(sources.map((source) => source.charAt(0))),
+  // ].sort();
 
   return (
     <div className="source_filter">
@@ -63,36 +62,17 @@ const SourceFilt = () => {
         <Search
           value={searchQuery}
           onChange={handleSearchChange}
-          placeholder="ძიება წყაროს მიხედვით..."
+          placeholder="წყაროს"
         />
         {showNotFoundMessage && (
           <p className="not_found_msg">
             წყარო ვერ მოიძებნა, სცადეთ სხვა სათაური.
           </p>
         )}
-        {sortedFirstLetters.map((letter) => {
-          const sourcesWithLetter = filteredSources.filter(
-            (source) => source.charAt(0) === letter
-          );
-          if (sourcesWithLetter.length > 0) {
-            return (
-              <div key={letter} className="filt_cont_div">
-                <h2>{letter}</h2>
-                <div className="filt_cont_btn">
-                  {sourcesWithLetter.map((source) => (
-                    <button
-                      key={source}
-                      onClick={() => handleSourceClick(source)}
-                    >
-                      {source}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            );
-          }
-          return null;
-        })}
+        <FilteredList
+          filteredItems={filteredSources}
+          handleItemClick={handleSourceClick}
+        />
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ const Search = ({ value, onChange, placeholder }) => {
         onChange={onChange}
         onFocus={handleFocus}
         onBlur={handleBlur}
-        placeholder={placeholder}
+        placeholder={"ძიება " + placeholder + " მიხედვით..."}
       />
     </div>
   );

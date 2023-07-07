@@ -5,6 +5,7 @@ import { faArrowLeft, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import "./result.css";
 import CopyButton from "../../../ReComp/CopyButton";
 import MailTo from "../../../AboutUs/MailTo";
+import PaginationComponent from "../../../ReComp/Pagination";
 
 const SourceResult = () => {
   const navigate = useNavigate();
@@ -12,8 +13,10 @@ const SourceResult = () => {
   const [sourceName, setSourceName] = useState("");
   const [filteredQuotes, setFilteredQuotes] = useState([]);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
-  const [hoveredAuthor, setHoveredAuthor] = useState(null);
-  const [hoveredTopic, setHoveredTopic] = useState(null);
+  // const [hoveredAuthor, setHoveredAuthor] = useState(null);
+  // const [hoveredTopic, setHoveredTopic] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [quotesPerPage] = useState(8);
 
   useEffect(() => {
     if (!state?.filteredQuotes) {
@@ -70,13 +73,13 @@ const SourceResult = () => {
     navigate(`/author-results/${decodedAuthorName}`);
   };
 
-  const handleAuthorHover = (index) => {
-    setHoveredAuthor(index);
-  };
+  // const handleAuthorHover = (index) => {
+  //   setHoveredAuthor(index);
+  // };
 
-  const handleAuthorHoverLeave = () => {
-    setHoveredAuthor(null);
-  };
+  // const handleAuthorHoverLeave = () => {
+  //   setHoveredAuthor(null);
+  // };
 
   // ~ Topic
   const handleTopicClick = (topicName) => {
@@ -86,28 +89,40 @@ const SourceResult = () => {
     navigate(`/topic-results/${decodedTopicName}`);
   };
 
-  const handleTopicHover = (index, topicIndex) => {
-    setHoveredTopic({ quoteIndex: index, topicIndex });
-  };
+  // const handleTopicHover = (index, topicIndex) => {
+  //   setHoveredTopic({ quoteIndex: index, topicIndex });
+  // };
 
-  const handleTopicHoverLeave = () => {
-    setHoveredTopic(null);
-  };
+  // const handleTopicHoverLeave = () => {
+  //   setHoveredTopic(null);
+  // };
 
   const handleCardClick = (index) => {
     if (activeCardIndex === index) {
-      setActiveCardIndex(null); 
+      setActiveCardIndex(null);
     } else {
       setActiveCardIndex(index);
     }
   };
 
   const handleCardCloseClick = (event) => {
-    event.stopPropagation(); 
+    event.stopPropagation();
     setActiveCardIndex(null);
   };
 
   const quoteCount = filteredQuotes.length;
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  const indexOfLastQuote = currentPage * quotesPerPage;
+  const indexOfFirstQuote = indexOfLastQuote - quotesPerPage;
+  const currentQuotes = filteredQuotes.slice(
+    indexOfFirstQuote,
+    indexOfLastQuote
+  );
+  const totalPages = Math.ceil(filteredQuotes.length / quotesPerPage);
 
   return (
     <div className="result filt_elem_result">
@@ -136,7 +151,7 @@ const SourceResult = () => {
       )}
 
       <div className="cards">
-        {filteredQuotes.map((data, index) => (
+        {currentQuotes.map((data, index) => (
           <figure key={data.id} className="quote_card">
             <div
               className={`info_btn ${
@@ -161,8 +176,8 @@ const SourceResult = () => {
                   <button
                     className="linker_source linkers"
                     onClick={() => handleAuthorClick(data.attributes.author)}
-                    onMouseEnter={() => handleAuthorHover(index)}
-                    onMouseLeave={handleAuthorHoverLeave}
+                    // onMouseEnter={() => handleAuthorHover(index)}
+                    // onMouseLeave={handleAuthorHoverLeave}
                   >
                     <p>{data.attributes.author}</p>
                   </button>
@@ -183,10 +198,10 @@ const SourceResult = () => {
                           key={`${data.id}_${topicIndex}`}
                           className="linker_topic linkers"
                           onClick={() => handleTopicClick(topic)}
-                          onMouseEnter={() =>
-                            handleTopicHover(index, topicIndex)
-                          }
-                          onMouseLeave={handleTopicHoverLeave}
+                          // onMouseEnter={() =>
+                          //   handleTopicHover(index, topicIndex)
+                          // }
+                          // onMouseLeave={handleTopicHoverLeave}
                         >
                           <p>{topic}</p>
                         </button>
@@ -217,6 +232,14 @@ const SourceResult = () => {
           </figure>
         ))}
       </div>
+      {/* pagination */}
+      {filteredQuotes.length > quotesPerPage && (
+        <PaginationComponent
+          totalPages={totalPages}
+          currentPage={currentPage}
+          handlePageChange={handlePageChange}
+        />
+      )}
     </div>
   );
 };

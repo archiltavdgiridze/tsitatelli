@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import "./result.css";
 import CopyButton from "../../../ReComp/CopyButton";
-import Pagination from "@mui/lab/Pagination";
 import PaginationComponent from "../../../ReComp/Pagination";
 
 const AuthorResult = () => {
@@ -81,11 +80,12 @@ const AuthorResult = () => {
     }
   };
 
+ 
+  const quoteCount = filteredQuotes.length;
+ 
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
-
-  const quoteCount = filteredQuotes.length;
 
   const indexOfLastQuote = currentPage * quotesPerPage;
   const indexOfFirstQuote = indexOfLastQuote - quotesPerPage;

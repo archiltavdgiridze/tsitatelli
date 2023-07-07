@@ -7,6 +7,7 @@ import { faPenNib } from "@fortawesome/free-solid-svg-icons";
 import CopyButton from "../ReComp/CopyButton";
 import axios from "axios";
 import "../MainComponents/MainCSS/mainpage.css";
+import { API_ENDPOINT } from "../../quoteURL";
 
 const MainPage = () => {
   const [quote, setQuote] = useState("");
@@ -15,10 +16,9 @@ const MainPage = () => {
   const [previousIndex, setPreviousIndex] = useState(null);
   // needed in case there is only one quote in the database at the moment, so it won't run in infinite loop
   const [singleQuote, setSingleQuote] = useState(false);
-  
-  const url =
-  "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
-  
+
+  const url = API_ENDPOINT;
+
   // async function logJSONData() {
   //   const response = await fetch(url);
   //   const jsonData = await response.json();
@@ -71,10 +71,12 @@ const MainPage = () => {
         <div className="quote">
           <FontAwesomeIcon icon={faQuoteLeft} />
           <div className="MP_textNcopy">
-            <h3 className="generatedQuote">
-              {quote}
-            </h3>
-            <CopyButton text={`„${quote}“ - ${author}`} className="copy-btn" />
+            <h3 className="generatedQuote">{quote}</h3>
+            <CopyButton
+              className="copy-btn"
+              text={`„${quote}“ 
+- ${author}`}
+            />
           </div>
         </div>
         <div className="author">

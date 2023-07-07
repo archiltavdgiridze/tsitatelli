@@ -36,10 +36,10 @@
 }
 
 .filt_cont_div:hover {
-  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  box-shadow: 8px 6px 0px -1px var(--accentColor);
-  -webkit-box-shadow: 8px 6px 8px 0px var(--accentColor);
-  -moz-box-shadow: 8px 6px 0px -1px var(--accentColor);
+  transition: box-shadow 0.2s ease-in-out;
+  box-shadow: 5px 5px 2px 0px var(--accentColor);
+  -webkit-box-shadow: 5px 5px 2px 0px var(--accentColor);
+  -moz-box-shadow: 5px 5px 2px 0px var(--accentColor);
 }
 
 .filt_cont_div h2 {

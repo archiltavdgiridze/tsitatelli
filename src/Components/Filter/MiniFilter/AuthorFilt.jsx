@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Search from "../../ReComp/Search";
 import { API_ENDPOINT } from "../../../quoteURL";
-
-// import "./minifilter.css"
+import FilteredList from "../../ReComp/FilteredList";
 
 const AuthorFilt = () => {
   const url = API_ENDPOINT;
@@ -53,48 +52,23 @@ const AuthorFilt = () => {
     setShowNotFoundMessage(filtered.length === 0 && query !== "");
   };
 
-  const sortedFirstLetters = [
-    ...new Set(filteredAuthors.map((author) => author.charAt(0))),
-  ].sort();
-
   return (
     <div className="author_filter">
       <div className="filter_container">
         <Search
           value={searchQuery}
           onChange={handleSearchChange}
-          placeholder="ძიება ავტორის მიხედვით..."
-        >
-        </Search>
+          placeholder="ავტორის"
+        />
         {showNotFoundMessage && (
           <p className="not_found_msg">
             ავტორი ვერ მოიძებნა, სცადეთ სხვა სახელი.
           </p>
         )}
-
-        {sortedFirstLetters.map((letter) => {
-          const authorsWithLetter = filteredAuthors.filter(
-            (author) => author.charAt(0) === letter
-          );
-          if (authorsWithLetter.length > 0) {
-            return (
-              <div key={letter} className="filt_cont_div">
-                <h2>{letter}</h2>
-                <div className="filt_cont_btn">
-                  {authorsWithLetter.map((author) => (
-                    <button
-                      key={author}
-                      onClick={() => handleAuthorClick(author)}
-                    >
-                      {author}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            );
-          }
-          return null;
-        })}
+        <FilteredList
+          filteredItems={filteredAuthors}
+          handleItemClick={handleAuthorClick}
+        />
       </div>
     </div>
   );
