@@ -1,0 +1,67 @@
+hr {
+  width: 100%;
+  height: 2px;
+  color: var(--lightGray);
+}
+
+.generator_title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.generator_btns {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.selectors {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.generatorBtn button {
+  font-size: 2rem;
+}
+
+#chipselector:hover {
+  outline: 3px solid var(--goldColor);
+}
+
+#chip-label {
+  font-size: 1.2rem;
+  font-family: var(--secondaryFontReg);
+  color: var(--accentColor);
+  font-weight: bold;
+}
+
+.card_groups {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card_group {
+  padding: 10px;
+  border: 1px solid var(--accentColor);
+  border-radius: 10px;
+}
+
+.gen_category_title {
+  font-family: var(--secondaryFontReg);
+  margin-bottom: 0.5rem;
+}
+
+.gen_cards {
+  margin: 0 ;
+}
+
+.gen_quote_card {
+  width: 100%;
+}

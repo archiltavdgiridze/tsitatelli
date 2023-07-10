@@ -4,6 +4,7 @@ import {
   faFilter,
   faHouse,
   faCircleInfo,
+  faWandMagicSparkles,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import "../MainComponents/MainCSS/sidebar.css";
@@ -56,6 +57,21 @@ const Sidebar = () => {
                 <FontAwesomeIcon icon={faFilter} />
               </span>
               <p className="sidebar-texts">ფილტრი</p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/generator"
+              className={`sidebar-links ${
+                activeLink === "generator" ? "active" : ""
+              }`}
+              onClick={() => handleLinkClick("generator")}
+              alt="sources-button"
+            >
+              <span>
+                <FontAwesomeIcon icon={faWandMagicSparkles} />
+              </span>
+              <p className="sidebar-texts">გენერატორი</p>
             </Link>
           </li>
           <li>
