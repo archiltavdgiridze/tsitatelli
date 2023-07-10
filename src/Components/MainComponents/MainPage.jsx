@@ -62,6 +62,11 @@ const MainPage = () => {
     fetchRandomQuote();
   };
 
+  useEffect(() => {
+    document.title = "მთავარი | ციტატელი"; // Replace 'Custom Text' with your desired title
+  }, []);
+
+
   return (
     <div className="result rightDiv">
       <div className="result_wrapper rightDivWrapper" id="data-container">

@@ -13,7 +13,7 @@ const AuthorResult = () => {
   const [filteredQuotes, setFilteredQuotes] = useState([]);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [quotesPerPage] = useState(15);
+  const [quotesPerPage] = useState(10);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -29,6 +29,10 @@ const AuthorResult = () => {
       setFilteredQuotes(quotes);
     }
   }, [state]);
+
+  useEffect(() => {
+    document.title = `${authorName} | ციტატელი`; // Update the tab name with the author's name
+  }, [authorName]);
 
   const fetchQuotesByAuthor = (authorName) => {
     const apiUrl = `https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes?filter[author]=${authorName}`;

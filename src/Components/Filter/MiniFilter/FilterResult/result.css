@@ -306,12 +306,8 @@
     border-top: 3px solid var(--accentColor);
   }
 
-  .filtered_authorName {
-    font-size: 1.3rem;
-    text-align: center;
-  }
-
   .result_title {
+    font-size: 1.4rem;
     text-align: center;
     padding: 0 1rem;
   }

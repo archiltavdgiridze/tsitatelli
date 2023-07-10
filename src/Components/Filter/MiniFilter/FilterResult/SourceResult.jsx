@@ -13,10 +13,9 @@ const SourceResult = () => {
   const [sourceName, setSourceName] = useState("");
   const [filteredQuotes, setFilteredQuotes] = useState([]);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
-  // const [hoveredAuthor, setHoveredAuthor] = useState(null);
-  // const [hoveredTopic, setHoveredTopic] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [quotesPerPage] = useState(8);
+  const [quotesPerPage] = useState(10);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     if (!state?.filteredQuotes) {
@@ -28,14 +27,15 @@ const SourceResult = () => {
       fetchQuotesBySource(decodedSourceName);
     } else {
       const quotes = state.filteredQuotes;
-      // setSourceName(quotes[0]?.attributes.source || "");
       setFilteredQuotes(quotes);
     }
   }, [state]);
 
-  const fetchQuotesBySource = (sourceName) => {
-    // const decodedSourceName = sourceName.replace(/[-–]/g, " ");
+  useEffect(() => {
+    document.title = `${sourceName} | ციტატელი`; // Update the tab name with the author's name
+  }, [sourceName]);
 
+  const fetchQuotesBySource = (sourceName) => {
     const apiUrl = `https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes?filter[source]=${sourceName}`;
 
     fetch(apiUrl)
@@ -43,8 +43,6 @@ const SourceResult = () => {
       .then((data) => {
         const filteredQuotes = data.data;
         setFilteredQuotes(filteredQuotes);
-        // const formattedSourceName = decodedSourceName.replace(/–/g, " ");
-        // setSourceName(formattedSourceName);
       })
       .catch((error) => {
         console.error("Error fetching filtered quotes:", error);
@@ -73,14 +71,6 @@ const SourceResult = () => {
     navigate(`/author-results/${decodedAuthorName}`);
   };
 
-  // const handleAuthorHover = (index) => {
-  //   setHoveredAuthor(index);
-  // };
-
-  // const handleAuthorHoverLeave = () => {
-  //   setHoveredAuthor(null);
-  // };
-
   // ~ Topic
   const handleTopicClick = (topicName) => {
     const decodedTopicName = encodeURIComponent(
@@ -89,25 +79,12 @@ const SourceResult = () => {
     navigate(`/topic-results/${decodedTopicName}`);
   };
 
-  // const handleTopicHover = (index, topicIndex) => {
-  //   setHoveredTopic({ quoteIndex: index, topicIndex });
-  // };
-
-  // const handleTopicHoverLeave = () => {
-  //   setHoveredTopic(null);
-  // };
-
   const handleCardClick = (index) => {
     if (activeCardIndex === index) {
       setActiveCardIndex(null);
     } else {
       setActiveCardIndex(index);
     }
-  };
-
-  const handleCardCloseClick = (event) => {
-    event.stopPropagation();
-    setActiveCardIndex(null);
   };
 
   const quoteCount = filteredQuotes.length;
@@ -124,18 +101,32 @@ const SourceResult = () => {
   );
   const totalPages = Math.ceil(filteredQuotes.length / quotesPerPage);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.pageYOffset > getYOffsetThreshold());
+    };
+
+    const getYOffsetThreshold = () => {
+      return window.innerWidth >= 1024 ? 135 : 125; // Change the values as per your requirement
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="result filt_elem_result">
-      <button className="backButton" onClick={handleGoBack}>
-        <FontAwesomeIcon icon={faArrowLeft} />
-      </button>
-      {sourceName && (
-        <h1 className="filtered_sourceName result_title ">
-          {sourceName} | {quoteCount}
-        </h1>
-      )}
+    <div className={`result filt_elem_result ${isScrolled ? "scrolled" : ""}`}>
+      <div className={`topBar ${isScrolled ? "scrolled" : ""}`}>
+        <button className="backButton" onClick={handleGoBack}>
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </button>
+        {sourceName && (
+          <h1 className="filtered_sourceName result_title ">
+            {sourceName} | {quoteCount}
+          </h1>
+        )}
+      </div>
       {sourceName === "უცნობი" && (
-        // <div className="special-design">
         <p className="unknown_source_msg">
           *მოცემული ციტატების წყარო არის უცნობი. თუ რომელიმე ციტატის წყაროზე
           გაქვთ ინფორმაცია,
@@ -176,18 +167,9 @@ const SourceResult = () => {
                   <button
                     className="linker_source linkers"
                     onClick={() => handleAuthorClick(data.attributes.author)}
-                    // onMouseEnter={() => handleAuthorHover(index)}
-                    // onMouseLeave={handleAuthorHoverLeave}
                   >
                     <p>{data.attributes.author}</p>
                   </button>
-                  {/* <div
-                      className={`info_div ${
-                        hoveredAuthor === index ? "active" : ""
-                      }`}
-                    >
-                      ავტორის სხვა ციტატები
-                    </div> */}
                 </div>
                 <div className="bottom_group_buttons">
                   <p className="group_title">თემატიკა:</p>
@@ -198,24 +180,9 @@ const SourceResult = () => {
                           key={`${data.id}_${topicIndex}`}
                           className="linker_topic linkers"
                           onClick={() => handleTopicClick(topic)}
-                          // onMouseEnter={() =>
-                          //   handleTopicHover(index, topicIndex)
-                          // }
-                          // onMouseLeave={handleTopicHoverLeave}
                         >
                           <p>{topic}</p>
                         </button>
-
-                        {/* <div
-                          className={`info_div ${
-                            hoveredTopic?.quoteIndex === index &&
-                            hoveredTopic?.topicIndex === topicIndex
-                              ? "active"
-                              : ""
-                          }`}
-                        >
-                        სხვა ციტატები თემიდან
-                      </div> */}
                       </>
                     )
                   )}

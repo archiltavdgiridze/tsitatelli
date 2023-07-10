@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MailTo from "./MailTo";
 import "./AboutusCSS/aboutus.css";
 
@@ -6,6 +6,10 @@ const AboutUs = () => {
   const url = "https://linktr.ee/archiltavdgiridze";
   const urlGiorgi = "https://github.com/George1Meshveliani";
   const calligraphy = "https://calligraphy.ge/";
+
+  useEffect(() => {
+    document.title = "ჩვენს შესახებ | ციტატელი"; // Replace 'Custom Text' with your desired title
+  }, []);
 
   return (
     <div className="result">

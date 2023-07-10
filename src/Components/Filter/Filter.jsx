@@ -4,8 +4,7 @@ import TopicFilt from "./MiniFilter/TopicFilt";
 import SourceFilt from "./MiniFilter/SourceFilt";
 import "./filter.css";
 import "../Filter/MiniFilter/minifilter.css";
-import "./MiniFilter/FilterResult/result.css"
-
+import "./MiniFilter/FilterResult/result.css";
 
 const Filter = () => {
   const [activeFilter, setActiveFilter] = useState(
@@ -30,20 +29,9 @@ const Filter = () => {
     }
   };
 
-  // const url =
-  //   "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes";
-
-  // async function logJSONData() {
-  //   const response = await fetch(url);
-  //   const jsonData = await response.json();
-  //   // console.log(jsonData);
-  // }
-
-  // logJSONData();
-
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 600); 
+      setIsMobile(window.innerWidth <= 600);
     };
 
     // Add event listener for window resize
@@ -56,6 +44,10 @@ const Filter = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+  }, []);
+
+  useEffect(() => {
+    document.title = "ფილტრი | ციტატელი"; // Replace 'Custom Text' with your desired title
   }, []);
 
   if (isMobile) {

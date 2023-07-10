@@ -6,18 +6,15 @@ import "./result.css";
 import CopyButton from "../../../ReComp/CopyButton";
 import PaginationComponent from "../../../ReComp/Pagination";
 
-// import MailTo from "../../../AboutUs/MailTo";
-
 const TopicResult = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
   const [topicName, setTopicName] = useState("");
   const [filteredQuotes, setFilteredQuotes] = useState([]);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
-  // const [hoveredAuthor, setHoveredAuthor] = useState(null);
-  // const [hoveredSource, setHoveredSource] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [quotesPerPage] = useState(8);
+  const [quotesPerPage] = useState(10);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     if (!state?.filteredQuotes) {
@@ -32,6 +29,10 @@ const TopicResult = () => {
       setFilteredQuotes(quotes);
     }
   }, [state]);
+
+  useEffect(() => {
+    document.title = `${topicName} | ციტატელი`; // Update the tab name with the author's name
+  }, [topicName]);
 
   const fetchQuotesByTopic = (topicName) => {
     const decodedTopicName = topicName.replace(/[-–]/g, " ");
@@ -63,14 +64,6 @@ const TopicResult = () => {
     navigate(`/author-results/${encodedAuthorName}`);
   };
 
-  // const handleAuthorHover = (index) => {
-  //   setHoveredAuthor(index);
-  // };
-
-  // const handleAuthorHoverLeave = () => {
-  //   setHoveredAuthor(null);
-  // };
-
   // ~ Source
   const handleSourceClick = (sourceName) => {
     const encodedSourceName = encodeURIComponent(
@@ -79,25 +72,12 @@ const TopicResult = () => {
     navigate(`/source-results/${encodedSourceName}`);
   };
 
-  // const handleSourceHover = (index) => {
-  //   setHoveredSource(index);
-  // };
-
-  // const handleSourceHoverLeave = () => {
-  //   setHoveredSource(null);
-  // };
-
   const handleCardClick = (index) => {
     if (activeCardIndex === index) {
       setActiveCardIndex(null); // Close the expanded div
     } else {
       setActiveCardIndex(index);
     }
-  };
-
-  const handleCardCloseClick = (event) => {
-    event.stopPropagation(); // Prevent event bubbling to the card div
-    setActiveCardIndex(null);
   };
 
   const quoteCount = filteredQuotes.length;
@@ -114,16 +94,31 @@ const TopicResult = () => {
   );
   const totalPages = Math.ceil(filteredQuotes.length / quotesPerPage);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.pageYOffset > getYOffsetThreshold());
+    };
+
+    const getYOffsetThreshold = () => {
+      return window.innerWidth >= 1024 ? 135 : 125; // Change the values as per your requirement
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="result filt_elem_result">
-      <button className="backButton" onClick={handleGoBack}>
-        <FontAwesomeIcon icon={faArrowLeft} />
-      </button>
-      {topicName && (
-        <h1 className="filtered_topicName result_title ">
-          {topicName} | {quoteCount}
-        </h1>
-      )}
+    <div className={`result filt_elem_result ${isScrolled ? "scrolled" : ""}`}>
+      <div className={`topBar ${isScrolled ? "scrolled" : ""}`}>
+        <button className="backButton" onClick={handleGoBack}>
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </button>
+        {topicName && (
+          <h1 className="filtered_topicName result_title ">
+            {topicName} | {quoteCount}
+          </h1>
+        )}
+      </div>
       <div className="cards">
         {currentQuotes.map((data, index) => (
           <figure key={data.id} className="quote_card">
