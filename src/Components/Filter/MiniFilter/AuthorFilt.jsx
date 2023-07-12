@@ -4,13 +4,15 @@ import Search from "../../ReComp/Search";
 import { API_ENDPOINT } from "../../../quoteURL";
 import FilteredList from "../../ReComp/FilteredList";
 
+
 const AuthorFilt = () => {
   const url = API_ENDPOINT;
+  const navigate = useNavigate();
   const [authors, setAuthors] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredAuthors, setFilteredAuthors] = useState([]);
   const [showNotFoundMessage, setShowNotFoundMessage] = useState(false);
-  const navigate = useNavigate();
+  const [isDataFetched, setIsDataFetched] = useState(false);
 
   useEffect(() => {
     fetch(url)
@@ -28,6 +30,7 @@ const AuthorFilt = () => {
         const uniqueAuthorNames = Array.from(new Set(authorNames));
         setAuthors(uniqueAuthorNames);
         setFilteredAuthors(uniqueAuthorNames);
+        setIsDataFetched(true);
       })
       .catch((error) => {
         console.error("Error fetching author data:", error);
@@ -68,6 +71,7 @@ const AuthorFilt = () => {
         <FilteredList
           filteredItems={filteredAuthors}
           handleItemClick={handleAuthorClick}
+          dataStatus={isDataFetched}
         />
       </div>
     </div>

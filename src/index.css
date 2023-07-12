@@ -100,11 +100,6 @@ ul {
   margin: 20px 0 0;
 }
 
-
-/* .result.scrolled {
-  padding-top: 120px;
-} */
-
 /* result */
 
 /* ~ copy */
@@ -195,36 +190,12 @@ ul {
 }
 
 
-
-
-/* ~ scrollbar */
-/* ! needs fix */
-/* body::-webkit-scrollbar-track,
-.result::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: #F5F5F5;
-}
-
-body::-webkit-scrollbar,
-.result::-webkit-scrollbar {
-  width: 15px;
-  background-color: #F5F5F5;
-}
-
-body::-webkit-scrollbar-thumb,
-.result::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-  background-color: var(--accentColor);
-} */
-
 /* ! BOTTOM CSS */
 /* ~ --------------------- */
 /* ~ --------------------- */
 
 /* media queries */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .result {
     width: 100%;
     height: fit-content;

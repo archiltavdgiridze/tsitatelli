@@ -33,7 +33,7 @@ const MultipleSelectChip = ({ title, names, selectedNames, onChange }) => {
   // console.log(selectedNames);
 
   return (
-    <FormControl sx={{ m: 0.5, width: 350 }}>
+    <FormControl className="chip_selector" sx={{ m: 0.5 }}>
       <InputLabel id={`chip-label`}>{title}</InputLabel>
       <Select
         labelId={`chip-label-id`}
@@ -45,10 +45,7 @@ const MultipleSelectChip = ({ title, names, selectedNames, onChange }) => {
         renderValue={(selected) => (
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
             {selected.map((value) => (
-              <Chip
-                key={value}
-                label={value}
-              />
+              <Chip key={value} label={value} />
             ))}
           </Box>
         )}

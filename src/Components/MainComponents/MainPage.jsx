@@ -8,24 +8,18 @@ import CopyButton from "../ReComp/CopyButton";
 import axios from "axios";
 import "../MainComponents/MainCSS/mainpage.css";
 import { API_ENDPOINT } from "../../quoteURL";
+import Skeleton from "@mui/material/Skeleton";
 
 const MainPage = () => {
+  const url = API_ENDPOINT;
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
   // needed to prevent the same quote from being generated twice in a row
   const [previousIndex, setPreviousIndex] = useState(null);
   // needed in case there is only one quote in the database at the moment, so it won't run in infinite loop
   const [singleQuote, setSingleQuote] = useState(false);
+  const [isDataFetched, setIsDataFetched] = useState(false);
 
-  const url = API_ENDPOINT;
-
-  // async function logJSONData() {
-  //   const response = await fetch(url);
-  //   const jsonData = await response.json();
-  //   console.log(jsonData.data[5].attributes.topic);
-  // }
-
-  // logJSONData();
 
   useEffect(() => {
     fetchRandomQuote();
@@ -49,6 +43,7 @@ const MainPage = () => {
       setQuote(quote);
       setAuthor(author);
       setPreviousIndex(randomIndex);
+      setIsDataFetched(true);
     } catch (error) {
       console.error("Error fetching quotes:", error);
     }
@@ -66,8 +61,7 @@ const MainPage = () => {
     document.title = "მთავარი | ციტატელი"; // Replace 'Custom Text' with your desired title
   }, []);
 
-
-  return (
+  const content = isDataFetched ? (
     <div className="result rightDiv">
       <div className="result_wrapper rightDivWrapper" id="data-container">
         <div className="generatorBtn" id="generatorBtn">
@@ -90,7 +84,52 @@ const MainPage = () => {
         </div>
       </div>
     </div>
+  ) : (
+    <div className="result rightDiv">
+      <div className="result_wrapper rightDivWrapper" id="data-container">
+        <div className="generatorBtn" id="generatorBtn">
+          <button onClick={generateRandomQuote}>ახლის ჩვენება</button>
+        </div>
+        <div className="quote">
+          <FontAwesomeIcon icon={faQuoteLeft} />
+          <div className="MP_textNcopy">
+            <Skeleton
+              animation="wave"
+              variant="text"
+              width="95%"
+              height="30px"
+            />
+            <Skeleton
+              animation="wave"
+              variant="text"
+              width="78%"
+              height="30px"
+            />
+            <Skeleton
+              animation="wave"
+              variant="text"
+              width="85%"
+              height="30px"
+            />
+            <CopyButton
+              className="copy-btn"
+              text={`„${quote}“ 
+- ${author}`}
+            />
+          </div>
+        </div>
+        <div
+          style={{ display: "flex", justifyContent: "space-between" }}
+          className="author"
+        >
+          <FontAwesomeIcon icon={faPenNib} />
+          <Skeleton variant="text" width="40%" height="30px" />
+        </div>
+      </div>
+    </div>
   );
+
+  return content;
 };
 
 export default MainPage;

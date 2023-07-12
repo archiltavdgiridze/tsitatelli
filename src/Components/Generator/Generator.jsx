@@ -199,9 +199,6 @@ const Generator = () => {
   return (
     <div className="result rightDiv">
       <div className="result_wrapper rightDivWrapper">
-        <h3 style={{ color: "red" }}>
-          *კომპონენტი არის დეველოპმენტის პროცესში
-        </h3>
         <div className="generator_title">
           <h1 className="result_title">ციტატების გენერატორი</h1>
         </div>

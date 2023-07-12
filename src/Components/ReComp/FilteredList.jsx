@@ -1,6 +1,7 @@
 import React from "react";
+import { Skeleton } from "@mui/lab";
 
-const FilteredList = ({ filteredItems, handleItemClick }) => {
+const FilteredList = ({ filteredItems, handleItemClick, dataStatus }) => {
   const sortedFirstLetters = [
     ...new Set(
       filteredItems
@@ -9,7 +10,7 @@ const FilteredList = ({ filteredItems, handleItemClick }) => {
     ),
   ].sort();
 
-  return (
+  const content = dataStatus ? (
     <>
       {sortedFirstLetters.map((letter) => {
         const itemsWithLetter = filteredItems.filter(
@@ -32,7 +33,42 @@ const FilteredList = ({ filteredItems, handleItemClick }) => {
         return null;
       })}
     </>
+  ) : (
+    <>
+      {sortedFirstLetters.map((letter) => {
+        const itemsWithLetter = filteredItems.filter(
+          (item) => typeof item === "string" && item.charAt(0) === letter
+        );
+        if (itemsWithLetter.length > 0) {
+          return (
+            <div key={letter} className="filt_cont_div">
+              <Skeleton
+                animation="wave"
+                variant="text"
+                width="5%"
+                height="50px"
+              />
+              <Skeleton
+                animation="wave"
+                variant="text"
+                width="40%"
+                height="50px"
+              />
+              <Skeleton
+                animation="wave"
+                variant="text"
+                width="40%"
+                height="50px"
+              />
+            </div>
+          );
+        }
+        return null;
+      })}
+    </>
   );
+
+  return content;
 };
 
 export default FilteredList;

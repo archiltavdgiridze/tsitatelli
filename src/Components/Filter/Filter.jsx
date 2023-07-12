@@ -5,12 +5,14 @@ import SourceFilt from "./MiniFilter/SourceFilt";
 import "./filter.css";
 import "../Filter/MiniFilter/minifilter.css";
 import "./MiniFilter/FilterResult/result.css";
+import Skeleton from "@mui/material/Skeleton";
 
 const Filter = () => {
   const [activeFilter, setActiveFilter] = useState(
     sessionStorage.getItem("activeFilter") || "Authors"
   ); // Get the active filter from sessionStorage, default to "Authors" if not set
   const [isMobile, setIsMobile] = useState(false);
+
 
   const handleFilterChange = (event) => {
     const filterName = event.target.value;

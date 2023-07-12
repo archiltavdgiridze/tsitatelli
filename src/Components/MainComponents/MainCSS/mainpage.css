@@ -118,7 +118,7 @@
   font-family: var(--mainFont);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .quote {
     width: 100%;
     display: flex;
