@@ -7,7 +7,7 @@ import CopyButton from "../../../ReComp/CopyButton";
 import MailTo from "../../../AboutUs/MailTo";
 import PaginationComponent from "../../../ReComp/Pagination";
 
-const SourceResult = () => {
+const SourceResult = ({ darkMode }) => {
   const navigate = useNavigate();
   const { state } = useLocation();
   const [sourceName, setSourceName] = useState("");
@@ -115,7 +115,11 @@ const SourceResult = () => {
   }, []);
 
   return (
-    <div className={`result filt_elem_result ${isScrolled ? "scrolled" : ""}`}>
+    <div
+      className={`result filt_elem_result ${isScrolled ? "scrolled" : ""} ${
+        darkMode ? "dark-mode" : ""
+      }`}
+    >
       <div className={`topBar ${isScrolled ? "scrolled" : ""}`}>
         <button className="backButton" onClick={handleGoBack}>
           <FontAwesomeIcon icon={faArrowLeft} />

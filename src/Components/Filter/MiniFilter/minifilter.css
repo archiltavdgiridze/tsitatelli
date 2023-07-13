@@ -22,6 +22,11 @@
   text-align: center;
 }
 
+.result.dark-mode .not_found_msg {
+  color: var(--DMtextColorWhite);
+}
+
+
 .filt_cont_div {
   width: -webkit-fill-available;
   display: flex;
@@ -30,16 +35,20 @@
   gap: 1rem;
   text-align: left;
   padding: 10px 1rem;
-  background-color: var(--lightGray);
+  background-color: var(--bgLight);
   border-radius: 1rem;
   transition: box-shadow 0.5s ease, background-color 0.5s ease, outline-offset 0.25s;
 }
 
+.result.dark-mode .filt_cont_div {
+  background-color: var(--DMbgLight);
+}
+
 .filt_cont_div:hover {
   transition: box-shadow 0.2s ease-in-out;
-  box-shadow: 5px 5px 2px 0px var(--accentColor);
-  -webkit-box-shadow: 5px 5px 2px 0px var(--accentColor);
-  -moz-box-shadow: 5px 5px 2px 0px var(--accentColor);
+  box-shadow: 5px 5px 2px 0px var(--accentColor2);
+  -webkit-box-shadow: 5px 5px 2px 0px var(--accentColor2);
+  -moz-box-shadow: 5px 5px 2px 0px var(--accentColor2);
 }
 
 .filt_cont_div h2 {
@@ -49,11 +58,16 @@
   justify-content: center;
   font-size: 2rem;
   line-height: 50px;
+  color: var(--textColorBlack);
   font-family: var(--secondaryFont);
 }
 
+.result.dark-mode .filt_cont_div h2 {
+  color: var(--DMtextColorWhite);
+}
+
 .filt_cont_div:hover.filt_cont_div h2 {
-  color: var(--goldColor);
+  color: var(--accentColor2);
   transition: 0.3s ease-in-out;
 }
 
@@ -69,6 +83,8 @@
   min-height: 50px;
   width: auto;
   transition: background-color 0.5s ease, outline-offset 0.25s, box-shadow 0.5s ease-in-out;
+  color: var(--textColorBlack);
+  background-color: transparent;
   font-family: var(--secondaryFont);
   font-size: 1.5rem;
   font-weight: bolder;
@@ -81,10 +97,19 @@
   letter-spacing: 1px;
 }
 
+.result.dark-mode .filt_cont_btn button {
+  color: var(--DMtextColorWhite);
+}
+
 .filt_cont_btn button:hover {
   outline-offset: 3px;
-  outline-color: var(--goldColor);
-  background-color: var(--lightGoldColor);
+  outline-color: var(--accentColor2);
+  background-color: var(--accentColor2);
+}
+
+.result.dark-mode .filt_cont_btn button:hover {
+  color: var(--DMtextColorBlack);
+
 }
 
 .filter_placeholder {

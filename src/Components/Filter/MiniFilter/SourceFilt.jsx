@@ -6,11 +6,12 @@ import FilteredList from "../../ReComp/FilteredList";
 
 const SourceFilt = () => {
   const url = API_ENDPOINT;
+  const navigate = useNavigate();
   const [sources, setSources] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredSources, setFilteredSources] = useState([]);
   const [showNotFoundMessage, setShowNotFoundMessage] = useState(false);
-  const navigate = useNavigate();
+  const [isDataFetched, setIsDataFetched] = useState(false);
 
   useEffect(() => {
     fetch(url)
@@ -28,6 +29,7 @@ const SourceFilt = () => {
         const uniqueSourceNames = Array.from(new Set(sourceNames));
         setSources(uniqueSourceNames);
         setFilteredSources(uniqueSourceNames);
+        setIsDataFetched(true);
       })
       .catch((error) => {
         console.error("Error fetching source data:", error);
@@ -72,6 +74,7 @@ const SourceFilt = () => {
         <FilteredList
           filteredItems={filteredSources}
           handleItemClick={handleSourceClick}
+          dataStatus={isDataFetched}
         />
       </div>
     </div>

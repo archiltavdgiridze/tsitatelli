@@ -45,7 +45,7 @@ const MultipleSelectChip = ({ title, names, selectedNames, onChange }) => {
         renderValue={(selected) => (
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
             {selected.map((value) => (
-              <Chip key={value} label={value} />
+              <Chip className="chip_text" key={value} label={value} />
             ))}
           </Box>
         )}

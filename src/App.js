@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 //copybtn and search css
 import "./Components/ReComp/RecompCSS/search.css";
@@ -17,17 +17,26 @@ import SourceResult from "./Components/Filter/MiniFilter/FilterResult/SourceResu
 //
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div className="App">
-      <Sidebar />
+    <div className={`App ${darkMode ? "dark-mode" : ""}`}>
+      <Sidebar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/filter" element={<Filter />} />
-        <Route path="/author-results/:author" element={<AuthorResult />} />
-        <Route path="/topic-results/:topic" element={<TopicResult />} />
-        <Route path="/source-results/:source" element={<SourceResult />} />
-        <Route path="/generator" element={<Generator />} />
-        <Route path="/about_us" element={<AboutUs />} />
+        <Route path="/" element={<MainPage darkMode={darkMode} />} />
+        <Route path="/filter" element={<Filter darkMode={darkMode} />} />
+        <Route
+          path="/author-results/:author"
+          element={<AuthorResult darkMode={darkMode} />}
+        />
+        <Route path="/topic-results/:topic" element={<TopicResult darkMode={darkMode}/>} />
+        <Route path="/source-results/:source" element={<SourceResult darkMode={darkMode}/>} />
+        <Route path="/generator" element={<Generator darkMode={darkMode}/>} />
+        <Route path="/about_us" element={<AboutUs darkMode={darkMode}/>} />
       </Routes>
     </div>
   );

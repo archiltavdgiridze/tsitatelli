@@ -75,7 +75,6 @@
   justify-content: center;
 }
 
-
 .sidebar-links p {
   width: 85%;
   padding-left: 1rem;
@@ -83,7 +82,7 @@
 
 .sidebar-links.active {
   transition: 0.4s;
-  color: var(--goldColor);
+  color: var(--accentColor2);
   border-radius: 10px;
   box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25), 0 0.25rem 0.25rem rgba(58, 136, 145, 0.2);
 }
@@ -98,6 +97,22 @@
 .material-symbols-outlined {
   font-size: 2rem;
 }
+
+/* ~ Dark mode CSS */
+
+.sidebar.dark-mode {
+  color: var(--DMtextColorWhite);
+  background-color: var(--DMbgDark);
+}
+
+.sidebar.dark-mode .sidebar_title a {
+  color: var(--accentColor2);
+}
+
+/* .sidebar.dark-mode .sidebar-links {
+  color: var(--DMaccentColor);
+} */
+/* ! */
 
 @media screen and (max-width: 1100px) {
 

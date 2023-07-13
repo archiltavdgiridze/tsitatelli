@@ -6,11 +6,12 @@ import FilteredList from "../../ReComp/FilteredList";
 
 const TopicFilt = () => {
   const url = API_ENDPOINT;
+  const navigate = useNavigate();
   const [topics, setTopics] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredTopics, setFilteredTopics] = useState([]);
   const [showNotFoundMessage, setShowNotFoundMessage] = useState(false);
-  const navigate = useNavigate();
+  const [isDataFetched, setIsDataFetched] = useState(false);
 
   useEffect(() => {
     fetch(url)
@@ -29,6 +30,7 @@ const TopicFilt = () => {
         const uniqueTopics = Array.from(new Set(topicNames));
         setTopics(uniqueTopics);
         setFilteredTopics(uniqueTopics);
+        setIsDataFetched(true);
       })
       .catch((error) => {
         console.error("Error fetching topic data:", error);
@@ -67,6 +69,7 @@ const TopicFilt = () => {
         <FilteredList
           filteredItems={filteredTopics}
           handleItemClick={handleTopicClick}
+          dataStatus={isDataFetched}
         />
       </div>
     </div>

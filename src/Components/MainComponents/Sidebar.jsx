@@ -1,27 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFilter,
   faHouse,
   faCircleInfo,
   faWandMagicSparkles,
+  faMoon,
+  faSun,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import "../MainComponents/MainCSS/sidebar.css";
 
-const Sidebar = () => {
-  const [activeLink, setActiveLink] = useState("home"); // State variable to store the active link
+const Sidebar = ({ darkMode, toggleDarkMode }) => {
+  const [activeLink, setActiveLink] = React.useState("home");
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
   };
 
   const handleLogoClick = () => {
-    setActiveLink("home"); // Set the active link to "home" when the logo is clicked
+    setActiveLink("home");
   };
 
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${darkMode ? "dark-mode" : ""}`}>
       <div className="sidebar_title">
         <Link to="/" className="sidebar_logo" onClick={handleLogoClick}>
           <h1>ციტატელი</h1>
@@ -90,6 +92,11 @@ const Sidebar = () => {
             </Link>
           </li>
         </ul>
+        <div className="dark-mode-toggle">
+          <button onClick={toggleDarkMode} className="dark-mode-button">
+            {darkMode ? "Light Mode" : "Dark Mode"}
+          </button>
+        </div>
       </div>
     </div>
   );

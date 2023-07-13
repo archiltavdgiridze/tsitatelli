@@ -1,6 +1,4 @@
-// new code
 import React, { useState, useEffect } from "react";
-// import quoteBase from "../../quoteBase.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 import { faPenNib } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +8,7 @@ import "../MainComponents/MainCSS/mainpage.css";
 import { API_ENDPOINT } from "../../quoteURL";
 import Skeleton from "@mui/material/Skeleton";
 
-const MainPage = () => {
+const MainPage = ({ darkMode }) => {
   const url = API_ENDPOINT;
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
@@ -19,7 +17,6 @@ const MainPage = () => {
   // needed in case there is only one quote in the database at the moment, so it won't run in infinite loop
   const [singleQuote, setSingleQuote] = useState(false);
   const [isDataFetched, setIsDataFetched] = useState(false);
-
 
   useEffect(() => {
     fetchRandomQuote();
@@ -58,12 +55,17 @@ const MainPage = () => {
   };
 
   useEffect(() => {
-    document.title = "მთავარი | ციტატელი"; // Replace 'Custom Text' with your desired title
+    document.title = "მთავარი | ციტატელი";
   }, []);
 
   const content = isDataFetched ? (
-    <div className="result rightDiv">
-      <div className="result_wrapper rightDivWrapper" id="data-container">
+    <div className={`result rightDiv ${darkMode ? "dark-mode" : ""}`}>
+      <div
+        className={`result_wrapper rightDivWrapper ${
+          darkMode ? "dark-mode" : ""
+        }`}
+        id="data-container"
+      >
         <div className="generatorBtn" id="generatorBtn">
           <button onClick={generateRandomQuote}>ახლის ჩვენება</button>
         </div>
@@ -85,8 +87,13 @@ const MainPage = () => {
       </div>
     </div>
   ) : (
-    <div className="result rightDiv">
-      <div className="result_wrapper rightDivWrapper" id="data-container">
+    <div className={`result rightDiv ${darkMode ? "dark-mode" : ""}`}>
+      <div
+        className={`result_wrapper rightDivWrapper ${
+          darkMode ? "dark-mode" : ""
+        }`}
+        id="data-container"
+      >
         <div className="generatorBtn" id="generatorBtn">
           <button onClick={generateRandomQuote}>ახლის ჩვენება</button>
         </div>

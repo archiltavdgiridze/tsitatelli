@@ -7,12 +7,11 @@ import "../Filter/MiniFilter/minifilter.css";
 import "./MiniFilter/FilterResult/result.css";
 import Skeleton from "@mui/material/Skeleton";
 
-const Filter = () => {
+const Filter = ({ darkMode }) => {
   const [activeFilter, setActiveFilter] = useState(
     sessionStorage.getItem("activeFilter") || "Authors"
   ); // Get the active filter from sessionStorage, default to "Authors" if not set
   const [isMobile, setIsMobile] = useState(false);
-
 
   const handleFilterChange = (event) => {
     const filterName = event.target.value;
@@ -55,8 +54,12 @@ const Filter = () => {
   if (isMobile) {
     // Render dropdown selector for mobile
     return (
-      <div className="result">
-        <div className="result_wrapper mobile_result">
+      <div className={`result ${darkMode ? "dark-mode" : ""}`}>
+        <div
+          className={`result_wrapper mobile_result ${
+            darkMode ? "dark-mode" : ""
+          }`}
+        >
           <select
             className="filter_select"
             value={activeFilter}
@@ -74,8 +77,8 @@ const Filter = () => {
 
   // Render button-based layout for desktop
   return (
-    <div className="result">
-      <div className="result_wrapper">
+    <div className={`result ${darkMode ? "dark-mode" : ""}`}>
+      <div className={`result_wrapper ${darkMode ? "dark-mode" : ""}`}>
         <div className="filter_buttons">
           <button
             className={activeFilter === "Authors" ? "active" : ""}

@@ -9,19 +9,26 @@
   font-size: 1.2rem;
   border-radius: 50px;
   border: none;
-  background-color: var(--lightGray);
+  color: var(--textColorBlack);
+  background-color: var(--bgLight);
   transition: box-shadow 0.5s ease;
   transition: background-color 0.5s ease;
 }
 
+.result.dark-mode .backButton {
+  background-color: var(--DMbgLight);
+}
+
 .backButton:hover {
-  color: var(--white);
-  background-color: var(--goldColor);
+  color: var(--bgLight);
+  background-color: var(--accentColor2);
   transition: 0.3s ease-in-out;
-  box-shadow: 8px 6px 0px -1px #feedb4;
-  -webkit-box-shadow: 8px 6px 8px 0px #feedb4;
-  -moz-box-shadow: 8px 6px 0px -1px #feedb4;
   transition: 0.3s ease-in-out;
+}
+
+.result.dark-mode .backButton:hover {
+  color: var(--DMtextColorBlack);
+  background-color: var(--bgLighter);
 }
 
 .topBar {
@@ -36,7 +43,7 @@
 }
 
 .topBar.scrolled {
-  background-color: var(--lightGray);
+  background-color: var(--bgLight);
   position: fixed;
   z-index: 999;
   width: inherit;
@@ -53,26 +60,35 @@
 .topBar.scrolled .backButton {
   width: 10%;
   margin: 0;
-  background-color: var(--darkGray);
-  transition: box-shadow 0.5s ease;
+  background-color: var(--bgDarker);
+  transition: box-shadow 0.3s ease;
 }
 
 .topBar.scrolled .backButton:hover {
-  color: var(--white);
-  background-color: var(--goldColor);
-  transition: 0.3s ease-in-out;
+  color: var(--bgLight);
+  background-color: var(--accentColor2);
+  transition: 0.2s ease-in-out;
   box-shadow: 8px 6px 0px -1px #feedb4;
   -webkit-box-shadow: 8px 6px 8px 0px #feedb4;
   -moz-box-shadow: 8px 6px 0px -1px #feedb4;
-  transition: 0.3s ease-in-out;
-}
-
-.filtered_authorName {
-  letter-spacing: 1px;
+  transition: 0.2s ease-in-out;
 }
 
 .result_title {
+  letter-spacing: 1px;
   font-family: var(--secondaryFontReg);
+}
+
+.result.dark-mode .result_title {
+  color: var(--DMtextColorWhite);
+}
+
+.result.dark-mode .topBar.scrolled {
+  background-color: var(--DMbgDark);
+}
+
+.result.dark-mode>.topBar.scrolled .result_title {
+  color: var(--DMtextColorWhite);
 }
 
 .unknown_source_msg {
@@ -120,8 +136,12 @@
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   transition: transform 250ms;
-  background-color: var(--lightGray);
+  background-color: var(--bgLight);
   text-align: center;
+}
+
+.result.dark-mode .q_card_top {
+  background-color: var(--DMbgLight);
 }
 
 .info_btn {
@@ -134,9 +154,14 @@
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  background-color: var(--darkGray);
+  background-color: var(--bgDarker);
   font-family: var(--secondaryFont);
 }
+
+/* 
+.result.dark-mode .info_btn {
+  background-color: var(--DMbgLight);
+} */
 
 .info_btn:active {
   background-color: var(--goldColor);
@@ -148,7 +173,7 @@
 }
 
 .quote_info:hover {
-  color: var(--goldColor);
+  color: var(--accentColor);
   transition: 0.2s;
 }
 
@@ -162,6 +187,10 @@
   text-align: left;
   font-family: var(--secondaryFont);
   user-select: none;
+}
+
+.result.dark-mode .q_card_top h2 {
+  color: var(--DMtextColorWhite);
 }
 
 .q_card_bottom {
@@ -180,17 +209,20 @@
 }
 
 .btn_filled {
-  color: var(--white);
-  background-color: var(--accentColor);
+  color: var(--DMtextColorWhite);
+  /* background-color: var(--accentColor); */
+  background-color: transparent;
   margin: 0;
   border-radius: 6px;
   font-size: 1.3rem;
+  outline: 3px solid var(--accentColor);
 }
+
 
 .btn_filled:hover {
   color: var(--white);
   transition: 0.4s;
-  background-color: var(--goldColor);
+  background-color: var(--DMaccentColor2);
   outline-color: var(--lightGoldColor);
   box-shadow: none;
 }
@@ -215,6 +247,7 @@
   font-weight: bold;
   text-align: left;
 }
+
 
 .top_group_buttons,
 .bottom_group_buttons {
@@ -261,16 +294,23 @@
 }
 
 .linkers {
-  color: var(--white);
-  background-color: var(--accentColor);
+  color: var(--bgLight);
+  /* background-color: var(--accentColor); */
+  background-color: transparent;
+  outline: 3px solid var(--accentColor);
   border: none;
 }
 
 .linkers:hover {
-  background-color: var(--goldColor);
-  outline: 3px solid var(--goldColor);
+  color: var(--textColorBlack);
+  background-color: var(--DMaccentColor2);
+  outline: 3px solid var(--DMaccentColor2);
   outline-offset: 3px;
   transition: 0.2s;
+}
+
+.linkers:hover .q_card_buttons button p {
+  color: var(--textColorBlack);
 }
 
 .linker_source {

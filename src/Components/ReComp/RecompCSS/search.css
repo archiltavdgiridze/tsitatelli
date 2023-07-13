@@ -17,10 +17,9 @@
 }
 
 .search_icon.focused {
-  transition: 0.4s;
-  color: var(--goldColor);
+  transition: 0.2s;
+  color: var(--accentColor2);
 }
-
 
 .search_bar {
   height: 3rem;
@@ -28,22 +27,29 @@
   border: none;
   border-radius: 1rem;
   font-family: var(--secondaryFont);
+  color: var(--textColorBlack);
+  background-color: var(--bgLighter);
   font-size: 1.3rem;
   letter-spacing: 1px;
 }
 
+.result.dark-mode .search_bar {
+  color: var(--DMtextColorWhite);
+  background-color: var(--DMbgLight);
+}
+
 .search_bar:hover {
   transition: 0.2s;
-  outline: 3px solid var(--goldColor);
+  outline: 3px solid var(--accentColor);
 
 }
 
 .search_bar:focus {
-  transition: 0.4s;
-  outline: 2px solid var(--goldColor);
-  box-shadow: 8px 6px 0px -1px var(--goldColor);
-  -webkit-box-shadow: 8px 6px 8px 0px var(--goldColor);
-  -moz-box-shadow: 8px 6px 0px -1px var(--goldColor);
+  transition: 0.2s;
+  outline: 2px solid var(--accentColor2);
+  box-shadow: 8px 6px 0px -1px var(--accentColor2);
+  -webkit-box-shadow: 8px 6px 8px 0px var(--accentColor2);
+  -moz-box-shadow: 8px 6px 0px -1px var(--accentColor2);
 }
 
 /* when .search_bar is focused, search_icon should change color to gold color */

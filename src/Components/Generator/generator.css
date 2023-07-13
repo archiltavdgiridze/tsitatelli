@@ -10,6 +10,10 @@ hr {
   justify-content: center;
 }
 
+.result.dark-mode .generator_title {
+  color: var(--DMtextColorWhite);
+}
+
 .generator_btns {
   width: 100%;
   display: flex;
@@ -28,10 +32,6 @@ hr {
 
 .generatorBtn button {
   font-size: 2rem;
-}
-
-#chipselector:hover {
-  outline: 3px solid var(--goldColor);
 }
 
 #chip-label {
@@ -60,6 +60,10 @@ hr {
   margin-bottom: 0.5rem;
 }
 
+.result.dark-mode .gen_category_title {
+  color: var(--DMtextColorWhite);
+}
+
 .gen_cards {
   margin: 0;
 }
@@ -71,6 +75,10 @@ hr {
 .selectors {
   width: 100%;
   gap: 0.5rem;
+}
+
+.chip_text {
+  color: #fff;
 }
 
 .chip_selector {
@@ -88,8 +96,7 @@ hr {
   overflow-y: auto;
 }
 
-@media screen and (max-width: 1100px) {
-}
+@media screen and (max-width: 1100px) {}
 
 
 @media screen and (max-width: 850px) {

@@ -7,7 +7,7 @@ import { API_ENDPOINT } from "../../quoteURL";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
-const Generator = () => {
+const Generator = ({ darkMode }) => {
   const url = API_ENDPOINT;
   const navigate = useNavigate();
   const [authorNames, setAuthorNames] = useState([]);
@@ -183,7 +183,6 @@ const Generator = () => {
       } else {
         // Clicked on a different card, update the active state
         updatedIndices[groupIndex] = cardIndex;
-
         // Remove the active state from the previously active card
         for (let i = 0; i < updatedIndices.length; i++) {
           if (i !== groupIndex) {
@@ -197,8 +196,12 @@ const Generator = () => {
   };
 
   return (
-    <div className="result rightDiv">
-      <div className="result_wrapper rightDivWrapper">
+    <div className={`result rightDiv ${darkMode ? "dark-mode" : ""}`}>
+      <div
+        className={`result_wrapper rightDivWrapper${
+          darkMode ? "dark-mode" : ""
+        }`}
+      >
         <div className="generator_title">
           <h1 className="result_title">ციტატების გენერატორი</h1>
         </div>

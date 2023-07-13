@@ -1,12 +1,5 @@
-:root {
-  --accentColor: #3A8891;
-  --accentColorHover: rgb(96, 168, 176);
-}
 
 .pagination {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem; */
+
   margin: 0 0 3rem;
 }

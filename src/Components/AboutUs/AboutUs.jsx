@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import MailTo from "./MailTo";
 import "./AboutusCSS/aboutus.css";
 
-const AboutUs = () => {
+const AboutUs = ({ darkMode }) => {
   const url = "https://linktr.ee/archiltavdgiridze";
   const urlGiorgi = "https://github.com/George1Meshveliani";
   const calligraphy = "https://calligraphy.ge/";
@@ -12,7 +12,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="result">
+    <div className={`result ${darkMode ? "dark-mode" : ""}`}>
       <div className="about_us">
         <h1>ჩვენ ვართ ციტატელი</h1>
         <h2>
