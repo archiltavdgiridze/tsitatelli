@@ -35,10 +35,7 @@
   cursor: pointer;
   outline: 3px solid var(--accentColor);
   transition: outline-offset 0.25s;
-}
-
-.result.dark-mode .filter_buttons button {
-  color: var(--DMtextColorWhite);
+  transition: color 0.5s ease;
 }
 
 /* ~ */
@@ -49,11 +46,6 @@
   outline-offset: 3px;
   outline: 3px solid var(--accentColor2);
 }
-
-.result.dark-mode .filter_buttons button.active {
-  color: var(--DMtextColorBlack);
-}
-
 
 .filter_buttons button:hover {
   transition: 0.2s ease-in-out;
@@ -80,8 +72,14 @@
   font-family: var(--secondaryFont);
 }
 
-
 /* ~ Dark mode */
+.result.dark-mode .filter_buttons button {
+  color: var(--DMtextColorWhite);
+}
+
+.result.dark-mode .filter_buttons button.active {
+  color: var(--DMtextColorBlack);
+}
 
 /* ! */
 

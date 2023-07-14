@@ -15,9 +15,6 @@
   transition: background-color 0.5s ease;
 }
 
-.result.dark-mode .backButton {
-  background-color: var(--DMbgLight);
-}
 
 .backButton:hover {
   color: var(--bgLight);
@@ -26,10 +23,6 @@
   transition: 0.3s ease-in-out;
 }
 
-.result.dark-mode .backButton:hover {
-  color: var(--DMtextColorBlack);
-  background-color: var(--bgLighter);
-}
 
 .topBar {
   width: inherit;
@@ -77,19 +70,9 @@
 .result_title {
   letter-spacing: 1px;
   font-family: var(--secondaryFontReg);
+  transition: background-color 0.5s ease;
 }
 
-.result.dark-mode .result_title {
-  color: var(--DMtextColorWhite);
-}
-
-.result.dark-mode .topBar.scrolled {
-  background-color: var(--DMbgDark);
-}
-
-.result.dark-mode>.topBar.scrolled .result_title {
-  color: var(--DMtextColorWhite);
-}
 
 .unknown_source_msg {
   width: 90%;
@@ -135,14 +118,11 @@
   border-top-right-radius: inherit;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  transition: transform 250ms;
   background-color: var(--bgLight);
   text-align: center;
+  transition: transform 250ms background-color 0.5s ease;
 }
 
-.result.dark-mode .q_card_top {
-  background-color: var(--DMbgLight);
-}
 
 .info_btn {
   position: absolute;
@@ -157,11 +137,6 @@
   background-color: var(--bgDarker);
   font-family: var(--secondaryFont);
 }
-
-/* 
-.result.dark-mode .info_btn {
-  background-color: var(--DMbgLight);
-} */
 
 .info_btn:active {
   background-color: var(--goldColor);
@@ -187,11 +162,10 @@
   text-align: left;
   font-family: var(--secondaryFont);
   user-select: none;
+  transition: color 0.5s ease;
+
 }
 
-.result.dark-mode .q_card_top h2 {
-  color: var(--DMtextColorWhite);
-}
 
 .q_card_bottom {
   display: flex;
@@ -326,6 +300,30 @@
   padding: 10px 8px;
   width: 100%;
 }
+
+/* ~ Dark mode */
+
+.result.dark-mode .backButton,
+.result.dark-mode .q_card_top {
+  background-color: var(--DMbgLight);
+}
+
+.result.dark-mode .backButton:hover {
+  color: var(--DMtextColorBlack);
+  background-color: var(--bgLighter);
+}
+
+.result.dark-mode .topBar.scrolled {
+  background-color: var(--DMbgDark);
+}
+
+.result.dark-mode>.topBar.scrolled .result_title,
+.result.dark-mode .q_card_top h2,
+.result.dark-mode .result_title {
+  color: var(--DMtextColorWhite);
+}
+
+/* ! */
 
 @media screen and (max-width: 1100px) {
   .backButton {

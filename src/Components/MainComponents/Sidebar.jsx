@@ -93,8 +93,18 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
           </li>
         </ul>
         <div className="dark-mode-toggle">
-          <button onClick={toggleDarkMode} className="dark-mode-button">
-            {darkMode ? "Light Mode" : "Dark Mode"}
+          <button onClick={toggleDarkMode} >
+            {darkMode ? (
+              <div className="dark_mode_button">
+                <FontAwesomeIcon icon={faSun} className="fa_sun" />
+                <p>დღის რეჟიმი</p>
+              </div>
+            ) : (
+              <div className="dark_mode_button">
+                <FontAwesomeIcon icon={faMoon} className="fa_moon" />
+                <p>ღამის რეჟიმი</p>
+              </div>
+            )}
           </button>
         </div>
       </div>

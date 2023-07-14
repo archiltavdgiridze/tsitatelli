@@ -29,19 +29,14 @@
   font-family: var(--secondaryFont);
   color: var(--textColorBlack);
   background-color: var(--bgLighter);
+  transition: background-color 0.5s ease;
   font-size: 1.3rem;
   letter-spacing: 1px;
-}
-
-.result.dark-mode .search_bar {
-  color: var(--DMtextColorWhite);
-  background-color: var(--DMbgLight);
 }
 
 .search_bar:hover {
   transition: 0.2s;
   outline: 3px solid var(--accentColor);
-
 }
 
 .search_bar:focus {
@@ -52,15 +47,20 @@
   -moz-box-shadow: 8px 6px 0px -1px var(--accentColor2);
 }
 
-/* when .search_bar is focused, search_icon should change color to gold color */
-
-
-
 .search_bar::placeholder {
   font-family: var(--secondaryFont);
   font-size: 1.3rem;
   letter-spacing: 1px;
 }
+
+/* ~ Dark mode */
+.result.dark-mode .search_bar {
+  color: var(--DMtextColorWhite);
+  background-color: var(--DMbgLight);
+}
+
+/* ! */
+
 
 @media screen and (max-width: 1024px) {
   .search_bar {

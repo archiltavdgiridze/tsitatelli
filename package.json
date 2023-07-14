@@ -2,6 +2,7 @@
   "name": "tsitatelli",
   "version": "0.1.0",
   "dependencies": {
+    "@animated-burgers/burger-squeeze": "^1.1.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -14,7 +15,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
-    "bpg-le-studio-02-caps": "^1.0.0",
     "darkmode-js": "^1.5.7",
     "http-proxy-middleware": "^2.0.6",
     "react": "^18.2.0",
