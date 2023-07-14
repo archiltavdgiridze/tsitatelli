@@ -215,5 +215,21 @@
 
   .generatorBtn button {
     width: 100%;
+    background-color: var(--accentColor);
+  }
+
+  .generatorBtn button:hover {
+    /* transition: 0.4s; */
+    background-color: var(--accentColor);
+    color: var(--textColorWhite);
+    outline-offset: 3px;
+    outline: 3px solid var(--accentColor);
+  }
+
+  .generatorBtn button:active {
+    color: var(--textColorWhite);
+    background-color: var(--accentColor2);
+    outline: 3px solid var(--accentColor2);
+    transition: 0.1s;
   }
 }

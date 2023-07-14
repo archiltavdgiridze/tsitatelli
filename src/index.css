@@ -118,6 +118,7 @@ ul {
   box-sizing: border-box;
   background-color: var(--bgDarker);
   transition: background-color 0.5s ease;
+
 }
 
 .result.dark-mode {
@@ -230,6 +231,7 @@ ul {
   .result {
     width: 100%;
     height: fit-content;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
