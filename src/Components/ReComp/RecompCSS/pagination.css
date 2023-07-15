@@ -1,5 +1,21 @@
-
 .pagination {
+  margin: 0 0 5rem;
+}
 
-  margin: 0 0 3rem;
+/* pagination button color which are inactive */
+.result.dark-mode .css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root {
+  color: #fff !important;
+}
+
+/* color on dark mode, i dont remember exactly */
+.css-rfy232-MuiPagination-root .Mui-selected:focus {
+  background-color: var(--accentColorHover);
+}
+
+/* font size for pagination buttons */
+.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root {
+  font-size: 1.7rem !important;
+  border-radius: 25px !important;
+  min-width: 48px !important;
+  height: 48px !important;
 }

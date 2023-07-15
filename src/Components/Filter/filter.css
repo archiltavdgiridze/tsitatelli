@@ -14,6 +14,9 @@
   font-size: 1.5rem;
   border: none;
   border-radius: 5px;
+  font-family: var(--secondaryFont);
+  color: var(--DMtextColorWhite);
+  background-color: var(--accentColor);
   outline: 3px solid var(--accentColor);
 }
 
@@ -81,11 +84,9 @@
   color: var(--DMtextColorBlack);
 }
 
-/* ! */
-
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .filter_buttons {
-    width: 93%;
+    /* width: 93%; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -96,7 +97,12 @@
 
   .filter_buttons button {
     padding: 20px 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
+}
 
+@media screen and (max-width: 750px) {
+  .filter_select {
+    width: 100%;
+  } 
 }

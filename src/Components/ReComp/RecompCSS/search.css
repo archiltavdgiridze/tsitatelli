@@ -59,11 +59,44 @@
   background-color: var(--DMbgLight);
 }
 
-/* ! */
+.result.dark-mode .search_bar::placeholder {
+  color: var(--textColorWhite);
+}
 
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .search_bar {
+    height: 3.8rem;
     padding: 0 0 0 3.5rem;
+    font-size: 1.7rem;
+  }
+
+  .search_bar::placeholder {
+    font-size: 1.7rem;
+  }
+
+  .search_icon {
+    position: absolute;
+    top: 1.1rem;
+    left: 1rem;
+    color: lightgray;
+    font-size: 1.8rem;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search_bar {
+    height: 3rem;
+    padding: 0 0 0 2.8rem;
+  }
+
+  .search_bar::placeholder {
+    font-size: 1.3rem;
+  }
+
+  .search_icon {
+    top: 0.8rem;
+    left: 0.8rem;
+    font-size: 1.5rem;
   }
 }

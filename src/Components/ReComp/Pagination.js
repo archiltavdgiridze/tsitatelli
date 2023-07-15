@@ -14,7 +14,7 @@ const PaginationComponent = ({ totalPages, currentPage, handlePageChange, color 
             backgroundColor: "var(--accentColor) !important", // Set your custom color here
             color: "white", // Set the text color for the selected page
             "&:hover": {
-              backgroundColor: "var(--accentColorHover) !important", // Set the background color on hover
+              backgroundColor: "var(--accentColor) !important", // Set the background color on hover
             },
           },
         }}

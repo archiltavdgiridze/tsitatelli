@@ -10,22 +10,26 @@ import Skeleton from "@mui/material/Skeleton";
 
 const MainPage = ({ darkMode }) => {
   const url = API_ENDPOINT;
+  // sets and stores quote and author
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
   // needed to prevent the same quote from being generated twice in a row
   const [previousIndex, setPreviousIndex] = useState(null);
   // needed in case there is only one quote in the database at the moment, so it won't run in infinite loop
   const [singleQuote, setSingleQuote] = useState(false);
+  // used to display skeleton while data is being fetched
   const [isDataFetched, setIsDataFetched] = useState(false);
 
   useEffect(() => {
     fetchRandomQuote();
   }, []);
 
+  // fetches random quote from the database
   const fetchRandomQuote = async () => {
     try {
       const response = await axios.get(url);
       const quotes = response.data.data;
+
       let randomIndex = generateRandomIndex(quotes.length);
       if (quotes.length === 1) {
         setSingleQuote(true);
@@ -37,6 +41,7 @@ const MainPage = ({ darkMode }) => {
       }
       const quote = quotes[randomIndex].attributes.quote;
       const author = quotes[randomIndex].attributes.author;
+
       setQuote(quote);
       setAuthor(author);
       setPreviousIndex(randomIndex);
@@ -46,14 +51,17 @@ const MainPage = ({ darkMode }) => {
     }
   };
 
+  // generates random index for the quotes array
   const generateRandomIndex = (length) => {
     return Math.floor(Math.random() * length);
   };
 
+  // generates random quote
   const generateRandomQuote = () => {
     fetchRandomQuote();
   };
 
+  // sets document title
   useEffect(() => {
     document.title = "მთავარი | ციტატელი";
   }, []);
@@ -69,7 +77,7 @@ const MainPage = ({ darkMode }) => {
         <div className="generatorBtn" id="generatorBtn">
           <button onClick={generateRandomQuote}>ახლის ჩვენება</button>
         </div>
-        <div className="quote">
+        <div className="quote hyphenate-wrap">
           <FontAwesomeIcon icon={faQuoteLeft} />
           <div className="MP_textNcopy">
             <h3 className="generatedQuote">{quote}</h3>

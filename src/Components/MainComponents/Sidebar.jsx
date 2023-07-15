@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { slide as Menu } from "react-burger-menu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFilter,
   faHouse,
-  faCircleInfo,
+  faFilter,
   faWandMagicSparkles,
+  faCircleInfo,
   faMoon,
   faSun,
   faBars,
@@ -15,28 +15,36 @@ import { Link } from "react-router-dom";
 import "../MainComponents/MainCSS/sidebar.css";
 
 const Sidebar = ({ darkMode, toggleDarkMode }) => {
+  // sets and stores active link
   const [activeLink, setActiveLink] = useState("home");
+  // sets and stores menu state
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // sets and stores window width
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  // handles link click and closes menu
   const handleLinkClick = (link) => {
     setActiveLink(link);
     setIsMenuOpen(false);
   };
 
+  // handles logo click and closes menu
   const handleLogoClick = () => {
     setActiveLink("home");
     setIsMenuOpen(false);
   };
 
+  // handles menu state change and sets isMenuOpen state
   const handleMenuStateChange = (state) => {
     setIsMenuOpen(state.isOpen);
   };
 
+  // handles window resize and sets windowWidth state
   const handleWindowResize = () => {
     setWindowWidth(window.innerWidth);
   };
 
+  // sets windowWidth state on window resize
   useEffect(() => {
     window.addEventListener("resize", handleWindowResize);
     return () => {
@@ -44,7 +52,7 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
     };
   }, []);
 
-  const isMobile = windowWidth > 1100;
+  const isMobile = windowWidth > 1200;
 
   return (
     <div className={`sidebar ${darkMode ? "dark-mode" : ""}`}>
@@ -137,7 +145,7 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
         <div className="sidebar_content">
           <Menu
             right
-            animation={"stack"}
+            // animation={"stack"}
             width={"300px"}
             isOpen={isMenuOpen}
             onStateChange={handleMenuStateChange}

@@ -77,6 +77,9 @@
   cursor: pointer;
   display: flex;
   justify-content: center;
+  border-radius: 10px;
+  padding: 6px;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25), 0 0.25rem 0.25rem rgba(58, 136, 145, 0.2);
 }
 
 .sidebar-links p {
@@ -86,9 +89,12 @@
 
 .sidebar-links.active {
   transition: 0.4s;
-  color: var(--accentColor2);
+  color: var(--accentColor);
   border-radius: 10px;
-  /* box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25), 0 0.25rem 0.25rem rgba(58, 136, 145, 0.2); */
+}
+
+.sidebar-links.active span {
+  color: var(--accentColor2);
 }
 
 .sidebar-texts {
@@ -112,7 +118,7 @@
   border: 2px solid var(--bgDarker);
   border-radius: 10px;
   padding: 0.5rem;
-  background-color: var(--bgDarker);
+  background-color: var(--bgLighter);
 }
 
 .dark-mode-toggle button:hover {
@@ -144,8 +150,6 @@
   color: var(--DMbgLight);
 }
 
-
-
 /* ~ Dark mode CSS */
 
 .sidebar.dark-mode {
@@ -169,143 +173,19 @@
   background-color: var(--DMbgDark);
 }
 
-/* .sidebar.dark-mode .sidebar-links {
-  color: var(--DMaccentColor);
-} */
-/* ! */
-
-
-/* ~ MENU */
-.sidebar_content div div:nth-child(0) {
-  display: flex;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.menu_button {
-  display: none;
-}
-
-/* Position and sizing of burger button */
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  right: 2rem;
-  top: 1.6rem;
-}
-
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #373a47;
-}
-
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  background: #a90000;
-}
-
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 2rem !important;
-  width: 2rem !important;
-  right: 24px !important;
-  top: 20px !important;
+.sidebar.dark-mode .sidebar_menu_bars {
   color: var(--accentColor2);
-  /* background-color: red; */
 }
 
-.bm-cross-button span {
-  position: absolute;
-  top: 8px;
-  right: 24px;
+.sidebar.dark-mode .bm-menu {
+  background-color: var(--DMbgDark);
+  transition: background-color 0.5s ease;
 }
 
-/* Color/shape of close button cross */
-.bm-cross {
-  /* background: #bdc3c7; */
-  /* width: 4px !important;
-  height: 32px !important; */
-}
-
-/*
-Sidebar wrapper styles
-Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-*/
-.bm-menu-wrap {
-  position: fixed;
-  height: 100%;
-  top: 0;
-}
-
-/* General sidebar styles */
-.bm-menu {
-  background: #373a47;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-  overflow-y: hidden !important;
-}
-
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  width: 90%;
-  color: #b8b7ad;
-  padding: 0.8em;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Individual item */
-.bm-item {
-  display: inline-block;
-}
-
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-}
-
-.sidebar_close_icon {
-  font-size: 1rem;
-}
-
-.sidebar_menu_bars {
-  font-size: 1.5rem;
-}
-
-/* ~ */
-
-
-
-
-@media screen and (max-width: 1100px) {
-
-  .menu_button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 10vh;
-    position: fixed;
-    top: 0;
-    z-index: 3;
-  }
-
+@media screen and (max-width: 1200px) {
   .sidebar {
     width: 100%;
-    height: 10vh;
+    height: 130px;
     min-height: auto;
     flex-direction: row;
     justify-content: space-around;
@@ -313,6 +193,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     position: fixed;
     top: 0;
     z-index: 3;
+    border-bottom: 2px solid var(--accentColor);
   }
 
   .sidebar_title {
@@ -324,7 +205,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
 
   .sidebar_title h1 {
-    font-size: 2rem;
+    font-size: 2.8rem;
     padding-bottom: 1rem;
   }
 
@@ -338,24 +219,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
 
   .sidebar_content ul {
-    /* width: 75%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0; */
     display: flex !important;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     padding: 0;
     gap: 2rem;
-
+    margin: 4rem 0 0 0;
   }
 
   .sidebar_content ul li {
-    /* height: 75%; */
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -363,10 +236,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
 
   .sidebar-links {
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     padding: 0;
+    font-size: 40px;
+    flex-direction: row-reverse;
   }
 
   .sidebar-links:hover {
@@ -374,10 +250,214 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
 
   .sidebar-links span {
-    width: auto;
+    width: 15%;
   }
 
   .sidebar-texts {
-    /* display: none; */
+    font-size: 2rem;
+  }
+
+  /* ~ MENU */
+  /* ? 
+  .menu_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+  }
+  */
+
+  .sidebar_content div div:nth-child(0) {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .menu_button {
+    display: none;
+  }
+
+  .bm-burger-button {
+    position: fixed;
+    width: 48px;
+    height: 50px;
+    right: 60px;
+    transform: translateY(-50%);
+  }
+
+  .bm-burger-bars {
+    /* background: #373a47; */
+  }
+
+  .bm-burger-bars-hover {}
+
+  .bm-cross-button {
+    height: 3rem !important;
+    width: 3rem !important;
+    right: 56px !important;
+    top: 40px !important;
+    color: var(--accentColor);
+  }
+
+  .bm-cross-button span {
+    position: absolute;
+    top: 8px;
+    right: 24px;
+  }
+
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    width: 500px !important;
+  }
+
+  .bm-menu {
+    background: var(--bgDarker);
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+    overflow-y: hidden !important;
+    transition: background-color 0.5s ease;
+  }
+
+  .bm-item-list {
+    width: 90%;
+    color: #b8b7ad;
+    padding: 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .bm-item {
+    display: inline-block;
+  }
+
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+
+  .sidebar_close_icon {
+    font-size: 1rem;
+  }
+
+  .sidebar_menu_bars {
+    font-size: 1.5rem;
+  }
+
+  .dark-mode-toggle button {
+    width: auto;
+    height: auto;
+    padding: 1rem 1.5rem;
+  }
+
+  .dark_mode_button p,
+  .fa_sun,
+  .fa_moon {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .bm-menu-wrap {
+    width: 400px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sidebar {
+    height: 80px;
+  }
+
+  .sidebar_title h1 {
+    font-size: 1.8rem;
+  }
+
+  .sidebar_content ul {
+    gap: 1.5rem;
+  }
+
+  .sidebar-links {
+    font-size: 30px;
+  }
+
+  .sidebar-links p {
+    padding: 0;
+  }
+
+  .sidebar-texts {
+    font-size: 1.3rem;
+  }
+
+  /* ~ MENU */
+  /* ? .menu_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+  } */
+
+  /* ? .sidebar_content div div:nth-child(0) {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  } */
+
+  /* ? .menu_button {
+    display: none;
+  } */
+
+  .bm-burger-button {
+    width: 42px;
+    height: 36px;
+    right: 40px;
+  }
+
+  .bm-cross-button {
+    height: 2.5rem !important;
+    width: 2.5rem !important;
+    right: 36px !important;
+    top: 20px !important;
+  }
+
+  .bm-menu-wrap {
+    width: 280px !important;
+  }
+
+  .bm-menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bm-item-list {
+    width: 100%;
+    padding: 0;
+  }
+
+  .dark-mode-toggle button {
+    padding: 1rem 0.8rem;
+  }
+
+  .dark_mode_button p,
+  .fa_sun,
+  .fa_moon {
+    font-size: 1.3rem;
   }
 }

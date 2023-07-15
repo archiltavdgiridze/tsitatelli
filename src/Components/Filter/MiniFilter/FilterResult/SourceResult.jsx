@@ -177,9 +177,9 @@ const SourceResult = ({ darkMode }) => {
                 </div>
                 <div className="bottom_group_buttons">
                   <p className="group_title">თემატიკა:</p>
-                  {splitTopics(data.attributes.topic).map(
-                    (topic, topicIndex) => (
-                      <>
+                  <div className="topic_buttons">
+                    {splitTopics(data.attributes.topic).map(
+                      (topic, topicIndex) => (
                         <button
                           key={`${data.id}_${topicIndex}`}
                           className="linker_topic linkers"
@@ -187,9 +187,9 @@ const SourceResult = ({ darkMode }) => {
                         >
                           <p>{topic}</p>
                         </button>
-                      </>
-                    )
-                  )}
+                      )
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="card_copy">

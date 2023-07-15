@@ -6,6 +6,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Chip from "@mui/material/Chip";
+import "./RecompCSS/chipselector.css";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -53,10 +54,11 @@ const MultipleSelectChip = ({ title, names, selectedNames, onChange }) => {
         sx={{
           "& .MuiOutlinedInput-notchedOutline": {
             borderColor: "var(--accentColor)", // Customize the outline color
-          },
-          "& .MuiInputBase-input": {
-            fontSize: "16px", // Customize the font size
-          },
+          }
+          // ,
+          // "& .MuiInputBase-input": {
+          //   fontSize: "16px", // Customize the font size
+          // },
         }}
       >
         {names.map((name) => (

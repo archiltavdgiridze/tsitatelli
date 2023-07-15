@@ -5,8 +5,9 @@
   align-items: center;
   gap: 40px;
   letter-spacing: 1px;
-  padding: 60px;
+  padding: 50px;
   font-family: var(--secondaryFont), sans-serif;
+  text-align: center;
 }
 
 .result.dark-mode .about_us {
@@ -15,4 +16,10 @@
 
 .result.dark-mode .about_us a {
   color: lightblue;
+}
+
+@media screen and (max-width: 500px) {
+  .about_us {
+    font-size: 0.8rem;
+  }
 }

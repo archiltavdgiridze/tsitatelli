@@ -15,14 +15,12 @@
   transition: background-color 0.5s ease;
 }
 
-
 .backButton:hover {
   color: var(--bgLight);
   background-color: var(--accentColor2);
   transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-
 
 .topBar {
   width: inherit;
@@ -38,7 +36,7 @@
 .topBar.scrolled {
   background-color: var(--bgLight);
   position: fixed;
-  z-index: 999;
+  z-index: 2;
   width: inherit;
   display: flex;
   flex-direction: row-reverse;
@@ -72,7 +70,6 @@
   font-family: var(--secondaryFontReg);
   transition: background-color 0.5s ease;
 }
-
 
 .unknown_source_msg {
   width: 90%;
@@ -123,7 +120,6 @@
   transition: transform 250ms background-color 0.5s ease;
 }
 
-
 .info_btn {
   position: absolute;
   top: 0.7rem;
@@ -163,9 +159,7 @@
   font-family: var(--secondaryFont);
   user-select: none;
   transition: color 0.5s ease;
-
 }
-
 
 .q_card_bottom {
   display: flex;
@@ -184,14 +178,12 @@
 
 .btn_filled {
   color: var(--DMtextColorWhite);
-  /* background-color: var(--accentColor); */
   background-color: transparent;
   margin: 0;
   border-radius: 6px;
   font-size: 1.3rem;
   outline: 3px solid var(--accentColor);
 }
-
 
 .btn_filled:hover {
   color: var(--white);
@@ -222,7 +214,6 @@
   text-align: left;
 }
 
-
 .top_group_buttons,
 .bottom_group_buttons {
   display: flex;
@@ -236,10 +227,6 @@
 .bottom_group_buttons p {
   color: var(--white);
   font-family: var(--secondaryFontReg);
-}
-
-.group_title {
-  width: 11%;
 }
 
 .info_div {
@@ -269,7 +256,6 @@
 
 .linkers {
   color: var(--bgLight);
-  /* background-color: var(--accentColor); */
   background-color: transparent;
   outline: 3px solid var(--accentColor);
   border: none;
@@ -292,6 +278,15 @@
   z-index: 1;
 }
 
+.topic_buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  width: auto;
+}
+
 .card_copy {
   width: 25%;
 }
@@ -302,10 +297,13 @@
 }
 
 /* ~ Dark mode */
-
 .result.dark-mode .backButton,
 .result.dark-mode .q_card_top {
   background-color: var(--DMbgLight);
+}
+
+.result.dark-mode .backButton {
+  color: var(--DMtextColorWhite);
 }
 
 .result.dark-mode .backButton:hover {
@@ -323,13 +321,16 @@
   color: var(--DMtextColorWhite);
 }
 
-/* ! */
-
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .backButton {
     left: 30px;
     top: 20px;
     width: 80%;
+    height: 50px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .topBar.scrolled .backButton {
@@ -342,12 +343,19 @@
     padding: 1rem;
     gap: 0;
     border-top: 3px solid var(--accentColor);
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .topBar.scrolled .result_title {
+    font-size: 2rem;
+    text-align: center;
+    width: fit-content;
   }
 
   .result_title {
-    font-size: 1.4rem;
+    font-size: 2.2rem;
     text-align: center;
-    padding: 0 1rem;
   }
 
   .cards {
@@ -357,9 +365,17 @@
 
   .q_card_top h2 {
     text-align: left;
-    font-size: 1.3rem;
-    padding: 1.5rem 12px 12px;
-    line-height: 2rem;
+    font-size: 1.8rem;
+    padding: 1.5rem 30px 12px 12px;
+  }
+
+  .info_btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .quote_info {
+    font-size: 1.5rem;
   }
 
   .q_card_body {
@@ -375,7 +391,7 @@
   .q_card_buttons {
     display: flex;
     flex-direction: column;
-    margin-right: 10px;
+    margin-right: 1rem;
     height: 100%;
   }
 
@@ -384,7 +400,7 @@
   }
 
   .q_card_buttons button p {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 
   .top_group_buttons,
@@ -396,8 +412,58 @@
     width: auto;
   }
 
+  .group_title {
+    font-size: 1.4rem;
+  }
+
   .card_copy .copy-btn:active {
     color: var(--accentColor);
     background-color: aliceblue;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .backButton {
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .topBar.scrolled .backButton {
+    width: 30%;
+    margin: 0 1rem;
+  }
+
+  .topBar.scrolled .result_title {
+    font-size: 1.3rem;
+    width: 70%;
+  }
+
+  .result_title {
+    font-size: 1.7rem;
+  }
+
+  .cards {
+    gap: 10px;
+  }
+
+  .q_card_top h2 {
+    font-size: 1.4rem;
+  }
+
+  .info_btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .quote_info {
+    font-size: 1.3rem;
+  }
+
+  .q_card_buttons button p {
+    font-size: 1.2rem;
+  }
+
+  .group_title {
+    font-size: 1.2rem;
   }
 }

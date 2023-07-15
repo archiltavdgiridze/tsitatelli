@@ -161,17 +161,19 @@ const AuthorResult = ({ darkMode }) => {
                 </div>
                 <div className="bottom_group_buttons">
                   <p className="group_title">თემატიკა:</p>
-                  {splitTopics(data.attributes.topic).map(
-                    (topic, topicIndex) => (
-                      <button
-                        key={`${data.id}_${topicIndex}`}
-                        className="linker_topic linkers"
-                        onClick={() => handleTopicClick(topic)}
-                      >
-                        <p>{topic}</p>
-                      </button>
-                    )
-                  )}
+                  <div className="topic_buttons">
+                    {splitTopics(data.attributes.topic).map(
+                      (topic, topicIndex) => (
+                        <button
+                          key={`${data.id}_${topicIndex}`}
+                          className="linker_topic linkers"
+                          onClick={() => handleTopicClick(topic)}
+                        >
+                          <p>{topic}</p>
+                        </button>
+                      )
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="card_copy">

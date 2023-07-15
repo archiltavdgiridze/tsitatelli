@@ -32,7 +32,7 @@ const Filter = ({ darkMode }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 600);
+      setIsMobile(window.innerWidth <= 750);
     };
 
     // Add event listener for window resize
