@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import { HelmetProvider, Helmet } from "react-helmet-async"; 
+import { HelmetProvider, Helmet } from "react-helmet-async";
 //copybtn and search css
 import "./Components/ReComp/RecompCSS/search.css";
 //
@@ -28,7 +28,10 @@ function App() {
     <div className={`App ${darkMode ? "dark-mode" : ""}`}>
       <HelmetProvider>
         <Helmet>
-          <meta property="og:image" content="./assets/images/tsitatelli-meta-img.jpg" />{" "}
+          <meta
+            property="og:image"
+            content="https://tsitatelli.vercel.app/assets/images/tsitatelli-meta-img.jpg"
+          />
         </Helmet>
         <Sidebar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Routes>
