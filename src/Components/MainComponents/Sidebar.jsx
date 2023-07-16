@@ -11,12 +11,14 @@ import {
   faBars,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../MainComponents/MainCSS/sidebar.css";
 
 const Sidebar = ({ darkMode, toggleDarkMode }) => {
+  // location hook
+  const location = useLocation();
   // sets and stores active link
-  const [activeLink, setActiveLink] = useState("home");
+  const [activeLink, setActiveLink] = useState("");
   // sets and stores menu state
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // sets and stores window width
@@ -52,6 +54,11 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
     };
   }, []);
 
+  useEffect(() => {
+    const currentPath = location.pathname;
+    setActiveLink(currentPath === "/" ? "home" : currentPath.substr(1));
+  }, [location]);
+
   const isMobile = windowWidth > 1200;
 
   return (
@@ -86,7 +93,7 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
                   activeLink === "filter" ? "active" : ""
                 }`}
                 onClick={() => handleLinkClick("filter")}
-                alt="sources-button"
+                alt="filter-button"
               >
                 <span>
                   <FontAwesomeIcon icon={faFilter} />
@@ -101,7 +108,7 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
                   activeLink === "generator" ? "active" : ""
                 }`}
                 onClick={() => handleLinkClick("generator")}
-                alt="sources-button"
+                alt="generator-button"
               >
                 <span>
                   <FontAwesomeIcon icon={faWandMagicSparkles} />
@@ -113,7 +120,7 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
               <Link
                 to="/about_us"
                 className={`sidebar-links ${
-                  activeLink === "about" ? "active" : ""
+                  activeLink === "about_us" ? "active" : ""
                 }`}
                 onClick={() => handleLinkClick("about")}
                 alt="about-us-button"
@@ -203,10 +210,18 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
                 </Link>
               </li>
               <li>
-                <Link
+                {/* <Link
                   to="/about_us"
                   className={`sidebar-links ${
                     activeLink === "about" ? "active" : ""
+                  }`}
+                  onClick={() => handleLinkClick("about")}
+                  alt="about-us-button"
+                > */}
+                <Link
+                  to="/about_us"
+                  className={`sidebar-links ${
+                    activeLink === "about_us" ? "active" : ""
                   }`}
                   onClick={() => handleLinkClick("about")}
                   alt="about-us-button"

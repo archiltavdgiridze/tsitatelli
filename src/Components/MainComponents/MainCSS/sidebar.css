@@ -65,11 +65,13 @@
   justify-content: flex-start;
   text-decoration: none;
   color: var(--accentColor);
-  padding: 20px 10px;
+  padding: 6px 10px;
   font-size: 28px;
   transition: all 0.5s;
   cursor: pointer;
   user-select: none;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0.25rem 0.25rem rgba(58, 136, 145, 0.2);
 }
 
 .sidebar-links span {
@@ -79,7 +81,6 @@
   justify-content: center;
   border-radius: 10px;
   padding: 6px;
-  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25), 0 0.25rem 0.25rem rgba(58, 136, 145, 0.2);
 }
 
 .sidebar-links p {
@@ -90,6 +91,7 @@
 .sidebar-links.active {
   transition: 0.4s;
   color: var(--accentColor);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0.3rem 0.1rem -1px rgba(235, 180, 0, 1);
   border-radius: 10px;
 }
 
@@ -240,7 +242,7 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    padding: 0;
+    padding: 0 10px;
     font-size: 40px;
     flex-direction: row-reverse;
   }

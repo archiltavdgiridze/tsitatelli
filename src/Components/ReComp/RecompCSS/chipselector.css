@@ -21,7 +21,31 @@
   background-color: #3A889145 !important;
 }
 
+
+/* ~ Dark mode */
+.dark-mode .css-w66kx-MuiChip-root {
+  color: var(--textColorWhite) !important;
+  transition: 0.5s;
+}
+
+.dark-mode .css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  background-color: #000 !important;
+  transition: 0.5s;
+  color: white !important;
+}
+
+.dark-mode .dark-mode-selector {
+  background-color: #000 !important;
+  /* Change to the desired background color */
+  color: white !important;
+  /* Change to the desired text color */
+}
+
+
+/*  */
+
 @media screen and (max-width: 1200px) {
+
   /* chips selected */
   .css-w66kx-MuiChip-root {
     font-size: 1.2rem !important;
@@ -30,6 +54,7 @@
 }
 
 @media screen and (max-width: 500px) {
+
   /* chips selected */
   .css-w66kx-MuiChip-root {
     font-size: 0.9rem !important;

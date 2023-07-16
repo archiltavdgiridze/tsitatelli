@@ -46,6 +46,7 @@
   --bgLighter: #F1F0F0;
   /* add bgDark here */
   --bgDarker: #D9D9D9;
+  --accentColor: rgb(58, 136, 145);
   --accentColor: #3A8891;
   --accentColorHover: #4ba3ad;
   --accentColor2: #ebb400;
