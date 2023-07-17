@@ -53,6 +53,19 @@
   letter-spacing: 1px;
 }
 
+.search_button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 0 1rem;
+  color: #000;
+  font-family: var(--secondaryFontReg);
+  border: none;
+  background-color: var(--accentColor2);
+  border-radius: 1rem;
+}
+
 /* ~ Dark mode */
 .result.dark-mode .search_bar {
   color: var(--DMtextColorWhite);

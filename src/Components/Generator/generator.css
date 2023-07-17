@@ -10,6 +10,7 @@ hr {
   justify-content: center;
 }
 
+
 .result.dark-mode .generator_title {
   color: var(--DMtextColorWhite);
 }
@@ -31,14 +32,15 @@ hr {
 }
 
 .generatorBtn button {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  padding: 1rem 30px;
 }
 
 #chip-label {
-  font-size: 1.5rem;
+  font-size: 1.2rem !important;
   font-family: var(--secondaryFontReg);
-  color: var(--accentColor);
   font-weight: bold;
+  user-select: none !important;
 }
 
 .card_groups {
@@ -59,6 +61,7 @@ hr {
   font-family: var(--secondaryFontReg);
   margin: 0 0 10px 0.5rem;
   transition: color 0.5s ease;
+  user-select: none;
 }
 
 .gen_cards {
@@ -93,9 +96,28 @@ hr {
   overflow-y: auto;
 }
 
+.generator .q_card_top p {
+  padding: 10px 50px 10px 10px;
+  font-size: 1.3rem;
+  text-align: left;
+  font-family: var(--secondaryFont);
+  font-weight: 600;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: color 0.5s ease;
+}
+
 /* ~ Dark mode */
 .result.dark-mode .gen_category_title {
   color: var(--DMtextColorWhite);
+}
+
+.result.dark-mode #chip-label {
+  color: var(--DMtextColorWhite);
+}
+
+.dark-mode .generator .q_card_top p {
+  color: var(--textColorWhite);
 }
 
 @media screen and (max-width: 850px) {

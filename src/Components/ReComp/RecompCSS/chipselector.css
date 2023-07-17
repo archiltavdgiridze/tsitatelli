@@ -1,7 +1,7 @@
 /* chip selector opened  */
 .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
-  font-size: 1.3rem !important;
-  padding: 0.8rem 0 0.8rem 1rem !important;
+  font-size: 1.1rem !important;
+  padding: 0.5rem 0 0.5rem 1rem !important;
   border: 1px solid var(--accentColor) !important;
   white-space: break-spaces !important;
   font-family: var(--secondaryFontReg) !important;
@@ -9,7 +9,7 @@
 
 /* chip selector opened option outer div */
 .css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
-  max-height: 400px !important;
+  max-height: 300px !important;
 }
 
 /* chip selector opened selected options div option hover */
@@ -21,6 +21,10 @@
   background-color: #3A889145 !important;
 }
 
+/* chip selector outside input element */
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 13px !important;
+}
 
 /* ~ Dark mode */
 .dark-mode .css-w66kx-MuiChip-root {

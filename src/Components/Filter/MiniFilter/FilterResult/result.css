@@ -169,7 +169,7 @@
   color: #f4c644;
   justify-content: space-between;
   align-items: center;
-  background-color: #595959;
+  background-color: var(--DMbgDark);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: inherit;
@@ -188,7 +188,7 @@
 .btn_filled:hover {
   color: var(--white);
   transition: 0.4s;
-  background-color: var(--DMaccentColor2);
+  /* background-color: var(--DMaccentColor2); */
   outline-color: var(--lightGoldColor);
   box-shadow: none;
 }
@@ -263,7 +263,7 @@
 
 .linkers:hover {
   color: var(--textColorBlack);
-  background-color: var(--DMaccentColor2);
+  /* background-color: var(--DMaccentColor2); */
   outline: 3px solid var(--DMaccentColor2);
   outline-offset: 3px;
   transition: 0.2s;
@@ -319,6 +319,11 @@
 .result.dark-mode .q_card_top h2,
 .result.dark-mode .result_title {
   color: var(--DMtextColorWhite);
+}
+
+.dark-mode .linkers:hover .top_group_buttons p,
+.dark-mode .linkers:hover .bottom_group_buttons p {
+  color: var(--textColorBlack);
 }
 
 @media screen and (max-width: 1200px) {
@@ -384,7 +389,7 @@
 
   .q_card_bottom {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     height: 100%;
   }
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 //copybtn and search css
-import "./Components/ReComp/RecompCSS/search.css";
+import "./Components/ReComp/RecompCSS/searchbar.css";
 //
 // main components
 import Sidebar from "./Components/MainComponents/Sidebar";
@@ -14,6 +14,7 @@ import AboutUs from "./Components/AboutUs/AboutUs";
 import AuthorResult from "./Components/Filter/MiniFilter/FilterResult/AuthorResult";
 import TopicResult from "./Components/Filter/MiniFilter/FilterResult/TopicResult";
 import SourceResult from "./Components/Filter/MiniFilter/FilterResult/SourceResult";
+import Search from "./Components/Search/Search";
 //
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
           path="/source-results/:source"
           element={<SourceResult darkMode={darkMode} />}
         />
+        <Route path="/search" element={<Search darkMode={darkMode}/>}/>
         <Route path="/generator" element={<Generator darkMode={darkMode} />} />
         <Route path="/about_us" element={<AboutUs darkMode={darkMode} />} />
       </Routes>

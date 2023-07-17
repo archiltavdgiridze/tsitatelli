@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Search from "../../ReComp/Search";
+import SearchBar from "../../ReComp/SearchBar";
 import { API_ENDPOINT } from "../../../quoteURL";
 import FilteredList from "../../ReComp/FilteredList";
 
@@ -58,10 +58,10 @@ const AuthorFilt = () => {
   return (
     <div className="author_filter">
       <div className="filter_container">
-        <Search
+        <SearchBar
           value={searchQuery}
           onChange={handleSearchChange}
-          placeholder="ავტორის"
+          placeholder="ძიება ავტორის მიხედვით..."
         />
         {showNotFoundMessage && (
           <p className="not_found_msg">

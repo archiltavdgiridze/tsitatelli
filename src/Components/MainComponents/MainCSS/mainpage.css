@@ -18,6 +18,7 @@
   cursor: pointer;
   outline: 3px solid var(--accentColor);
   transition: outline-offset .25s;
+  user-select: none;
 }
 
 .generatorBtn button:hover {
@@ -236,10 +237,6 @@
     outline: 3px solid var(--accentColor2);
     transition: 0.1s;
   }
-
-  .copy-text {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 500px) {
@@ -266,5 +263,9 @@
 
   .author h3 {
     font-size: 1.3rem;
+  }
+
+  .copy-text {
+    display: none;
   }
 }

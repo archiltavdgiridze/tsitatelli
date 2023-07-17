@@ -196,7 +196,7 @@ const Generator = ({ darkMode }) => {
   };
 
   return (
-    <div className={`result rightDiv ${darkMode ? "dark-mode" : ""}`}>
+    <div className={`result rightDiv generator ${darkMode ? "dark-mode" : ""}`}>
       <div
         className={`result_wrapper rightDivWrapper${
           darkMode ? "dark-mode" : ""
@@ -257,7 +257,7 @@ const Generator = ({ darkMode }) => {
                         />
                       </div>
                       <figcaption className="q_card_top">
-                        <h2>„{data.quote}“</h2>
+                        <p>„{data.quote}“</p>
                       </figcaption>
                       <figcaption
                         className={`q_card_bottom ${

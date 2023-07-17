@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { API_ENDPOINT } from "../../../quoteURL";
-import Search from "./../../ReComp/Search";
+import SearchBar from "./../../ReComp/SearchBar";
 import FilteredList from "../../ReComp/FilteredList";
 
 const TopicFilt = () => {
@@ -58,10 +58,10 @@ const TopicFilt = () => {
   return (
     <div className="topic_filter ">
       <div className="filter_container">
-        <Search
+        <SearchBar
           value={searchQuery}
           onChange={handleSearchChange}
-          placeholder="თემატიკის"
+          placeholder="ძიება თემატიკის მიხედვით..."
         />
         {showNotFoundMessage && (
           <p className="not_found_msg">თემატიკა ვერ მოიძებნა, სცადეთ სხვა.</p>

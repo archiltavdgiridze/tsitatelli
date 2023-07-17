@@ -10,6 +10,7 @@ import {
   faSun,
   faBars,
   faXmark,
+  faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation } from "react-router-dom";
 import "../MainComponents/MainCSS/sidebar.css";
@@ -103,6 +104,21 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
             </li>
             <li>
               <Link
+                to="/search"
+                className={`sidebar-links ${
+                  activeLink === "search" ? "active" : ""
+                }`}
+                onClick={() => handleLinkClick("search")}
+                alt="search-button"
+              >
+                <span>
+                  <FontAwesomeIcon icon={faMagnifyingGlass} />
+                </span>
+                <p className="sidebar-texts">ძიება</p>
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/generator"
                 className={`sidebar-links ${
                   activeLink === "generator" ? "active" : ""
@@ -192,6 +208,21 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
                     <FontAwesomeIcon icon={faFilter} />
                   </span>
                   <p className="sidebar-texts">ფილტრი</p>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/search"
+                  className={`sidebar-links ${
+                    activeLink === "search" ? "active" : ""
+                  }`}
+                  onClick={() => handleLinkClick("search")}
+                  alt="search-button"
+                >
+                  <span>
+                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                  </span>
+                  <p className="sidebar-texts">ძიება</p>
                 </Link>
               </li>
               <li>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-const Search = ({ value, onChange, placeholder }) => {
+const SearchBar = ({ value, onChange, placeholder }) => {
   const [isFocused, setIsFocused] = useState(false);
 
   const handleFocus = () => {
@@ -26,10 +26,10 @@ const Search = ({ value, onChange, placeholder }) => {
         onChange={onChange}
         onFocus={handleFocus}
         onBlur={handleBlur}
-        placeholder={"ძიება " + placeholder + " მიხედვით..."}
+        placeholder={placeholder}
       />
     </div>
   );
 };
 
-export default Search;
+export default SearchBar;
