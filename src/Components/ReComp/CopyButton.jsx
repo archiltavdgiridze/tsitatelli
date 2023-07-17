@@ -20,7 +20,7 @@ const CopyButton = ({ text, className, style }) => {
   };
 
   return (
-    <button onClick={handleCopy} className={`${className}`} style={style}>
+    <button onClick={handleCopy} className={`${className}`} style={style} alt="copy-quote-button">
       <FontAwesomeIcon icon={faCopy} />
       <p className="copy-text">{buttonText}</p>
     </button>
