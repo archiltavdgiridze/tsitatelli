@@ -2,7 +2,7 @@ import React from "react";
 import { slide as Menu } from "react-burger-menu";
 import { Link, useLocation } from "react-router-dom";
 
-const SidebarMenuMobile = ({
+const SidebarMenuContent = ({
   isMenuOpen,
   handleMenuStateChange,
   handleLinkClick,
@@ -21,19 +21,7 @@ const SidebarMenuMobile = ({
   faMagnifyingGlass,
 }) => {
   return (
-    <Menu
-      right
-      stack
-      width={"300px"}
-      isOpen={isMenuOpen}
-      onStateChange={handleMenuStateChange}
-      customBurgerIcon={
-        <FontAwesomeIcon className="sidebar_menu_bars" icon={faBars} />
-      }
-      customCrossIcon={
-        <FontAwesomeIcon className="sidebar_close_icon" icon={faXmark} />
-      }
-    >
+    <>
       <ul>
         <li>
           <Link
@@ -124,8 +112,8 @@ const SidebarMenuMobile = ({
           )}
         </button>
       </div>
-    </Menu>
+    </>
   );
 };
 
-export default SidebarMenuMobile;
+export default SidebarMenuContent;

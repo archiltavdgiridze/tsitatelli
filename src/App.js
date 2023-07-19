@@ -37,15 +37,15 @@ function App() {
         <Route path="/" element={<MainPage darkMode={darkMode} />} />
         <Route path="/filter" element={<Filter darkMode={darkMode} />} />
         <Route
-          path="/author-results/:author"
+          path="/filter/author-results/:author"
           element={<AuthorResult darkMode={darkMode} />}
         />
         <Route
-          path="/topic-results/:topic"
+          path="/filter/topic-results/:topic"
           element={<TopicResult darkMode={darkMode} />}
         />
         <Route
-          path="/source-results/:source"
+          path="/filter/source-results/:source"
           element={<SourceResult darkMode={darkMode} />}
         />
         <Route path="/search" element={<Search darkMode={darkMode}/>}/>

@@ -1,111 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import "./result.css";
 import CopyButton from "../../../ReComp/CopyButton";
 import PaginationComponent from "../../../ReComp/Pagination";
+import useResultComponent from "./Hooks/useResultComponent";
 
-const TopicResult = ({ darkMode }) => {
-  const navigate = useNavigate();
-  const { state } = useLocation();
-  const [topicName, setTopicName] = useState("");
-  const [filteredQuotes, setFilteredQuotes] = useState([]);
-  const [activeCardIndex, setActiveCardIndex] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [quotesPerPage] = useState(10);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    if (!state?.filteredQuotes) {
-      const topicFromURL = decodeURIComponent(
-        window.location.pathname.split("/")[2]
-      );
-      const decodedTopicName = topicFromURL.replace(/_/g, " ");
-      fetchQuotesByTopic(decodedTopicName);
-    } else {
-      const quotes = state.filteredQuotes;
-      setTopicName(quotes[0]?.attributes.topic || "");
-      setFilteredQuotes(quotes);
-    }
-  }, [state]);
-
-  useEffect(() => {
-    document.title = `${topicName} | ციტატელი`; // Update the tab name with the author's name
-  }, [topicName]);
-
-  const fetchQuotesByTopic = (topicName) => {
-    const decodedTopicName = topicName.replace(/[-–]/g, " ");
-
-    const apiUrl = `https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes?filter[topic]=${decodedTopicName}`;
-
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        const filteredQuotes = data.data;
-        const formattedTopicName = decodedTopicName.replace(/–/g, " ");
-        setTopicName(formattedTopicName);
-        setFilteredQuotes(filteredQuotes);
-      })
-      .catch((error) => {
-        console.error("Error fetching filtered quotes:", error);
-      });
-  };
-
-  const handleGoBack = () => {
-    navigate("/filter");
-  };
-
-  // ~ Author
-  const handleAuthorClick = (authorName) => {
-    const encodedAuthorName = encodeURIComponent(
-      authorName.replace(/\s+|-/g, "_")
-    );
-    navigate(`/author-results/${encodedAuthorName}`);
-  };
-
-  // ~ Source
-  const handleSourceClick = (sourceName) => {
-    const encodedSourceName = encodeURIComponent(
-      sourceName.replace(/\s+|-/g, "_")
-    );
-    navigate(`/source-results/${encodedSourceName}`);
-  };
-
-  const handleCardClick = (index) => {
-    if (activeCardIndex === index) {
-      setActiveCardIndex(null); // Close the expanded div
-    } else {
-      setActiveCardIndex(index);
-    }
-  };
-
-  const quoteCount = filteredQuotes.length;
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
-
-  const indexOfLastQuote = currentPage * quotesPerPage;
-  const indexOfFirstQuote = indexOfLastQuote - quotesPerPage;
-  const currentQuotes = filteredQuotes.slice(
-    indexOfFirstQuote,
-    indexOfLastQuote
-  );
-  const totalPages = Math.ceil(filteredQuotes.length / quotesPerPage);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.pageYOffset > getYOffsetThreshold());
-    };
-
-    const getYOffsetThreshold = () => {
-      return window.innerWidth >= 1024 ? 135 : 125; // Change the values as per your requirement
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+const TopicResult = React.memo(({ darkMode }) => {
+  const {
+    resultName: topicName,
+    handleGoBack,
+    filteredQuotes,
+    handleAuthorClick,
+    handleSourceClick,
+    handleCardClick,
+    activeCardIndex,
+    currentPage,
+    handlePageChange,
+    currentQuotes,
+    totalPages,
+    quoteCount,
+    quotesPerPage,
+    isScrolled,
+  } = useResultComponent("topic");
 
   return (
     <div
@@ -149,35 +66,17 @@ const TopicResult = ({ darkMode }) => {
                   <button
                     className="linker_topic linkers"
                     onClick={() => handleAuthorClick(data.attributes.author)}
-                    // onMouseEnter={() => handleAuthorHover(index)}
-                    // onMouseLeave={handleAuthorHoverLeave}
                   >
                     <p>{data.attributes.author}</p>
                   </button>
                 </div>
-                {/* <div
-                      className={`info_div ${
-                        hoveredAuthor === index ? "active" : ""
-                      }`}
-                    >
-                      ავტორის სხვა ციტატები
-                    </div> */}
                 <div className="bottom_group_buttons">
                   <p className="group_title">წყარო:</p>
                   <button
                     className="linker_topic linkers"
                     onClick={() => handleSourceClick(data.attributes.source)}
-                    // onMouseEnter={() => handleSourceHover(index)}
-                    // onMouseLeave={handleSourceHoverLeave}
                   >
                     <p>{data.attributes.source}</p>
-                    {/* <div
-                      className={`info_div ${
-                        hoveredSource === index ? "active" : ""
-                      }`}
-                    >
-                      სხვა ციტატები წყაროდან
-                    </div> */}
                   </button>
                 </div>
               </div>
@@ -192,7 +91,6 @@ const TopicResult = ({ darkMode }) => {
           </figure>
         ))}
       </div>
-      {/* pagination */}
       {filteredQuotes.length > quotesPerPage && (
         <PaginationComponent
           totalPages={totalPages}
@@ -202,6 +100,6 @@ const TopicResult = ({ darkMode }) => {
       )}
     </div>
   );
-};
+});
 
 export default TopicResult;

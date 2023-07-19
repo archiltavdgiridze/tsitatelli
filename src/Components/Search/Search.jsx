@@ -12,7 +12,6 @@ import "./search.css";
 const Search = ({ darkMode }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [quotes, setQuotes] = useState([]);
-  // const [filteredQuotes, setFilteredQuotes] = useState([]);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
   const [showNotFoundMessage, setShowNotFoundMessage] = useState(false);
   const [loading, setLoading] = useState(false);

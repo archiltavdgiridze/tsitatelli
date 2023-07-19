@@ -1,116 +1,29 @@
-import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import "./result.css";
 import CopyButton from "../../../ReComp/CopyButton";
 import PaginationComponent from "../../../ReComp/Pagination";
+import useResultComponent from "./Hooks/useResultComponent";
 
-const AuthorResult = ({ darkMode }) => {
-  const navigate = useNavigate();
-  const { state } = useLocation();
-  const [authorName, setAuthorName] = useState("");
-  const [filteredQuotes, setFilteredQuotes] = useState([]);
-  const [activeCardIndex, setActiveCardIndex] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [quotesPerPage] = useState(10);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    if (!state?.filteredQuotes) {
-      const authorFromURL = decodeURIComponent(
-        window.location.pathname.split("/")[2]
-      );
-      const decodedAuthorName = authorFromURL.replace(/_/g, " ");
-      setAuthorName(decodedAuthorName);
-      fetchQuotesByAuthor(decodedAuthorName);
-    } else {
-      const quotes = state.filteredQuotes;
-      setFilteredQuotes(quotes);
-    }
-  }, [state]);
-
-  useEffect(() => {
-    document.title = `${authorName} | ციტატელი`; // Update the tab name with the author's name
-  }, [authorName]);
-
-  const fetchQuotesByAuthor = (authorName) => {
-    const apiUrl = `https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes?filter[author]=${authorName}`;
-    console.log(apiUrl);
-
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        const filteredQuotes = data.data;
-        setFilteredQuotes(filteredQuotes);
-      })
-      .catch((error) => {
-        console.error("Error fetching filtered quotes:", error);
-      });
-  };
-
-  const splitTopics = (topics) => {
-    if (typeof topics === "string") {
-      return topics.split(",");
-    } else if (Array.isArray(topics)) {
-      return topics.join(",").split(",");
-    } else {
-      return [];
-    }
-  };
-
-  const handleGoBack = () => {
-    navigate("/filter");
-  };
-
-  const handleTopicClick = (topicName) => {
-    const decodedTopicName = encodeURIComponent(
-      topicName.replace(/[-\s]/g, "_")
-    );
-    navigate(`/topic-results/${decodedTopicName}`);
-  };
-
-  const handleSourceClick = (sourceName) => {
-    const decodedSourceName = encodeURIComponent(
-      sourceName.replace(/[-\s]/g, "_")
-    );
-    navigate(`/source-results/${decodedSourceName}`);
-  };
-
-  const handleCardClick = (index) => {
-    if (activeCardIndex === index) {
-      setActiveCardIndex(null); // Close the expanded div
-    } else {
-      setActiveCardIndex(index);
-    }
-  };
-
-  const quoteCount = filteredQuotes.length;
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
-
-  const indexOfLastQuote = currentPage * quotesPerPage;
-  const indexOfFirstQuote = indexOfLastQuote - quotesPerPage;
-  const currentQuotes = filteredQuotes.slice(
-    indexOfFirstQuote,
-    indexOfLastQuote
-  );
-  const totalPages = Math.ceil(filteredQuotes.length / quotesPerPage);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.pageYOffset > getYOffsetThreshold());
-    };
-
-    const getYOffsetThreshold = () => {
-      return window.innerWidth >= 1024 ? 135 : 125; // Change the values as per your requirement
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+const AuthorResult = React.memo(({ darkMode }) => {
+  const {
+    resultName: authorName,
+    handleGoBack,
+    filteredQuotes,
+    handleTopicClick,
+    handleSourceClick,
+    handleCardClick,
+    activeCardIndex,
+    currentPage,
+    splitTopics,
+    handlePageChange,
+    currentQuotes,
+    totalPages,
+    quoteCount,
+    quotesPerPage,
+    isScrolled,
+  } = useResultComponent("author");
 
   return (
     <div
@@ -187,7 +100,6 @@ const AuthorResult = ({ darkMode }) => {
           </figure>
         ))}
       </div>
-      {/* pagination */}
       {filteredQuotes.length > quotesPerPage && (
         <PaginationComponent
           totalPages={totalPages}
@@ -197,6 +109,6 @@ const AuthorResult = ({ darkMode }) => {
       )}
     </div>
   );
-};
+});
 
 export default AuthorResult;
