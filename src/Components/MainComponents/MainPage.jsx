@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import useRandomQuote from "./Hooks/useRandomQuote";
 import "../MainComponents/MainCSS/mainpage.css";
 import QuoteDisplay from "./MiniComps/QuoteDisplay";
-import ShareButton from "../ReComp/ShareButton";
 
 const MainPage = ({ darkMode }) => {
   const { quote, author, isDataFetched, generateRandomQuote } =
