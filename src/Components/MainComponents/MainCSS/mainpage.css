@@ -134,11 +134,44 @@
   font-family: var(--mainFont);
 }
 
-.fb_icon {
-  font-size: 1.5rem;
-  color: #4267B2;
-  padding: 0 0 0 14px;
+.share_n_author {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
 }
+
+.share_fb {
+  width: 13rem;
+}
+
+.share_fb button {
+  font-family: var(--secondaryFont);
+  border: 2px solid #4267B2;
+  border-radius: 10px;
+  padding: 6px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--bgLight);
+}
+
+.share_fb button:hover {
+  border: 2px dashed #4267B2;
+  background-color: var(--bgLight);
+}
+
+.share_fb button:active {
+  color: #FFF;
+  background-color: #4267B2;
+}
+
+.share_fb button:active .fb_icon {
+  color: #FFF;
+}
+
 
 /* ~ Dark mode */
 .result.dark-mode .quote,
@@ -157,7 +190,22 @@
   color: var(--accentColor2);
 }
 
+.dark-mode .share_fb button {
+  border: 2px solid #4267B2;
+  color: var(--textColorWhite);
+  background-color: var(--DMbgLight);
+}
 
+.dark-mode .share_fb button:hover {
+  border: 2px dashed #4267B2;
+  background-color: var(--DMbgLight);
+  color: var(--textColorWhite);
+}
+
+.dark-mode .share_fb button:active {
+  color: #FFF;
+  background-color: #4267B2;
+}
 
 
 @media screen and (max-width: 1200px) {
