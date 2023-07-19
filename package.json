@@ -55,7 +55,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.22.9",
-    "babel-eslint": "^10.1.0"
+    "@babel/eslint-parser": "^7.22.9"
   }
 }
