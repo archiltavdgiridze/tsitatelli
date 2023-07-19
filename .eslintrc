@@ -1,5 +1,8 @@
 {
   "parser": "babel-eslint",
+  "env": {
+    "es6": true
+  },
   "plugins": ["import", "react"],
   "globals": {
     "FB": "readonly"
