@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { API_ENDPOINT } from "../../../quoteURL";
+import React from "react";
 import SearchBar from "./../../ReComp/SearchBar";
 import FilteredList from "../../ReComp/FilteredList";
-import useMiniFilterHandlers from "./MiniComps/useMiniFilterHandlers";
+import useMiniFilterHandlers from "./Hooks/useMiniFilterHandlers";
 
 const TopicFilt = () => {
   const {

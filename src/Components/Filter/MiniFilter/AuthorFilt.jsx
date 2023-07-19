@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBar from "../../ReComp/SearchBar";
 import FilteredList from "../../ReComp/FilteredList";
-import useMiniFilterHandlers from "./MiniComps/useMiniFilterHandlers";
+import useMiniFilterHandlers from "./Hooks/useMiniFilterHandlers";
 
 const AuthorFilt = () => {
   const {
