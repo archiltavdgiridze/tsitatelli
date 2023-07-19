@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { API_ENDPOINT } from "../../../../quoteURL";
+import { API_ENDPOINT } from "../../../quoteURL";
 
 const useMiniFilterHandlers = () => {
   const url = API_ENDPOINT;

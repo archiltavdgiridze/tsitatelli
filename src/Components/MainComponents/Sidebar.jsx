@@ -13,7 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import "../MainComponents/MainCSS/sidebar.css";
-import useLinkClickControl from "./Hooks/useLinkClickControl";
+import useLinkClickControl from "../Hooks/ForMain/useLinkClickControl";
 import SidebarMenuContent from "./MiniComps/SidebarMenuContent";
 import { slide as Menu } from "react-burger-menu";
 

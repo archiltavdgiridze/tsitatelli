@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBar from "./../../ReComp/SearchBar";
 import FilteredList from "../../ReComp/FilteredList";
-import useMiniFilterHandlers from "./Hooks/useMiniFilterHandlers";
+import useMiniFilterHandlers from "../../Hooks/ForFilter/useMiniFilterHandlers";
 
 const TopicFilt = () => {
   const {

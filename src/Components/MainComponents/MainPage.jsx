@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import useRandomQuote from "./Hooks/useRandomQuote";
+import useRandomQuote from "../Hooks/ForMain/useRandomQuote";
 import "../MainComponents/MainCSS/mainpage.css";
 import QuoteDisplay from "./MiniComps/QuoteDisplay";
 

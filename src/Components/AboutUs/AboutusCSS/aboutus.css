@@ -14,8 +14,10 @@
   color: var(--textColorWhite);
 }
 
-.result.dark-mode .about_us a {
-  color: lightblue;
+.dark-mode .about_us a {
+  color: var(--accentColor);
+  text-decoration: underline;
+  text-decoration-color: var(--accentColor2);
 }
 
 @media screen and (max-width: 500px) {

@@ -15,6 +15,7 @@ import AuthorResult from "./Components/Filter/MiniFilter/FilterResult/AuthorResu
 import TopicResult from "./Components/Filter/MiniFilter/FilterResult/TopicResult";
 import SourceResult from "./Components/Filter/MiniFilter/FilterResult/SourceResult";
 import Search from "./Components/Search/Search";
+import ErrorComp from "./Components/404/ErrorComp";
 //
 
 function App() {
@@ -48,9 +49,10 @@ function App() {
           path="/filter/source-results/:source"
           element={<SourceResult darkMode={darkMode} />}
         />
-        <Route path="/search" element={<Search darkMode={darkMode}/>}/>
+        <Route path="/search" element={<Search darkMode={darkMode} />} />
         <Route path="/generator" element={<Generator darkMode={darkMode} />} />
         <Route path="/about_us" element={<AboutUs darkMode={darkMode} />} />
+        <Route path="*" element={<ErrorComp darkMode={darkMode} />} />
       </Routes>
     </div>
   );

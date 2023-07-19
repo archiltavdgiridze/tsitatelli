@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { FacebookShareButton } from "react-share";
+import "./RecompCSS/sharebutton.css"
 
 const ShareButton = ({ quote }) => {
   const quoteURL = window.location.href;
