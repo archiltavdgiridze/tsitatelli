@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import useRandomQuote from "./Hooks/useRandomQuote";
 import "../MainComponents/MainCSS/mainpage.css";
 import QuoteDisplay from "./MiniComps/QuoteDisplay";
-
+import ShareButton from "../ReComp/ShareButton";
 
 const MainPage = ({ darkMode }) => {
   const vercelAnalyticsID = process.env.VERCEL_ANALYTICS_ID;
@@ -33,6 +33,7 @@ const MainPage = ({ darkMode }) => {
           isLoading={!isDataFetched}
           darkMode={darkMode}
         />
+        <ShareButton quote={quote} />
       </div>
     </div>
   );
