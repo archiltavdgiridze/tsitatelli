@@ -134,6 +134,50 @@
   font-family: var(--mainFont);
 }
 
+.share_n_author {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.share_fb {
+  width: 13rem;
+}
+
+.share_fb button {
+  font-family: var(--secondaryFont);
+  border: 2px solid #4267B2;
+  border-radius: 10px;
+  padding: 6px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--bgLight);
+}
+
+.share_fb button:hover {
+  border: 2px dashed #4267B2;
+  background-color: var(--bgLight);
+}
+
+.share_fb button:active {
+  color: #FFF;
+  background-color: #4267B2;
+}
+
+.share_fb button:active .fb_icon {
+  color: #FFF;
+}
+
+.fb_icon {
+  font-size: 1.5rem;
+  color: #4267B2;
+  padding: 0 0 0 14px;
+}
+
 /* ~ Dark mode */
 .result.dark-mode .quote,
 .result.dark-mode .author {
@@ -150,6 +194,24 @@
 .result.dark-mode .fa-pen-nib {
   color: var(--accentColor2);
 }
+
+.dark-mode .share_fb button {
+  border: 2px solid #4267B2;
+  color: var(--textColorWhite);
+  background-color: var(--DMbgLight);
+}
+
+.dark-mode .share_fb button:hover {
+  border: 2px dashed #4267B2;
+  background-color: var(--DMbgLight);
+  color: var(--textColorWhite);
+}
+
+.dark-mode .share_fb button:active {
+  color: #FFF;
+  background-color: #4267B2;
+}
+
 
 @media screen and (max-width: 1200px) {
   .quote {
@@ -181,7 +243,7 @@
     min-width: 100%;
     font-size: 2rem;
     padding: 1rem 0.5rem;
-    margin: 0 0 1rem;
+    margin: 0 0 2rem;
     line-height: 5rem;
     text-align: right;
   }
@@ -239,6 +301,49 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .quote h3 {
+    font-size: 1.8rem;
+    padding: 0;
+    line-height: 4.5rem;
+  }
+
+  .author {
+    padding: 0.5rem 1rem 0.5rem 6rem;
+  }
+
+  .fa-pen-nib {
+    font-size: 36px;
+  }
+
+  .author h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .share_n_author {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 6rem;
+  }
+
+  .share_fb {
+    width: 100%;
+  }
+
+  .share_fb button {
+    width: 100%;
+  }
+
+  .share_fb p {
+    width: 70%;
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .fa-quote-left {
     left: 0.5rem;
@@ -265,7 +370,5 @@
     font-size: 1.3rem;
   }
 
-  .copy-text {
-    display: none;
-  }
+
 }

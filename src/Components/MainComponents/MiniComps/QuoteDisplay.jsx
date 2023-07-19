@@ -1,11 +1,31 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
-import { faPenNib } from "@fortawesome/free-solid-svg-icons";
+import { faQuoteLeft, faPenNib } from "@fortawesome/free-solid-svg-icons";
 import CopyButton from "../../ReComp/CopyButton";
 import Skeleton from "@mui/material/Skeleton";
+import ShareButton from "../../ReComp/ShareButton";
 
 const QuoteDisplay = ({ quote, author, isLoading, darkMode }) => {
+  const handleShare = () => {
+    // Ensure you have the publish_actions permission from Facebook for your app
+    // Use the FB.api method to make a custom post request
+    window.FB.api(
+      "/me/feed",
+      "post",
+      {
+        message: quote, // Use the quote as the post text
+        link: window.location.href, // Add the website link to the post
+      },
+      (response) => {
+        if (!response || response.error) {
+          alert("Error sharing quote on Facebook. Please try again.");
+        } else {
+          alert("Quote shared on Facebook successfully!");
+        }
+      }
+    );
+  };
+
   if (isLoading) {
     return (
       <>
@@ -61,9 +81,15 @@ const QuoteDisplay = ({ quote, author, isLoading, darkMode }) => {
           />
         </div>
       </div>
-      <div className="author">
-        <FontAwesomeIcon icon={faPenNib} />
-        <h3 className="generatedAuthor">{author}</h3>
+      <div className="share_n_author">
+        <div className="share_fb">
+          <ShareButton quote={quote} />
+          
+        </div>
+        <div className="author">
+          <FontAwesomeIcon icon={faPenNib} />
+          <h3 className="generatedAuthor">{author}</h3>
+        </div>
       </div>
     </>
   );

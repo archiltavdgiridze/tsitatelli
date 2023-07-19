@@ -29,7 +29,6 @@ const MainPage = ({ darkMode }) => {
           isLoading={!isDataFetched}
           darkMode={darkMode}
         />
-        <ShareButton quote={quote} />
       </div>
     </div>
   );

@@ -183,7 +183,6 @@ ul {
   }
 }
 
-/* close btn */
 .close_icon {
   position: absolute;
   top: 20px;
@@ -198,20 +197,18 @@ ul {
 }
 
 .result.dark-mode .copy-btn {
-  color: var(--accentColor2);
-  outline: 3px solid var(--accentColor2);
+  color: var(--textColorWhite);
+  outline: 3px solid var(--accentColor);
 }
 
 .dark-mode .copy-btn:hover {
-  color: var(--textColorBlack);
-  /* outline: 3px solid var(--accentColor); */
+  outline: 3px solid var(--accentColor2);
 }
 
 /* ! BOTTOM CSS */
 /* ~ --------------------- */
 /* ~ --------------------- */
 
-/* media queries */
 @media screen and (max-width: 1200px) {
   .result {
     width: 100%;
@@ -241,7 +238,7 @@ ul {
 
   /* ~ copy btn */
   .copy-btn {
-    width: 5rem;
+    width: 12rem;
     height: 6vh;
     display: flex;
     justify-content: center;
@@ -254,6 +251,11 @@ ul {
 @media screen and (max-width: 500px) {
   .result {
     margin-top: 80px;
+  }
+
+  .copy-btn {
+    width: 12rem;
+    height: 4vh;
   }
 
   .result_wrapper {

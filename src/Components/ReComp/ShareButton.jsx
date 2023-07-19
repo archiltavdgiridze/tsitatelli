@@ -1,18 +1,34 @@
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+
 const ShareButton = ({ quote }) => {
   const handleShare = () => {
-    // Encode the quote and website link to be shared on Facebook
-    const encodedQuote = encodeURIComponent(quote).replace(/%20/g, "+");
-    const encodedLink = encodeURIComponent(window.location.href);
-
-    // Open the Facebook share dialog
-    window.open(
-      `https://www.facebook.com/sharer/sharer.php?u=${encodedLink}&quote=${encodedQuote}`,
-      "Share on Facebook",
-      "width=600,height=400"
+    // Ensure you have the publish_actions permission from Facebook for your app
+    // Use the FB.api method to make a custom post request
+    window.FB.api(
+      "/me/feed",
+      "post",
+      {
+        message: quote, // Use the quote as the post text
+        link: window.location.href, // Add the website link to the post
+      },
+      (response) => {
+        if (!response || response.error) {
+          alert("Error sharing quote on Facebook. Please try again.");
+        } else {
+          alert("Quote shared on Facebook successfully!");
+        }
+      }
     );
   };
 
-  return <button onClick={handleShare}>Share on Facebook</button>;
+  return (
+    <button onClick={handleShare}>
+      <FontAwesomeIcon icon={faFacebookF} className="fb_icon"/>
+      <p className="fb_text">დააკოპირე ციტატა და გააზიარე Facebook-ზე</p>
+    </button>
+  );
 };
 
 export default ShareButton;
