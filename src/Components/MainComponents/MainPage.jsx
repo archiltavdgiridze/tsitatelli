@@ -5,10 +5,6 @@ import QuoteDisplay from "./MiniComps/QuoteDisplay";
 import ShareButton from "../ReComp/ShareButton";
 
 const MainPage = ({ darkMode }) => {
-  const vercelAnalyticsID = process.env.VERCEL_ANALYTICS_ID;
-
-  console.log("Vercel Analytics ID:", vercelAnalyticsID);
-
   const { quote, author, isDataFetched, generateRandomQuote } =
     useRandomQuote();
 

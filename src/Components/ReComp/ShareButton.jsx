@@ -1,9 +1,7 @@
-import React from "react";
-
 const ShareButton = ({ quote }) => {
   const handleShare = () => {
     // Encode the quote and website link to be shared on Facebook
-    const encodedQuote = encodeURIComponent(quote);
+    const encodedQuote = encodeURIComponent(quote).replace(/%20/g, "+");
     const encodedLink = encodeURIComponent(window.location.href);
 
     // Open the Facebook share dialog
