@@ -137,6 +137,7 @@
 
 .dark_mode_button p {
   font-size: 1rem;
+  user-select: none;
 }
 
 .fa_sun,
@@ -291,10 +292,6 @@
     height: 50px;
     right: 60px;
     transform: translateY(-50%);
-  }
-
-  .bm-burger-bars {
-    /* background: #373a47; */
   }
 
   .bm-burger-bars-hover {}

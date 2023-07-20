@@ -1,0 +1,155 @@
+.alphabet_scrollbar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  right: 6px;
+  top: 20px;
+  width: 30px;
+  height: 95vh;
+  overflow-y: auto;
+  scrollbar-width: 2px;
+  background-color: var(--bgLight);
+  border-radius: 10px;
+}
+
+.alphabet_scrollbar:hover {
+  width: 40px;
+  transition: 0.2s ease-in-out;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.alphabet_scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #3a8891 #ebb400;
+}
+
+/* Chrome, Edge, and Safari */
+.alphabet_scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.alphabet_scrollbar::-webkit-scrollbar-track {
+  background: #ebb400;
+}
+
+.alphabet_scrollbar::-webkit-scrollbar-thumb {
+  background-color: #3a8891;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+}
+
+.alphabet_scrollbar a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-family: var(--secondaryFontReg);
+  border-radius: 8px;
+}
+
+.alphabet_scrollbar a:hover {
+  color: var(--accentColor2);
+  background-color: var(--accentColor);
+  transition: 0.2s ease-in-out;
+  font-size: 1.5rem;
+  padding: 4px 0;
+}
+
+/* ~ Dark mode */
+.dark-mode .alphabet_scrollbar {
+  background-color: var(--DMbgLight);
+}
+
+.dark-mode .alphabet_scrollbar a {
+  color: var(--DMtextColorWhite);
+}
+
+
+@media screen and (max-width: 1200px) {
+  .alphabet_scrollbar {
+    margin-top: 130px;
+    width: 55px;
+    height: 75vh;
+  }
+
+  .alphabet_scrollbar:hover {
+    width: 55px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .alphabet_scrollbar a {
+    width: 50px;
+    font-size: 1.5rem;
+    border-bottom: 1px dashed black;
+  }
+
+  .alphabet_scrollbar a:hover {
+    width: 50px;
+    color: var(--accentColor2);
+    background-color: var(--accentColor);
+    transition: 0.2s ease-in-out;
+    font-size: 1.5rem;
+    padding: 4px 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .alphabet_scrollbar {
+    margin-top: 130px;
+    width: 50px;
+    height: 80vh;
+  }
+
+  .alphabet_scrollbar:hover {
+    width: 50px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .alphabet_scrollbar a {
+    width: 40px;
+    font-size: 1.5rem;
+    border-bottom: 1px dashed black;
+  }
+
+  .alphabet_scrollbar a:hover {
+    width: 40px;
+    color: var(--accentColor2);
+    background-color: var(--accentColor);
+    transition: 0.2s ease-in-out;
+    font-size: 1.5rem;
+    padding: 4px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .alphabet_scrollbar {
+    margin-top: 80px;
+    width: 50px;
+    height: 85dvh;
+    top: 16px;
+  }
+
+  .alphabet_scrollbar:hover {
+    width: 50px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .alphabet_scrollbar a {
+    width: 40px;
+    font-size: 1.5rem;
+    border-bottom: 1px dashed black;
+  }
+
+  .alphabet_scrollbar a:hover {
+    width: 40px;
+    color: var(--accentColor2);
+    background-color: var(--accentColor);
+    transition: 0.2s ease-in-out;
+    font-size: 1.5rem;
+    padding: 4px 0;
+  }
+}

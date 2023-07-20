@@ -54,7 +54,7 @@ const Filter = ({ darkMode }) => {
   if (isMobile) {
     // Render dropdown selector for mobile
     return (
-      <div className={`result ${darkMode ? "dark-mode" : ""}`}>
+      <main className={`result ${darkMode ? "dark-mode" : ""}`}>
         <div
           className={`result_wrapper mobile_result ${
             darkMode ? "dark-mode" : ""
@@ -71,15 +71,15 @@ const Filter = ({ darkMode }) => {
           </select>
         </div>
         <div className="filter_result">{renderMiniFilter()}</div>
-      </div>
+      </main>
     );
   }
 
   // Render button-based layout for desktop
   return (
-    <div className={`result ${darkMode ? "dark-mode" : ""}`}>
+    <main className={`result ${darkMode ? "dark-mode" : ""}`}>
       <div className={`result_wrapper ${darkMode ? "dark-mode" : ""}`}>
-        <div className="filter_buttons">
+        <nav className="filter_buttons">
           <button
             className={activeFilter === "Authors" ? "active" : ""}
             onClick={() => handleFilterChange({ target: { value: "Authors" } })}
@@ -98,10 +98,10 @@ const Filter = ({ darkMode }) => {
           >
             <h4>წყაროები</h4>
           </button>
-        </div>
+        </nav>
         <div className="filter_result">{renderMiniFilter()}</div>
       </div>
-    </div>
+    </main>
   );
 };
 

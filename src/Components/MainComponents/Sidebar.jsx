@@ -52,7 +52,7 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
         </Link>
       </div>
       {isMobile ? (
-        <div className="sidebar_content">
+        <nav className="sidebar_content">
           <SidebarMenuContent
             isMenuOpen={isMenuOpen}
             handleMenuStateChange={handleMenuStateChange}
@@ -71,9 +71,9 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
             faCircleInfo={faCircleInfo}
             faMagnifyingGlass={faMagnifyingGlass}
           />
-        </div>
+        </nav>
       ) : (
-        <div className="sidebar_content">
+        <nav className="sidebar_content">
           <Menu
             right
             // stack
@@ -106,7 +106,7 @@ const Sidebar = ({ darkMode, toggleDarkMode }) => {
               faMagnifyingGlass={faMagnifyingGlass}
             />
           </Menu>
-        </div>
+        </nav>
       )}
     </div>
   );

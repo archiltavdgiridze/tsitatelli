@@ -1,11 +1,11 @@
 .filter_container {
   overflow-y: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   gap: 12px;
-  margin: 0 0 15vh;
+  margin: 1rem 0 15vh;
   border-radius: 20px;
-  padding: 0 12px 12px;
+  padding: 0 12px 12px 0;
 }
 
 .not_found_msg {
@@ -20,6 +20,12 @@
   font-weight: bold;
   font-family: var(--secondaryFont);
   text-align: center;
+}
+
+.filter_cards_container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .filt_cont_div {
@@ -51,6 +57,7 @@
   line-height: 50px;
   color: var(--textColorBlack);
   font-family: var(--secondaryFont);
+  scroll-margin-top: 170px;
 }
 
 .filt_cont_div:hover.filt_cont_div h2 {
@@ -119,20 +126,39 @@
   .filt_cont_btn button {
     font-size: 1.8rem;
   }
-  
+
   .filter_container {
     gap: 6px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .filt_cont_btn button {
+    padding: 6px 4px;
+  }
+
+  .filt_cont_div h2 {
+    scroll-margin-top: 130px;
+  }
+
+  .filter_container {
+    width: calc(100% - 50px);
   }
 }
 
 @media screen and (max-width: 500px) {
   .filt_cont_btn button {
     font-size: 1.2rem;
-    padding: 8px 10px;
+    padding: 6px 4px;
     min-height: 40px;
   }
 
   .filt_cont_div h2 {
     font-size: 1.7rem;
+    scroll-margin-top: 130px;
+  }
+
+  .filter_container {
+    width: calc(100% - 52px);
   }
 }

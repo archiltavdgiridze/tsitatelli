@@ -196,15 +196,15 @@ const Generator = ({ darkMode }) => {
   };
 
   return (
-    <div className={`result rightDiv generator ${darkMode ? "dark-mode" : ""}`}>
+    <main className={`result rightDiv generator ${darkMode ? "dark-mode" : ""}`}>
       <div
         className={`result_wrapper rightDivWrapper${
           darkMode ? "dark-mode" : ""
         }`}
       >
-        <div className="generator_title">
+        <header className="generator_title">
           <h1 className="result_title">ციტატების გენერატორი</h1>
-        </div>
+        </header>
         <hr />
         <div className="generator_btns">
           <div className="selectors">
@@ -315,7 +315,7 @@ const Generator = ({ darkMode }) => {
           )}
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

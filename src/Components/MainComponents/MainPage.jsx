@@ -12,7 +12,7 @@ const MainPage = ({ darkMode }) => {
   }, []);
 
   return (
-    <div className={`result rightDiv ${darkMode ? "dark-mode" : ""}`}>
+    <main className={`result rightDiv ${darkMode ? "dark-mode" : ""}`}>
       <div
         className={`result_wrapper rightDivWrapper ${
           darkMode ? "dark-mode" : ""
@@ -29,7 +29,7 @@ const MainPage = ({ darkMode }) => {
           darkMode={darkMode}
         />
       </div>
-    </div>
+    </main>
   );
 };
 

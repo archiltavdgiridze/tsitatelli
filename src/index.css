@@ -46,9 +46,11 @@
   --bgLighter: #F1F0F0;
   /* add bgDark here */
   --bgDarker: #D9D9D9;
+  --accentColor: rgb(58, 136, 145);
   --accentColor: #3A8891;
   --accentColorHover: #4ba3ad;
   --highlightColor: #ebb40096;
+  --accentColor2: rgb(235, 180, 0);
   --accentColor2: #ebb400;
   --textColorWhite: #F1F0F0;
   --textColorBlack: #252525;
@@ -227,7 +229,7 @@ ul {
     width: 93%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 1rem;
     margin: 1rem 0 80px;
   }
