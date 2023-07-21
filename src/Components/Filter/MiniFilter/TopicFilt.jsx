@@ -4,7 +4,6 @@ import FilteredList from "../../ReComp/FilteredList";
 import useMiniFilterHandlers from "../../Hooks/ForFilter/useMiniFilterHandlers";
 import AlphabetScrollbar from "../../ReComp/AlphabetScrollbar";
 
-
 const TopicFilt = () => {
   const {
     searchQuery,
@@ -30,15 +29,15 @@ const TopicFilt = () => {
 
   return (
     <div className="topic_filter ">
-        <AlphabetScrollbar
-          letters={sortedFirstLetters}
-          handleClick={handleClick}
-        />
-        <SearchBar
-          value={searchQuery}
-          onChange={handleTopicSearchChange}
-          placeholder="ძიება თემატიკის მიხედვით..."
-        />
+      <AlphabetScrollbar
+        letters={sortedFirstLetters}
+        handleClick={handleClick}
+      />
+      <SearchBar
+        value={searchQuery}
+        onChange={handleTopicSearchChange}
+        placeholder="ძიება თემატიკის მიხედვით..."
+      />
       <div className="filter_container">
         {showNotFoundMessage && (
           <p className="not_found_msg">თემატიკა ვერ მოიძებნა, სცადეთ სხვა.</p>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Skeleton } from "@mui/lab";
+import "../Filter/MiniFilter/minifilter.css"
 
 const FilteredList = ({ filteredItems, handleItemClick, dataStatus }) => {
   const sortedFirstLetters = [

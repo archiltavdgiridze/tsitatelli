@@ -72,21 +72,21 @@ const useResultComponent = (pageType) => {
     const encodedAuthorName = encodeURIComponent(
       authorName.replace(/\s+|-/g, "_")
     );
-    navigate(`/author-results/${encodedAuthorName}`);
+    navigate(`/filter/author-results/${encodedAuthorName}`);
   };
 
   const handleTopicClick = (topicName) => {
     const decodedTopicName = encodeURIComponent(
       topicName.replace(/[-\s]/g, "_")
     );
-    navigate(`/topic-results/${decodedTopicName}`);
+    navigate(`/filter/topic-results/${decodedTopicName}`);
   };
 
   const handleSourceClick = (sourceName) => {
     const encodedSourceName = encodeURIComponent(
       sourceName.replace(/\s+|-/g, "_")
     );
-    navigate(`/source-results/${encodedSourceName}`);
+    navigate(`/filter/source-results/${encodedSourceName}`);
   };
 
   const handleCardClick = (index) => {

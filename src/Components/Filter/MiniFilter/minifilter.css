@@ -57,7 +57,7 @@
   line-height: 50px;
   color: var(--textColorBlack);
   font-family: var(--secondaryFont);
-  scroll-margin-top: 170px;
+  scroll-margin-top: 30px;
 }
 
 .filt_cont_div:hover.filt_cont_div h2 {
@@ -155,7 +155,7 @@
 
   .filt_cont_div h2 {
     font-size: 1.7rem;
-    scroll-margin-top: 130px;
+    scroll-margin-top: 100px;
   }
 
   .filter_container {
