@@ -5,7 +5,7 @@ import "./result.css";
 import CopyButton from "../../../ReComp/CopyButton";
 import MailTo from "../../../AboutUs/MailTo";
 import PaginationComponent from "../../../ReComp/Pagination";
-import useResultComponent from "./Hooks/useResultComponent";
+import useResultComponent from "../../../Hooks/ForFilter/useResultComponent";
 
 const SourceResult = React.memo(({ darkMode }) => {
   const {

@@ -4,7 +4,7 @@ import { faArrowLeft, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import "./result.css";
 import CopyButton from "../../../ReComp/CopyButton";
 import PaginationComponent from "../../../ReComp/Pagination";
-import useResultComponent from "./Hooks/useResultComponent";
+import useResultComponent from "../../../Hooks/ForFilter/useResultComponent";
 
 const AuthorResult = React.memo(({ darkMode }) => {
   const {

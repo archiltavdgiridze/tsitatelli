@@ -63,6 +63,11 @@
   background-color: var(--highlightColor);
 }
 
+.search_pagination {
+  display: flex;
+  justify-content: center;
+}
+
 /* ~ Dark mode */
 .dark-mode .search_q_card_top h3 {
   color: var(--textColorWhite);

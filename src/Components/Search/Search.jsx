@@ -8,6 +8,7 @@ import { API_ENDPOINT } from "../../quoteURL";
 import { Skeleton } from "@mui/material";
 import SearchBar from "../ReComp/SearchBar";
 import "./search.css";
+import PaginationComponent from "../ReComp/Pagination";
 
 const Search = ({ darkMode }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -16,17 +17,18 @@ const Search = ({ darkMode }) => {
   const [showNotFoundMessage, setShowNotFoundMessage] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [filteredQuotes, setFilteredQuotes] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [quotesPerPage] = useState(10);
+  const [noResults, setNoResults] = useState(false);
   const navigate = useNavigate();
 
   const handleSearchChange = (event) => {
     const query = event.target.value;
     setSearchQuery(query);
 
-    // const filtered = quotes.filter((quote) =>
-    //   quote.toLowerCase().includes(query.toLowerCase())
-    // );
-    // setFilteredQuotes(filtered);
-    // setShowNotFoundMessage(filtered.length === 0 && query !== "");
+    // Reset the noResults state when the search query changes
+    setNoResults(false);
   };
 
   useEffect(() => {
@@ -45,6 +47,15 @@ const Search = ({ darkMode }) => {
         );
 
         setQuotes(filteredQuotes);
+        setFilteredQuotes(filteredQuotes);
+
+        // Check if there are no results after filtering
+        if (filteredQuotes.length === 0) {
+          setNoResults(true);
+        } else {
+          setNoResults(false);
+        }
+
         setLoading(false);
       } catch (error) {
         setError(error.message);
@@ -120,6 +131,20 @@ const Search = ({ darkMode }) => {
     };
   }, []);
 
+  const quoteCount = filteredQuotes.length;
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  const indexOfLastQuote = currentPage * quotesPerPage;
+  const indexOfFirstQuote = indexOfLastQuote - quotesPerPage;
+  const currentQuotes = filteredQuotes.slice(
+    indexOfFirstQuote,
+    indexOfLastQuote
+  );
+  const totalPages = Math.ceil(filteredQuotes.length / quotesPerPage);
+
   useEffect(() => {
     document.title = "ძიება | ციტატელი";
   }, []);
@@ -134,8 +159,8 @@ const Search = ({ darkMode }) => {
             onChange={handleSearchChange}
             placeholder="მოძებნეთ სასურველი ციტატა"
           />
-
-          {showNotFoundMessage && (
+          {/* Show the error message when no results are found */}
+          {noResults && (
             <p className="not_found_msg">ციტატა ვერ მოიძებნა, სცადეთ სხვა.</p>
           )}
         </div>
@@ -148,7 +173,7 @@ const Search = ({ darkMode }) => {
             </>
           ) : (
             <div className="cards">
-              {quotes.map((data, index) => (
+              {currentQuotes.map((data, index) => (
                 <figure key={data.id} className="quote_card">
                   <div
                     className={`info_btn ${
@@ -225,6 +250,15 @@ const Search = ({ darkMode }) => {
               ))}
             </div>
           )}
+          <div className="search_pagination">
+            {filteredQuotes.length > quotesPerPage && (
+              <PaginationComponent
+                totalPages={totalPages}
+                currentPage={currentPage}
+                handlePageChange={handlePageChange}
+              />
+            )}
+          </div>
           {error && <p>Error: {error}</p>}
         </div>
       </div>
