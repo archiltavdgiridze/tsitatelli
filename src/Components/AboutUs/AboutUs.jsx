@@ -1,15 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import MailTo from "./MailTo";
 import "./AboutusCSS/aboutus.css";
+import { API_ENDPOINT } from "../../quoteURL";
 
 const AboutUs = ({ darkMode }) => {
   const url = "https://linktr.ee/archiltavdgiridze";
   const urlGiorgi = "https://github.com/George1Meshveliani";
   const calligraphy = "https://calligraphy.ge/";
+  const [quoteCount, setQuoteCount] = useState(0);
 
   useEffect(() => {
     document.title = "ჩვენს შესახებ | ციტატელი"; // Replace 'Custom Text' with your desired title
   }, []);
+
+  async function logJSONData() {
+    let url = API_ENDPOINT;
+    const response = await fetch(url);
+    const jsonData = await response.json();
+    setQuoteCount(jsonData.data.length);
+  }
+
+  logJSONData();
 
   return (
     <div className={`result ${darkMode ? "dark-mode" : ""}`}>
@@ -29,6 +40,9 @@ const AboutUs = ({ darkMode }) => {
               დაგვიკავშირდით ელ-ფოსტაზე!
             </MailTo>
           </span>
+        </h2>
+        <h2 className="quote_count_txt">
+          ამჟამად, ციტატელის ბაზაში არის {quoteCount} ციტატა.
         </h2>
 
         <br />

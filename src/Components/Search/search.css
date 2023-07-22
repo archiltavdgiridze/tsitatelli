@@ -8,7 +8,7 @@
 
 .search_title {
   font-family: var(--secondaryFontReg);
-  margin: 2rem 0 1rem;
+  margin: 2rem 0 0;
 }
 
 .search_q_card_top {
@@ -48,7 +48,15 @@
 }
 
 .search_input {
-  padding: 4rem 1rem 1.5rem;
+  padding: 1.5rem 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.search_wrapper.sticky .search_input {
+  background-color: var(--bgDarker);
 }
 
 .highlight {
@@ -61,6 +69,11 @@
   transition: color 0.5s ease;
 }
 
+.dark-mode .search_wrapper.sticky .search_input {
+  background-color: var(--DMbgDarker);
+  transition: background-color 0.3s ease;
+}
+
 @media screen and (max-width: 1200px) {
   .search_quote_icon {
     position: absolute;
@@ -71,6 +84,10 @@
 
   .search_q_card_top {
     padding: 3.5rem 0 0 0;
+  }
+
+  .search_wrapper.sticky .search_input {
+    padding-top: 150px;
   }
 }
 
@@ -89,5 +106,9 @@
 
   .search_bar::placeholder {
     font-size: 1.1rem;
+  }
+
+  .search_wrapper.sticky .search_input {
+    padding-top: 100px;
   }
 }

@@ -108,4 +108,8 @@
   .filter_select {
     width: calc(100% - 50px);
   }
+
+  .filter_result .search_div {
+    width: calc(100% - 52px);
+  }
 }

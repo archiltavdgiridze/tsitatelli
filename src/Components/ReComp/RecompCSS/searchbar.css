@@ -98,16 +98,9 @@
 }
 
 @media screen and (max-width: 750px) {
-  .search_div {
-    width: calc(100% - 52px);
-  }
 }
 
 @media screen and (max-width: 500px) {
-  .search_div {
-    width: calc(100% - 52px);
-  }
-
   .search_bar {
     height: 3rem;
     padding: 0 0 0 2.8rem;

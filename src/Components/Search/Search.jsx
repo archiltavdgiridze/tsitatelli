@@ -97,12 +97,37 @@ const Search = ({ darkMode }) => {
   };
 
   useEffect(() => {
+    // Function to handle the scroll event
+    const handleScroll = () => {
+      const searchWrapper = document.querySelector(".search_wrapper");
+      const offsetTop = searchWrapper.offsetTop;
+      const scrollTop = window.scrollY;
+
+      // Add or remove the "sticky" class based on the scroll position
+      if (scrollTop > offsetTop) {
+        searchWrapper.classList.add("sticky");
+      } else {
+        searchWrapper.classList.remove("sticky");
+      }
+    };
+
+    // Add the event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
     document.title = "ძიება | ციტატელი";
   }, []);
 
   return (
     <div className={`result rightDiv ${darkMode ? "dark-mode" : ""}`}>
       <div className={`search_wrapper ${darkMode ? "dark-mode" : ""}`}>
+        <h1 className="search_title">ციტატების ძიება</h1>
         <div className="search_input">
           <SearchBar
             value={searchQuery}
