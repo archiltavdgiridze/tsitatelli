@@ -17,6 +17,14 @@ import SourceResult from "./Components/Filter/MiniFilter/FilterResult/SourceResu
 import Search from "./Components/Search/Search";
 import ErrorComp from "./Components/404/ErrorComp";
 //
+import ReactGA from "react-ga";
+
+function initializeReactGA() {
+  ReactGA.initialize("YOUR_TRACKING_ID"); // Replace 'YOUR_TRACKING_ID' with your actual tracking ID
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
+
+initializeReactGA();
 
 function App() {
   const [darkMode, setDarkMode] = useState(

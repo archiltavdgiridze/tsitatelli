@@ -2,6 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-K9DP892Q2X"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-K9DP892Q2X");
+    </script>
+
     <link rel="icon" href="%PUBLIC_URL%/tsitatelli_logo.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -38,13 +54,13 @@
       src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=231983419221843"
       nonce="YOUR_NONCE_VALUE"
     ></script>
-    
+
     <script defer src="/_vercel/insights/script.js"></script>
     <title>ციტატელი | Tsitatelli</title>
   </head>
   <body>
     <div id="root"></div>
-    
+
     <div id="fb-root"></div>
     <script
       async
