@@ -69,7 +69,7 @@ const SourceResult = React.memo(({ darkMode }) => {
               <FontAwesomeIcon className="quote_info" icon={faCircleInfo} />
             </div>
             <figcaption className="q_card_top">
-              <h2>„{data.attributes.quote}“</h2>
+              <p>„{data.attributes.quote}“</p>
             </figcaption>
             <figcaption
               className={`q_card_bottom ${

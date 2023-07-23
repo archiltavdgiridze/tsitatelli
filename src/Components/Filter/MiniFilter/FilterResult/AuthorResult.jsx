@@ -32,14 +32,6 @@ const AuthorResult = React.memo(({ darkMode }) => {
         darkMode ? "dark-mode" : ""
       }`}
     >
-      {/* <Helmet>
-        <title>{`${authorName} |`} ციტატელი </title>
-        <meta
-          name="description"
-          content={`${authorName} ციტატები`}
-        />
-      </Helmet> */}
-
       <div className={`topBar ${isScrolled ? "scrolled" : ""}`}>
         <button className="backButton" onClick={handleGoBack}>
           <FontAwesomeIcon icon={faArrowLeft} />
@@ -106,6 +98,19 @@ const AuthorResult = React.memo(({ darkMode }) => {
                 />
               </div>
             </figcaption>
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Quotation",
+                text: data.attributes.quote,
+                author: {
+                  "@type": "Person",
+                  name: data.attributes.author,
+                },
+                source: data.attributes.source,
+                about: data.attributes.topic,
+              })}
+            </script>
           </figure>
         ))}
       </div>
