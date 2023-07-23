@@ -29,6 +29,7 @@
     "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
     "react-share": "^4.4.1",
+    "sitemap": "^7.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
