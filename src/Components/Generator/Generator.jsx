@@ -195,8 +195,14 @@ const Generator = ({ darkMode }) => {
     });
   };
 
+  useEffect(() => {
+    document.title = `გენერატორი | ციტატელი`;
+  });
+
   return (
-    <main className={`result rightDiv generator ${darkMode ? "dark-mode" : ""}`}>
+    <main
+      className={`result rightDiv generator ${darkMode ? "dark-mode" : ""}`}
+    >
       <div
         className={`result_wrapper rightDivWrapper${
           darkMode ? "dark-mode" : ""

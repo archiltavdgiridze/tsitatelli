@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import "./result.css";
@@ -31,6 +32,14 @@ const AuthorResult = React.memo(({ darkMode }) => {
         darkMode ? "dark-mode" : ""
       }`}
     >
+      {/* <Helmet>
+        <title>{`${authorName} |`} ციტატელი </title>
+        <meta
+          name="description"
+          content={`${authorName} ციტატები`}
+        />
+      </Helmet> */}
+
       <div className={`topBar ${isScrolled ? "scrolled" : ""}`}>
         <button className="backButton" onClick={handleGoBack}>
           <FontAwesomeIcon icon={faArrowLeft} />
@@ -54,7 +63,7 @@ const AuthorResult = React.memo(({ darkMode }) => {
               <FontAwesomeIcon className="quote_info" icon={faCircleInfo} />
             </div>
             <figcaption className="q_card_top">
-              <h2>„{data.attributes.quote}“</h2>
+              <p>„{data.attributes.quote}“</p>
             </figcaption>
             <figcaption
               className={`q_card_bottom ${

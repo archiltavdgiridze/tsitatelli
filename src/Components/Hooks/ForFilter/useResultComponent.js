@@ -8,7 +8,7 @@ const useResultComponent = (pageType) => {
   const [filteredQuotes, setFilteredQuotes] = useState([]);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [quotesPerPage] = useState(10);
+  const [quotesPerPage] = useState(20);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -36,9 +36,9 @@ const useResultComponent = (pageType) => {
     }
   };
 
-  useEffect(() => {
-    document.title = `${resultName} | ციტატელი`; // Update the tab name with the result's name
-  }, [resultName]);
+  // useEffect(() => {
+  //   document.title = `${resultName} | ციტატელი`; // Update the tab name with the result's name
+  // }, [resultName]);
 
   const fetchQuotes = (name) => {
     let apiUrl;
@@ -98,6 +98,30 @@ const useResultComponent = (pageType) => {
   };
 
   const quoteCount = filteredQuotes.length;
+
+  useEffect(() => {
+    let metaDescription = "";
+
+    if (pageType === "author") {
+      metaDescription = `${resultName} ციტატები | ${quoteCount} ციტატა.`;
+    } else if (pageType === "topic") {
+      metaDescription = `ციტატები ${resultName}–ზე | ${quoteCount} ციტატა.`;
+    } else if (pageType === "source") {
+      metaDescription = `ციტატები "${resultName}"–დან | ${quoteCount} ციტატა.`;
+    }
+
+    document.title = `${resultName} | ციტატელი`; // Update the tab name with the result's name
+    const metaTag = document.querySelector('meta[name="description"]');
+    if (metaTag) {
+      metaTag.setAttribute("content", metaDescription); // Update the meta description
+    } else {
+      // If the meta tag doesn't exist, create and append it to the head
+      const newMetaTag = document.createElement("meta");
+      newMetaTag.setAttribute("name", "description");
+      newMetaTag.setAttribute("content", metaDescription);
+      document.head.appendChild(newMetaTag);
+    }
+  }, [resultName, quoteCount, pageType]);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);

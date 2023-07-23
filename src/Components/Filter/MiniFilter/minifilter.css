@@ -2,6 +2,7 @@
   overflow-y: auto;
   display: flex;
   flex-direction: row-reverse;
+  justify-content: center;
   gap: 12px;
   margin: 1rem 0 15vh;
   border-radius: 20px;
@@ -26,6 +27,7 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  width: 100%;
 }
 
 .filt_cont_div {
@@ -54,7 +56,7 @@
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  line-height: 50px;
+  line-height: 40px;
   color: var(--textColorBlack);
   font-family: var(--secondaryFont);
   scroll-margin-top: 30px;
@@ -74,21 +76,23 @@
 }
 
 .filt_cont_btn button {
-  min-height: 50px;
   width: auto;
   transition: background-color 0.5s ease, outline-offset 0.25s, box-shadow 0.5s ease-in-out;
-  color: var(--textColorBlack);
   background-color: transparent;
-  font-family: var(--secondaryFont);
-  font-size: 1.5rem;
-  font-weight: bolder;
-  padding: 10px;
+  padding: 6px;
   text-align: left;
   border-radius: 10px;
   outline: 3px solid var(--accentColor);
   border: none;
   cursor: pointer;
   letter-spacing: 1px;
+}
+
+.filt_cont_btn button p {
+  color: var(--textColorBlack);
+  font-family: var(--secondaryFont);
+  font-size: 1.2rem;
+  font-weight: bolder;
 }
 
 .filt_cont_btn button:hover {

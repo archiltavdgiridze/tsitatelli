@@ -49,7 +49,6 @@ const AuthorFilt = () => {
           filteredItems={filteredAuthors}
           handleItemClick={handleAuthorClick}
           dataStatus={isDataFetched}
-          // sortedFirstLetters={sortedFirstLetters} // Pass sortedFirstLetters as a prop
         />
       </div>
     </div>

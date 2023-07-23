@@ -1,6 +1,6 @@
 import React from "react";
 import { Skeleton } from "@mui/lab";
-import "../Filter/MiniFilter/minifilter.css"
+import "../Filter/MiniFilter/minifilter.css";
 
 const FilteredList = ({ filteredItems, handleItemClick, dataStatus }) => {
   const sortedFirstLetters = [
@@ -25,7 +25,7 @@ const FilteredList = ({ filteredItems, handleItemClick, dataStatus }) => {
                 <div className="filt_cont_btn">
                   {itemsWithLetter.map((item) => (
                     <button key={item} onClick={() => handleItemClick(item)}>
-                      {item}
+                      <p>{item}</p>
                     </button>
                   ))}
                 </div>
