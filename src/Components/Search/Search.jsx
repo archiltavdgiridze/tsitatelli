@@ -82,14 +82,14 @@ const Search = ({ darkMode }) => {
     const decodedTopicName = encodeURIComponent(
       topicName.replace(/[-\s]/g, "_")
     );
-    navigate(`/topic-results/${decodedTopicName}`);
+    navigate(`/filter/topic-results/${decodedTopicName}`);
   };
 
   const handleSourceClick = (sourceName) => {
     const decodedSourceName = encodeURIComponent(
       sourceName.replace(/[-\s]/g, "_")
     );
-    navigate(`/source-results/${decodedSourceName}`);
+    navigate(`/filter/source-results/${decodedSourceName}`);
   };
 
   const splitTopics = (topics) => {
