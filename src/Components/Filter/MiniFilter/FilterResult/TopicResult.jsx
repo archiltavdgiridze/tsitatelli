@@ -88,6 +88,19 @@ const TopicResult = React.memo(({ darkMode }) => {
                 />
               </div>
             </figcaption>
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Quotation",
+                text: data.attributes.quote,
+                author: {
+                  "@type": "Person",
+                  name: data.attributes.author,
+                },
+                source: data.attributes.source,
+                about: data.attributes.topic,
+              })}
+            </script>
           </figure>
         ))}
       </div>
