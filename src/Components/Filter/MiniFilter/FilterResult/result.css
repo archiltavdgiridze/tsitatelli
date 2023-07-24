@@ -427,6 +427,12 @@
   }
 }
 
+@media screen and (max-width: 750px) {
+  .copy-text {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .backButton {
     height: 40px;
@@ -471,4 +477,6 @@
   .group_title {
     font-size: 1.2rem;
   }
+
+
 }
