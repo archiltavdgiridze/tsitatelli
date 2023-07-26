@@ -396,7 +396,7 @@
   }
 
   .sidebar-texts {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   /* ~ MENU */
@@ -454,7 +454,10 @@
     padding: 1rem 0.8rem;
   }
 
-  .dark_mode_button p,
+  .dark_mode_button p {
+    font-size: 1.2rem;
+  }
+
   .fa_sun,
   .fa_moon {
     font-size: 1.3rem;

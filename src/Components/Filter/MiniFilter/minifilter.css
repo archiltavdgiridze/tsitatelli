@@ -1,7 +1,8 @@
 .filter_container {
   overflow-y: auto;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
+  /* flex-direction: row-reverse; */
   justify-content: center;
   gap: 12px;
   margin: 1rem 0 15vh;
@@ -21,6 +22,12 @@
   font-weight: bold;
   font-family: var(--secondaryFont);
   text-align: center;
+}
+
+.filter_container .not_found_msg {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .filter_cards_container {
@@ -114,7 +121,8 @@
   background-color: var(--DMbgLight);
 }
 
-.result.dark-mode .filt_cont_div h2 {
+.result.dark-mode .filt_cont_div h2,
+.result.dark-mode .filt_cont_div p {
   color: var(--DMtextColorWhite);
 }
 
@@ -164,5 +172,10 @@
 
   .filter_container {
     width: calc(100% - 52px);
+  }
+
+  .not_found_msg {
+    padding-top: 16px;
+    font-size: 1.5rem;
   }
 }
