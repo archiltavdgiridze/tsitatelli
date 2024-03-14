@@ -18,39 +18,38 @@ const useMiniFilterHandlers = () => {
   const [isDataFetched, setIsDataFetched] = useState(false);
 
   useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((db) => {
-        const authorNames = db.data.map((author) => author.attributes.author);
-        const topicNames = db.data.flatMap((topic) => topic.attributes.topic);
-        const sourceNames = db.data.map((source) => source.attributes.source);
+    try {
+      const db = tsitatelliDB; // use the imported JSON data
 
-        const georgianCollator = new Intl.Collator("ka-GE", {
-          sensitivity: "base",
-          ignorePunctuation: true,
-        });
+      const authorNames = db.data.map((author) => author.attributes.author);
+      const topicNames = db.data.flatMap((topic) => topic.attributes.topic);
+      const sourceNames = db.data.map((source) => source.attributes.source);
 
-        authorNames.sort((a, b) => georgianCollator.compare(a, b));
-        topicNames.sort((a, b) => georgianCollator.compare(a, b));
-        sourceNames.sort((a, b) => georgianCollator.compare(a, b));
-
-        const uniqueAuthorNames = Array.from(new Set(authorNames));
-        const uniqueTopics = Array.from(new Set(topicNames));
-        const uniqueSourceNames = Array.from(new Set(sourceNames));
-
-        setAuthors(uniqueAuthorNames);
-        setTopics(uniqueTopics);
-        setSources(uniqueSourceNames);
-
-        setFilteredAuthors(uniqueAuthorNames);
-        setFilteredTopics(uniqueTopics);
-        setFilteredSources(uniqueSourceNames);
-
-        setIsDataFetched(true);
-      })
-      .catch((error) => {
-        console.error("Error fetching author data:", error);
+      const georgianCollator = new Intl.Collator("ka-GE", {
+        sensitivity: "base",
+        ignorePunctuation: true,
       });
+
+      authorNames.sort((a, b) => georgianCollator.compare(a, b));
+      topicNames.sort((a, b) => georgianCollator.compare(a, b));
+      sourceNames.sort((a, b) => georgianCollator.compare(a, b));
+
+      const uniqueAuthorNames = Array.from(new Set(authorNames));
+      const uniqueTopics = Array.from(new Set(topicNames));
+      const uniqueSourceNames = Array.from(new Set(sourceNames));
+
+      setAuthors(uniqueAuthorNames);
+      setTopics(uniqueTopics);
+      setSources(uniqueSourceNames);
+
+      setFilteredAuthors(uniqueAuthorNames);
+      setFilteredTopics(uniqueTopics);
+      setFilteredSources(uniqueSourceNames);
+
+      setIsDataFetched(true);
+    } catch (error) {
+      console.error("Error fetching author data:", error);
+    }
   }, []);
 
   const handleAuthorClick = (authorName) => {

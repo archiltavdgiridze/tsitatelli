@@ -1,2 +1,3 @@
-export const API_ENDPOINT =
-  "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes?&page[limit]=1000&page[offset]=0";
+import tsitatelliDB from "./tsitatelli-database-2024-1.json";
+
+export const API_ENDPOINT = tsitatelliDB;

@@ -1,0 +1,4410 @@
+{
+  "jsonapi": {
+    "version": "1.0",
+    "meta": {
+      "links": {
+        "self": {
+          "href": "http://jsonapi.org/format/1.0/"
+        }
+      }
+    }
+  },
+  "data": [
+    {
+      "type": "georgian-quotes",
+      "id": "84b03694-71eb-4159-beb3-799895330a2f",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/84b03694-71eb-4159-beb3-799895330a2f?resourceVersion=id%3A16"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "სანთელ-სარკმეველი თავის გზას არ დაკარგავს",
+        "source": "გლახის ნაამბობი",
+        "topic": []
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "230920c7-3faf-4815-86ee-ea680e8329c2",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/230920c7-3faf-4815-86ee-ea680e8329c2?resourceVersion=id%3A17"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ჩვენი თავი ჩვენადვე გვეყუდნეს!",
+        "source": "მგზავრის წერილები",
+        "topic": []
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "bcbd2958-0b8f-4308-8c5e-eff2058e9862",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/bcbd2958-0b8f-4308-8c5e-eff2058e9862?resourceVersion=id%3A18"
+        }
+      },
+      "attributes": {
+        "author": "კონსტანტინე გამსახურდია",
+        "quote": "როცა ხალხს ამდენი მოღალატე შინა ჰყავს, მაკედონელიც ვერ გაამარჯვებინებს მას!",
+        "source": "დიდოსტატის მარჯვენა",
+        "topic": []
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "ced4bac9-5b8f-4f0d-973d-53d317629d34",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/ced4bac9-5b8f-4f0d-973d-53d317629d34?resourceVersion=id%3A19"
+        }
+      },
+      "attributes": {
+        "author": "შოთა რუსთაველი",
+        "quote": "ბოროტსა სძლია კეთილმან, არსება მისი გრძელია!",
+        "source": "ვეფხისტყაოსანი",
+        "topic": []
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "a1d31523-ea29-443c-a6c3-13b7e04aed6e",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/a1d31523-ea29-443c-a6c3-13b7e04aed6e?resourceVersion=id%3A20"
+        }
+      },
+      "attributes": {
+        "author": "აკაკი წერეთელი",
+        "quote": "გული თუ გატყდა, შესაძლებელიც აღარ სჯერა!",
+        "source": "თამარ ცბიერი",
+        "topic": [
+          "იმედგაცრუება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "dc3f2d1f-b7fa-4bfe-b52a-1a31fe9f304c",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/dc3f2d1f-b7fa-4bfe-b52a-1a31fe9f304c?resourceVersion=id%3A21"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "სიმართლე შეგიძლია გვემო, ხაროში ჩააგდო და ზემოდან მიწა გადააფარო. ან არადა, ლაქი წაუსვა, ვერცხლის წყალში ამოავლო, ლამაზ ქათქათა ტყუილში გაახვიო, მაგრამ მოკვლით ვერ მოკლავ. სუნთქვას ვერ შეუკრავ. სიმართლის სუნთქვა მაინც გესმის, ცდილობ ყური არ ათხოვო და მაინც გესმის, როგორც საათის წიკწიკი სამარისებულ სიჩუმეში.",
+        "source": "მდგმური",
+        "topic": [
+          "სიმართლე",
+          "ცხოვრებისეული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "3f0e287b-f507-4269-a538-e421d1e3527b",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/3f0e287b-f507-4269-a538-e421d1e3527b?resourceVersion=id%3A22"
+        }
+      },
+      "attributes": {
+        "author": "გურამ დოჩანაშვილი",
+        "quote": "დედამიწას სიყვარული ატრიალებს, დომენიკო..",
+        "source": "სამოსელი პირველი",
+        "topic": [
+          "სიყვარული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "d2fbf56f-50e3-4b8d-8989-e3eee9109375",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/d2fbf56f-50e3-4b8d-8989-e3eee9109375?resourceVersion=id%3A23"
+        }
+      },
+      "attributes": {
+        "author": "ჭაბუა ამირეჯიბი",
+        "quote": "ცხოვრება ის არის, რაც გახსოვს. დანარჩენი არსებობაა.",
+        "source": "დათა თუთაშხია",
+        "topic": [
+          "ცხოვრებისეული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "ed445b7b-0a3c-4e45-b3ad-f1c3d6dcb156",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/ed445b7b-0a3c-4e45-b3ad-f1c3d6dcb156?resourceVersion=id%3A24"
+        }
+      },
+      "attributes": {
+        "author": "გალაკტიონ ტაბიძე",
+        "quote": "მძიმეა ტვირთი? მაშ სხვებმა ზიდონ…",
+        "source": "ის მოდიოდა ქუჩაში ერთი",
+        "topic": [
+          "ცხოვრებისეული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "72cfce89-8678-478c-9910-f500ad495531",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/72cfce89-8678-478c-9910-f500ad495531?resourceVersion=id%3A26"
+        }
+      },
+      "attributes": {
+        "author": "ჭაბუა ამირეჯიბი",
+        "quote": "ყველა კაცი თავის საქმეს მისდევს, ჭკუა ბევრისთვის მიუცია ღმერთს, გაგება ცოტასთვის. გაგება როგორიც აქვს ადამიანს, ისეთ საქმეს მიჰყვება და არის.",
+        "source": "დათა თუთაშხია",
+        "topic": [
+          "ცხოვრებისეული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "5119b437-3d94-4722-9071-6bdca67867d2",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/5119b437-3d94-4722-9071-6bdca67867d2?resourceVersion=id%3A27"
+        }
+      },
+      "attributes": {
+        "author": "ნოდარ დუმბაძე",
+        "quote": "ყველაზე დიდი გამოგონება ქვეყანაზე: ანბანი, ჰიმნი და დროშაა. რადგან სამთავე თავისუფლების სათავეა.",
+        "source": "თეთრი ბაირაღები",
+        "topic": [
+          "თავისუფლება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "79b342af-f151-460f-a171-9c43e5b0dee6",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/79b342af-f151-460f-a171-9c43e5b0dee6?resourceVersion=id%3A28"
+        }
+      },
+      "attributes": {
+        "author": "კონსტანტინე გამსახურდია",
+        "quote": "ვინც შეგირდი არ ყოფილა, ვერასოდეს გახდება ოსტატი. ვერც იგი გახდება ოდესმე ოსტატი, მუდამ ოსტატებს ვინც შეჰყურებს პირში.",
+        "source": "დიდოსტატის მარჯვენა",
+        "topic": [
+          "თავისუფლება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "de95e086-96e0-4a46-944f-15792cf3cd67",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/de95e086-96e0-4a46-944f-15792cf3cd67?resourceVersion=id%3A29"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "მუტრუკი მიტომ მუტრუკობს, დედა ჰყოლია ვირიო. კაცი ბეჩავის მჩაგრავი სად გაგონილა გმირიო?!",
+        "source": "მუტრუკი მიტომ მუტრუკობს",
+        "topic": [
+          "ჩაგვრა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "4ea8377c-17ec-4f99-a0cf-994c7d63f151",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/4ea8377c-17ec-4f99-a0cf-994c7d63f151?resourceVersion=id%3A30"
+        }
+      },
+      "attributes": {
+        "author": "კონსტანტინე გამსახურდია",
+        "quote": "ძლიერს უფრო მეტად უჭირს ამ ქვეყნად. ამიტომაც მუდამ დაღრენილნი დადიან ლომები, ვეფხვები და ავაზები, ხოლო თრითინები, თაგვები და ციყვები მუდამ მხიარულად დაცუნცულებენ.",
+        "source": "დიდოსტატის მარჯვენა",
+        "topic": [
+          "ცხოვრებისეული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "97397533-29f2-4ffb-926a-7337e3dd8465",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/97397533-29f2-4ffb-926a-7337e3dd8465?resourceVersion=id%3A31"
+        }
+      },
+      "attributes": {
+        "author": "გიორგი ლეონიძე",
+        "quote": "ქვეყანას სამი რამ აკლია: ცას კიბე, ზღვას ხიდი, ადამიანს კი სამართალი.",
+        "source": "ნატვრის ხე",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "c10028a4-dae1-4ebf-aa6a-ff7a607a63ee",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/c10028a4-dae1-4ebf-aa6a-ff7a607a63ee?resourceVersion=id%3A32"
+        }
+      },
+      "attributes": {
+        "author": "ნიკოლოზ ბარათაშვილი",
+        "quote": "სასაცილოა, ბერიკაცი რომ ყმაწვილობდეს და საბრალოა, როს ჭაბუკი ბერიკაცობდეს!",
+        "source": "ჩემთ მეგობართ",
+        "topic": [
+          "ცხოვრებისეული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "b8f37fab-8a8e-439e-b162-02723403489c",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/b8f37fab-8a8e-439e-b162-02723403489c?resourceVersion=id%3A33"
+        }
+      },
+      "attributes": {
+        "author": "იაკობ გოგებაშვილი",
+        "quote": "რამდენადაც უფრო დიდია ხალხის სიღარიბე, იმდენად უფრო ესაჭიროება სკოლა, რომელიც სამართლიანად ითვლება სიღარიბის უებარ წამლად.",
+        "source": "უცნობი",
+        "topic": [
+          "განათლება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "0a58bc79-3873-44de-ba6f-cfa52b536042",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/0a58bc79-3873-44de-ba6f-cfa52b536042?resourceVersion=id%3A34"
+        }
+      },
+      "attributes": {
+        "author": "სულხან–საბა ორბელიანი",
+        "quote": "კაცი, სახელის მძებნელი, უკვდავად შემირაცხია, მკვდრად იგი თქმულა, ვის ვაი სახელი ზედ არ აცხია.",
+        "source": "სიბრძნის სიმფონია",
+        "topic": [
+          "ვაჟკაცი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "fd295886-aecf-461b-9d09-27d2e446380c",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/fd295886-aecf-461b-9d09-27d2e446380c?resourceVersion=id%3A35"
+        }
+      },
+      "attributes": {
+        "author": "სულხან–საბა ორბელიანი",
+        "quote": "საქმე სიტყვიანი და სიტყვა საქმიანი.",
+        "source": "სიბრძნე სიცრუისა",
+        "topic": [
+          "საქმე"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "d33419f5-f6a5-4956-aa9c-a33fb838eaa2",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/d33419f5-f6a5-4956-aa9c-a33fb838eaa2?resourceVersion=id%3A36"
+        }
+      },
+      "attributes": {
+        "author": "ზაალ სამადაშვილი",
+        "quote": "ვცდილობ განვახორციელო პრინციპი: როცა არ მოგწონს სხვის მიერ გაკეთებული საქმე, შეეცადე შენ თვითონ გააკეთო უკეთესად. კამათში დაღლას შრომით დაღლა მირჩევნია.",
+        "source": "უცნობი",
+        "topic": [
+          "საქმე"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "2735f6ba-0c65-426d-bb3d-92ed9758844e",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/2735f6ba-0c65-426d-bb3d-92ed9758844e?resourceVersion=id%3A37"
+        }
+      },
+      "attributes": {
+        "author": "ნოე ჟორდანია",
+        "quote": "მეფე ისეთივე გამოგონილი ავტორიტეტია, როგორც ღმერთი. ეს ორთავე ერთ დონეზე დავაყენე, ათეიზმი და რესპუბლიკანიზმი ერთიმეორის ტყუპათ დავსახე.",
+        "source": "ჩემი წარსული",
+        "topic": [
+          "უცნობი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "38a9f57d-61a9-4cc6-8f38-f50eab5b7df6",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/38a9f57d-61a9-4cc6-8f38-f50eab5b7df6?resourceVersion=id%3A38"
+        }
+      },
+      "attributes": {
+        "author": "დათო ტურაშვილი",
+        "quote": "წარსულს თურმე დაბრუნებაც შეუძლია და განსაკუთრებით იმ შემთხვევაში, თუ იმ წარსულს ჩვენ თვითონაც არ ვშორდებით.",
+        "source": "ჯინსების თაობა",
+        "topic": [
+          "წარსული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "1172cbd7-46bc-4cd8-9950-646c36dfbcd7",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/1172cbd7-46bc-4cd8-9950-646c36dfbcd7?resourceVersion=id%3A39"
+        }
+      },
+      "attributes": {
+        "author": "დათო ტურაშვილი",
+        "quote": "საფლავი იყო ერთადერთი ადგილი საბჭოთა საქართველოში, სადაც საბჭოთა ხელისუფლება არ ვრცელდებოდა.",
+        "source": "ჯინსების თაობა",
+        "topic": [
+          "წარსული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "65bc707f-9566-42dc-b9bd-6749ce999d2f",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/65bc707f-9566-42dc-b9bd-6749ce999d2f?resourceVersion=id%3A40"
+        }
+      },
+      "attributes": {
+        "author": "დათო ტურაშვილი",
+        "quote": "ოფიციალური იმედი არ არსებობს. იმედი ერთია, ის შენია და შეგიძლია ამით იცოცხლო.",
+        "source": "ჯინსების თაობა",
+        "topic": [
+          "იმედი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "e2957b9b-cc7e-4a99-a4cd-a3eba9a3c756",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/e2957b9b-cc7e-4a99-a4cd-a3eba9a3c756?resourceVersion=id%3A41"
+        }
+      },
+      "attributes": {
+        "author": "დათო ტურაშვილი",
+        "quote": "ქართველებმა კუბოს სასახლე დაარქვეს, რომ სიკვდილი მათთვის უფრო მსუბუქი ყოფილიყო.",
+        "source": "ჯინსების თაობა",
+        "topic": [
+          "სიკვდილი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "d355df1f-0a48-4e14-bce6-36a2e9278265",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/d355df1f-0a48-4e14-bce6-36a2e9278265?resourceVersion=id%3A42"
+        }
+      },
+      "attributes": {
+        "author": "დათო ტურაშვილი",
+        "quote": "თუ ადამიანი თუნდაც სხვების დასანახად მივა ეკლესიაში, მაინც უკეთესია, რადგან იქ უფრო მეტი დრო ექნება იმისათვის, რომ სიყვარულზე, ღმერთსა და ჭეშმარიტებაზე იფიქროს.",
+        "source": "ჯინსების თაობა",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "1c73ba7d-048e-420a-9ca4-4f91e21cb454",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/1c73ba7d-048e-420a-9ca4-4f91e21cb454?resourceVersion=id%3A43"
+        }
+      },
+      "attributes": {
+        "author": "დათო ტურაშვილი",
+        "quote": "თქვენ არ იცით, როგორ ბოროტდებიან ამპარტავნები, როცა ისინი ხელისუფლებაში ხვდებიან.",
+        "source": "ჯინსების თაობა",
+        "topic": [
+          "ხელისუფლება",
+          "ადამიანი",
+          "ამპარტავნება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "0279ebad-c749-486b-b68b-a15116cc8410",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/0279ebad-c749-486b-b68b-a15116cc8410?resourceVersion=id%3A44"
+        }
+      },
+      "attributes": {
+        "author": "დათო ტურაშვილი",
+        "quote": "იმედი სულ ბოლოს კი არა, საერთოდ არასოდეს კვდება.",
+        "source": "ჯინსების თაობა",
+        "topic": [
+          "იმედი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "ec95df1c-9348-463e-a325-30ea5b1dbf76",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/ec95df1c-9348-463e-a325-30ea5b1dbf76?resourceVersion=id%3A45"
+        }
+      },
+      "attributes": {
+        "author": "დათო ტურაშვილი",
+        "quote": "იქ, სადაც ადამიანის სიკვდილი თოთხმეტი მანეთი ღირდა, ადამიანის სიცოცხლეს რა ფასი ექნებოდა.",
+        "source": "ჯინსების თაობა",
+        "topic": [
+          "ადამიანი",
+          "სიკვდილი",
+          "სიცოცხლე"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "3afc689d-0f95-4e7d-86d4-31ccfa91941d",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/3afc689d-0f95-4e7d-86d4-31ccfa91941d?resourceVersion=id%3A46"
+        }
+      },
+      "attributes": {
+        "author": "მერაბ კოსტავა",
+        "quote": "მსოფლიო იცნობს ოცდაათწლიანი და ასწლიანი ომების ისტორიას, მაგრამ არსებობს მუდმივი, უვადო ომი. ეს საქართველოსი ისტორიაა.",
+        "source": "უცნობი",
+        "topic": [
+          "საქართველო",
+          "ომი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "b5be1618-e279-417a-896f-8e6d09c60dce",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/b5be1618-e279-417a-896f-8e6d09c60dce?resourceVersion=id%3A47"
+        }
+      },
+      "attributes": {
+        "author": "მერაბ კოსტავა",
+        "quote": "საქმეა იქცე მსოფლიო კაცად და არ უმუხთლო ერსა და თვისტომთ.",
+        "source": "უცნობი",
+        "topic": [
+          "ერთგულება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "74aa8280-5303-4e83-8cf9-15662ee4eead",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/74aa8280-5303-4e83-8cf9-15662ee4eead?resourceVersion=id%3A48"
+        }
+      },
+      "attributes": {
+        "author": "მერაბ კოსტავა",
+        "quote": "თუ ერთმანეთთან ვერ გამოვნახავთ სალაპარაკო ენას დღეს, შესაძლოა დადგეს დრო განუჭვრეტელი სიბნელისა, სადაც ჩვენ ერთმანეთს დაბრმავებული ვეძებდეთ და ვეღარ ვპოვებდეთ.",
+        "source": "უცნობი",
+        "topic": [
+          "ერთიანობა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "bb94c799-942b-4753-8167-2f1d467c3cef",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/bb94c799-942b-4753-8167-2f1d467c3cef?resourceVersion=id%3A49"
+        }
+      },
+      "attributes": {
+        "author": "ზვიად გამსახურდია",
+        "quote": "თუ გსურს ერი, ან ადამიანი გახრწნა და გადააგვარო, მას არა მხოლოდ უნდა დაავიწყო წარსული, არამედ უნდა გაუყალბო კიდეც იგი. თავისი ჭეშმარიტი გმირები ბოროტმოქმედებად და უნიათო კაცუნებად უნდა დაუსახო, მედროვენი და მოღალატენი კი - გმირებად.",
+        "source": "აირჩიე, ქართველო ერო",
+        "topic": [
+          "გადაგვარება",
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "80a2e5a1-f25e-4037-a3c1-a1cc8deba23f",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/80a2e5a1-f25e-4037-a3c1-a1cc8deba23f?resourceVersion=id%3A50"
+        }
+      },
+      "attributes": {
+        "author": "ზვიად გამსახურდია",
+        "quote": "არ შეიძლება საკუთარი თავისა და საკუთარი ხალხის მოტყუება - ამაზე მწარე ხვედრი, ამაზე შემზარავი დანაშაული არ არსებობს.",
+        "source": "აირჩიე, ქართველო ერო",
+        "topic": [
+          "ტყუილი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "a43257b4-7e0f-485e-b3c5-afaa67a554f7",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/a43257b4-7e0f-485e-b3c5-afaa67a554f7?resourceVersion=id%3A51"
+        }
+      },
+      "attributes": {
+        "author": "ზვიად გამსახურდია",
+        "quote": "პატარა შეცდომა ხშირად დიდი შეცდომის საწინდარია.",
+        "source": "აირჩიე, ქართველო ერო",
+        "topic": [
+          "შეცდომა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "7bd37382-3c39-4958-8f32-a38054530fc3",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/7bd37382-3c39-4958-8f32-a38054530fc3?resourceVersion=id%3A52"
+        }
+      },
+      "attributes": {
+        "author": "ზვიად გამსახურდია",
+        "quote": "ყველაფერი შეიძლება წაართვა პიროვნებას, ერს, მაგრამ ვერავინ შესძლებს თავისუფლების შეგრძნება წაართვას მას.",
+        "source": "აირჩიე, ქართველო ერო",
+        "topic": [
+          "თავისუფლება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "0ed35e57-a38d-4720-8181-d77d4cf5430f",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/0ed35e57-a38d-4720-8181-d77d4cf5430f?resourceVersion=id%3A53"
+        }
+      },
+      "attributes": {
+        "author": "კახა ბენდუქიძე",
+        "quote": "თუ გლანძღავენ – ესე იგი საინტერესოდ ცხოვრობ, თუ გემუქრებიან – ესე იგი მათთვის საშიში ხარ, თუ ჯერ კიდევ ცოცხალი ხარ – ესე იგი მათ არ გაუმარჯვიათ!",
+        "source": "უცნობი",
+        "topic": [
+          "გამარჯვება",
+          "შური",
+          "ცხოვრებისეული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "e6df5234-c794-48b7-a4e1-8d51d2cf5bbb",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/e6df5234-c794-48b7-a4e1-8d51d2cf5bbb?resourceVersion=id%3A54"
+        }
+      },
+      "attributes": {
+        "author": "ზვიად გამსახურდია",
+        "quote": "დამოუკიდებლობა ხომ ერის ზნეობის გადარჩენაა და, ამდენად, თვით ერის გადარჩენაც.",
+        "source": "აირჩიე, ქართველო ერო",
+        "topic": [
+          "დამოუკიდებლობა",
+          "თავისუფლება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "af7bbaad-1bae-477e-8bc5-e67a72b7c56e",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/af7bbaad-1bae-477e-8bc5-e67a72b7c56e?resourceVersion=id%3A55"
+        }
+      },
+      "attributes": {
+        "author": "ზვიად გამსახურდია",
+        "quote": "მტერს ეშინია ჩვენი ერთობისა.",
+        "source": "აირჩიე, ქართველო ერო",
+        "topic": [
+          "ერთიანობა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "16989f80-6752-404b-8974-01dd97b45ca9",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/16989f80-6752-404b-8974-01dd97b45ca9?resourceVersion=id%3A56"
+        }
+      },
+      "attributes": {
+        "author": "ზვიად გამსახურდია",
+        "quote": "ნაცრად ქცეული ხე ისევე ხეს გამოადგებაო სასუქად. ცხოვრებაშიც ასეა: კაცმა რომ მეორე კაცს არგოს, ხესავით უნდა დაიწვას მისთვის და დანაცრდეს.",
+        "source": "აირჩიე, ქართველო ერო",
+        "topic": [
+          "ერთიანობა",
+          "თავგანწირვა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "814cb617-80f8-4115-bf6b-f7049e01b786",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/814cb617-80f8-4115-bf6b-f7049e01b786?resourceVersion=id%3A57"
+        }
+      },
+      "attributes": {
+        "author": "ზვიად გამსახურდია",
+        "quote": "როდესაც რაიმე დიდ საქმეს შეეწირება მსხვერპლად მისი მესვეური, ეს მოასწავებს ამ საქმის გამარჯვებას.",
+        "source": "აირჩიე, ქართველო ერო",
+        "topic": [
+          "თავგანწირვა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "f06c5f64-e17a-4b62-99f0-d45096423678",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/f06c5f64-e17a-4b62-99f0-d45096423678?resourceVersion=id%3A58"
+        }
+      },
+      "attributes": {
+        "author": "ზვიად გამსახურდია",
+        "quote": "რელიგიას გონებით, მარტო ინტელექტით ვერ გააცნობიერებ, ვერ გაიგებ, ყოველთვის გაწბილებული დარჩები.",
+        "source": "აირჩიე, ქართველო ერო",
+        "topic": [
+          "რელიგია"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "2cf5942c-c903-461d-91d6-f99e180006d7",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/2cf5942c-c903-461d-91d6-f99e180006d7?resourceVersion=id%3A59"
+        }
+      },
+      "attributes": {
+        "author": "ზვიად გამსახურდია",
+        "quote": "დღეს უწიგნური და უმეცარი ადამიანი ვერ იქნება ჭეშმარიტი მორწმუნე.",
+        "source": "აირჩიე, ქართველო ერო",
+        "topic": [
+          "რელიგია"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "bc8bb89d-ea97-4db2-b1ff-2acb657e70ae",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/bc8bb89d-ea97-4db2-b1ff-2acb657e70ae?resourceVersion=id%3A60"
+        }
+      },
+      "attributes": {
+        "author": "ზვიად გამსახურდია",
+        "quote": "ეშმაკის მიერ ადამიანის შეცდენა გამოიხატა იმაში, რომ მან მისცა ინტელექტი, ამქვეყნიური ინტელექტი, ლოგიკა და ყველაფერი ის, რაც ღმერთს აშორებს ადამიანს.",
+        "source": "აირჩიე, ქართველო ერო",
+        "topic": [
+          "ადამიანი",
+          "ეშმაკი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "2bad4883-2647-4ee7-a0c7-928331149d31",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/2bad4883-2647-4ee7-a0c7-928331149d31?resourceVersion=id%3A61"
+        }
+      },
+      "attributes": {
+        "author": "გურამ დოჩანაშვილი",
+        "quote": "დაწოლისას, დაძინებამდე, არის ერთი, რაღაც პატარა, გარდამავალი წამი, როცა საკუთარი თავი ყველამ ვიცით.",
+        "source": "სამოსელი პირველი",
+        "topic": [
+          "ჭეშმარიტება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "ed5380e4-f379-4d48-8091-cdc7467ef937",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/ed5380e4-f379-4d48-8091-cdc7467ef937?resourceVersion=id%3A62"
+        }
+      },
+      "attributes": {
+        "author": "გურამ დოჩანაშვილი",
+        "quote": "ნამდვილ ჯამბაზს თვალებში ყინული და წებო კი არა, ნაღვლიანი საიდუმლო უნდა ჰქონდეს...",
+        "source": "სამოსელი პირველი",
+        "topic": [
+          "ცხოვრებისეული",
+          "ტკივილი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "c852fae3-aaf6-45a1-8df9-9c51bae1ce08",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/c852fae3-aaf6-45a1-8df9-9c51bae1ce08?resourceVersion=id%3A63"
+        }
+      },
+      "attributes": {
+        "author": "გურამ დოჩანაშვილი",
+        "quote": "ძალიან დიდი განსხვავება არ აქვს იმას, ადრე მოკვდები თუ გვიან, რადგან ბოლო მაინც ეგ არის. მთავარია, თუ როგორ მოკვდები და რის ჩადენას მოასწრებ.",
+        "source": "სამოსელი პირველი",
+        "topic": [
+          "ცხოვრებისეული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "e2b59b91-0f63-44b5-ad54-5a773fc4f341",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/e2b59b91-0f63-44b5-ad54-5a773fc4f341?resourceVersion=id%3A64"
+        }
+      },
+      "attributes": {
+        "author": "ივანე ჯავახიშვილი",
+        "quote": "ყოველ ჩვენგანს, მეტადრე მოხუცებულებს, უნდა ახსოვდეთ, რომ „იგი წავა და სხვა მოვა ტურფასა საბაღნაროსა“.",
+        "source": "ი.ჯავახიშვილის ცხოვრება და მეცნ. ღვაწლი",
+        "topic": [
+          "ცხოვრებისეული",
+          "ჭეშმარიტება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "296edf55-b9b3-4784-8ad6-52259db98d40",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/296edf55-b9b3-4784-8ad6-52259db98d40?resourceVersion=id%3A65"
+        }
+      },
+      "attributes": {
+        "author": "დავით კვიცარიძე",
+        "quote": "ჩვენ ხომ სიკეთისთვის ვართ გაჩენილნი და ვეცადოთ, იქნებ მოხდეს სასწაული, იქნებ კეთილი გულით ნათქვამი არ აცდეს მიზანს,თესლი ნოყიერ ადგილას დავარდეს და იხეიროს.",
+        "source": "ძეგლები მიწას არ ამძიმებენ",
+        "topic": [
+          "სიკეთე"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "a5ded2b9-50e9-4018-94d4-3ed62d528c27",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/a5ded2b9-50e9-4018-94d4-3ed62d528c27?resourceVersion=id%3A66"
+        }
+      },
+      "attributes": {
+        "author": "დავით კვიცარიძე",
+        "quote": "თქვენს მეგობარს წამალზე უფრო მეტად ადამიანური სითბო სჭირდება.",
+        "source": "ძეგლები მიწას არ ამძიმებენ",
+        "topic": [
+          "მეგობარი",
+          "სითბო"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "b9c098c9-113b-4b60-9005-e0bb32918992",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/b9c098c9-113b-4b60-9005-e0bb32918992?resourceVersion=id%3A67"
+        }
+      },
+      "attributes": {
+        "author": "ნიკო ფიროსმანი",
+        "quote": "მოვა დრო და ჩემს ნახატებს მილიონებად გაყიდიან!",
+        "source": "უცნობი",
+        "topic": [
+          "იმედი",
+          "შეუპოვრობა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "48d80734-8cc5-47dd-b882-7814f3a6e16a",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/48d80734-8cc5-47dd-b882-7814f3a6e16a?resourceVersion=id%3A68"
+        }
+      },
+      "attributes": {
+        "author": "ეგნატე ნინოშვილი",
+        "quote": "გვიყვარდეს ერთმანეთი, ვირჩინოთ ჩვენი თავი ჩვენი შრომით და ვიყოთ. ნურვის ვაწყენთ და ჩვენც არავინ გვაწყენს.",
+        "source": "სიმონა",
+        "topic": [
+          "სიყვარული",
+          "შრომა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "24eae515-fabd-4286-9a5a-b5d237982ce9",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/24eae515-fabd-4286-9a5a-b5d237982ce9?resourceVersion=id%3A69"
+        }
+      },
+      "attributes": {
+        "author": "დავით ჭიჭინაძე",
+        "quote": "გლეხს სწავლა რომ უყვარდეს, ის გლეხი არ იქნებოდა.",
+        "source": "უცნობი",
+        "topic": [
+          "გლეხი",
+          "სწავლა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "9246fea0-5e7e-4ab3-8abf-dc780b54b955",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/9246fea0-5e7e-4ab3-8abf-dc780b54b955?resourceVersion=id%3A70"
+        }
+      },
+      "attributes": {
+        "author": "ლორიკ მარშანია",
+        "quote": "მე აფხაზი ვარ და ამაყად ვამბობ, რომ ჩემი საქართველო აფხაზეთიდან იწყება.",
+        "source": "ლ.მარშანიას მიმართვა ვ.არძინბასადმი,1992",
+        "topic": [
+          "აფხაზეთი",
+          "საქართველო"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "e3fd258d-b7e3-4a95-bbf7-a78f0da97e41",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/e3fd258d-b7e3-4a95-bbf7-a78f0da97e41?resourceVersion=id%3A71"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "სიკვდილი ყველას შეუძლია, გადარჩენა კი – არა.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "სიკვდილი",
+          "ბრძოლა",
+          "გადარჩენა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "fd4fd835-8f1f-4b47-95f3-bcf8f12765cb",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/fd4fd835-8f1f-4b47-95f3-bcf8f12765cb?resourceVersion=id%3A72"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "რაც უფრო მორიდებულია ადამიანი, მით უფრო ანტიმორიდებული ხდება, როცა კი მორცხვობას დაძლევს.",
+        "source": "მდგმური",
+        "topic": [
+          "მორიდება",
+          "ცვლილება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "f8ab9b08-8ac8-40b1-996b-03dada44714d",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/f8ab9b08-8ac8-40b1-996b-03dada44714d?resourceVersion=id%3A73"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "ვინც ერთხელ სცადა თავის მოკვლა და ვერ მოიკლა, ის მეორედ აღარ ცდის.",
+        "source": "მდგმური",
+        "topic": [
+          "შეცდომა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "bbd64612-a85d-461b-b641-a438bd2af48e",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/bbd64612-a85d-461b-b641-a438bd2af48e?resourceVersion=id%3A74"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "ოდიდგან ყველა მამაკაცს რომ გაეკეთებინა ის, რისი გაკეთებაც შეეძლო, დედამიწა აქამდე ან სამოთხედ იქცეოდა, ან ნამსხვრევებად.",
+        "source": "მდგმური",
+        "topic": [
+          "შრომა",
+          "დედამიწა",
+          "საქმე"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "53b054b5-4849-4cec-bd94-433dff9dbc45",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/53b054b5-4849-4cec-bd94-433dff9dbc45?resourceVersion=id%3A75"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "სამყაროს დასაბამიდან მამაკაცი ქმნის ყოველივეს. ავსაც და კარგსაც, შხამსაც და მალამოსაც, სიკვდილსაც და სიცოცხლესაც. ქალი კი ბიძგია. ხან ბიძგია, ხან შთაგონება, ხან საყრდენი.",
+        "source": "მდგმური",
+        "topic": [
+          "ქალი",
+          "კაცი",
+          "სამყარო"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "16b79a8e-1d8a-4103-824f-9a050cfcf8c5",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/16b79a8e-1d8a-4103-824f-9a050cfcf8c5?resourceVersion=id%3A76"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "ყველა გენიალური აღმოჩენა მარტივია.",
+        "source": "მდგმური",
+        "topic": [
+          "თვალთამხელი",
+          "შთამაგონებელი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "b87007c6-87c9-43e6-8f8b-896e78437371",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/b87007c6-87c9-43e6-8f8b-896e78437371?resourceVersion=id%3A77"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "ჭარბი სერიოზულობა სხვის თვალში ხშირად კომიკური ჩანს, არასერიოზულობა კი უფრო ეფექტური და მომგებიანია. განსაკუთრებით მაშინ, როცა ურთიერთობა გიხდება ლამაზ გოგოსთან და არა საქმიან ჩინოვნიკებთან.",
+        "source": "მდგმური",
+        "topic": [
+          "ეშმაკობა",
+          "იუმორნარევი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "7f0271c2-8581-46ce-8e8c-54a2a7954638",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/7f0271c2-8581-46ce-8e8c-54a2a7954638?resourceVersion=id%3A78"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "ადამიანის გამტყუნება ძნელია, მით უმეტეს, თუ შენ თვითონაც ადამიანი ხარ.",
+        "source": "მდგმური",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "4f6c2b37-3bde-488e-ac73-44021e64fc99",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/4f6c2b37-3bde-488e-ac73-44021e64fc99?resourceVersion=id%3A79"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "სანამ განზრახვა მხოლოდ განზრახვაა, ყველაფერი იოლია. განზრახვის ნამდვილი ძალა და მნიშვნელობა მაშინ გამოჩნდება, როცა იგი ფაქტად იქცევა.",
+        "source": "ქარავანი",
+        "topic": [
+          "განზრახვა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "ed1aee0f-6fb2-4787-b346-5a686e121bc6",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/ed1aee0f-6fb2-4787-b346-5a686e121bc6?resourceVersion=id%3A80"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "პოპულარობა ავადმყოფური კმაყოფილებაა, რომელიც ღამღამობით, ძილისწინ, გამოფიტულობისა და სიცარიელის განცდას იწვევს და საკუთარ თავს გაძულებს.",
+        "source": "ქარავანი",
+        "topic": [
+          "პოპულარობა",
+          "ცხოვრებისეული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "0853eeef-5853-4947-913b-3020a020a57e",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/0853eeef-5853-4947-913b-3020a020a57e?resourceVersion=id%3A81"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "საერთოდ არაა ცნობილი, თუ სად, როდის და რატომ იბადება სიყვარული, რადგან კაცობრიობის ისტორიაში ჯერ არ გამოჩენილა ის ადამიანი, ვინც წარმატებულად დაშლის სიყვარულს შემადგენელ ნაწილებად და მის მექანიზმში გაერკვევა.",
+        "source": "ქარავანი",
+        "topic": [
+          "სიყვარული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "44801079-cb75-4de4-a33a-ae631f8549c7",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/44801079-cb75-4de4-a33a-ae631f8549c7?resourceVersion=id%3A82"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "ერთი შეხედვით სრულიად უმნიშვნელო შემთხვევას შეუძლია უღრმესი და თავდაუღწეველი სიყვარული დაბადოს. და საერთოდ, სიყვარული მუდამ ასეთ უბრალო და შეუმჩნეველ დეტალებზე აღმოცენდება ხოლმე.",
+        "source": "ქარავანი",
+        "topic": [
+          "სიყვარული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "86f8a071-6a13-4114-916c-14029b06a92c",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/86f8a071-6a13-4114-916c-14029b06a92c?resourceVersion=id%3A83"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "ცხოვრებას ასეთი წესი აქვს: ერთ ჭიქა შარბათს რომ შეგასმევს, მერე ერთ ჭიქა სამსალას მიგაყოლებინებს.",
+        "source": "ქარავანი",
+        "topic": [
+          "ცხოვრებისეული",
+          "ჭეშმარიტება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "dd078578-3a60-415d-ad65-69d3418e5944",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/dd078578-3a60-415d-ad65-69d3418e5944?resourceVersion=id%3A84"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "დილით ფიცის დადება ადვილია, რადგან საღამო ჯერ არ დამდგარა.",
+        "source": "ქარავანი",
+        "topic": [
+          "ფიცი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "f879d609-2c47-4da1-8a41-423fc0d6da5f",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/f879d609-2c47-4da1-8a41-423fc0d6da5f?resourceVersion=id%3A85"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "შეურაცხყოფის მიტევება სილაჩრე და სულმდაბლობაა, ხოლო შურისძიება ბოროტება, რომელიც წამსვე შეურაცხმყოფელის გვერდით მიგიჩენს ადგილს.",
+        "source": "ქარავანი",
+        "topic": [
+          "შეურაცხყოფა",
+          "შურისძიება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "82e87ec8-be41-4b26-8f44-84e2fef1b0eb",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/82e87ec8-be41-4b26-8f44-84e2fef1b0eb?resourceVersion=id%3A86"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "კაცის ცხოვრებას ეპოქა განაპირობებს.",
+        "source": "ქარავანი",
+        "topic": [
+          "კაცი",
+          "ეპოქა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "01f30d2f-3919-4768-96f3-b24e07ba22d6",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/01f30d2f-3919-4768-96f3-b24e07ba22d6?resourceVersion=id%3A87"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "ჩემი აზრით პროვინციალობა, ყოველ შემთხვევაში მისი ერთ-ერთი უმთავრესი ნიშანი, ისაა, კაცს რომ თავისი მოდელი ეთაკილება და სხვისი მოდელით ცდილობს იცხოვროს.",
+        "source": "ქარავანი",
+        "topic": [
+          "კაცი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "64c5f051-7026-4378-a856-eb5dae5b587a",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/64c5f051-7026-4378-a856-eb5dae5b587a?resourceVersion=id%3A88"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "რუსთაველმა ცუდი სამსახური გაგვიწია, რადგან ძალიან დიდი ტილო გამოდგა და ყველას გვყოფნის ხელის შესაწმენდად. მერე რა, რომ ჩვენ არ ვვარგივართ?! სამაგიეროდ რუსთაველია დიდი. მერე რა, რომ ჩვენ უნიჭოები ვართ?! სამაგიეროდ რუსთაველია გენიოსი. მერე რა, რომ ჩვენ ასე დავკნინდით და დავბეჩავდით?! სამაგიეროდ რუსთაველია ამაღლებული.",
+        "source": "ქარავანი",
+        "topic": [
+          "ჩამაფიქრებელი",
+          "ქართველი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "728d405a-d559-4eb5-9406-b42570679d21",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/728d405a-d559-4eb5-9406-b42570679d21?resourceVersion=id%3A89"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "მდორე ადგილას მდინარეს მეტი სიღრმე აქვს, ვიდრე კლდე-ღრეებში, სადაც ყურისწამღებად მიხტუნავს.",
+        "source": "ქარავანი",
+        "topic": [
+          "ჩამაფიქრებელი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "19411414-4d7a-45c0-bc75-93d4509c178c",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/19411414-4d7a-45c0-bc75-93d4509c178c?resourceVersion=id%3A90"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "პროგრესი მაშინ დაიწყება, როცა ჩვენს უვარგისობას შევიგნებთ... თუკი პროგრესი სულიერ და ზნეობრივ სფეროში საერთოდ შესაძლებელია.",
+        "source": "ქარავანი",
+        "topic": [
+          "ჩამაფიქრებელი",
+          "ჭეშმარიტება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "5b8a3130-76a5-45e6-9de3-852bd76fc678",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/5b8a3130-76a5-45e6-9de3-852bd76fc678?resourceVersion=id%3A91"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "ადამიანის დანიშნულება ადამიანის გარეთაა საძებნელი. თუმცა თავისი თეორია ყველას შეიძლება ჰქონდეს. ჩემი თეორიის მიხედვით, ადამიანს არავითარი დანიშნულება არ აქვს, უბრალოდ, სიცოცხლის იმპულსი აქვს, რომელიც გარდაუვალია და ამიტომ დანიშნულების ძიების სურვილს ბადებს.",
+        "source": "ქარავანი",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "3b00fcc4-63c9-47d7-9417-a798585ade0b",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/3b00fcc4-63c9-47d7-9417-a798585ade0b?resourceVersion=id%3A92"
+        }
+      },
+      "attributes": {
+        "author": "ჯემალ ქარჩხაძე",
+        "quote": "ყველა რომ ზნემაღალი იყოს, არავინ ლოთობდეს, ქუჩაში არავინ არწყევდეს, არავინ ქურდობდეს, არავინ ცრუობდეს, სიგარეტსაც კი არავინ ეწეოდეს და უკლებლივ ყველანი ზნეობისა და თავაზიანობის განსახიერებად ვიქცეთ, ხომ დაგვიდგა სამოთხე და ხომ მოკვდა ქალაქი მოწყენილობისგან.",
+        "source": "ქარავანი",
+        "topic": [
+          "ირონია"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "35766eca-b50c-47a0-8057-99c6d260a4ff",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/35766eca-b50c-47a0-8057-99c6d260a4ff?resourceVersion=id%3A93"
+        }
+      },
+      "attributes": {
+        "author": "კოტე მარჯანიშვილი",
+        "quote": "ხელოვნების მიზანი სულ უბრალოა — მიანიჭოს ადამიანს სიხარული, შთაბეროს მას მხნეობა.",
+        "source": "უცნობი",
+        "topic": [
+          "ხელოვნება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "7592891a-cc9b-4b3b-8976-56cdf3da5dd3",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/7592891a-cc9b-4b3b-8976-56cdf3da5dd3?resourceVersion=id%3A94"
+        }
+      },
+      "attributes": {
+        "author": "მამა გაბრიელი",
+        "quote": "შეიცან შენი უძლურება და უფალი გაგაძლიერებს შენ.",
+        "source": "ბერის დიადემა",
+        "topic": [
+          "ძალა",
+          "უფალი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "55b8336a-3009-44fe-886d-09d47fd4a246",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/55b8336a-3009-44fe-886d-09d47fd4a246?resourceVersion=id%3A95"
+        }
+      },
+      "attributes": {
+        "author": "მამა გაბრიელი",
+        "quote": "სიყვარული ლომს ქედს მოადრეკინებს.",
+        "source": "ბერის დიადემა",
+        "topic": [
+          "სიყვარული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "cfafac38-771d-43c4-b49c-325a9bbdce8e",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/cfafac38-771d-43c4-b49c-325a9bbdce8e?resourceVersion=id%3A96"
+        }
+      },
+      "attributes": {
+        "author": "მამა გაბრიელი",
+        "quote": "გული ვისგანაც მოგეცა, იმასვე ეკუთვნის.",
+        "source": "ბერის დიადემა",
+        "topic": [
+          "გული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "57b7c039-bdfb-4f47-9dd6-46b3bccc9fb7",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/57b7c039-bdfb-4f47-9dd6-46b3bccc9fb7?resourceVersion=id%3A97"
+        }
+      },
+      "attributes": {
+        "author": "მამა გაბრიელი",
+        "quote": "გულით სინანული მეტია ცრემლით სინანულზე.",
+        "source": "ბერის დიადემა",
+        "topic": [
+          "გული",
+          "ცრემლი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "1d2c419e-6eb1-4b26-a075-5ac7c3812f35",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/1d2c419e-6eb1-4b26-a075-5ac7c3812f35?resourceVersion=id%3A98"
+        }
+      },
+      "attributes": {
+        "author": "მამა გაბრიელი",
+        "quote": "მოწყალება ოქროა, მოთმინება კი ბრილიანტი.",
+        "source": "ბერის დიადემა",
+        "topic": [
+          "მოწყალება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "0cca4618-54a5-46cd-8873-6502b01fc4ee",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/0cca4618-54a5-46cd-8873-6502b01fc4ee?resourceVersion=id%3A99"
+        }
+      },
+      "attributes": {
+        "author": "მამა გაბრიელი",
+        "quote": "სადაც მეტი მადლია, საჩუქარიც მეტი იქნება.",
+        "source": "ბერის დიადემა",
+        "topic": [
+          "მადლი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "2054861b-8768-4774-ae0e-e17b7ba9dcfa",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/2054861b-8768-4774-ae0e-e17b7ba9dcfa?resourceVersion=id%3A100"
+        }
+      },
+      "attributes": {
+        "author": "მამა გაბრიელი",
+        "quote": "მიწიერი ადამიანის გაღმერთება არ შეიძლება.",
+        "source": "ბერის დიადემა",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "24e37cc6-0cf7-4934-a048-25a7d03eccdf",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/24e37cc6-0cf7-4934-a048-25a7d03eccdf?resourceVersion=id%3A101"
+        }
+      },
+      "attributes": {
+        "author": "მამა გაბრიელი",
+        "quote": "ჯერ უგუნური უნდა იყო, რომ მერე ბრძენი გახდე.",
+        "source": "ბერის დიადემა",
+        "topic": [
+          "უგუნური"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "b4157ebe-d227-439a-bc4c-15798d4c45b2",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/b4157ebe-d227-439a-bc4c-15798d4c45b2?resourceVersion=id%3A102"
+        }
+      },
+      "attributes": {
+        "author": "მამა გაბრიელი",
+        "quote": "ყველა წესსა და კანონზე უპირატესი სიყვარულია.",
+        "source": "ბერის დიადემა",
+        "topic": [
+          "კანონი",
+          "სიყვარული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "1eb03de6-c14d-4dc9-bb49-39ed91b043e5",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/1eb03de6-c14d-4dc9-bb49-39ed91b043e5?resourceVersion=id%3A103"
+        }
+      },
+      "attributes": {
+        "author": "მამა გაბრიელი",
+        "quote": "ცუდია, როცა ენა წინ გისწრებს, ჭკუა კი უკან გრჩება.",
+        "source": "ბერის დიადემა",
+        "topic": [
+          "ენა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "1b2e6b73-0724-4ddf-8931-2658253212ea",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/1b2e6b73-0724-4ddf-8931-2658253212ea?resourceVersion=id%3A104"
+        }
+      },
+      "attributes": {
+        "author": "მამა გაბრიელი",
+        "quote": "ვინც ენასა და მუცელს სძლია, ის უკვე სწორ გზაზე დგას.",
+        "source": "ბერის დიადემა",
+        "topic": [
+          "ენა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "3195ca1f-7cbf-42d9-b035-1f644ff404c8",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/3195ca1f-7cbf-42d9-b035-1f644ff404c8?resourceVersion=id%3A105"
+        }
+      },
+      "attributes": {
+        "author": "კახა ბენდუქიძე",
+        "quote": "ჩემი წარმოდგენა ჩემზე ძალიან განსხვავდება მათი წარმოდგენისგან ჩემზე, - მე ჩემი თავი უფრო ბუნჩულა მგონია, ვიდრე მათ ჰგონიათ რომ ვარ.",
+        "source": "უცნობი",
+        "topic": [
+          "იუმორნარევი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "dec9d0c0-6fdf-49df-88e8-84835ec08d61",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/dec9d0c0-6fdf-49df-88e8-84835ec08d61?resourceVersion=id%3A106"
+        }
+      },
+      "attributes": {
+        "author": "მერაბ მამარდაშვილი",
+        "quote": "ხომ შეიძლება, ღმერთი დაიღალოს აბსოლუტურად ბნელი ადამიანის გაშუქებით? აი, მაშინ კი, მაპატიეთ ეს გამოთქმა, ყოფა გეტირებათ.",
+        "source": "უცნობი",
+        "topic": [
+          "იუმორნარევი",
+          "ღმერთი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "40b1ef24-91e1-4dff-8eb6-cc298e798ee2",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/40b1ef24-91e1-4dff-8eb6-cc298e798ee2?resourceVersion=id%3A107"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "არავითარი განსხვავება არაა შენ იპარავ, თუ გასცემ, ყველაფერი ზედმეტისთვის ისჯები.",
+        "source": "უცნობი",
+        "topic": [
+          "მოპარვა",
+          "გაცემა",
+          "სასჯელი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "1411d89d-05cb-41da-aba7-da5858915818",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/1411d89d-05cb-41da-aba7-da5858915818?resourceVersion=id%3A108"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "ხელოვნება თავისი არსით უფრო ბედნიერია, ვიდრე უკვდავება.",
+        "source": "უცნობი",
+        "topic": [
+          "ხელოვნება",
+          "უკვდავება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "f0f4bb3e-971d-4574-9533-b8b628d5caa5",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/f0f4bb3e-971d-4574-9533-b8b628d5caa5?resourceVersion=id%3A109"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "ადამიანების უმრავლესობას ხომ უბრალოდ მოთმინება არ ყოფნიდა მიეცა სიჩუმისთვის შანსი, შესაძლებლობა, საკუთარი თავი გამოევლინა, მიეღო ეს ღვთის საჩუქარი.",
+        "source": "უცნობი",
+        "topic": [
+          "მოთმინება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "4c1590c0-2c16-4279-8b30-1398380e6b19",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/4c1590c0-2c16-4279-8b30-1398380e6b19?resourceVersion=id%3A110"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "ჭეშმარიტი გმირობა ხომ გმირობაზე უარის თქმაა.",
+        "source": "უცნობი",
+        "topic": [
+          "გმირობა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "35bf2028-6bb2-4a44-b875-ef9b905afb13",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/35bf2028-6bb2-4a44-b875-ef9b905afb13?resourceVersion=id%3A111"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "ხელების მოძრაობა იმისათვის არის საჭირო, რომ არ ჩაიძირო და არა იმისთვის, რომ ტალღას გაუსწრო. იცურე მშვიდად და სამყარო თვითონ წაგიყვანს იქ, სადაც მიდის.",
+        "source": "უცნობი",
+        "topic": [
+          "ცხოვრებისეული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "42290837-7cf4-4169-90ec-765947b139d1",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/42290837-7cf4-4169-90ec-765947b139d1?resourceVersion=id%3A112"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "ქალის ცრემლებზე უფრო მოსაწყენი, არაფერია ამქვეყნად.",
+        "source": "უცნობი",
+        "topic": [
+          "ქალი",
+          "ცრემლი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "977dcca3-d7e9-4938-8078-e4eb20164806",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/977dcca3-d7e9-4938-8078-e4eb20164806?resourceVersion=id%3A113"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "მკითხველი მინიმალურად უნდა დააბინძურო გამონაბოლქვით, არა აქვს მნიშვნელობა ეს მართლა ბენზინზე მომუშავე ძრავაა, თუ შენი სული.",
+        "source": "უცნობი",
+        "topic": [
+          "ქალი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "14d419c3-ad8d-4757-b45b-1148677696ae",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/14d419c3-ad8d-4757-b45b-1148677696ae?resourceVersion=id%3A114"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "ჩემი გამოცდილებიდან გამომდინარე, შეცდომების გამოსწორება შეუძლებელია, ისინი რჩებიან ისტორიაში, ისევე როგორც მოპოვებული გამარჯვებები.",
+        "source": "უცნობი",
+        "topic": [
+          "შეცდომა",
+          "ისტორია",
+          "გამარჯვება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "3675754e-8d7f-43e7-9de6-49a11f851076",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/3675754e-8d7f-43e7-9de6-49a11f851076?resourceVersion=id%3A115"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "იმედების დამყარება მშობლების საყვარელი გართობაა.",
+        "source": "უცნობი",
+        "topic": [
+          "იმედი",
+          "მშობელი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "553347c0-b404-4255-8ad0-60b638aadea7",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/553347c0-b404-4255-8ad0-60b638aadea7?resourceVersion=id%3A116"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "მიენდე იმას რაც მოგეცა, მშვიდად ამოძრავე კიდურები, იცურე აუღელვებლად... სხეული ხომ ნავია... ხელები ნიჩბები... მოუსვი ისინი ისე რომ არ შეაწუხო შენს გვერდით მოცურავენი... ისინიც ეძებენ სწორ და ნეტარ რიტმს. ეცადე შეინარჩუნო მშვიდი ტემპი, არ შეანელო და არც ააჩქარო მოძრაობა... რომელიც თანდათან მუსიკასავით შთანთქავს მთელ შენ არსებას... მიყევი მას და გახსოვდეს, რომ შენი მელოდია განუმეორებელია, ყველაფერთან შესაბამისი და ჰარმონიული.",
+        "source": "უცნობი",
+        "topic": [
+          "რჩევა",
+          "ცხოვრებისეული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "84c51475-e448-40a9-b6c4-3e24097d19ba",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/84c51475-e448-40a9-b6c4-3e24097d19ba?resourceVersion=id%3A117"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "სიყვარულს, სიხარულს არ ემუქრება სიბერე, როგორც სიმღერას ვერას აკლებს დრო.",
+        "source": "უცნობი",
+        "topic": [
+          "სიყვარული",
+          "სიხარული",
+          "სიმღერა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "9e094681-f3d0-48af-bc8f-09c34a35be0a",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/9e094681-f3d0-48af-bc8f-09c34a35be0a?resourceVersion=id%3A118"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "რაც უფრო მეტს გასცემ, მით უფრო მეტი ადამიანი გტოვებს და რჩები ღმერთივით მარტო.",
+        "source": "უცნობი",
+        "topic": [
+          "მარტოობა",
+          "გაცემა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "61fbfab4-0c55-4072-9c90-022acc36fd33",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/61fbfab4-0c55-4072-9c90-022acc36fd33?resourceVersion=id%3A119"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "მე მოგცემ ძალას, მოერიო დაჟანგებულ ფრთებს.",
+        "source": "უცნობი",
+        "topic": [
+          "ძალა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "fdf2705f-53da-4e41-9213-888756ea06e2",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/fdf2705f-53da-4e41-9213-888756ea06e2?resourceVersion=id%3A120"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "დრო მხოლოდ სიყვარულს დაინდობს!..",
+        "source": "უცნობი",
+        "topic": [
+          "სიყვარული",
+          "დრო"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "0d814642-ac40-4599-a113-325a08c51584",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/0d814642-ac40-4599-a113-325a08c51584?resourceVersion=id%3A121"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "ფიქრებში ყოველთვის შენთან ვარ, შენი ვარ.",
+        "source": "უცნობი",
+        "topic": [
+          "ფიქრი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "3549f28f-6054-4524-afca-5fa67b490354",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/3549f28f-6054-4524-afca-5fa67b490354?resourceVersion=id%3A122"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "მე ისევ მოვალ, ოღონდ არავის, არ გაუმხილო, რომ მე დავბრუნდი.",
+        "source": "უცნობი",
+        "topic": [
+          "დაბრუნება",
+          "იმედი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "c98a265c-80be-475b-8602-a2eaa5cb0c95",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/c98a265c-80be-475b-8602-a2eaa5cb0c95?resourceVersion=id%3A123"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "რა გაქვს ჩემს სიყვარულზე მეტი?!",
+        "source": "სულს მოგცემ",
+        "topic": [
+          "სიყვარული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "b0854bb9-c98f-4846-ac70-7ef5049828c3",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/b0854bb9-c98f-4846-ac70-7ef5049828c3?resourceVersion=id%3A124"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "არა, არ ღირან ეპოქები, რომ მათთან დარჩე!..",
+        "source": "არა",
+        "topic": [
+          "ეპოქა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "76657ffc-2ed5-4b21-91b2-4a43627c3c77",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/76657ffc-2ed5-4b21-91b2-4a43627c3c77?resourceVersion=id%3A125"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "ნუ დამიკარგავ იმედს, იმედს, რომ ხარ!..",
+        "source": "ერთად",
+        "topic": [
+          "იმედი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "18e39e8d-5122-4aa7-bda2-96596ea6195c",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/18e39e8d-5122-4aa7-bda2-96596ea6195c?resourceVersion=id%3A126"
+        }
+      },
+      "attributes": {
+        "author": "ირაკლი ჩარკვიანი",
+        "quote": "მე მხოლოდ შენს სიყვარულს ვგრძნობ, ყველაზე ღვთაებრივს და მართალს!..",
+        "source": "აქ ხარ",
+        "topic": [
+          "სიყვარული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "2d4e67df-d1dc-4ea9-90fe-bbd028b5e46f",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/2d4e67df-d1dc-4ea9-90fe-bbd028b5e46f?resourceVersion=id%3A127"
+        }
+      },
+      "attributes": {
+        "author": "ტარიელ ჭანტურია",
+        "quote": "ყველაფერი, რაც კლასიკოსის ხელიდანაა გამოსული, კლასიკა არ არის. როცა რომელიმე ჩვენგანი გაცხარებული ლანძღავს გალაკტიონის ზოგიერთ ლექსს, იგი გალაკტიონს არ ლანძღავს.",
+        "source": "უცნობი",
+        "topic": [
+          "ლანძღვა",
+          "ლექსი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "1265b59f-7d03-404b-b148-122152212232",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/1265b59f-7d03-404b-b148-122152212232?resourceVersion=id%3A128"
+        }
+      },
+      "attributes": {
+        "author": "მიხეილ ჯავახიშვილი",
+        "quote": "ჩვენ ჭუჭყი გარედან გვაცხია, ქალაქელს კი შიგნიდან აქვთ. სუ მუდამ იმას გონობენ, ვინ მოვატყუვავ, ჩვენ ჯაბსაღნი დომნი ორთ, თქვენ კი დამპალი ეშმანი ხართ და სულიც და ხორციც დამპალი გაქვთ.",
+        "source": "თეთრი საყელო",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "4ee357cd-f626-4a55-8f1c-616b68d4ece4",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/4ee357cd-f626-4a55-8f1c-616b68d4ece4?resourceVersion=id%3A129"
+        }
+      },
+      "attributes": {
+        "author": "მიხეილ ჯავახიშვილი",
+        "quote": "მამაჩემი მიწას მოსწყდა და ქალაქს მიეკედლა. მეც მიწა ვიყავი და ისევ მიწას დაუბრუნდი.",
+        "source": "თეთრი საყელო",
+        "topic": [
+          "ადამიანი",
+          "მიწა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "f9bf293f-8556-4a95-a143-ee3a85f2b227",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/f9bf293f-8556-4a95-a143-ee3a85f2b227?resourceVersion=id%3A130"
+        }
+      },
+      "attributes": {
+        "author": "მიხეილ ჯავახიშვილი",
+        "quote": "უცნაური სირცხვილის ჭია ჰღრნის უძღებ შვილს, რომელმაც თავისი ახალგაზრდობა და ძალ-ღონე სადღაც გაფლანგა და ეხლაღა მოიგონა ბებერი ძიძამიწა, რომელმაც აღზარდა და გამოკვება.",
+        "source": "კვაჭი კვაჭანტირაძე",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "af4b875d-98b5-4d1c-8af0-05ca59f3251e",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/af4b875d-98b5-4d1c-8af0-05ca59f3251e?resourceVersion=id%3A131"
+        }
+      },
+      "attributes": {
+        "author": "მიხეილ ჯავახიშვილი",
+        "quote": "რა ოხრად გინდა სიმართლე? მართლის თქმა ყველას შეუძლიან , - ტუტუცს, ველურს და ძუძუმწოვარსაც.",
+        "source": "კვაჭი კვაჭანტირაძე",
+        "topic": [
+          "სიმართლე"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "241b0f5c-d0b1-4d9a-b535-c81605eb4f3b",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/241b0f5c-d0b1-4d9a-b535-c81605eb4f3b?resourceVersion=id%3A132"
+        }
+      },
+      "attributes": {
+        "author": "მიხეილ ჯავახიშვილი",
+        "quote": "- სულ ერთია ჩემო ბესო, პატიოსნებიდან არაფერი გამოდის. ირგვლივ ყველანი სძარცვავენ და იტაცებენ. - ძველებიც და ახლებიც. - პატიოსანი კაცი კი მშრალზე რჩება და მშიერი კვდება.",
+        "source": "კვაჭი კვაჭანტირაძე",
+        "topic": [
+          "პატიოსნება",
+          "ძარცვა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "112d062f-2592-4d45-9c55-925c132b0596",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/112d062f-2592-4d45-9c55-925c132b0596?resourceVersion=id%3A133"
+        }
+      },
+      "attributes": {
+        "author": "მიხეილ ჯავახიშვილი",
+        "quote": "მონადირე ნადირს დასდევს. ნადირი კი მონადირეს თვითონვე წააწყდაო.",
+        "source": "კვაჭი კვაჭანტირაძე",
+        "topic": [
+          "მონადირე"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "166f1b7b-42cc-4861-9911-44a648ca6a38",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/166f1b7b-42cc-4861-9911-44a648ca6a38?resourceVersion=id%3A134"
+        }
+      },
+      "attributes": {
+        "author": "მიხეილ ჯავახიშვილი",
+        "quote": "მინდა ერთხელ მაინც გავიგო შენგან მართალი სიტყვა. საცაა ჩამოგახრჩობენ, ეხლა მაინც ნუ ორპირობ.",
+        "source": "კვაჭი კვაჭანტირაძე",
+        "topic": [
+          "სიმართლე",
+          "ორპირი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "fb5bd0bb-c1ff-42a3-ab22-1fc87bde7193",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/fb5bd0bb-c1ff-42a3-ab22-1fc87bde7193?resourceVersion=id%3A135"
+        }
+      },
+      "attributes": {
+        "author": "მამა გიორგი ბასილაძე",
+        "quote": "საქართველოს გაერთიანების და აღორძინების გასაღებს ტყუილა დაეძებს ბევრი ამერიკაში და ბევრიც რუსეთში! ეს გასაღები აქვე არის - საქართველოშიც, უფრო მეტიც - თითოეულ ქართველში! ეს აქ და „ზეციურ საქართველოში“ წყდება.",
+        "source": "ქართველობა ძნელია, მაგრამ აუცილბელი!..",
+        "topic": [
+          "საქართველო",
+          "ქართველი",
+          "ერთიანობა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "b0d420e2-021b-4aa7-863e-57d0c47c9014",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/b0d420e2-021b-4aa7-863e-57d0c47c9014?resourceVersion=id%3A136"
+        }
+      },
+      "attributes": {
+        "author": "ამბროსი კათოლიკოს-პატრიარქი",
+        "quote": "სული ჩემი ღმერთს ეკუთვნის, გული ჩემი სამშობლოს, მძორი, ჯალათებო – თქვენ და რაც გინდათ ის უყავით მას.",
+        "source": "უცნობი",
+        "topic": [
+          "რელიგია"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "f59cd1ed-cdee-4dea-872d-15024532fecd",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/f59cd1ed-cdee-4dea-872d-15024532fecd?resourceVersion=id%3A137"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "ადამიანი იმით ფასდება, აზრს ვინ ატარებს რამდნად ფრთიანსა.",
+        "source": "საასპარეზოდ მოგვცა უფალმა",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "d8d0d251-46a4-45db-ab85-226899b11110",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/d8d0d251-46a4-45db-ab85-226899b11110?resourceVersion=id%3A138"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "ადამიანის ფიქრის ერთი საქებული თვისება - მოვლენათა მიზეზების ძიებაა.",
+        "source": "ფიქრები",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "2e1240e7-6939-4a68-90fa-aa9195a7aa81",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/2e1240e7-6939-4a68-90fa-aa9195a7aa81?resourceVersion=id%3A139"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "ადამიანის გონება ყველას და ყველაფრის დაბერებას შეურიგდება, ხოლო სიბერე ერისა საშინელებაა.",
+        "source": "ზოგი რამ ფიქრებიდან",
+        "topic": [
+          "ადამიანი",
+          "სიბერე"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "5e622981-81fb-4ba7-9a46-b0c4c6dde5e0",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/5e622981-81fb-4ba7-9a46-b0c4c6dde5e0?resourceVersion=id%3A140"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "ადვილ ვერ იცნობ ვაჟკაცსა მის ვაჟკაცური რჯულითა",
+        "source": "ალუდა ქეთელაური",
+        "topic": [
+          "ვაჟკაცი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "f570a25f-d2c1-443f-b34a-13c17c82f69a",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/f570a25f-d2c1-443f-b34a-13c17c82f69a?resourceVersion=id%3A141"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "ავი დატანჯე და დაამონე, კეთილის მქნელსა შეასხი ფრთები.",
+        "source": "სვინიდისი",
+        "topic": [
+          "რჩევა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "906949c1-a325-44e4-95e2-9c2f2c033ba2",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/906949c1-a325-44e4-95e2-9c2f2c033ba2?resourceVersion=id%3A142"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "ავი კაცის პურ-მარილიც მოსარიდებელია და ცნობა-მეგობრობაც.",
+        "source": "თიანეთური ფელეტონი",
+        "topic": [
+          "რჩევა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "861a48be-8cd4-45fd-9153-22ed5201b367",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/861a48be-8cd4-45fd-9153-22ed5201b367?resourceVersion=id%3A143"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "ავსა და კარგსა კაცისას როდი ივიწყებს სოფელი.",
+        "source": "საახალწლო",
+        "topic": [
+          "ჭეშმარიტება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "38e0ddf9-0abc-4e7f-9d71-40a647bdf13f",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/38e0ddf9-0abc-4e7f-9d71-40a647bdf13f?resourceVersion=id%3A144"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "აზრი სწორი და შრომა მედგარი, ბედნიერების მოსაპოვებლად ერთი სახსარი მხოლოდ ეგ არი.",
+        "source": "წვეთი და ლოდი",
+        "topic": [
+          "აზრი",
+          "შრომა",
+          "ბედნიერება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "cb98e9a5-156d-4089-8d6d-cf21dee3566d",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/cb98e9a5-156d-4089-8d6d-cf21dee3566d?resourceVersion=id%3A145"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "აზრის წარმოთქმა რომელიმე საგანზე თვით საგნის შეუსწავლელად და შეუგნებლად მხოლოდ რეგვენ ადამიანს შეუძლია.",
+        "source": "ცოტა რამ ჩვენი ცხოვრების ავ–კარგისა",
+        "topic": [
+          "აზრი",
+          "რეგვენი",
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "78ba45b3-31f8-4c39-9563-1bceef0ec950",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/78ba45b3-31f8-4c39-9563-1bceef0ec950?resourceVersion=id%3A146"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "ათი ათას სჯობს მტრედს, კაკაბს, მარტო არწივის თვალები.",
+        "source": "მთათა ერთობა",
+        "topic": [
+          "არწივი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "36c558d4-a332-4ca3-b2a3-ed61388b9d46",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/36c558d4-a332-4ca3-b2a3-ed61388b9d46?resourceVersion=id%3A147"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "ათისა და ოცის კაცის ავაზაკობა ისე ვერ დააზიანებს ერის ცხოვრებას, როგორც სხვაგვარი ავაზაკობა ათასისა და ორი ათასისა, - პირველთ ადვილად ვიშორებთ თავიდან, ავაზაკებს ვეძახით, ვსდევნით, როგორც ცოფიან ძაღლებს, ვეტევებით თოფით და ხმლით, მოსაკლავად არა ვზოგავთ, ხოლო მეორე ჯულის ავაზაკებს ვძმობილობთ და ვემოყვრებით.",
+        "source": "თიანეთური ფელეტონი",
+        "topic": [
+          "მოსაზრებანი",
+          "ავაზაკი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "5d746324-14e9-44cd-94e5-b5955249eec8",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/5d746324-14e9-44cd-94e5-b5955249eec8?resourceVersion=id%3A148"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "ან უსამშობლომ, კაცმა ბოგანომ, რა იცის, რაა სამშობლოს ტრფობა?!",
+        "source": "საასპარეზოდ მოგვცა უფალმა",
+        "topic": [
+          "სამშობლო"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "6a599359-cc88-4689-90e4-476b7d99fe8a",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/6a599359-cc88-4689-90e4-476b7d99fe8a?resourceVersion=id%3A149"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "არ ვარგა ერთურთიკილვა, უგზოდ სიტყვების რახუნი.",
+        "source": "საახალწლო",
+        "topic": [
+          "რჩევა",
+          "მოთმინება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "eb1d165b-6936-4a57-aad7-5668a9495d1c",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/eb1d165b-6936-4a57-aad7-5668a9495d1c?resourceVersion=id%3A150"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "არ ესმის სხვისა ტკივილი სხვასაო.",
+        "source": "გამამერია ჭაღარა",
+        "topic": [
+          "ტკივილი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "f65a73fb-b6c8-4a2b-8bb6-cc4032b04796",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/f65a73fb-b6c8-4a2b-8bb6-cc4032b04796?resourceVersion=id%3A151"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "არა მოგცა რა ლამაზის სიტყვებით ამაყობამა.",
+        "source": "ქებათა-ქება",
+        "topic": [
+          "მოსაზრებანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "35a13861-4d67-44f5-aa1e-6bcb8d9da06f",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/35a13861-4d67-44f5-aa1e-6bcb8d9da06f?resourceVersion=id%3A152"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "ბავშვი მანამ მოლაშქრეობას შეძლებს, ჯერ ყბედობს და სახელიც მაშინ ერქმევა.",
+        "source": "გაზვიადებული საკითხავი",
+        "topic": [
+          "ბავშვი",
+          "იუმორნარევი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "697baac4-7190-461d-be33-e355d74a86b5",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/697baac4-7190-461d-be33-e355d74a86b5?resourceVersion=id%3A153"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "თავის მარცხს კაცნი ვერ ვიტყვით, ჩქარა ვიუბნებთ სხვისასა.",
+        "source": "ვაჟა-ფშაველას აფორიზმები და გამონათქვამები",
+        "topic": [
+          "მარცხი",
+          "ლანძღვა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "cd7d0465-ca3c-4813-a7c4-a655e03cada7",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/cd7d0465-ca3c-4813-a7c4-a655e03cada7?resourceVersion=id%3A154"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "სამშობლოს არვის წავართმევთ, სხვაც ნურვინ შეგვეცილება, თორემ ისეთ დღეს დავაყრით მკვდარასაც კი გაეცინება.",
+        "source": "მხედართა ძველი სიმღერა",
+        "topic": [
+          "ბრძოლა",
+          "სამშობლო",
+          "სიკვდილი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "71f6d711-02ab-4c58-8c32-e5d8cc76dd8d",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/71f6d711-02ab-4c58-8c32-e5d8cc76dd8d?resourceVersion=id%3A155"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "მხოლოდ იმაში არ გამოიხატება თავისუფლება, რაც გნებავს ის ილაპარაკო, სწერო, აკეთო, – არა! უნდა ყოველს სიტყვას და მოქმედებას საერთო, საზოგადო ბედნიერება ედვას სარჩულად, ქვეყნის თუ სასარგებლო არა, სამავნებლო, საზარალო მაინც არ უნდა იყოს ქვეყნისათვის.",
+        "source": "მხედართა ძველი სიმღერა",
+        "topic": [
+          "თავისუფლება",
+          "რჩევა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "ab26f230-e74d-4ce2-a230-1500376ef6b2",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/ab26f230-e74d-4ce2-a230-1500376ef6b2?resourceVersion=id%3A157"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "ახ რა ცუდია, რა ცუდი, გზაარეულად მსჯელობა, ცეცხლმოდებულის ერისა თავისი თავის მტერობა!",
+        "source": "ილიას საღამო",
+        "topic": [
+          "შეცდომა",
+          "ერი",
+          "მტერი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "e69404b3-420c-4fd0-bc85-a6bbd8255bc4",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/e69404b3-420c-4fd0-bc85-a6bbd8255bc4?resourceVersion=id%3A158"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "ბედნიერი მაშინ ვარ, რომ ვიტანჯვი სხვისთვისა.",
+        "source": "არავის არ გემდურებით",
+        "topic": [
+          "ბედნიერება",
+          "ტანჯვა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "ddca3a2a-2de1-4115-b3a4-0b154be0ff2c",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/ddca3a2a-2de1-4115-b3a4-0b154be0ff2c?resourceVersion=id%3A159"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "ბევრად სჯობია სიკვდილი, მშობელი დედის წყენასა.",
+        "source": "უცნობი",
+        "topic": [
+          "დედა",
+          "სიკვდილი",
+          "წყენა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "135771a7-c2ba-4ddc-aeff-c0178023d0cc",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/135771a7-c2ba-4ddc-aeff-c0178023d0cc?resourceVersion=id%3A160"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "არ მინდა თავს ლეშად ვგრძნობდე, უსულოდ გდებულს ტიალად.",
+        "source": "გულო, არ გასტყდე!",
+        "topic": [
+          "წუხილი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "05e746e2-a461-4595-a1ed-103e75265679",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/05e746e2-a461-4595-a1ed-103e75265679?resourceVersion=id%3A161"
+        }
+      },
+      "attributes": {
+        "author": "ვაჟა–ფშაველა",
+        "quote": "არც ის მგონია ბიჭობა, ვისაც ერევი ახრჩობდე, ბიჭს მაშინ დაგიძახებდი, რომ სხვას დამხრჩვალსა სწამლობდე.",
+        "source": "ის კი არ არის ბიჭობა",
+        "topic": [
+          "სიკეთე"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "768346a9-96c7-4257-a0b6-08ffb7ab0a80",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/768346a9-96c7-4257-a0b6-08ffb7ab0a80?resourceVersion=id%3A162"
+        }
+      },
+      "attributes": {
+        "author": "ედიშერ ფუტკარაძე",
+        "quote": "ვისაც უნდა შენთან ადამიანური ურთიერთობის დამყარება, შენარჩუნება ანდა გაფრთხილება – გაუმჯოფესება, ის მოქმედებს ამის შესაბამისად და არ მოგაყენებს ტკივილს.",
+        "source": "ჩემი მოსაზრებები",
+        "topic": [
+          "ურთიერთობა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "374628d0-6901-4f00-846e-ef3847e4e228",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/374628d0-6901-4f00-846e-ef3847e4e228?resourceVersion=id%3A163"
+        }
+      },
+      "attributes": {
+        "author": "ედიშერ ფუტკარაძე",
+        "quote": "ვერაფერი დაგაშორებს იმ ადამიანს, ვისაც ესმის შენი, შენი თანამოაზრეა და იწონებს შენს გზასა და ნაბიჯებს. ვინც ამას არ აკეთებს, ადრე თუ გვიან მაინც უცხო გახდება შენთვის.",
+        "source": "ჩემი მოსაზრებები",
+        "topic": [
+          "ურთიერთობა",
+          "მეგობრობა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "de363631-3af0-4f58-b676-c88d1e56290c",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/de363631-3af0-4f58-b676-c88d1e56290c?resourceVersion=id%3A164"
+        }
+      },
+      "attributes": {
+        "author": "ედიშერ ფუტკარაძე",
+        "quote": "ვისაც შეუძლია და აქვს კიდეც თავისი პოზიცია ცხოვრებაში, მას არასდროს სჭირდება და არც მოუწევს ყოფნა ოპოზიციაში.",
+        "source": "ჩემი მოსაზრებები",
+        "topic": [
+          "თვალთამხელი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "5cbdc527-022a-4375-aa56-b2464c28e8f5",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/5cbdc527-022a-4375-aa56-b2464c28e8f5?resourceVersion=id%3A165"
+        }
+      },
+      "attributes": {
+        "author": "მიხეილ ჯავახიშვილი",
+        "quote": "დრო არასოდეს არ მოდის, იგი მიდის და ვინც მას არ გაჰყვება, დაიღუპება.",
+        "source": "უცნობი",
+        "topic": [
+          "დრო"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "f2de3a8e-7a85-4dd3-b751-2e3ea7c979f1",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/f2de3a8e-7a85-4dd3-b751-2e3ea7c979f1?resourceVersion=id%3A166"
+        }
+      },
+      "attributes": {
+        "author": "მიხეილ ჯავახიშვილი",
+        "quote": "საკუთარი თავის დამცირება ამპარტავნობაზე უარესია.",
+        "source": "უცნობი",
+        "topic": [
+          "დამცირება",
+          "ამპარტავნება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "97c245d1-02e6-40af-95a8-916b6f3904e8",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/97c245d1-02e6-40af-95a8-916b6f3904e8?resourceVersion=id%3A167"
+        }
+      },
+      "attributes": {
+        "author": "მიხეილ ჯავახიშვილი",
+        "quote": "ადამიანი ერთსა და იმავე ალაგას მეორეჯერ აღარ წაიქცევა, მაგრამ სამაგიეროდ, ყოველი ნაბიჯი წასაქცევი ალაგია და ამიტომ ნურავინაც ნუ დაიფიცებს ამას იქით აღარ წავიქცევიო.",
+        "source": "უცნობი",
+        "topic": [
+          "ჩამაფიქრებელი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "e4c564b6-8f08-4b88-b98f-fd6304260de4",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/e4c564b6-8f08-4b88-b98f-fd6304260de4?resourceVersion=id%3A168"
+        }
+      },
+      "attributes": {
+        "author": "მიხეილ ჯავახიშვილი",
+        "quote": "ადამიანის დასამარებისათვის ორი ხერხი არსებობს. პირველი - დუმილი, მეორე - გამომჟღავნება. მე გამოვთქვი აზრი, რომ შეიძლება დუმილი სჯობდეს.",
+        "source": "უცნობი",
+        "topic": [
+          "ჩამაფიქრებელი",
+          "ტანჯვა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "a6a686c1-80f8-4bac-9296-4944d96904b5",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/a6a686c1-80f8-4bac-9296-4944d96904b5?resourceVersion=id%3A169"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ქალს რამეზე ხელი რომ ააღებინო, სამაგიეროს უნდა დაჰპირდე, თან უკეთესს.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ქალი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "17d2df94-1c4a-45d7-8e48-b55339068df9",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/17d2df94-1c4a-45d7-8e48-b55339068df9?resourceVersion=id%3A170"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "უბედურებაში ჩავარდნილ კაცს ყველაზე მეტად თანაგრძნობა სჭირდება, თუნდაც მოჩვენებითი, ყალბი, მოვალეობის მოსახდელი.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "თანაგრძნობა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "14273e61-b6c2-4ed0-ac92-2f1ca7e65481",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/14273e61-b6c2-4ed0-ac92-2f1ca7e65481?resourceVersion=id%3A171"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "უბედურებაზე უფრო, მარტო დარჩენის ეშინია კაცს.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "მარტოობა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "15aab394-f05d-4357-90f8-52827bab8edc",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/15aab394-f05d-4357-90f8-52827bab8edc?resourceVersion=id%3A172"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ტკივილი და სიბრაზე ადამიანს უფრო გულახდილს ხდის, უფრო გულწრფელს, ვიდრე მერეა, როცა სიბრაზე გადაუვლის და ტკივილიც ჩაუწყნარდება.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ტკივილი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "1c9002e3-692d-4397-bd67-090426d5d22f",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/1c9002e3-692d-4397-bd67-090426d5d22f?resourceVersion=id%3A173"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "როცა ანგარებაა გარეული საქმეში, გინდა ერთ კაცს დაუწექი და გინდა მთელ ქალაქს, მაინც მეძავი ხარ, რადგან სხეულს ყიდი და არავითარი მნიშვნელობა არა აქვს, ერთი მუშტარი გყავს თუ ათასი, ფულს გიხდიან თუ ერბოს.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ანგარება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "8302b28d-0ec2-4a06-9d13-68ffefcc843d",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/8302b28d-0ec2-4a06-9d13-68ffefcc843d?resourceVersion=id%3A174"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ცხოვრება გაწბილებული ოცნებაა, საწინააღმდეგოდ ამხდარი სიზმარია, ლამაზი, ყურის მაამებელი, გულის გამკეთებელი სიტყვა კი არაა, არამედ ამ ლამაზი სიტყვებიდან დაბადებული მკაცრი და დაუნდობელი სიმართლე.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ცხოვრება",
+          "ოცნება",
+          "სიმართლე"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "f9431e12-4c34-49d6-ae3f-4fd84dbc3f85",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/f9431e12-4c34-49d6-ae3f-4fd84dbc3f85?resourceVersion=id%3A175"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "რაც არ ეგუება – კვდება.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "შეგუება",
+          "სიკვდილი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "ee100303-209f-44ad-a779-4a78cea1ccae",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/ee100303-209f-44ad-a779-4a78cea1ccae?resourceVersion=id%3A176"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ვაჟკაცობა თავის გამოდება და სიკვდილი კი არა, გადარჩენაა, რადაც არ უნდა დაგიჯდეს ის.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ვაჟკაცი",
+          "გადარჩენა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "535a760c-9ad1-421d-8172-f8c61c4da3ee",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/535a760c-9ad1-421d-8172-f8c61c4da3ee?resourceVersion=id%3A177"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "მწერზე მეტი განსჯის უნარი არც ადამიანს გააჩნია, სადაც შუქი აინთება, ყველა მისი გულისთვის, მის მისაზიდად და მის გასართობად ჰგონია ანთებული.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ადამიანი",
+          "თვალთამხელი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "2d476ced-09e5-4ef9-8e7d-ce45889fd505",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/2d476ced-09e5-4ef9-8e7d-ce45889fd505?resourceVersion=id%3A178"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "კაცი მარტო მაშინ არის ხერხი, როცა ცოდნა აქვს, როცა ჭკუა ცოდნით გაულესია, ცოდნის ჩარხზე გაუჩარხავს. მაშინ ხერხსავით სხვისთვისაც გააქვს და თავისთვისაც შემოაქვს.",
+        "source": "უცნობი",
+        "topic": [
+          "კაცი",
+          "ცოდნა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "cd7ece5a-716f-46dc-9c3a-547c5985431a",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/cd7ece5a-716f-46dc-9c3a-547c5985431a?resourceVersion=id%3A179"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ადამიანის უძვირფასესი საუნჯე მისი ვინაობაა.",
+        "source": "უცნობი",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "a35b5b0c-1763-4dd9-a7d2-ef1e0b0d5251",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/a35b5b0c-1763-4dd9-a7d2-ef1e0b0d5251?resourceVersion=id%3A180"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ადამიანი მხოლოდ სიცოცხლე ან მხოლოდ სიკვდილი კი არ არის, არამედ ორივე ერთად, სიკვდილიცა და სიცოცხლეც, სიკვდილ-სიცოცხლე, ერთი მეორეს ქმნის, ორივე ერთად კი – ადამიანს.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ადამიანი",
+          "სიცოცხლე",
+          "სიკვდილი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "324fe2f5-dc25-4def-bff7-843381bcb46c",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/324fe2f5-dc25-4def-bff7-843381bcb46c?resourceVersion=id%3A181"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ავი კაცი რამდენადაც მეცნიერია, დიდი სწავლული, იმოდენად უფრო ძლიერ საშიშია, უფრო ძლიერ მავნებელია.",
+        "source": "უცნობი",
+        "topic": [
+          "კაცი",
+          "განათლება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "daea0985-04a3-4175-a5ce-345d3a21c793",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/daea0985-04a3-4175-a5ce-345d3a21c793?resourceVersion=id%3A182"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ბედი არსებობს იმდენად, რამდენადაც ადამიანს სჭირდება მისი არსებობა, თუნდაც მხოლოდ იმიტომ, მას რომ გადააბრალოს თავისი მარცხიცა და წარმატებაც და ამით უფრო ასატანი გახადოს საკუთარი არსებობა მეორე ადამიანისთვის.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ადამიანი",
+          "ბედი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "10e7ad85-02a2-4a52-8b17-1278e22ba1af",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/10e7ad85-02a2-4a52-8b17-1278e22ba1af?resourceVersion=id%3A183"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "არამც თუ უსაბუთო ძაგება, უსაბუთო ქებაც კი საწყენია მართებულის კაცისათვის.",
+        "source": "უცნობი",
+        "topic": [
+          "კაცი",
+          "პატიოსნება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "3b96e75a-018f-4060-ab89-bdb507d8354e",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/3b96e75a-018f-4060-ab89-bdb507d8354e?resourceVersion=id%3A184"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ადამიანი მარტო არასოდეს არ არის, მარტო თავის თავს არასოდეს ეკუთვნის.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "23bdeb5c-93da-4165-bb78-7a72bc17c59f",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/23bdeb5c-93da-4165-bb78-7a72bc17c59f?resourceVersion=id%3A185"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "მიჩვეულს ნუ გადააჩვევ და მიუჩვეველს ნუ მიაჩვევ, ამაშია ადამიანის ბუნების მთელი საიდუმლო.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ადამიანი",
+          "მიჩვევა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "e1379f6c-8d14-4ea5-a728-db7bcec97397",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/e1379f6c-8d14-4ea5-a728-db7bcec97397?resourceVersion=id%3A186"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ადამიანის სიცოცხლესაც და სიკვდილსაც არა თვითონ ადამიანი, არამედ უხილავი სული ქმნის და ადამიანი უმწეოა, იღონოს რამე.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ადამიანი",
+          "სიცოცხლე",
+          "სიკვდილი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "cd790db9-678b-449c-9967-cb617dea40b8",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/cd790db9-678b-449c-9967-cb617dea40b8?resourceVersion=id%3A187"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ზოგი საგანია, რომ თუ არ დაინახავ, ვერ ირწმუნებ, და ზოგი - იმისთანა, თუ არ ირწმუნებ, ვერ დაინახავ.",
+        "source": "უცნობი",
+        "topic": [
+          "უცნობი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "10a5967c-a86f-41d2-8a2e-a60732d4cffc",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/10a5967c-a86f-41d2-8a2e-a60732d4cffc?resourceVersion=id%3A188"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ბავშვობა მხოლოდ მაშინ აჩენს სინანულის გრძნობას, როცა კარგა ხნის დამთავრებულია იგი.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ბავშვობა",
+          "სინანული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "d367aa62-cddf-43b9-bc6e-69e19b0e81a9",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/d367aa62-cddf-43b9-bc6e-69e19b0e81a9?resourceVersion=id%3A189"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ერთადერთი გზა შეგუებაა, დანარჩენი თავისით მოვა.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "შეგუება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "dcf6854d-6796-4b15-8fb4-86ceecbc5941",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/dcf6854d-6796-4b15-8fb4-86ceecbc5941?resourceVersion=id%3A190"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "მხოლოდ წარსულის ცოდნით დაუცავს ყოველს ერს თავისი ეროვნება, თავისი არსებობა, თავისი ვინაობა.",
+        "source": "უცნობი",
+        "topic": [
+          "ერი",
+          "წარსული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "41dabb4e-71b9-4083-bdc8-82e2246cb42f",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/41dabb4e-71b9-4083-bdc8-82e2246cb42f?resourceVersion=id%3A191"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "მოწყალების მიღება საკუთარი უმწეობის აღიარებაა, ხოლო მოწყალების გაღება საკუთარი უპირატესობის დასამტკიცებლად სჭირდება ადამიანს.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ადამიანი",
+          "მოწყალება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "132c915c-2cd6-4672-aa41-82beab1f6073",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/132c915c-2cd6-4672-aa41-82beab1f6073?resourceVersion=id%3A192"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ვინც კარგად ემსახურება სამშობლო ქვეყანას, იგი უდიდგვაროდაც დიდია.",
+        "source": "უცნობი",
+        "topic": [
+          "სამშობლო"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "6925ae06-7b4d-4a37-ad0b-48813da0c96d",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/6925ae06-7b4d-4a37-ad0b-48813da0c96d?resourceVersion=id%3A193"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ამ ქვეყანაზე ტყუილად არავინ არაფერს იძლევა, მაგრამ ძლიერია არა ის, ვინც იძლევა, არამედ ის, ვინც არ იღებს.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "გაცემა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "08916442-b712-4d98-9e9f-21a21ac4c865",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/08916442-b712-4d98-9e9f-21a21ac4c865?resourceVersion=id%3A194"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "გაუზიარებელი ბედნიერება გაზიარებულ უბედურებაზე მწარეა.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ბედნიერება",
+          "უბედურება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "c18d5d21-b762-4bbf-a468-a2d3281cffde",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/c18d5d21-b762-4bbf-a468-a2d3281cffde?resourceVersion=id%3A195"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "აწმყოს, რომელსაც წარსული არ აქვს, არც მომავალი აქვს.",
+        "source": "უცნობი",
+        "topic": [
+          "წარსული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "a191df46-90a0-4e61-91f8-fe32e8600918",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/a191df46-90a0-4e61-91f8-fe32e8600918?resourceVersion=id%3A196"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "სიმახინჯისაკენ მიდრეკილება ადამიანის ერთ-ერთი მთავარი თვისებაა, რადგან სიმახინჯე სილამაზის ხვალინდელი დღეა, უფრო მშვიდი და ხანგრძლივი.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ადამიანი",
+          "სიმახინჯე",
+          "სილამაზე"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "2a6a78d9-733b-4f68-b105-0ab3bc4d8e43",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/2a6a78d9-733b-4f68-b105-0ab3bc4d8e43?resourceVersion=id%3A197"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ქვეყანა ტაძარი კი არაა, საცა კაცი უნდა ლოცულობდეს, არამედ სახელოსნოა, საცა უნდა ირჯებოდეს და მუშაობდეს!",
+        "source": "უცნობი",
+        "topic": [
+          "სამშობლო"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "eecff50e-1f5b-4c02-83df-9e0431a3f194",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/eecff50e-1f5b-4c02-83df-9e0431a3f194?resourceVersion=id%3A198"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ადამიანის გული თვალუწვდენელი ორმოა.",
+        "source": "უცნობი",
+        "topic": [
+          "ადამიანი",
+          "გული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "e887337c-b82c-432b-85ce-c4cac634cd15",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/e887337c-b82c-432b-85ce-c4cac634cd15?resourceVersion=id%3A199"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "კაცობრიობის ერთიანობას ერთ ქარგაზე მოჭრილი ნიფხავი კი არ განაპირობებს, არამედ დიადისკენ ერთნაირი მიდრეკილება, შექმნის მოთხოვნილება და უნარი.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ერთიანობა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "21c6a386-36c4-4d64-a737-aca75a884775",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/21c6a386-36c4-4d64-a737-aca75a884775?resourceVersion=id%3A200"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "გახსოვდეს, რომ ქვეყანაზე ქაღალდის გარდა არის კიდევ სინდისი.",
+        "source": "უცნობი",
+        "topic": [
+          "სინდისი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "cef525a2-2248-42bf-9ac5-8773db644d43",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/cef525a2-2248-42bf-9ac5-8773db644d43?resourceVersion=id%3A201"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ბედს თვითონ კაცი ქმნის და არა ბედი კაცსა.",
+        "source": "უცნობი",
+        "topic": [
+          "კაცი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "d08b134b-8f37-4ee6-901a-6c637d2f3d97",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/d08b134b-8f37-4ee6-901a-6c637d2f3d97?resourceVersion=id%3A202"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ქვეყანაზე, რომ ჭირი არ იყოს, ადამიანი ენასაც არ ამოიდგამდა.",
+        "source": "უცნობი",
+        "topic": [
+          "ადამიანი",
+          "ჭირი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "07966ecc-9ccd-4c90-8b82-fe60f480369b",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/07966ecc-9ccd-4c90-8b82-fe60f480369b?resourceVersion=id%3A203"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ჭეშმარიტ ღირსებას ყვირილი არ უნდა.",
+        "source": "უცნობი",
+        "topic": [
+          "ღირსება",
+          "ჭეშმარიტება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "f979f3ec-5909-4a29-9d4b-aa5389781361",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/f979f3ec-5909-4a29-9d4b-aa5389781361?resourceVersion=id%3A204"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "დიდი სიბრძნეა კაცისა, ცნობა თავისი თავისა.",
+        "source": "უცნობი",
+        "topic": [
+          "სიბრძნე"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "3b300e04-fcc0-453c-bf74-8b8823b9bca1",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/3b300e04-fcc0-453c-bf74-8b8823b9bca1?resourceVersion=id%3A205"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ადამიანი მხოლოდ მაშინ ითვლება მკვდრად, როცა იმის სიკვდილს შეეგუებიან.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ადამიანი",
+          "სიკვდილი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "8c1df636-e0f7-46e7-a928-e8820de50875",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/8c1df636-e0f7-46e7-a928-e8820de50875?resourceVersion=id%3A206"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ქვეყნის სამსახური ყველგან მსხვერპლია და არა სეირი.",
+        "source": "უცნობი",
+        "topic": [
+          "ქვეყანა",
+          "მსხვერპლი",
+          "სეირი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "c48db2fb-2494-4722-a4ac-2e4bb9858d88",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/c48db2fb-2494-4722-a4ac-2e4bb9858d88?resourceVersion=id%3A207"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "მეზობლის უბედურებაზე ჩვენი ბედნიერება ვერ დაფუძნდება.",
+        "source": "უცნობი",
+        "topic": [
+          "ქვეყანა",
+          "ბედნიერება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "02aec122-0274-4755-97ff-5d055c69a086",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/02aec122-0274-4755-97ff-5d055c69a086?resourceVersion=id%3A208"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "გაუმართლებელი, გადამეტებული სიკეთე ბოროტებას აღვივებს მხოლოდ.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "სიკეთე",
+          "ბოროტება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "37bcfd21-3507-4ea2-a929-5142152352b0",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/37bcfd21-3507-4ea2-a929-5142152352b0?resourceVersion=id%3A209"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ღობე-ყორეს მოდება ღალატია საქმისა.",
+        "source": "უცნობი",
+        "topic": [
+          "საქმე",
+          "ღალატი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "1b5c46cd-1d9d-4910-9901-eba3e16f99fb",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/1b5c46cd-1d9d-4910-9901-eba3e16f99fb?resourceVersion=id%3A210"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ხშირია ხოლმე, რომ, როცა სული ჭლქედება, ხორცის დღეობა მაშინ არის; როცა სული ჰყვავის, ხორცი დნება.",
+        "source": "უცნობი",
+        "topic": [
+          "სული",
+          "ხორცი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "82774849-8de0-49e8-8994-f8d370ab40f7",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/82774849-8de0-49e8-8994-f8d370ab40f7?resourceVersion=id%3A211"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ადამიანი იმას კი არ ირჩევს, რაც მას უნდა, არამედ, იმას თანხმდება, რასაც თავზე ახვევენ… ანდა იღუპება.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "ადამიანი",
+          "მანიპულაცია"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "8e7e4d33-150e-41b0-9117-05d6b548bdef",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/8e7e4d33-150e-41b0-9117-05d6b548bdef?resourceVersion=id%3A212"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "იმედის ანაბარა ცხოვრებას უიმედო ბრძოლა სჯობია.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "იმედი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "ab086f35-ea88-4bd2-9757-580d261b9851",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/ab086f35-ea88-4bd2-9757-580d261b9851?resourceVersion=id%3A213"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "იგი გრძნობაა მართალი, რომელიც კატასავით დღე მუდამ არა სჩხავის და მზეთუნახავად დაბინავებულა გულში.",
+        "source": "უცნობი",
+        "topic": [
+          "გრძნობა",
+          "ჭეშმარიტება",
+          "გული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "765a2d30-5839-4833-bd15-6276bc30ee9e",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/765a2d30-5839-4833-bd15-6276bc30ee9e?resourceVersion=id%3A214"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "თანაგრძნობა მხოლოდ იმისგან შეიძლება მიიღო, ვისაც შენს უბედურებასთან არაფერი ესაქმება, ვისი ხელიც არ ურევა შენს უბედურებაში.",
+        "source": "ყოველმან ჩემმან მპოვნელმან",
+        "topic": [
+          "თანაგრძნობა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "d934c799-abb4-4de6-8f42-e15f399f3271",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/d934c799-abb4-4de6-8f42-e15f399f3271?resourceVersion=id%3A215"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ადამიანი სინდისია. სინდისის გარდა, რაც არ უნდა წაართვა, მაინც ადამიანი იქნება. მაგრამ სინდისი რომ წაართვა და სხვა ყველაფერი დაუტოვო, ვეღარ იქნება ადამიანი.",
+        "source": "მარტის მამალი",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "27d885cd-cae1-4545-9ede-c42c4381fe62",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/27d885cd-cae1-4545-9ede-c42c4381fe62?resourceVersion=id%3A216"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "სინდისი იგივე სულია ადამიანისა, ანუ, სული იგივე სინდისია.",
+        "source": "მარტის მამალი",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "609b2e6e-8de3-4bfc-9044-8e20da7b7658",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/609b2e6e-8de3-4bfc-9044-8e20da7b7658?resourceVersion=id%3A217"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "თუ სახელის შოვნა გინდა, დღეს ისეთი ნერგი დარგე, რომ ხვალემა მადლობით სთქვას: „ნანერგითა შენითა მარგე“.",
+        "source": "უცნობი",
+        "topic": [
+          "მადლი",
+          "განზრახვა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "b493ca6d-ebcf-426f-89d4-59e743491617",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/b493ca6d-ebcf-426f-89d4-59e743491617?resourceVersion=id%3A218"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "პატარა ნიჩბითაც ბევრი რამ გაკეთდება და ძალიან შესაძლოა ცოტ-ცოტაობიდან დიდი საქმე გამოვიდეს.",
+        "source": "უცნობი",
+        "topic": [
+          "საქმე"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "c407f30d-72ef-4e5d-b000-cbafa098d1df",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/c407f30d-72ef-4e5d-b000-cbafa098d1df?resourceVersion=id%3A219"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "რასაც თვითონ არ ვიმოქმედებთო, სხვისგან ბევრს ნურას ველოდებითო.",
+        "source": "უცნობი",
+        "topic": [
+          "მოლოდინი",
+          "საქმე"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "4dff8154-7064-4afa-90da-89d093e069dd",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/4dff8154-7064-4afa-90da-89d093e069dd?resourceVersion=id%3A220"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "კმაყოფილება კაცის მომაკვდინებელი სენია.",
+        "source": "უცნობი",
+        "topic": [
+          "კაცი",
+          "კმაყოფილება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "c3b4ec07-f390-4815-99d3-6c3909d532a6",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/c3b4ec07-f390-4815-99d3-6c3909d532a6?resourceVersion=id%3A221"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "სინდისი იგივე სულია ადამიანისა, ანუ, სული იგივე სინდისია.",
+        "source": "მარტის მამალი",
+        "topic": [
+          "ადამიანი",
+          "სინდისი",
+          "სული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "d012d7d7-6ff1-4828-8d74-69d85b53da1e",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/d012d7d7-6ff1-4828-8d74-69d85b53da1e?resourceVersion=id%3A222"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ვიდრე ადამიანს სინდისი აწუხებს, ყველაფერს ეშველება კიდევ, რადგან მთვარი ის კი არ არის, ღმერთმა ტალახისგან რომ შექმნა ის, არამედ, მთავარია, თავისი სული რომ ჩაჰბერა იმ ტალახს.",
+        "source": "მარტის მამალი",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "c5d610dc-338d-451a-8ddb-dfda4318f597",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/c5d610dc-338d-451a-8ddb-dfda4318f597?resourceVersion=id%3A223"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ქვეყანა იმით კი არ არის უბედური, რომ ღარიბია, არამედ იმით, რომ მცოდნე, გონებაგახსნილი, გულანთებული კაცები არა ჰყავს.",
+        "source": "უცნობი",
+        "topic": [
+          "ქვეყანა",
+          "უბედურება",
+          "განათლება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "7f4817ee-15aa-43e1-8b8e-818b9fab8083",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/7f4817ee-15aa-43e1-8b8e-818b9fab8083?resourceVersion=id%3A224"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ადამიანის ფიქრი და ოცნება მოითხოვს სივრცეს და არა თავად ადამიანი.",
+        "source": "მარტის მამალი",
+        "topic": [
+          "ადამიანი",
+          "ფიქრი",
+          "ოცნება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "9c2ca9f8-d860-40de-8bc1-acfd874716f6",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/9c2ca9f8-d860-40de-8bc1-acfd874716f6?resourceVersion=id%3A225"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "რაც გიყვარს, სიყვარულის გამო უნდა გიყვარდეს მხოლოდ და რაც გძულს, ისიც სიყვარულის გამო უნდა გძულდეს.",
+        "source": "მარტის მამალი",
+        "topic": [
+          "სიყვარული",
+          "სიძულვილი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "6af18ea6-fd96-4c6b-b983-3cc9b49e0c0a",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/6af18ea6-fd96-4c6b-b983-3cc9b49e0c0a?resourceVersion=id%3A226"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ადამიანი ძალაუფლების მაძიებელი ცხოველია.",
+        "source": "გოდორი",
+        "topic": [
+          "ადამიანი",
+          "ძალაუფლება",
+          "ცხოველი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "5c92e62f-8fce-4332-b78b-2f0226902e09",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/5c92e62f-8fce-4332-b78b-2f0226902e09?resourceVersion=id%3A227"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "შენ რომ ცუდკაცობდე, კაიკაცობაზედ სხვას მაინც ნუ გალანძღავ.",
+        "source": "უცნობი",
+        "topic": [
+          "კაცი",
+          "პატიოსნება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "b88b83af-95d1-4b70-8ef8-575642530b10",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/b88b83af-95d1-4b70-8ef8-575642530b10?resourceVersion=id%3A228"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "წარსული მკვიდრი საძირკველია აწმყოსი, როგორც აწმყო მომავლისა.",
+        "source": "უცნობი",
+        "topic": [
+          "წარსული",
+          "აწმყო",
+          "მომავალი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "3ddecc38-a34d-4079-a29c-b648528b322c",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/3ddecc38-a34d-4079-a29c-b648528b322c?resourceVersion=id%3A229"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "თუ კი ხელისუფლების შენარჩუნება გსურს, პირველ რიგში, შეკითხვის გეშინოდეთ, ბავშვის პირიდან ამოსულის.",
+        "source": "გოდორი",
+        "topic": [
+          "ბავშვი",
+          "ხელისუფლება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "8b88a3a3-ba87-467b-855d-f287508fb435",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/8b88a3a3-ba87-467b-855d-f287508fb435?resourceVersion=id%3A230"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ვინც კაცად არ ვარგა, ის არც მამად ივარგებს, არც დედად და არც სხვად რადმე; იმიტომ, რომ მამობა და დედობა ადამიანური მარტო შვილების გამრავლება და ძუძუს წოვება არ არის.",
+        "source": "უცნობი",
+        "topic": [
+          "კაცი",
+          "დედა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "ab97dd76-140f-476c-8c42-68ef19941c26",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/ab97dd76-140f-476c-8c42-68ef19941c26?resourceVersion=id%3A231"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ბავშვი საზარელი იარაღია, თუკი არადანიშნულებისამებრ გამოიყენებ.",
+        "source": "გოდორი",
+        "topic": [
+          "ბავშვი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "c877cb81-c7ec-4da8-b061-eb4aabdfa337",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/c877cb81-c7ec-4da8-b061-eb4aabdfa337?resourceVersion=id%3A232"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ვიდრე ბუნების ენას არ ვისწავლით, ყველა ცოდნა დამღუპველია.",
+        "source": "გოდორი",
+        "topic": [
+          "ბუნება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "cbb8f7d3-8d38-4c67-93f7-6100be002de3",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/cbb8f7d3-8d38-4c67-93f7-6100be002de3?resourceVersion=id%3A233"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ყველა ჭეშმარიტი პოეტი ან მკვდარია, ან უგულებელყოფილი. ვინც იბეჭდება, ხელისუფლებას ემსახურება, რადგან ნებისმიერი ხელისუფლება მხოლოდ იმის დაბეჭვდის უფლებას იძლევა, რისი დაბეჭდვაც უპირველეს ყოვლისა თვისთვის მიაჩნია სასარგებლოდ და არა პოეტისთვის.",
+        "source": "გოდორი",
+        "topic": [
+          "პოეტი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "08f2aa2b-4b45-4a3f-985b-5e42b0ea69a0",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/08f2aa2b-4b45-4a3f-985b-5e42b0ea69a0?resourceVersion=id%3A234"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ვინც ლაფში თავიდან ფეხებამდე ამოსვრილია, არ შეიძლება ისე შეეხოს სხვას, რომ თავისი ლაფი იმასაც არ მოაცხოს.",
+        "source": "უცნობი",
+        "topic": [
+          "უცნობი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "7b87a38e-b510-43a0-a225-9da78de34da1",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/7b87a38e-b510-43a0-a225-9da78de34da1?resourceVersion=id%3A235"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ერი, ერთის ღვაწლის დამდები, ერთს ისტორიულ უღელში ბმული, ერთად მებრძოლი ერთსა და იმავე ჭირსა და ლხინში გამოტარებული – ერთსულოვნებით, ერთგულებით ძლიერია.",
+        "source": "უცნობი",
+        "topic": [
+          "ერთგულება",
+          "ერი",
+          "სამშობლო"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "34acecac-3920-445d-9e6d-aff5a3efe04a",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/34acecac-3920-445d-9e6d-aff5a3efe04a?resourceVersion=id%3A236"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "თავის მოსულელებაც ერთგვარი სახეა ბრძოლისა, მით უფრო, როცა სხვა აღარაფერი შეგიძლია.",
+        "source": "გოდორი",
+        "topic": [
+          "ბრძოლა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "ee44e361-cf45-4e61-8169-f18b31d72035",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/ee44e361-cf45-4e61-8169-f18b31d72035?resourceVersion=id%3A237"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "თუ სათავე მღვრიეა, ბოლოში ამაო იქნება წმინდა წყლის ძებნა.",
+        "source": "უცნობი",
+        "topic": [
+          "უცნობი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "c28e7d2b-a053-4160-a5ca-349589eb5008",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/c28e7d2b-a053-4160-a5ca-349589eb5008?resourceVersion=id%3A238"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "საქართველოში, ქართველის გარდა, ჯერჯერობით არავინ დაჩაგრულა.",
+        "source": "გოდორი",
+        "topic": [
+          "საქართველო",
+          "ქართველი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "ba57c822-5afe-42c3-9149-c64747c06cb3",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/ba57c822-5afe-42c3-9149-c64747c06cb3?resourceVersion=id%3A239"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "ადამიანი არასოდეს მარტო არ ცდება, მაგრამ, სამწუხაროდ, ყოველთვის მარტო აგებს პასუხს საერთო შეცდომებისთვის.",
+        "source": "გოდორი",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "0982638a-e27c-41bd-9a5c-8abe444dfe42",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/0982638a-e27c-41bd-9a5c-8abe444dfe42?resourceVersion=id%3A240"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "კარგია გაღვიძებული ადამიანი, მაგრამ უფრო უკეთესია ადამიანი, რომელსაც ძილშიაც არა სძინავს, ქვეყნის უბედურებით გულ-აღტკინებულსა.",
+        "source": "უცნობი",
+        "topic": [
+          "ადამიანი",
+          "თანაგრძნობა",
+          "ქვეყანა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "f4fcd941-ceb3-4e89-b11c-8e46a5bd2120",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/f4fcd941-ceb3-4e89-b11c-8e46a5bd2120?resourceVersion=id%3A241"
+        }
+      },
+      "attributes": {
+        "author": "ოთარ ჭილაძე",
+        "quote": "კაცი ძველ ტანსაცმელს საჭიროებისათვის იცვამს, ახალს კი თავის გამოსაჩენად და სხვების გულის გასახეთქადო.",
+        "source": "გოდორი",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "4ab6603a-561e-4e68-85bc-5b3c23927115",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/4ab6603a-561e-4e68-85bc-5b3c23927115?resourceVersion=id%3A242"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ლუკმა მაშინ არის ტკბილი, როცა კაი კაცობით არის ნაშოვნი.",
+        "source": "უცნობი",
+        "topic": [
+          "ვაჟკაცი",
+          "პატიოსნება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "47e45c12-1782-4116-95a2-aeffe10be2e0",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/47e45c12-1782-4116-95a2-aeffe10be2e0?resourceVersion=id%3A243"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "მარტო შენი მტერი დაგიმალავს, შენს სახეზედ რომ ურიგობა ჰნახოს რამე, მოყვარე კი მაშინვე სარკეს მოგიტანს, რომ გაისწორო და ხალხში არ შერცხვე.",
+        "source": "უცნობი",
+        "topic": [
+          "მტერი",
+          "მოყვარე"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "8692e7b8-589c-4330-9b6e-39cf2932db3c",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/8692e7b8-589c-4330-9b6e-39cf2932db3c?resourceVersion=id%3A244"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "სხვა შენთვის და შენ სხვისთვის, აი გზა ცხოვრებისა.",
+        "source": "უცნობი",
+        "topic": [
+          "თანაგრძნობა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "9e013062-30e5-428b-a0bd-e336da822c07",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/9e013062-30e5-428b-a0bd-e336da822c07?resourceVersion=id%3A245"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ჩემი მსაჯული ჩემი ტვინია და ის პატარა ღმერთი, რომელსაც სინდისს ეძახიან.",
+        "source": "უცნობი",
+        "topic": [
+          "მსაჯული",
+          "ღმერთი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "382654f2-e1f7-4792-a8ff-70e2c3182523",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/382654f2-e1f7-4792-a8ff-70e2c3182523?resourceVersion=id%3A246"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ხვალე არ უნდა ჰგავდეს დღევანდელს, თუ კაცს პროგრესი, წინსვლა ადამიანისა ფუჭ სიტყვად არ მიაჩნია.",
+        "source": "უცნობი",
+        "topic": [
+          "აწმყო",
+          "მომავალი",
+          "წინსვლა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "856f0044-e905-4494-97d9-368e3a9039d5",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/856f0044-e905-4494-97d9-368e3a9039d5?resourceVersion=id%3A247"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ხელი მიეც შენს მეზობელს, შეერთდით, ერთად იმუშავეთ, თუ გინდათ ქვეყანაში რიგიანად იცხოვროთ.",
+        "source": "უცნობი",
+        "topic": [
+          "თანაგრძნობა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "4eb03278-a668-4766-95d2-00cff79a0940",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/4eb03278-a668-4766-95d2-00cff79a0940?resourceVersion=id%3A248"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ის იცინის კარგად, ვინც ბოლოს გაიცინებსო.",
+        "source": "უცნობი",
+        "topic": [
+          "იუმორნარევი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "db84e15d-47e1-4d45-aceb-996c5803fdcd",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/db84e15d-47e1-4d45-aceb-996c5803fdcd?resourceVersion=id%3A249"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ფეხს ვერ გასძრავთ, თუ საკუთარის ტვინის ძაფები არ ამოქმედეთ, თუ საკუთარი გრძნობა და ჭკუა არ წაიმძღვარეთ, თუ საკუთარი მსჯელობა არ იქონიეთ.",
+        "source": "უცნობი",
+        "topic": [
+          "ჭკუა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "b391d914-4d46-4b99-b7dc-5e7eddb404d9",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/b391d914-4d46-4b99-b7dc-5e7eddb404d9?resourceVersion=id%3A250"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ზოგჯერ მოკლე სიტყვაც გრძელია.",
+        "source": "უცნობი",
+        "topic": [
+          "იუმორნარევი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "14189e3a-40cb-4243-8adc-639eac05706b",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/14189e3a-40cb-4243-8adc-639eac05706b?resourceVersion=id%3A251"
+        }
+      },
+      "attributes": {
+        "author": "ოტია იოსელიანი",
+        "quote": "ა, ბატონო, გაზაფხული კარზეა მომდგარიდა გაჭინჭყლებული მკაცრად ითხოვს: ან ხვნა თესვას უნდა მიეჩვიოთ, ან ჭამა-სმას უნდა გადაეჩვიოთ!",
+        "source": "ქალი რავარი ასატანია, მარა, რო გიყვარს, რა გინდა რო ქნა!",
+        "topic": [
+          "გაზაფხული"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "203cf021-7cff-4c72-bc5f-455daed462e0",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/203cf021-7cff-4c72-bc5f-455daed462e0?resourceVersion=id%3A252"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "დედაც კაცია, – გვეუბნება ჩვენი ენა, – და მამაცაო.",
+        "source": "უცნობი",
+        "topic": [
+          "დედა",
+          "მამა",
+          "ენა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "6adaaadc-c8b4-4ec8-9ede-0c30a547b629",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/6adaaadc-c8b4-4ec8-9ede-0c30a547b629?resourceVersion=id%3A253"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ათი-ათასჯერ არაფერი მაინც არაფერია.",
+        "source": "უცნობი",
+        "topic": [
+          "ფასი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "6562b248-0542-45b5-99fc-c7a64eb629f0",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/6562b248-0542-45b5-99fc-c7a64eb629f0?resourceVersion=id%3A254"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ბოდიში ძნელად თუ მოარჩენს მოგრეხილს კისერსა, – და არც მოტეხილი ფეხისთვის არის უებარი წამალი.",
+        "source": "უცნობი",
+        "topic": [
+          "იუმორნარევი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "2a1e5cbd-9e62-4ae4-9afb-49b03792cc7d",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/2a1e5cbd-9e62-4ae4-9afb-49b03792cc7d?resourceVersion=id%3A255"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ვინც თვითონ მოიპოვებს სახელს, იგი ბევრით წინ არის იმაზე, ვისაც სახელი მამა-პაპათაგან რჩენია და რგებია.",
+        "source": "უცნობი",
+        "topic": [
+          "შრომა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "692db968-20db-444c-8528-9d413432c74b",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/692db968-20db-444c-8528-9d413432c74b?resourceVersion=id%3A256"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "თავისუფლების შოვნაი სჯობს საშოვნელსა ყველასა.",
+        "source": "უცნობი",
+        "topic": [
+          "თავისუფლება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "db4f7d38-dd1e-406e-9de9-b7b1586b9153",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/db4f7d38-dd1e-406e-9de9-b7b1586b9153?resourceVersion=id%3A257"
+        }
+      },
+      "attributes": {
+        "author": "ოტია იოსელიანი",
+        "quote": "ადამიანებს ერთმანეთის დანდობა და სიყვარული იმიტომ გვჭირდება, რომ ცხოვრებაა დაუნდობელი და კაცთმოძულე.",
+        "source": "სოფლის თვალი",
+        "topic": [
+          "ადამიანი",
+          "ცხოვრება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "e1d24e6f-edb5-4c78-b572-f442362cce61",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/e1d24e6f-edb5-4c78-b572-f442362cce61?resourceVersion=id%3A258"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "კაცად მაშინ ხარ საქები, თუ ეს წესი წესად დარგე: ყოველ დღესა შენს თავს ჰკითხო, – აბა დღეს მე ვის რა ვარგე?",
+        "source": "უცნობი",
+        "topic": [
+          "ვაჟკაცი",
+          "კაცი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "e73ab7ac-5720-4719-a8cf-e6c714e0f50d",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/e73ab7ac-5720-4719-a8cf-e6c714e0f50d?resourceVersion=id%3A259"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "სიკეთით სძლიე შენს მტერსა, ერიდე სისხლით ზღვევასა: სულგრძელობითა ძლევა სჯობს ვაჟკაცობითა ძლევასა.",
+        "source": "უცნობი",
+        "topic": [
+          "სიკეთე",
+          "მტერი",
+          "სულგრძელობა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "626ee879-6723-4826-947a-c40e476b394b",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/626ee879-6723-4826-947a-c40e476b394b?resourceVersion=id%3A260"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "სიტყვა თქმაა და არა ქმნა. თქმასა და ქმნას შორის დიდი ზღვარია.",
+        "source": "უცნობი",
+        "topic": [
+          "სიტყვა",
+          "საქმე"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "02cf1656-d445-4201-b793-a6273d92b7f7",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/02cf1656-d445-4201-b793-a6273d92b7f7?resourceVersion=id%3A261"
+        }
+      },
+      "attributes": {
+        "author": "ოტია იოსელიანი",
+        "quote": "ადამიანი ბუნების შვილია, გარემო-ბუნების ხელყოფა მშობლის ხელყოფაა.",
+        "source": "ზოგი რამ სიბრძნეზე",
+        "topic": [
+          "ადამიანი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "d56fb8f6-0b82-46fe-b6d1-3fee665e38bb",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/d56fb8f6-0b82-46fe-b6d1-3fee665e38bb?resourceVersion=id%3A262"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "რაც გინდა პატარა იყოს სამშობლო ქვეყანა, – პატიოსანს გულში დიდი ადგილი უჭირავს.",
+        "source": "უცნობი",
+        "topic": [
+          "პატიოსნება",
+          "სამშობლო"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "fb2b5d16-340e-457a-81fd-f462757e387a",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/fb2b5d16-340e-457a-81fd-f462757e387a?resourceVersion=id%3A263"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ღონიერი და ჭირთა მძლევი ის არის, ვისაც ჭკუა ცოდნით მოურთავს, ცოდნით აუყვავებია, ცოდნის ძუძუთი გაუზრდია.",
+        "source": "უცნობი",
+        "topic": [
+          "განათლება"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "05229123-108c-4b80-bf4f-3334164632ee",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/05229123-108c-4b80-bf4f-3334164632ee?resourceVersion=id%3A264"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ხეს ვერ გაზრდი იმ დროზე ადრე, რაც ბუნებას დაუნიშნავს.",
+        "source": "უცნობი",
+        "topic": [
+          "მოუთმენლობა"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "136168af-a763-49ec-8b6c-8c7bb8d6ccbc",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/136168af-a763-49ec-8b6c-8c7bb8d6ccbc?resourceVersion=id%3A265"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ხმალი მაშინ უფრო კარგია, როცა ის ფარია და არა სატევარი.",
+        "source": "უცნობი",
+        "topic": [
+          "უცნობი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "1a5b6caa-b228-4b74-8391-616484bfbeb8",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/1a5b6caa-b228-4b74-8391-616484bfbeb8?resourceVersion=id%3A266"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "ერთი „მაქვს“ სჯობს ათას „გქონდა-ს“.",
+        "source": "უცნობი",
+        "topic": [
+          "ფასი"
+        ]
+      }
+    },
+    {
+      "type": "georgian-quotes",
+      "id": "6410e0b7-f22f-43ec-bc53-3ba8d69171c2",
+      "links": {
+        "self": {
+          "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes/6410e0b7-f22f-43ec-bc53-3ba8d69171c2?resourceVersion=id%3A267"
+        }
+      },
+      "attributes": {
+        "author": "ილია ჭავჭავაძე",
+        "quote": "პატიოსანთ მტერთა შორის მოციქული ნამუსია.",
+        "source": "უცნობი",
+        "topic": [
+          "მტერი",
+          "ნამუსი"
+        ]
+      }
+    }
+  ],
+  "links": {
+    "next": {
+      "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes?page%5Boffset%5D=250&page%5Blimit%5D=250"
+    },
+    "self": {
+      "href": "https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes?page%5Blimit%5D=1000&page%5Boffset%5D=0"
+    }
+  }
+}

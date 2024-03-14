@@ -18,11 +18,17 @@ const useRandomQuote = () => {
     fetchRandomQuote();
   }, []);
 
+  // console.log(url);
+
   // fetches random quote from the database
   const fetchRandomQuote = async () => {
     try {
-      const response = await axios.get(url);
-      const quotes = response.data.data;
+      // const response = await axios.get(url);
+      // const response = url.data;
+      // console.log(response);
+      // const quotes = response.data.data;
+      const quotes = API_ENDPOINT.data
+      console.log(quotes);
 
       let randomIndex = generateRandomIndex(quotes.length);
       if (quotes.length === 1) {
