@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import CopyButton from "../ReComp/CopyButton";
 import axios from "axios";
-import { API_ENDPOINT } from "../../quoteURL";
+import API_ENDPOINT from "../../quoteURL";
 import { Skeleton } from "@mui/material";
 import SearchBar from "../ReComp/SearchBar";
 import "./search.css";

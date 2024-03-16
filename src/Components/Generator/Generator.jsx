@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "./generator.css";
 import CopyButton from "../ReComp/CopyButton";
 import MultipleSelectChip from "../ReComp/ChipSelector";
-import { API_ENDPOINT } from "../../quoteURL";
+import { quotesData } from "../../quoteURL";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 

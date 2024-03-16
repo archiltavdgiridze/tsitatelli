@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import tsitatelliDB from "../../../quoteURL";
 
 const useResultComponent = (pageType) => {
   const navigate = useNavigate();
@@ -36,33 +37,41 @@ const useResultComponent = (pageType) => {
     }
   };
 
-  // useEffect(() => {
-  //   document.title = `${resultName} | ციტატელი`; // Update the tab name with the result's name
-  // }, [resultName]);
-
+  // Fetch quotes from local JSON data
   const fetchQuotes = (name) => {
-    let apiUrl;
+    let filteredQuotes = tsitatelliDB.data;
     if (pageType === "author") {
-      apiUrl = `https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes?filter[author]=${name}`;
+      filteredQuotes = filteredQuotes.filter(
+        (quote) => quote.attributes.author === name
+      );
     } else if (pageType === "source") {
-      apiUrl = `https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes?filter[source]=${name}`;
+      filteredQuotes = filteredQuotes.filter(
+        (quote) => quote.attributes.source === name
+      );
     } else if (pageType === "topic") {
-      const decodedTopicName = name.replace(/[-–]/g, " ");
-      apiUrl = `https://dev-george1meshveliani-api.pantheonsite.io/meshveliani/apis/georgian-quotes?filter[topic]=${decodedTopicName}`;
+      filteredQuotes = filteredQuotes.filter((quote) =>
+        quote.attributes.topic.includes(name)
+      );
     }
-
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        const filteredQuotes = data.data;
-        const formattedResultName = name.replace(/–/g, " ");
-        setResultName(formattedResultName);
-        setFilteredQuotes(filteredQuotes);
-      })
-      .catch((error) => {
-        console.error("Error fetching filtered quotes:", error);
-      });
+    setResultName(name);
+    setFilteredQuotes(filteredQuotes);
   };
+
+  useEffect(() => {
+    // Use fetchQuotes function to get quotes based on pageType
+    if (!state?.filteredQuotes) {
+      const nameFromURL = decodeURIComponent(
+        window.location.pathname.split("/")[3]
+      );
+      const decodedResultName = nameFromURL.replace(/_/g, " ");
+      setResultName(decodedResultName);
+      fetchQuotes(decodedResultName); // Call fetchQuotes function here
+    } else {
+      const quotes = state.filteredQuotes;
+      setResultName(quotes[0]?.attributes[pageType] || "");
+      setFilteredQuotes(quotes);
+    }
+  }, [pageType, state]);
 
   const handleGoBack = () => {
     navigate("/filter");

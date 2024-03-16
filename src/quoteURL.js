@@ -1,3 +1,2 @@
 import tsitatelliDB from "./tsitatelli-database-2024-1.json";
-
-export const API_ENDPOINT = tsitatelliDB;
+export default tsitatelliDB;

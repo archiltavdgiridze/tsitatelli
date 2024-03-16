@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import MailTo from "./MailTo";
 import "./AboutusCSS/aboutus.css";
-import { API_ENDPOINT } from "../../quoteURL";
+import tsitatelliDB from "../../quoteURL";
+import { faChessKing } from "@fortawesome/free-regular-svg-icons";
 
 const AboutUs = ({ darkMode }) => {
   const url = "https://linktr.ee/archiltavdgiridze";
@@ -14,10 +15,8 @@ const AboutUs = ({ darkMode }) => {
   }, []);
 
   async function logJSONData() {
-    let url = API_ENDPOINT;
-    const response = await fetch(url);
-    const jsonData = await response.json();
-    setQuoteCount(jsonData.data.length);
+    const jsonData = await tsitatelliDB;
+    setQuoteCount(tsitatelliDB.data.length);
   }
 
   logJSONData();
@@ -54,7 +53,7 @@ const AboutUs = ({ darkMode }) => {
         </h2>
         <br />
         <br />
-        <h3>
+        {/* <h3>
           ციტატელის Back-end დეველოპმენტზე იზრუნა{" "}
           <a href={urlGiorgi} target="_blank" rel="noopener noreferrer">
             გიორგი მეშველიანმა
@@ -62,7 +61,7 @@ const AboutUs = ({ darkMode }) => {
           .
         </h3>
         <br />
-        <br />
+        <br /> */}
 
         <h4>
           &copy; ციტატებზე არსებული შრიფტი აღებულია &nbsp;

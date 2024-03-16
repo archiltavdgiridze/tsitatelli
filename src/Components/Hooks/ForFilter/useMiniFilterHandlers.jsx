@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { API_ENDPOINT } from "../../../quoteURL";
+import API_ENDPOINT from "../../../quoteURL";
 
 const useMiniFilterHandlers = () => {
-  const url = API_ENDPOINT;
+  // const url = API_ENDPOINT;
   const navigate = useNavigate();
   const [authors, setAuthors] = useState([]);
   const [topics, setTopics] = useState([]);
@@ -19,7 +19,7 @@ const useMiniFilterHandlers = () => {
 
   useEffect(() => {
     try {
-      const db = tsitatelliDB; // use the imported JSON data
+      const db = API_ENDPOINT; // use the imported JSON data
 
       const authorNames = db.data.map((author) => author.attributes.author);
       const topicNames = db.data.flatMap((topic) => topic.attributes.topic);

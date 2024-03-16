@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { API_ENDPOINT } from "../../../quoteURL";
+import API_ENDPOINT from "../../../quoteURL";
 
 const useRandomQuote = () => {
   const url = API_ENDPOINT;
@@ -27,7 +27,7 @@ const useRandomQuote = () => {
       // const response = url.data;
       // console.log(response);
       // const quotes = response.data.data;
-      const quotes = API_ENDPOINT.data
+      const quotes = API_ENDPOINT.data;
       console.log(quotes);
 
       let randomIndex = generateRandomIndex(quotes.length);
