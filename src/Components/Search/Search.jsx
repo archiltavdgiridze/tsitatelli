@@ -3,12 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import CopyButton from "../ReComp/CopyButton";
-import axios from "axios";
-import API_ENDPOINT from "../../quoteURL";
 import { Skeleton } from "@mui/material";
 import SearchBar from "../ReComp/SearchBar";
 import "./search.css";
 import PaginationComponent from "../ReComp/Pagination";
+import quotesData from "../../quoteURL"; // Import local JSON file
 
 const Search = ({ darkMode }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -26,41 +25,29 @@ const Search = ({ darkMode }) => {
   const handleSearchChange = (event) => {
     const query = event.target.value;
     setSearchQuery(query);
-
-    // Reset the noResults state when the search query changes
     setNoResults(false);
   };
 
   useEffect(() => {
-    const fetchQuotes = async () => {
-      try {
-        setLoading(true);
-        setError(null);
+    const fetchQuotes = () => {
+      setLoading(true);
+      setError(null);
 
-        const response = await axios.get(API_ENDPOINT);
-        const allQuotes = response.data.data;
+      // Filter quotes from local JSON data
+      const filteredQuotes = quotesData.data.filter((quote) =>
+        quote.attributes.quote.toLowerCase().includes(searchQuery.toLowerCase())
+      );
 
-        const filteredQuotes = allQuotes.filter((data) =>
-          data.attributes.quote
-            .toLowerCase()
-            .includes(searchQuery.toLowerCase())
-        );
+      setQuotes(filteredQuotes);
+      setFilteredQuotes(filteredQuotes);
 
-        setQuotes(filteredQuotes);
-        setFilteredQuotes(filteredQuotes);
-
-        // Check if there are no results after filtering
-        if (filteredQuotes.length === 0) {
-          setNoResults(true);
-        } else {
-          setNoResults(false);
-        }
-
-        setLoading(false);
-      } catch (error) {
-        setError(error.message);
-        setLoading(false);
+      if (filteredQuotes.length === 0) {
+        setNoResults(true);
+      } else {
+        setNoResults(false);
       }
+
+      setLoading(false);
     };
 
     if (searchQuery !== "") {
