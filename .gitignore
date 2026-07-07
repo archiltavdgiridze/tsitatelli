@@ -24,3 +24,6 @@ yarn-error.log*
 
 # Ignore .vscode directory
 .vscode/
+
+# Claude Code local dev-server config
+.claude/
