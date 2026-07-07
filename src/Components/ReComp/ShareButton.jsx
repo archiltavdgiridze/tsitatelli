@@ -9,10 +9,10 @@ const ShareButton = ({ quote }) => {
 
   return (
     <FacebookShareButton quote={quote} url={quoteURL}>
-      <button>
+      <div>
         <FontAwesomeIcon icon={faFacebookF} className="fb_icon" />
         <p className="fb_text">დააკოპირე ციტატა და გააზიარე Facebook-ზე</p>
-      </button>
+      </div>
     </FacebookShareButton>
   );
 };
