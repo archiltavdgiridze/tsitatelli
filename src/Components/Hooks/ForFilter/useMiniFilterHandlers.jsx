@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import API_ENDPOINT from "../../../quoteURL";
 
 const useMiniFilterHandlers = () => {
-  // const url = API_ENDPOINT;
   const navigate = useNavigate();
   const [authors, setAuthors] = useState([]);
   const [topics, setTopics] = useState([]);

@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
-import API_ENDPOINT from "../../../quoteURL";
+import tsitatelliDB from "../../../quoteURL";
 
 const useRandomQuote = () => {
-  const url = API_ENDPOINT;
   // sets and stores quote and author
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
@@ -20,15 +18,10 @@ const useRandomQuote = () => {
 
   // console.log(url);
 
-  // fetches random quote from the database
+  // picks a random quote from the local database
   const fetchRandomQuote = async () => {
     try {
-      // const response = await axios.get(url);
-      // const response = url.data;
-      // console.log(response);
-      // const quotes = response.data.data;
-      const quotes = API_ENDPOINT.data;
-      console.log(quotes);
+      const quotes = tsitatelliDB.data;
 
       let randomIndex = generateRandomIndex(quotes.length);
       if (quotes.length === 1) {

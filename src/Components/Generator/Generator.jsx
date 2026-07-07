@@ -3,12 +3,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "./generator.css";
 import CopyButton from "../ReComp/CopyButton";
 import MultipleSelectChip from "../ReComp/ChipSelector";
-import { quotesData } from "../../quoteURL";
+import tsitatelliDB from "../../quoteURL";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
 const Generator = ({ darkMode }) => {
-  const url = API_ENDPOINT;
   const navigate = useNavigate();
   const [authorNames, setAuthorNames] = useState([]);
   const [selectedAuthors, setSelectedAuthors] = useState([]);
@@ -20,33 +19,27 @@ const Generator = ({ darkMode }) => {
   const [activeCardIndices, setActiveCardIndices] = useState([]);
 
   useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((db) => {
-        const authorNames = db.data.map((author) => author.attributes.author);
-        const topicNames = db.data.flatMap((topic) => topic.attributes.topic);
-        const sourceNames = db.data.map((source) => source.attributes.source);
+    const db = tsitatelliDB;
+    const authorNames = db.data.map((author) => author.attributes.author);
+    const topicNames = db.data.flatMap((topic) => topic.attributes.topic);
+    const sourceNames = db.data.map((source) => source.attributes.source);
 
-        const georgianCollator = new Intl.Collator("ka-GE", {
-          sensitivity: "base",
-          ignorePunctuation: true,
-        });
+    const georgianCollator = new Intl.Collator("ka-GE", {
+      sensitivity: "base",
+      ignorePunctuation: true,
+    });
 
-        authorNames.sort((a, b) => georgianCollator.compare(a, b));
-        topicNames.sort((a, b) => georgianCollator.compare(a, b));
-        sourceNames.sort((a, b) => georgianCollator.compare(a, b));
+    authorNames.sort((a, b) => georgianCollator.compare(a, b));
+    topicNames.sort((a, b) => georgianCollator.compare(a, b));
+    sourceNames.sort((a, b) => georgianCollator.compare(a, b));
 
-        const uniqueAuthorNames = Array.from(new Set(authorNames));
-        const uniqueTopicNames = Array.from(new Set(topicNames));
-        const uniqueSourceNames = Array.from(new Set(sourceNames));
+    const uniqueAuthorNames = Array.from(new Set(authorNames));
+    const uniqueTopicNames = Array.from(new Set(topicNames));
+    const uniqueSourceNames = Array.from(new Set(sourceNames));
 
-        setAuthorNames(uniqueAuthorNames);
-        setTopicNames(uniqueTopicNames);
-        setSourceNames(uniqueSourceNames);
-      })
-      .catch((error) => {
-        console.error("Error fetching filtered quotes:", error);
-      });
+    setAuthorNames(uniqueAuthorNames);
+    setTopicNames(uniqueTopicNames);
+    setSourceNames(uniqueSourceNames);
   }, []);
 
   const handleAuthorChange = (selected) => {
@@ -62,24 +55,13 @@ const Generator = ({ darkMode }) => {
   };
 
   const generateQuotes = () => {
-    fetch(url)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error("Error fetching filtered quotes");
-        }
-      })
-      .then((data) => {
-        const quotes = data.data.map((quote) => quote.attributes);
-
-        const filteredQuotes = applyFilters(quotes);
-        const groupedQuotes = groupQuotesByCategory(filteredQuotes);
-        setGeneratedQuotes(groupedQuotes);
-      })
-      .catch((error) => {
-        console.error("Error fetching filtered quotes:", error);
-      });
+    const quotes = tsitatelliDB.data.map((quote) => ({
+      id: quote.id,
+      ...quote.attributes,
+    }));
+    const filteredQuotes = applyFilters(quotes);
+    const groupedQuotes = groupQuotesByCategory(filteredQuotes);
+    setGeneratedQuotes(groupedQuotes);
   };
 
   const applyFilters = (quotes) => {
