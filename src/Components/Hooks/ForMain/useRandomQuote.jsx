@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import tsitatelliDB from "../../../quoteURL";
+import { useState, useEffect, useRef } from "react";
+import { fetchQuotesData } from "../../../lib/fetchQuotes";
 
 const useRandomQuote = () => {
   // sets and stores quote and author
@@ -7,50 +7,45 @@ const useRandomQuote = () => {
   const [author, setAuthor] = useState("");
   // needed to prevent the same quote from being generated twice in a row
   const [previousIndex, setPreviousIndex] = useState(null);
-  // needed in case there is only one quote in the database at the moment, so it won't run in infinite loop
-  const [singleQuote, setSingleQuote] = useState(false);
   // used to display skeleton while data is being fetched
   const [isDataFetched, setIsDataFetched] = useState(false);
+  const quotesRef = useRef([]);
 
   useEffect(() => {
-    fetchRandomQuote();
+    fetchQuotesData()
+      .then(({ data }) => {
+        quotesRef.current = data;
+        pickRandomQuote();
+      })
+      .catch((error) => {
+        console.error("Error fetching quotes:", error);
+      });
   }, []);
-
-  // console.log(url);
-
-  // picks a random quote from the local database
-  const fetchRandomQuote = async () => {
-    try {
-      const quotes = tsitatelliDB.data;
-
-      let randomIndex = generateRandomIndex(quotes.length);
-      if (quotes.length === 1) {
-        setSingleQuote(true);
-      } else {
-        while (randomIndex === previousIndex) {
-          randomIndex = generateRandomIndex(quotes.length);
-        }
-        setSingleQuote(false);
-      }
-      const quote = quotes[randomIndex].attributes.quote;
-      const author = quotes[randomIndex].attributes.author;
-
-      setQuote(quote);
-      setAuthor(author);
-      setPreviousIndex(randomIndex);
-      setIsDataFetched(true);
-    } catch (error) {
-      console.error("Error fetching quotes:", error);
-    }
-  };
 
   const generateRandomIndex = (length) => {
     return Math.floor(Math.random() * length);
   };
 
-  // generates random quote
+  const pickRandomQuote = () => {
+    const quotes = quotesRef.current;
+    if (quotes.length === 0) return;
+
+    let randomIndex = generateRandomIndex(quotes.length);
+    if (quotes.length > 1) {
+      while (randomIndex === previousIndex) {
+        randomIndex = generateRandomIndex(quotes.length);
+      }
+    }
+
+    setQuote(quotes[randomIndex].attributes.quote);
+    setAuthor(quotes[randomIndex].attributes.author);
+    setPreviousIndex(randomIndex);
+    setIsDataFetched(true);
+  };
+
+  // generates random quote from the already-fetched list
   const generateRandomQuote = () => {
-    fetchRandomQuote();
+    pickRandomQuote();
   };
 
   return { quote, author, isDataFetched, generateRandomQuote };

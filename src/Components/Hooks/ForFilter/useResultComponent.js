@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import tsitatelliDB from "../../../quoteURL";
+import { fetchQuotesData } from "../../../lib/fetchQuotes";
 
 const useResultComponent = (pageType) => {
   const navigate = useNavigate();
@@ -29,49 +29,42 @@ const useResultComponent = (pageType) => {
 
   const splitTopics = (topics) => {
     if (typeof topics === "string") {
-      return topics.split(",");
+      return topics.split(",").filter((topic) => topic.trim() !== "");
     } else if (Array.isArray(topics)) {
-      return topics.join(",").split(",");
+      return topics
+        .join(",")
+        .split(",")
+        .filter((topic) => topic.trim() !== "");
     } else {
       return [];
     }
   };
 
-  // Fetch quotes from local JSON data
+  // Fetch quotes from Supabase, filtered by pageType
   const fetchQuotes = (name) => {
-    let filteredQuotes = tsitatelliDB.data;
-    if (pageType === "author") {
-      filteredQuotes = filteredQuotes.filter(
-        (quote) => quote.attributes.author === name
-      );
-    } else if (pageType === "source") {
-      filteredQuotes = filteredQuotes.filter(
-        (quote) => quote.attributes.source === name
-      );
-    } else if (pageType === "topic") {
-      filteredQuotes = filteredQuotes.filter((quote) =>
-        quote.attributes.topic.includes(name)
-      );
-    }
-    setResultName(name);
-    setFilteredQuotes(filteredQuotes);
+    fetchQuotesData()
+      .then(({ data }) => {
+        let filteredQuotes = data;
+        if (pageType === "author") {
+          filteredQuotes = filteredQuotes.filter(
+            (quote) => quote.attributes.author === name
+          );
+        } else if (pageType === "source") {
+          filteredQuotes = filteredQuotes.filter(
+            (quote) => quote.attributes.source === name
+          );
+        } else if (pageType === "topic") {
+          filteredQuotes = filteredQuotes.filter((quote) =>
+            quote.attributes.topic.includes(name)
+          );
+        }
+        setResultName(name);
+        setFilteredQuotes(filteredQuotes);
+      })
+      .catch((error) => {
+        console.error("Error fetching quotes:", error);
+      });
   };
-
-  useEffect(() => {
-    // Use fetchQuotes function to get quotes based on pageType
-    if (!state?.filteredQuotes) {
-      const nameFromURL = decodeURIComponent(
-        window.location.pathname.split("/")[3]
-      );
-      const decodedResultName = nameFromURL.replace(/_/g, " ");
-      setResultName(decodedResultName);
-      fetchQuotes(decodedResultName); // Call fetchQuotes function here
-    } else {
-      const quotes = state.filteredQuotes;
-      setResultName(quotes[0]?.attributes[pageType] || "");
-      setFilteredQuotes(quotes);
-    }
-  }, [pageType, state]);
 
   const handleGoBack = () => {
     navigate("/filter");

@@ -1,0 +1,66 @@
+.admin_panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.admin_form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.admin_form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--secondaryFontReg);
+  color: var(--textColorBlack);
+}
+
+.dark-mode .admin_form label {
+  color: var(--textColorWhite);
+}
+
+.admin_form input,
+.admin_form textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--darkGray);
+  font-family: var(--secondaryFontReg);
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.admin_form button {
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--accentColor);
+  color: var(--textColorWhite);
+  font-family: var(--secondaryFontReg);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.admin_form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin_status {
+  font-family: var(--secondaryFontReg);
+  text-align: center;
+}
+
+.admin_status_success {
+  color: var(--accentColor);
+}
+
+.admin_status_error {
+  color: #c0392b;
+}

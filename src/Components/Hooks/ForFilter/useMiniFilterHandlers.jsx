@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import API_ENDPOINT from "../../../quoteURL";
+import { fetchQuotesData } from "../../../lib/fetchQuotes";
 
 const useMiniFilterHandlers = () => {
   const navigate = useNavigate();
@@ -17,38 +17,40 @@ const useMiniFilterHandlers = () => {
   const [isDataFetched, setIsDataFetched] = useState(false);
 
   useEffect(() => {
-    try {
-      const db = API_ENDPOINT; // use the imported JSON data
+    fetchQuotesData()
+      .then((db) => {
+        const authorNames = db.data.map((author) => author.attributes.author);
+        const topicNames = db.data.flatMap((topic) => topic.attributes.topic);
+        const sourceNames = db.data.map((source) => source.attributes.source);
 
-      const authorNames = db.data.map((author) => author.attributes.author);
-      const topicNames = db.data.flatMap((topic) => topic.attributes.topic);
-      const sourceNames = db.data.map((source) => source.attributes.source);
+        const georgianCollator = new Intl.Collator("ka-GE", {
+          sensitivity: "base",
+          ignorePunctuation: true,
+        });
 
-      const georgianCollator = new Intl.Collator("ka-GE", {
-        sensitivity: "base",
-        ignorePunctuation: true,
+        authorNames.sort((a, b) => georgianCollator.compare(a, b));
+        topicNames.sort((a, b) => georgianCollator.compare(a, b));
+        sourceNames.sort((a, b) => georgianCollator.compare(a, b));
+
+        const uniqueAuthorNames = Array.from(new Set(authorNames));
+        const uniqueTopics = Array.from(
+          new Set(topicNames.filter((topic) => topic && topic.trim() !== ""))
+        );
+        const uniqueSourceNames = Array.from(new Set(sourceNames));
+
+        setAuthors(uniqueAuthorNames);
+        setTopics(uniqueTopics);
+        setSources(uniqueSourceNames);
+
+        setFilteredAuthors(uniqueAuthorNames);
+        setFilteredTopics(uniqueTopics);
+        setFilteredSources(uniqueSourceNames);
+
+        setIsDataFetched(true);
+      })
+      .catch((error) => {
+        console.error("Error fetching author data:", error);
       });
-
-      authorNames.sort((a, b) => georgianCollator.compare(a, b));
-      topicNames.sort((a, b) => georgianCollator.compare(a, b));
-      sourceNames.sort((a, b) => georgianCollator.compare(a, b));
-
-      const uniqueAuthorNames = Array.from(new Set(authorNames));
-      const uniqueTopics = Array.from(new Set(topicNames));
-      const uniqueSourceNames = Array.from(new Set(sourceNames));
-
-      setAuthors(uniqueAuthorNames);
-      setTopics(uniqueTopics);
-      setSources(uniqueSourceNames);
-
-      setFilteredAuthors(uniqueAuthorNames);
-      setFilteredTopics(uniqueTopics);
-      setFilteredSources(uniqueSourceNames);
-
-      setIsDataFetched(true);
-    } catch (error) {
-      console.error("Error fetching author data:", error);
-    }
   }, []);
 
   const handleAuthorClick = (authorName) => {

@@ -16,6 +16,7 @@ import TopicResult from "./Components/Filter/MiniFilter/FilterResult/TopicResult
 import SourceResult from "./Components/Filter/MiniFilter/FilterResult/SourceResult";
 import Search from "./Components/Search/Search";
 import ErrorComp from "./Components/404/ErrorComp";
+import AdminPanel from "./Components/Admin/AdminPanel";
 //
 import ReactGA from "react-ga";
 
@@ -60,6 +61,7 @@ function App() {
         <Route path="/search" element={<Search darkMode={darkMode} />} />
         <Route path="/generator" element={<Generator darkMode={darkMode} />} />
         <Route path="/about_us" element={<AboutUs darkMode={darkMode} />} />
+        <Route path="/admin" element={<AdminPanel darkMode={darkMode} />} />
         <Route path="*" element={<ErrorComp darkMode={darkMode} />} />
       </Routes>
     </div>

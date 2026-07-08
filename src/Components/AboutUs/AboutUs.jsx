@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MailTo from "./MailTo";
 import "./AboutusCSS/aboutus.css";
-import tsitatelliDB from "../../quoteURL";
+import { fetchQuotesData } from "../../lib/fetchQuotes";
 import { faChessKing } from "@fortawesome/free-regular-svg-icons";
 
 const AboutUs = ({ darkMode }) => {
@@ -14,12 +14,11 @@ const AboutUs = ({ darkMode }) => {
     document.title = "ჩვენს შესახებ | ციტატელი"; // Replace 'Custom Text' with your desired title
   }, []);
 
-  async function logJSONData() {
-    const jsonData = await tsitatelliDB;
-    setQuoteCount(tsitatelliDB.data.length);
-  }
-
-  logJSONData();
+  useEffect(() => {
+    fetchQuotesData()
+      .then(({ data }) => setQuoteCount(data.length))
+      .catch((error) => console.error("Error fetching quote count:", error));
+  }, []);
 
   return (
     <div className={`result ${darkMode ? "dark-mode" : ""}`}>

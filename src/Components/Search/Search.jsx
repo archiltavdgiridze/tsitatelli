@@ -7,11 +7,12 @@ import { Skeleton } from "@mui/material";
 import SearchBar from "../ReComp/SearchBar";
 import "./search.css";
 import PaginationComponent from "../ReComp/Pagination";
-import quotesData from "../../quoteURL"; // Import local JSON file
+import { fetchQuotesData } from "../../lib/fetchQuotes";
 
 const Search = ({ darkMode }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [quotes, setQuotes] = useState([]);
+  const [allQuotes, setAllQuotes] = useState([]);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
   const [showNotFoundMessage, setShowNotFoundMessage] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -29,33 +30,36 @@ const Search = ({ darkMode }) => {
   };
 
   useEffect(() => {
-    const fetchQuotes = () => {
-      setLoading(true);
-      setError(null);
+    setLoading(true);
+    fetchQuotesData()
+      .then(({ data }) => {
+        setAllQuotes(data);
+      })
+      .catch((error) => {
+        setError(error.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
 
-      // Filter quotes from local JSON data
-      const filteredQuotes = quotesData.data.filter((quote) =>
-        quote.attributes.quote.toLowerCase().includes(searchQuery.toLowerCase())
+  useEffect(() => {
+    if (searchQuery !== "") {
+      const filtered = allQuotes.filter((quote) =>
+        quote.attributes.quote
+          .toLowerCase()
+          .includes(searchQuery.toLowerCase())
       );
 
-      setQuotes(filteredQuotes);
-      setFilteredQuotes(filteredQuotes);
-
-      if (filteredQuotes.length === 0) {
-        setNoResults(true);
-      } else {
-        setNoResults(false);
-      }
-
-      setLoading(false);
-    };
-
-    if (searchQuery !== "") {
-      fetchQuotes();
+      setQuotes(filtered);
+      setFilteredQuotes(filtered);
+      setNoResults(filtered.length === 0);
     } else {
       setQuotes([]);
+      setFilteredQuotes([]);
+      setNoResults(false);
     }
-  }, [searchQuery]);
+  }, [searchQuery, allQuotes]);
 
   const handleCardClick = (index) => {
     if (activeCardIndex === index) {
@@ -81,9 +85,12 @@ const Search = ({ darkMode }) => {
 
   const splitTopics = (topics) => {
     if (typeof topics === "string") {
-      return topics.split(",");
+      return topics.split(",").filter((topic) => topic.trim() !== "");
     } else if (Array.isArray(topics)) {
-      return topics.join(",").split(",");
+      return topics
+        .join(",")
+        .split(",")
+        .filter((topic) => topic.trim() !== "");
     } else {
       return [];
     }
